@@ -5,10 +5,10 @@ const stats = [
   { label: "Mobile Subscribers", value: "9.3M" },
   { label: "Group AI Target by 2028", value: "€600M" },
   { label: "Djia Success Rate", value: "52%" },
-  { label: "Contracts Expiring Monthly", value: "Millions" },
+  { label: "Contracts Expiring Monthly", value: "100Ks" },
   { label: "WhatsApp Users in Romania", value: "10M+" },
   { label: "Combined Team Experience", value: "40+ yrs" },
-  { label: "Enterprise Repos in Production", value: "73+" },
+  { label: "AI Skills Deployed", value: "200+" },
 ];
 
 const items = [...stats, ...stats];
