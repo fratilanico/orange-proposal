@@ -140,8 +140,8 @@ const PROOF_POINTS = [
     name: "ProfileSense",
     metric: "5min",
     metricLabel: "30 Ranked Candidates",
-    desc: "White-label talent sourcing for Dutch recruitment (Lieno B.V., Benelux). Paste a job description → 30 ranked candidates with verified emails. AI-scored talent pipeline.",
-    role: "Full-Stack Delivery",
+    desc: "White-label talent sourcing platform for Dutch recruitment (Lieno B.V., Benelux). Paste a job description → 30 ranked candidates with verified emails in under 5 minutes. Multi-source AI scoring across LinkedIn, GitHub, and professional networks. Full agentic pipeline: scrape → enrich → score → rank → deliver. Production-grade, running live for paying clients.",
+    role: "Full-Stack Agentic Delivery",
     color: "#6e3aff",
     url: "https://profilesense-dashboard.vercel.app",
   },
@@ -158,8 +158,8 @@ const PROOF_POINTS = [
     name: "InfoAcademy",
     metric: "20K+",
     metricLabel: "Learners",
-    desc: "AI learning platform. 163+ daily content items, webinars, agentic training. Self-serve for students, customizable for enterprise cohorts. Already delivered training to Orange Romania.",
-    role: "CEO",
+    desc: "AI-first learning platform with built-in agentic orchestration layer — currently in beta with ~100 active users. Enterprise cohorts get customised training environments, progress tracking, and AI-assisted learning paths. Free for all customers during beta. Already delivered training to Orange Romania. The same platform that powers the Phase 1 training delivery.",
+    role: "Founder & CEO",
     color: "#30d158",
     url: "https://www.infoacademy.uk",
   },
@@ -355,7 +355,7 @@ function PhaseCard({ phase, initialOpen = false }: { phase: typeof PHASES[0]; in
 function ProofCard({ point, index }: { point: typeof PROOF_POINTS[0]; index: number }) {
   const inner = (
     <div
-      className={`block rounded-2xl p-6 transition-all ${point.url ? "hover:scale-[1.02] hover:-translate-y-1 cursor-pointer" : ""}`}
+      className={`block rounded-2xl p-6 h-full flex flex-col transition-all ${point.url ? "hover:scale-[1.02] hover:-translate-y-1 cursor-pointer" : ""}`}
       style={{ background: point.color + "06", border: `1px solid ${point.color}18` }}
     >
       <div className="flex items-baseline gap-2 mb-3">
@@ -364,7 +364,7 @@ function ProofCard({ point, index }: { point: typeof PROOF_POINTS[0]; index: num
       </div>
       <h3 className="text-[17px] font-bold text-[#1d1d1f] mb-1">{point.name}</h3>
       <p className="text-[11px] font-medium uppercase tracking-wider mb-2" style={{ color: point.color }}>{point.role}</p>
-      <p className="text-[13px] text-[#6e6e73] leading-relaxed">{point.desc}</p>
+      <p className="text-[13px] text-[#6e6e73] leading-relaxed flex-1">{point.desc}</p>
       {!point.url && (
         <span className="inline-flex items-center gap-1 mt-3 text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full"
           style={{ color: point.color, background: point.color + "15" }}>
@@ -376,8 +376,8 @@ function ProofCard({ point, index }: { point: typeof PROOF_POINTS[0]; index: num
   return (
     <AnimateIn delay={index * 0.1}>
       {point.url
-        ? <a href={point.url} target="_blank" rel="noopener">{inner}</a>
-        : inner
+        ? <a href={point.url} target="_blank" rel="noopener" className="block h-full">{inner}</a>
+        : <div className="h-full">{inner}</div>
       }
     </AnimateIn>
   );
