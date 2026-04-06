@@ -13,10 +13,10 @@ import { ChevronDown, Users, Brain, Target, Phone, Mail, Linkedin } from "lucide
 
 const PAIN_POINTS = [
   {
-    icon: "🤖",
-    title: "Djia Voice AI — 52% Success Rate",
-    desc: "Nearly half of all voice interactions fail. Customers hang up, call again, clog human queues. Every failed interaction costs Orange money and trust.",
-    color: "#ff453a",
+    icon: "📋",
+    title: "Contract Renewals — Massive Volume, Manual Process",
+    desc: "Orange manages millions of contract renewals monthly — and today every single one is reactive. Customers have to call in themselves, then wait 5 days for an offer. At this volume, even 1% improvement in retention is millions of euros.",
+    color: "#ff9f0a",
   },
   {
     icon: "🇷🇴",
@@ -43,9 +43,9 @@ const PAIN_POINTS = [
     color: "#30d158",
   },
   {
-    icon: "🏢",
-    title: "Vendor Lock-In Everywhere",
-    desc: "Genesys, MATRIXX, IBM — deep multi-year contracts. Internal AI capability is the only path that doesn't create another dependency.",
+    icon: "📧",
+    title: "Support Emails — Overwhelming Volume, Zero Routing",
+    desc: "Thousands of emails hit Orange's generic contact addresses every day. Every one is manually read, sorted, and forwarded. Urgent issues sit in the same queue as billing questions. At that volume, it never gets better — it only grows.",
     color: "#0071e3",
   },
 ];
@@ -551,12 +551,26 @@ export default function Page() {
               IBM and Accenture deliver products — and a renewal invoice. We deliver an architectural capability that lives inside Orange permanently. Your people build the agents. The methodology is ours. The outcome is yours.
             </p>
           </AnimateIn>
-          <AnimateIn delay={0.15}>
-            <div className="grid sm:grid-cols-3 gap-6 mt-14">
+
+          <AnimateIn delay={0.12}>
+            <div className="mt-10 mx-auto max-w-[680px] rounded-2xl px-8 py-6 border border-white/10 bg-white/[0.04]">
+              <p className="text-[11px] font-black uppercase tracking-widest text-[#ff7900] mb-3">The core principle</p>
+              <p className="text-xl font-black text-white leading-snug">
+                The agents handle the volume.
+                <span className="text-[#ff7900]"> Your people handle what requires judgment.</span>
+              </p>
+              <p className="text-[13px] text-white/40 mt-3 leading-relaxed">
+                These AI agents are not here to replace Orange employees. They exist to remove the high-volume, repetitive grunt work — so your team spends their time on decisions, relationships, and complex cases. The work only humans should be doing.
+              </p>
+            </div>
+          </AnimateIn>
+
+          <AnimateIn delay={0.2}>
+            <div className="grid sm:grid-cols-3 gap-6 mt-10">
               {[
-                { icon: <Users size={26} />, title: "Train", desc: "8–12 of your engineers and ops staff learn AI agent architecture by doing — not by watching slides." },
-                { icon: <Brain size={26} />, title: "Build", desc: "Each person builds a working AI agent solving a real Orange problem. Network triage, knowledge base, procurement analysis — Orange picks the use cases." },
-                { icon: <Target size={26} />, title: "Architect", desc: "Real agents running inside Orange's systems reveal the actual integration landscape. That evidence becomes your 18-month AI architecture blueprint." },
+                { icon: <Users size={26} />, title: "Train", desc: "8–12 Orange employees learn to build AI agents. Not a course — a build sprint. They leave with skills, not certificates." },
+                { icon: <Brain size={26} />, title: "Build", desc: "Each team builds a working agent for a real Orange problem. Contract renewals. Email triage. The agent takes the volume. The employee takes the credit." },
+                { icon: <Target size={26} />, title: "Architect", desc: "What your team builds reveals your actual integration landscape — turning 10 weeks of hands-on work into an 18-month AI roadmap grounded in evidence." },
               ].map((s, i) => (
                 <div key={i} className="rounded-2xl p-6 bg-white/5 border border-white/[0.07] text-left">
                   <div className="text-[#ff7900] mb-4">{s.icon}</div>
