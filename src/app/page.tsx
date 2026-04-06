@@ -484,7 +484,7 @@ export default function Page() {
           <AnimateIn delay={0.4}>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-16">
               {[
-                { value: 25, prefix: "€", suffix: "K", label: "Entry Investment" },
+                { value: 30, prefix: "€", suffix: "K", label: "Phase 1 Investment" },
                 { value: 18, prefix: "", suffix: " months", label: "To AI Independence" },
                 { value: 50, prefix: "", suffix: "+", label: "AI-Capable Staff" },
                 { value: 3, prefix: "", suffix: " phases", label: "Structured Engagement" },
@@ -871,35 +871,49 @@ export default function Page() {
           </AnimateIn>
 
           <AnimateIn delay={0.22}>
-            <div className="mt-10 grid sm:grid-cols-2 gap-6 text-left">
+            <div className="mt-10 grid lg:grid-cols-3 gap-5 text-left">
               {TEAM.map((person, i) => (
-                <div key={i} className="rounded-2xl p-6 bg-white/5 border border-white/[0.08]">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center text-white text-[11px] font-black mb-3"
-                    style={{ background: person.color }}>
-                    {person.name.split(" ").map(n => n[0]).join("")}
+                <div key={i} className="rounded-2xl overflow-hidden bg-white/[0.04] border border-white/[0.08]">
+                  {/* Header bar */}
+                  <div className="px-6 pt-6 pb-4 flex items-center gap-4" style={{ borderBottom: `1px solid ${person.color}25` }}>
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center text-white text-sm font-black flex-shrink-0"
+                      style={{ background: person.color }}>
+                      {person.name.split(" ").map(n => n[0]).join("")}
+                    </div>
+                    <div>
+                      <h3 className="text-[15px] font-black text-white leading-tight">{person.name}</h3>
+                      <p className="text-[11px] font-semibold mt-0.5" style={{ color: person.color }}>{person.title}</p>
+                      <p className="text-[10px] text-white/30 uppercase tracking-wider">{person.org}</p>
+                    </div>
                   </div>
-                  <h3 className="text-[15px] font-bold text-white">{person.name}</h3>
-                  <p className="text-[11px] text-white/40 uppercase tracking-wider mt-0.5">{person.title}</p>
-                  <div className="mt-3 space-y-1.5">
-                    {person.email && (
-                      <a href={`mailto:${person.email}`} className="flex items-center gap-2 text-[12px] text-[#ff7900] hover:underline">
-                        <Mail size={12} /> {person.email}
+                  {/* Bio */}
+                  <div className="px-6 py-4">
+                    <p className="text-[12px] text-white/50 leading-relaxed">{person.bio}</p>
+                    {/* Top credentials */}
+                    <div className="mt-3 space-y-1">
+                      {person.credentials.slice(0, 3).map((c, ci) => (
+                        <div key={ci} className="flex items-start gap-2 text-[11px] text-white/40">
+                          <span className="mt-0.5 flex-shrink-0" style={{ color: person.color }}>&#10003;</span> {c}
+                        </div>
+                      ))}
+                    </div>
+                    {/* Contact */}
+                    <div className="mt-4 pt-3 border-t border-white/[0.06] space-y-1.5">
+                      {person.email && (
+                        <a href={`mailto:${person.email}`} className="flex items-center gap-2 text-[11px] hover:underline" style={{ color: person.color }}>
+                          <Mail size={11} /> {person.email}
+                        </a>
+                      )}
+                      {person.whatsapp && (
+                        <a href={`https://wa.me/${person.whatsapp.replace(/\+/g, "")}`} target="_blank" rel="noopener"
+                          className="flex items-center gap-2 text-[11px] text-[#25d366] hover:underline">
+                          <WhatsAppIcon size={11} /> {person.whatsapp}
+                        </a>
+                      )}
+                      <a href={person.linkedin} target="_blank" rel="noopener" className="flex items-center gap-2 text-[11px] text-white/40 hover:text-white transition-colors">
+                        <Linkedin size={11} /> LinkedIn
                       </a>
-                    )}
-                    {person.whatsapp && (
-                      <a href={`https://wa.me/${person.whatsapp.replace(/\+/g, "")}`} target="_blank" rel="noopener"
-                        className="flex items-center gap-2 text-[12px] text-[#25d366] hover:underline">
-                        <WhatsAppIcon size={12} /> {person.whatsapp}
-                      </a>
-                    )}
-                    {person.phoneRO && (
-                      <a href={`tel:${person.phoneRO}`} className="flex items-center gap-2 text-[12px] text-white/50 hover:text-white transition-colors">
-                        <Phone size={12} /> {person.phoneRO} <span className="text-[10px] opacity-50">RO</span>
-                      </a>
-                    )}
-                    <a href={person.linkedin} target="_blank" rel="noopener" className="flex items-center gap-2 text-[12px] text-white/50 hover:text-white transition-colors">
-                      <Linkedin size={12} /> LinkedIn
-                    </a>
+                    </div>
                   </div>
                 </div>
               ))}
