@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #ffffff;
+  --color-foreground: #0a0a0a;
+  --color-muted: #6e6e73;
+  --color-muted-foreground: #86868b;
+  --color-border: #e8e8ed;
+  --color-card: #f5f5f7;
+  --color-orange: #ff7900;
+  --color-orange-dark: #e56a00;
+  --color-orange-light: #ff9a40;
+  --color-blue: #0071e3;
+  --color-purple: #6e3aff;
+  --color-green: #30d158;
+  --color-green-dark: #248a3d;
+  --color-red: #ff453a;
+  --color-teal: #00c7be;
+  --color-dark: #1d1d1f;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(255, 121, 0, 0.2);
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: ticker 32s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
