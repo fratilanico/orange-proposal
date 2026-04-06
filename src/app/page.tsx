@@ -15,44 +15,62 @@ const PAIN_POINTS = [
   {
     icon: "📋",
     title: "Contract Renewals — Reactive, Slow",
-    desc: "With 9.3M subscribers on rolling contracts, Orange handles hundreds of thousands of renewal events monthly — and today every single one is reactive. A customer recently had to call in themselves, then waited 5 days for an offer. At that scale, even a small improvement in retention is significant revenue.",
+    bullets: [
+      "Hundreds of thousands of renewal events every month across 9.3M subscribers",
+      "Process is fully reactive — customers call in themselves, then wait days for an offer",
+      "At this scale, even 0.5% improvement in retention is millions in recovered revenue",
+    ],
     color: "#ff9f0a",
   },
   {
     icon: "🇷🇴",
     title: "Romanian NLP — Underdeveloped",
-    desc: "Language-specific AI models are weak. Romanian is underserved by major LLM providers. Orange can't buy this off the shelf — it needs to be built.",
+    bullets: [
+      "Major LLM providers underserve Romanian — models are weak on local vocabulary and intent",
+      "Orange can't buy a Romanian-calibrated AI model off the shelf from any vendor",
+      "This needs to be built internally, fine-tuned on Orange's own call data and customer language",
+    ],
     color: "#ff9f0a",
   },
   {
     icon: "👻",
     title: "Shadow AI — No Governance",
-    desc: "Internal teams are already experimenting with ChatGPT, Claude, LangChain. No coordination, no standards, no governance. Every team is reinventing the wheel.",
+    bullets: [
+      "Internal teams are already using ChatGPT, Claude, LangChain — independently, with no coordination",
+      "No shared standards, no audit trails, no visibility into what's being built or deployed",
+      "Every department is reinventing the wheel — duplicating effort and creating compliance risk",
+    ],
     color: "#6e3aff",
   },
   {
     icon: "📊",
     title: "€600M AI Target — Clock Ticking",
-    desc: "Orange Group mandates €600M in AI-generated value by 2028. Paris has Live Intelligence Studio. Bucharest needs to show results — fast.",
+    bullets: [
+      "Orange Group has set ambitious AI value-generation targets aligned with Lead the Future 2025-2028",
+      "Paris is already deploying Group-level AI infrastructure — Bucharest needs to show results",
+      "Without concrete deliverables, the risk is centralisation from Paris, not autonomy for Romania",
+    ],
     color: "#ff7900",
   },
   {
     icon: "📱",
     title: "No WhatsApp Presence",
-    desc: "10M+ Romanians use WhatsApp daily. Orange has zero presence there. Vodafone and Digi haven't moved either. First-mover advantage is sitting on the table.",
+    bullets: [
+      "WhatsApp is the dominant messaging platform in Romania — and Orange has zero presence on it",
+      "Vodafone and Digi haven't moved either — the first-mover advantage is unclaimed",
+      "An AI-powered WhatsApp channel creates a new touchpoint for sales, support, and retention",
+    ],
     color: "#30d158",
   },
   {
     icon: "📧",
     title: "Support Emails — Manual Triage Daily",
-    desc: "Thousands of emails arrive daily at serviciul.clienti@orange.ro, reclamatii@orange.ro, and other generic addresses. Every one is manually read, sorted, and forwarded. Urgent issues sit in the same queue as billing questions. At this volume, it never gets better — it only grows.",
+    bullets: [
+      "Thousands of emails arrive daily at serviciul.clienti@orange.ro, reclamatii@orange.ro and others",
+      "Every one is manually read, sorted, and forwarded — urgent issues sit beside billing questions",
+      "At this volume it never gets better, only grows — and every delay risks customer escalation",
+    ],
     color: "#0071e3",
-  },
-  {
-    icon: "🔗",
-    title: "Complex Stack — No AI Layer",
-    desc: "Genesys, MATRIXX, IBM and more — deep multi-year investments that aren't going anywhere. But none of them have an AI layer that Orange owns. Every new capability means another vendor dependency.",
-    color: "#86868b",
   },
 ];
 
@@ -213,20 +231,70 @@ const OBJECTIONS = [
    COMPONENTS
    ══════════════════════════════════════════════════════════════ */
 
-function PainCard({ point, index }: { point: typeof PAIN_POINTS[0]; index: number }) {
+function PainCard({ point, index, isOpen, onToggle }: { point: typeof PAIN_POINTS[0]; index: number; isOpen: boolean; onToggle: () => void }) {
   return (
     <AnimateIn delay={index * 0.08}>
-      <div
-        className="rounded-2xl p-6 h-full flex flex-col"
-        style={{ background: point.color + "08", border: `1px solid ${point.color}20` }}
+      <motion.div
+        onClick={onToggle}
+        whileHover={{ scale: 1.02, y: -2 }}
+        whileTap={{ scale: 0.98 }}
+        className="cursor-pointer rounded-2xl p-6 transition-all"
+        style={{ background: point.color + "08", border: `1px solid ${isOpen ? point.color + "40" : point.color + "20"}` }}
       >
-        <div className="flex items-center gap-3 mb-3">
-          <span className="text-2xl flex-shrink-0">{point.icon}</span>
-          <h3 className="text-[15px] font-semibold text-[#1d1d1f]">{point.title}</h3>
+        <div className="flex items-start justify-between gap-2">
+          <div className="flex items-center gap-3">
+            <span className="text-2xl flex-shrink-0">{point.icon}</span>
+            <h3 className="text-[15px] font-semibold text-[#1d1d1f]">{point.title}</h3>
+          </div>
+          <ChevronDown
+            size={16}
+            className="text-[#86868b] flex-shrink-0 mt-1 transition-transform duration-300"
+            style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
+          />
         </div>
-        <p className="text-[13px] text-[#6e6e73] leading-relaxed flex-1">{point.desc}</p>
-      </div>
+        <AnimatePresence>
+          {isOpen && (
+            <motion.ul
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="mt-3 space-y-2"
+            >
+              {point.bullets.map((b, i) => (
+                <motion.li
+                  key={i}
+                  initial={{ opacity: 0, x: -6 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.05 }}
+                  className="text-[13px] text-[#6e6e73] leading-relaxed flex items-start gap-2"
+                >
+                  <span className="mt-1 flex-shrink-0" style={{ color: point.color }}>•</span>
+                  {b}
+                </motion.li>
+              ))}
+            </motion.ul>
+          )}
+        </AnimatePresence>
+      </motion.div>
     </AnimateIn>
+  );
+}
+
+function PainGrid() {
+  const [activeCard, setActiveCard] = useState<number | null>(null);
+  return (
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 items-start">
+      {PAIN_POINTS.map((p, i) => (
+        <PainCard
+          key={i}
+          point={p}
+          index={i}
+          isOpen={activeCard === i}
+          onToggle={() => setActiveCard(activeCard === i ? null : i)}
+        />
+      ))}
+    </div>
   );
 }
 
@@ -500,11 +568,7 @@ export default function Page() {
               </h2>
             </div>
           </AnimateIn>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {PAIN_POINTS.map((p, i) => (
-              <PainCard key={i} point={p} index={i} />
-            ))}
-          </div>
+          <PainGrid />
         </div>
       </section>
 
