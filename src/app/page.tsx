@@ -45,7 +45,7 @@ const PAIN_POINTS = [
   {
     icon: "📧",
     title: "Support Emails — Overwhelming Volume, Zero Routing",
-    desc: "Thousands of emails hit Orange's generic contact addresses every day. Every one is manually read, sorted, and forwarded. Urgent issues sit in the same queue as billing questions. At that volume, it never gets better — it only grows.",
+    desc: "Thousands of emails arrive daily at serviciul.clienti@orange.ro, reclamatii@orange.ro, and other generic addresses. Every one is manually read, sorted, and forwarded. Urgent issues sit in the same queue as billing questions. At this volume, it never gets better — it only grows.",
     color: "#0071e3",
   },
 ];
@@ -155,12 +155,24 @@ const TEAM = [
     color: "#ff7900",
   },
   {
-    name: "Mihai Catalin Teodosiu",
-    title: "Network Automation AI Specialist",
-    org: "aiQA / GNS3 Technologies",
-    bio: "100,000+ students across 185 countries. Vodafone NOC engineer. Building Network Automation AI Agents. CCNP certified. 12-dimension AI system management framework. Claude Code + MCP expert.",
-    credentials: ["Vodafone — NOC Engineer, 200+ critical alerts", "100K+ Udemy students, 185 countries", "CCNP, CCNA, CCDA, JNCIA, ISTQB certified", "Politehnica Bucharest — BS Telecommunications"],
-    linkedin: "https://linkedin.com/in/tmihaicatalin",
+    name: "Bogdan Toporan",
+    title: "Engineering Leader & AI Architect",
+    org: "ARANDI / ex-Telenav / ex-Micro Focus HP",
+    bio: "2 years focused exclusively on AI Agent Orchestration, RAG, and workflow optimisation. 17+ years building scalable cloud-native systems (K8s, Microservices, Big Data) for global tech leaders. Led 40+ engineer teams. Secured $10M+ via technical POCs. US Patent holder in network monitoring.",
+    credentials: ["ARANDI — Founder & Principal Architect (AI Agentic Systems)", "Telenav — Senior Engineering Manager, 40+ engineers", "Micro Focus / HP — R&D Manager", "US Patent — Network Monitoring", "Transylvania Angels Network — Member"],
+    linkedin: "https://linkedin.com/in/bogdan-toporan",
+    email: "bogdan.toporan@hotmail.com",
+    whatsapp: "",
+    phoneRO: "",
+    color: "#6e3aff",
+  },
+  {
+    name: "Hardik Nakum",
+    title: "Principal Cloud Architect — Agentic AI",
+    org: "Lloyds Banking Group",
+    bio: "10+ years at Lloyds Banking Group leading multi-cloud re-architecture programs across Azure, AWS, and GCP. Built AI-powered frameworks for enterprise decisioning. Regulatory compliance (ISO-27001, DORA, NIST). Agentic System Design and Cybersecurity. Shares Lloyds network engineering background with Nico.",
+    credentials: ["Lloyds Banking Group — Principal Cloud Architect (3 years)", "Lloyds Banking Group — Network & Security Architect/Lead (7.5 years)", "PayPoint plc — Enterprise Architect", "Visa — Senior Network & Security SME"],
+    linkedin: "https://linkedin.com/in/hardik-nakum",
     email: "",
     whatsapp: "",
     phoneRO: "",
@@ -175,7 +187,7 @@ const OBJECTIONS = [
   },
   {
     q: "You're a small company. Can you handle Orange scale?",
-    a: "InfoAcademy is your existing vendor — you've already vetted us. Teodosiu has trained 100K+ engineers globally. We're not replacing Genesys or MATRIXX — we're training your people to build the AI layer on top of what you already have.",
+    a: "InfoAcademy is your existing vendor — you've already vetted us. The team brings 10+ years inside Lloyds Banking Group, 17+ years of enterprise architecture, and 40+ engineer teams led. We're not replacing Genesys or MATRIXX — we're training your people to build the AI layer on top of what you already have.",
   },
   {
     q: "What if we take the blueprint and give it to Accenture?",
@@ -690,18 +702,18 @@ export default function Page() {
             <div className="text-center mb-16">
               <p className="text-[12px] font-bold uppercase tracking-widest text-[#ff7900] mb-3">Your Team</p>
               <h2 className="text-4xl lg:text-5xl font-black text-[#1d1d1f]">
-                Network engineering meets
+                Enterprise engineering.
                 <br />
-                <span className="text-[#86868b]">AI infrastructure.</span>
+                <span className="text-[#86868b]">AI-native delivery.</span>
               </h2>
               <p className="text-lg text-[#6e6e73] mt-4 max-w-[600px] mx-auto">
-                Delivered through InfoAcademy — your existing vendor. No new procurement. No new vendor qualification.
+                Lloyds Banking Group pedigree. 17+ years enterprise architecture. AI Agent Orchestration expertise. Delivered through InfoAcademy — your existing vendor.
               </p>
             </div>
           </AnimateIn>
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {TEAM.map((person, i) => (
-              <AnimateIn key={i} delay={i * 0.15}>
+              <AnimateIn key={i} delay={i * 0.12}>
                 <TeamCard person={person} />
               </AnimateIn>
             ))}
