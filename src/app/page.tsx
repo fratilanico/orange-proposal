@@ -104,11 +104,11 @@ const PHASES = [
 
 const PROOF_POINTS = [
   {
-    name: "ProfiCircle",
-    metric: "8",
-    metricLabel: "Agent Orchestration",
-    desc: "Building the AI agentic layer for an EU procurement platform (€33B TAM). Architecture: 8-agent pipeline covering outreach, LinkedIn automation, voice enrichment, and AI candidate classification. In active development.",
-    role: "AI Agentic Layer — Architect & Builder",
+    name: "GTM Agentic Platform",
+    metric: "€3M+",
+    metricLabel: "R&D Codebase",
+    desc: "Co-founding a plug-and-play GTM platform (€33B TAM) with an established EU procurement founder. Enterprises connect their vendor and customer data — the cognition layer handles discovery, qualification, matching, and onboarding autonomously. Full vendor lifecycle outsourced to AI, not to a consulting firm. Built on €3M+ of existing R&D.",
+    role: "Co-Founder — Cognition Architecture",
     color: "#0071e3",
     url: "",
   },
@@ -146,8 +146,8 @@ const TEAM = [
     name: "Nico Fratila",
     title: "AI Infrastructure Architect",
     org: "APEX OS / InfoAcademy",
-    bio: "73+ production repos. 5 years network engineering at Lloyds Banking Group. APEX OS founder — 200+ skills deployed, persistent agent orchestration running 24/7. Currently architecting the AI agentic layer for a €33B TAM EU procurement platform.",
-    credentials: ["Lloyds Banking Group — Network Engineering (5 years)", "APEX OS — 73+ repos, 200+ skills deployed", "ProfiCircle — AI Agentic Layer Architect (in development)", "InfoAcademy — 20K+ learners, Orange Romania vendor"],
+    bio: "73+ production repos. 5 years network engineering at Lloyds Banking Group. APEX OS founder — 200+ skills deployed, persistent agent orchestration running 24/7. Co-founding a plug-and-play cognition platform that outsources the full vendor lifecycle to AI — built on €3M+ existing R&D with an established EU procurement founder.",
+    credentials: ["Lloyds Banking Group — Network Engineering (5 years)", "APEX OS — 73+ repos, 200+ skills deployed", "GTM Cognition Platform — Co-founder, €3M+ R&D, €33B TAM", "InfoAcademy — 20K+ learners, Orange Romania vendor"],
     linkedin: "https://linkedin.com/in/nicofratila",
     email: "nico.f@infoacademy.net",
     whatsapp: "+447722195774",
