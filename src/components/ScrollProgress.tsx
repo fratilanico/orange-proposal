@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 
 const sections = [
   { id: "hero", label: "Intro" },
-  { id: "problem", label: "The Problem" },
-  { id: "solution", label: "Solution" },
-  { id: "how", label: "How It Works" },
-  { id: "proof", label: "Proof" },
+  { id: "problem", label: "The Challenge" },
+  { id: "offer", label: "What We Offer" },
+  { id: "value", label: "The Value" },
+  { id: "proof", label: "Track Record" },
   { id: "team", label: "Team" },
-  { id: "pricing", label: "Pricing" },
-  { id: "cta", label: "Next Steps" },
+  { id: "engagement", label: "The Engagement" },
+  { id: "cta", label: "Contact" },
 ];
 
 export default function ScrollProgress() {

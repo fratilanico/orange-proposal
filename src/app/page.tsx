@@ -472,10 +472,10 @@ export default function Page() {
           <AnimateIn delay={0.4}>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-16">
               {[
-                { value: 25, prefix: "€", suffix: "K", label: "Starting Investment" },
-                { value: 10, prefix: "", suffix: " weeks", label: "To First Results" },
-                { value: 4, prefix: "", suffix: " agents", label: "Built By Your Team" },
-                { value: 12, prefix: "", suffix: " people", label: "Trained & Certified" },
+                { value: 25, prefix: "€", suffix: "K", label: "Entry Investment" },
+                { value: 18, prefix: "", suffix: " months", label: "To AI Independence" },
+                { value: 50, prefix: "", suffix: "+", label: "AI-Capable Staff" },
+                { value: 3, prefix: "", suffix: " phases", label: "Structured Engagement" },
               ].map((s, i) => (
                 <div key={i} className="text-center">
                   <div className="text-3xl font-black text-white">
@@ -537,34 +537,48 @@ export default function Page() {
         </div>
       </div>
 
-      {/* ── SOLUTION ─────────────────────────────────────────── */}
-      <section id="solution" className="py-24 px-6 bg-[#1d1d1f]">
+      {/* ── WHAT WE OFFER ────────────────────────────────────── */}
+      <section id="offer" className="py-24 px-6 bg-[#1d1d1f]">
         <div className="max-w-[900px] mx-auto text-center">
           <AnimateIn>
-            <p className="text-[12px] font-bold uppercase tracking-widest text-[#ff7900] mb-3">The Solution</p>
+            <p className="text-[12px] font-bold uppercase tracking-widest text-[#ff7900] mb-3">What We Offer</p>
             <h2 className="text-4xl lg:text-5xl font-black text-white leading-tight">
-              Don&apos;t buy AI tools.
+              We transfer AI capability.
               <br />
-              <span className="text-[#ff7900]">Build AI capability.</span>
+              <span className="text-[#ff7900]">You build it. You own it. You run it.</span>
             </h2>
-            <p className="text-lg text-white/50 mt-6 max-w-[700px] mx-auto leading-relaxed">
-              IBM, Accenture, and Ericsson sell products that create dependency.
-              We transfer capability that creates independence.
-              Your team learns by building real agents that solve real Orange problems.
-              The architecture emerges from what they build.
+            <p className="text-lg text-white/50 mt-6 max-w-[680px] mx-auto leading-relaxed">
+              IBM and Accenture deliver products — and a renewal invoice. We deliver an architectural capability that lives inside Orange permanently. Your people build the agents. The methodology is ours. The outcome is yours.
             </p>
           </AnimateIn>
-          <AnimateIn delay={0.2}>
-            <div className="grid sm:grid-cols-3 gap-6 mt-16">
+          <AnimateIn delay={0.15}>
+            <div className="grid sm:grid-cols-3 gap-6 mt-14">
               {[
-                { icon: <Users size={28} />, title: "Train", desc: "8–12 of your people learn AI architecture by building — not by watching slides" },
-                { icon: <Brain size={28} />, title: "Build", desc: "Each team creates a working AI agent that solves a real Orange operational problem — owned by Orange" },
-                { icon: <Target size={28} />, title: "Architect", desc: "Real agents running inside Orange's systems reveal the actual integration landscape. That intelligence becomes an architecture blueprint built from evidence, not guesswork." },
+                { icon: <Users size={26} />, title: "Train", desc: "8–12 of your engineers and ops staff learn AI agent architecture by doing — not by watching slides." },
+                { icon: <Brain size={26} />, title: "Build", desc: "Each person builds a working AI agent solving a real Orange problem. Network triage, knowledge base, procurement analysis — Orange picks the use cases." },
+                { icon: <Target size={26} />, title: "Architect", desc: "Real agents running inside Orange's systems reveal the actual integration landscape. That evidence becomes your 18-month AI architecture blueprint." },
               ].map((s, i) => (
-                <div key={i} className="rounded-2xl p-6 bg-white/5 border border-white/8 text-left">
+                <div key={i} className="rounded-2xl p-6 bg-white/5 border border-white/[0.07] text-left">
                   <div className="text-[#ff7900] mb-4">{s.icon}</div>
-                  <h3 className="text-[17px] font-bold text-white mb-2">{s.title}</h3>
+                  <h3 className="text-[16px] font-bold text-white mb-2">{s.title}</h3>
                   <p className="text-[13px] text-white/50 leading-relaxed">{s.desc}</p>
+                </div>
+              ))}
+            </div>
+          </AnimateIn>
+          <AnimateIn delay={0.25}>
+            <div className="grid grid-cols-3 gap-0 mt-12 rounded-2xl overflow-hidden border border-white/[0.07] text-left text-[13px]">
+              {[
+                { label: "", apex: "APEX OS", them: "IBM / Accenture", isHeader: true },
+                { label: "Model", apex: "Capability transfer", them: "Product delivery" },
+                { label: "Ownership", apex: "You own every agent", them: "Vendor owns IP" },
+                { label: "After 18 months", apex: "You run independently", them: "Renewal required" },
+                { label: "Entry cost", apex: "€25–30K", them: "€300K+ minimum" },
+              ].map((row, i) => (
+                <div key={i} className="contents">
+                  <div className={`px-4 py-3 ${i === 0 ? "font-black text-[11px] uppercase tracking-widest text-white/30 bg-white/[0.04]" : "text-white/40"} border-b border-white/[0.05]`}>{row.label}</div>
+                  <div className={`px-4 py-3 ${i === 0 ? "font-black text-[11px] uppercase tracking-widest text-[#ff7900] bg-[#ff7900]/10" : "text-white font-semibold"} border-b border-l border-white/[0.05]`}>{row.apex}</div>
+                  <div className={`px-4 py-3 ${i === 0 ? "font-black text-[11px] uppercase tracking-widest text-white/30 bg-white/[0.04]" : "text-white/30"} border-b border-l border-white/[0.05]`}>{row.them}</div>
                 </div>
               ))}
             </div>
@@ -572,77 +586,61 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ── HOW IT WORKS ─────────────────────────────────────── */}
-      <section id="how" className="py-24 px-6">
-        <div className="max-w-[900px] mx-auto">
-          <AnimateIn>
-            <div className="text-center mb-16">
-              <p className="text-[12px] font-bold uppercase tracking-widest text-[#0071e3] mb-3">10-Week Program</p>
-              <h2 className="text-4xl lg:text-5xl font-black text-[#1d1d1f]">
-                Training that ships agents.
-              </h2>
-              <p className="text-lg text-[#6e6e73] mt-4 max-w-[600px] mx-auto">
-                Not a classroom course. A build program. Your team creates working AI agents — and the architecture blueprint emerges from what they build.
-              </p>
-            </div>
-          </AnimateIn>
-          <div className="grid gap-6">
-            {[
-              { week: "1–2", title: "Foundations", desc: "Agent patterns, orchestration, deterministic vs probabilistic pipelines, governance basics", color: "#ff7900" },
-              { week: "3–6", title: "Build Sprint", desc: "Each team selects a real Orange problem and builds a working AI agent. Network triage, knowledge base, procurement analysis, compliance monitoring — Orange picks.", color: "#0071e3" },
-              { week: "7–8", title: "Architecture Review", desc: "APEX reviews what your teams built. Synthesises patterns. Maps the integration opportunities that emerged from real builds against Orange's live systems.", color: "#6e3aff" },
-              { week: "9–10", title: "Roadmap Delivery", desc: "Living architecture blueprint on InfoAcademy — not a PDF. 18-month roadmap grounded in what your people actually built, not external assumptions about Orange's needs.", color: "#30d158" },
-            ].map((w, i) => (
-              <AnimateIn key={i} delay={i * 0.08}>
-                <div className="flex gap-6 items-start p-6 rounded-2xl hover:bg-[#f5f5f7] transition-colors">
-                  <div className="flex-shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center text-white font-black text-sm"
-                    style={{ background: w.color }}>
-                    W{w.week}
-                  </div>
-                  <div>
-                    <h3 className="text-[17px] font-bold text-[#1d1d1f]">{w.title}</h3>
-                    <p className="text-[13px] text-[#6e6e73] mt-1 leading-relaxed">{w.desc}</p>
-                  </div>
-                </div>
-              </AnimateIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── WHAT YOU GET ─────────────────────────────────────── */}
-      <section id="deliverables" className="py-24 px-6 bg-[#1d1d1f]">
+      {/* ── THE VALUE ────────────────────────────────────────── */}
+      <section id="value" className="py-24 px-6">
         <div className="max-w-[1120px] mx-auto">
           <AnimateIn>
             <div className="text-center mb-16">
-              <p className="text-[12px] font-bold uppercase tracking-widest text-[#ff7900] mb-3">Phase 1 Outputs</p>
-              <h2 className="text-4xl lg:text-5xl font-black text-white leading-tight">
-                10 weeks. Tangible outputs.
+              <p className="text-[12px] font-bold uppercase tracking-widest text-[#0071e3] mb-3">The Value for Orange</p>
+              <h2 className="text-4xl lg:text-5xl font-black text-[#1d1d1f]">
+                What this fixes.
                 <br />
-                <span className="text-[#ff7900]">You own everything we build.</span>
+                <span className="text-[#86868b]">Specifically. For you.</span>
               </h2>
-              <p className="text-lg text-white/50 mt-4 max-w-[600px] mx-auto">
-                Not a workshop deck. A build sprint with deliverables that outlast the engagement.
-              </p>
             </div>
           </AnimateIn>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 gap-5">
             {[
-              { icon: "🤖", title: "3–4 Working AI Agents", desc: "Built by YOUR team. Network triage, knowledge base, procurement analysis — you pick the use cases, we guide the build.", color: "#ff7900" },
-              { icon: "🗺️", title: "Living Architecture Blueprint", desc: "Not a PDF. A structured environment on InfoAcademy that evolves as your stack does. Phase 2 continuity is built in.", color: "#0071e3" },
-              { icon: "👥", title: "12 Trained Employees", desc: "Engineers and ops people who understand AI agent architecture. Your internal champions for scale in Phase 2.", color: "#6e3aff" },
-              { icon: "📋", title: "18-Month AI Roadmap", desc: "Derived from the integration walls your team actually hits — not APEX assumptions. Your findings become your strategy.", color: "#30d158" },
-              { icon: "🔒", title: "Governance Foundation", desc: "Shadow AI visibility, standards, audit trails. The foundation you need before scaling to 50+ AI-capable staff.", color: "#ff453a" },
-              { icon: "📊", title: "Capability Assessment", desc: "Where Orange sits in AI maturity — honestly scored. Evidence for your leadership's Group AI mandate reporting.", color: "#ff9f0a" },
+              {
+                tag: "Djia — 52% success rate",
+                title: "Your voice AI is failing half the time.",
+                value: "In Phase 1, your team builds a Romanian NLP agent calibrated to your call patterns. Measurable improvement by week 6 — not 18 months from now.",
+                color: "#ff453a",
+                icon: "🤖",
+              },
+              {
+                tag: "€600M Group Mandate — 2028",
+                title: "Paris set the target. Bucharest needs to deliver.",
+                value: "Phase 1 produces 3–4 working agents and an architecture blueprint. Bucharest becomes the Group's AI reference implementation — political capital for your leadership.",
+                color: "#ff7900",
+                icon: "📊",
+              },
+              {
+                tag: "Shadow AI — No Governance",
+                title: "15 internal experiments. No coordination.",
+                value: "12 trained staff who speak the same AI architecture language. A governance framework that coordinates what's already happening internally — and scales it.",
+                color: "#6e3aff",
+                icon: "🔒",
+              },
+              {
+                tag: "Vendor Lock-In — Genesys, MATRIXX, IBM",
+                title: "Your stack already belongs to someone else.",
+                value: "Every agent your team builds belongs to Orange. The architecture blueprint lives on InfoAcademy. Zero APEX dependency after Phase 1 if you choose not to continue.",
+                color: "#0071e3",
+                icon: "🗝️",
+              },
             ].map((item, i) => (
-              <AnimateIn key={i} delay={i * 0.07}>
-                <div
-                  className="rounded-2xl p-6 bg-white/5 border border-white/[0.08] hover:bg-white/[0.08] transition-colors"
-                  style={{ borderTop: `2px solid ${item.color}` }}
-                >
-                  <div className="text-2xl mb-4">{item.icon}</div>
-                  <h3 className="text-[15px] font-bold text-white mb-2">{item.title}</h3>
-                  <p className="text-[13px] text-white/50 leading-relaxed">{item.desc}</p>
+              <AnimateIn key={i} delay={i * 0.1}>
+                <div className="rounded-2xl p-7 border border-[#e8e8ed] hover:border-[#d0d0d7] transition-colors">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="text-xl">{item.icon}</span>
+                    <span className="text-[11px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full"
+                      style={{ color: item.color, background: item.color + "12" }}>
+                      {item.tag}
+                    </span>
+                  </div>
+                  <h3 className="text-[17px] font-black text-[#1d1d1f] mb-3 leading-snug">{item.title}</h3>
+                  <p className="text-[13px] text-[#6e6e73] leading-relaxed">{item.value}</p>
                 </div>
               </AnimateIn>
             ))}
@@ -697,25 +695,99 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ── PRICING ──────────────────────────────────────────── */}
-      <section id="pricing" className="py-24 px-6 bg-[#1d1d1f]">
+      {/* ── THE ENGAGEMENT ───────────────────────────────────── */}
+      <section id="engagement" className="py-24 px-6 bg-[#1d1d1f]">
         <div className="max-w-[1000px] mx-auto">
           <AnimateIn>
             <div className="text-center mb-16">
               <p className="text-[12px] font-bold uppercase tracking-widest text-[#ff7900] mb-3">The Engagement</p>
               <h2 className="text-4xl lg:text-5xl font-black text-white leading-tight">
-                Start small. Prove value.
+                Three phases.
                 <br />
-                <span className="text-[#ff7900]">Then scale.</span>
+                <span className="text-[#ff7900]">18 months to AI independence.</span>
               </h2>
+              <p className="text-lg text-white/40 mt-4">Start at Phase 1. Scale when ready. Stop any time — you keep everything.</p>
             </div>
           </AnimateIn>
-          <div className="grid gap-6">
-          {PHASES.map((phase, i) => (
-            <AnimateIn key={i} delay={i * 0.12}>
-              <PhaseCard phase={phase} initialOpen={i === 0} />
-            </AnimateIn>
-          ))}
+
+          {/* Phase 1 — Always-open rich split card */}
+          <AnimateIn>
+            <div className="rounded-2xl overflow-hidden mb-6" style={{ border: "1px solid #ff790025" }}>
+              {/* Header */}
+              <div className="p-7 flex flex-col sm:flex-row items-start justify-between gap-4"
+                style={{ background: "rgba(255,121,0,0.07)" }}>
+                <div>
+                  <div className="text-[11px] font-black uppercase tracking-widest text-[#ff7900] mb-2">
+                    Phase 01 — The Entry Point
+                  </div>
+                  <h3 className="text-2xl font-black text-white">AI Operations Lab</h3>
+                  <p className="text-[13px] text-white/40 mt-1">
+                    Funded from L&D budget · Below VP discretionary spend · No procurement committee
+                  </p>
+                </div>
+                <div className="flex-shrink-0 text-right">
+                  <div className="text-3xl font-black text-[#ff7900]">€25–30K</div>
+                  <div className="text-[12px] text-white/30 mt-0.5">10 weeks · Fixed fee</div>
+                </div>
+              </div>
+              {/* Split body */}
+              <div className="grid md:grid-cols-2">
+                {/* Left: 10-week timeline */}
+                <div className="p-7 border-b md:border-b-0 md:border-r border-white/[0.06]">
+                  <p className="text-[11px] font-black uppercase tracking-widest text-white/25 mb-5">10-Week Program</p>
+                  <div className="space-y-5">
+                    {[
+                      { week: "W1–2", title: "Foundations", desc: "Agent patterns, orchestration, deterministic vs probabilistic pipelines, governance basics", color: "#ff7900" },
+                      { week: "W3–6", title: "Build Sprint", desc: "Each team selects a real Orange use case — network triage, knowledge base, procurement analysis. Orange picks. We guide the build.", color: "#0071e3" },
+                      { week: "W7–8", title: "Architecture Review", desc: "APEX reviews what your teams built. Synthesises patterns. Maps integration opportunities against Orange's live systems.", color: "#6e3aff" },
+                      { week: "W9–10", title: "Roadmap Delivery", desc: "Living blueprint on InfoAcademy — not a PDF. 18-month roadmap grounded in what your people built, not external assumptions.", color: "#30d158" },
+                    ].map((w, i) => (
+                      <div key={i} className="flex gap-4 items-start">
+                        <div className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-[10px] font-black"
+                          style={{ background: w.color + "18", border: `1px solid ${w.color}35`, color: w.color }}>
+                          {w.week}
+                        </div>
+                        <div>
+                          <h4 className="text-[14px] font-bold text-white">{w.title}</h4>
+                          <p className="text-[12px] text-white/35 mt-0.5 leading-relaxed">{w.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                {/* Right: Deliverables */}
+                <div className="p-7">
+                  <p className="text-[11px] font-black uppercase tracking-widest text-white/25 mb-5">What You Get</p>
+                  <div className="space-y-4">
+                    {[
+                      { icon: "🤖", title: "3–4 Working AI Agents", desc: "Built by YOUR team. Owned by Orange." },
+                      { icon: "🗺️", title: "Living Architecture Blueprint", desc: "On InfoAcademy — not a PDF. Evolves with your stack." },
+                      { icon: "👥", title: "12 Trained Employees", desc: "Your internal AI champions. Ready to scale Phase 2." },
+                      { icon: "📋", title: "18-Month AI Roadmap", desc: "Grounded in your builds, not consultant assumptions." },
+                      { icon: "🔒", title: "Governance Foundation", desc: "Standards, audit trails, shadow AI visibility." },
+                      { icon: "📊", title: "Capability Assessment", desc: "Evidence for your Group AI mandate reporting." },
+                    ].map((item, i) => (
+                      <div key={i} className="flex gap-3 items-start">
+                        <span className="text-base flex-shrink-0 mt-0.5">{item.icon}</span>
+                        <div>
+                          <h4 className="text-[13px] font-bold text-white">{item.title}</h4>
+                          <p className="text-[11px] text-white/35 leading-relaxed">{item.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </AnimateIn>
+
+          {/* Phases 2 + 3 */}
+          <div className="grid gap-4">
+            {PHASES.slice(1).map((phase, i) => (
+              <AnimateIn key={i} delay={(i + 1) * 0.12}>
+                <PhaseCard phase={phase} initialOpen={false} />
+              </AnimateIn>
+            ))}
           </div>
         </div>
       </section>

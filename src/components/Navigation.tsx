@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const sections = [
-  { href: "#problem", label: "The Problem" },
-  { href: "#solution", label: "Solution" },
-  { href: "#how", label: "How It Works" },
-  { href: "#proof", label: "Proof" },
+  { href: "#problem", label: "The Challenge" },
+  { href: "#offer", label: "What We Offer" },
+  { href: "#value", label: "The Value" },
+  { href: "#proof", label: "Track Record" },
   { href: "#team", label: "Team" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#cta", label: "Next Steps" },
+  { href: "#engagement", label: "The Engagement" },
+  { href: "#cta", label: "Contact" },
 ];
 
 export default function Navigation() {
