@@ -168,6 +168,7 @@ const PROOF_POINTS = [
 const TEAM = [
   {
     name: "Nico Fratila",
+    location: "London",
     title: "AI Infrastructure Architect",
     org: "APEX OS / InfoAcademy",
     bio: "5 years network engineering at Lloyds Banking Group. Founded APEX OS — architectural cognition with 200+ skills running 24/7.",
@@ -178,6 +179,7 @@ const TEAM = [
   },
   {
     name: "Bogdan Toporan",
+    location: "Cluj",
     title: "Engineering Leader & AI Architect",
     org: "ARANDI / ex-Telenav / ex-HP",
     bio: "17+ years enterprise architecture. 2 years focused on AI Agent Orchestration and RAG. Led 40+ engineer teams. US Patent holder.",
@@ -188,6 +190,7 @@ const TEAM = [
   },
   {
     name: "Hardik Nakum",
+    location: "London",
     title: "Principal Cloud Architect",
     org: "Lloyds Banking Group",
     bio: "10+ years at Lloyds leading multi-cloud re-architecture across Azure, AWS, and GCP. Agentic System Design and Cybersecurity.",
@@ -195,6 +198,17 @@ const TEAM = [
     linkedin: "https://linkedin.com/in/hardik-nakum",
     email: "",
     color: "#0071e3",
+  },
+  {
+    name: "Alexandru Vasile",
+    location: "San Francisco",
+    title: "DevOps & MLOps Engineer",
+    org: "Orthant Software / ex-Rezatec / ex-Broadberry",
+    bio: "7+ years across DevOps, cloud infrastructure, and automation. Applied Masters in Modern ML Techniques. NLP and LLM specialist.",
+    credentials: ["Orthant Software — DevOps & MLOps (US)", "Rezatec — Cloud Migration, GCP + Azure (5 years)", "Broadberry Data Systems — Infrastructure (6 years)"],
+    linkedin: "https://linkedin.com/in/vmalex",
+    email: "",
+    color: "#30d158",
   },
 ];
 
@@ -387,35 +401,38 @@ function WhatsAppIcon({ size = 14 }: { size?: number }) {
 
 function TeamCard({ person }: { person: typeof TEAM[0] }) {
   return (
-    <div className="rounded-2xl p-7 h-full flex flex-col" style={{ background: person.color + "06", border: `1px solid ${person.color}18` }}>
-      <div className="flex items-center gap-4 mb-4">
-        <div className="w-12 h-12 rounded-xl flex items-center justify-center text-white text-sm font-black flex-shrink-0"
-          style={{ background: person.color }}>
-          {person.name.split(" ").map(n => n[0]).join("")}
-        </div>
-        <div>
-          <h3 className="text-[17px] font-bold text-[#1d1d1f] leading-tight">{person.name}</h3>
-          <p className="text-[12px] font-semibold" style={{ color: person.color }}>{person.title}</p>
-          <p className="text-[10px] text-[#86868b] uppercase tracking-wider">{person.org}</p>
-        </div>
+    <div className="rounded-2xl p-6 h-full flex flex-col" style={{ background: person.color + "06", border: `1px solid ${person.color}18` }}>
+      {/* Avatar */}
+      <div className="w-11 h-11 rounded-xl flex items-center justify-center text-white text-[12px] font-black mb-4"
+        style={{ background: person.color }}>
+        {person.name.split(" ").map(n => n[0]).join("")}
       </div>
-      <p className="text-[13px] text-[#6e6e73] leading-relaxed">{person.bio}</p>
-      <ul className="mt-3 space-y-1.5 flex-1">
+      {/* Name + location */}
+      <h3 className="text-[16px] font-bold text-[#1d1d1f] leading-tight">{person.name}</h3>
+      <p className="text-[10px] text-[#86868b] mt-0.5">{person.location}</p>
+      {/* Title */}
+      <p className="text-[12px] font-semibold mt-2" style={{ color: person.color }}>{person.title}</p>
+      <p className="text-[10px] text-[#86868b] uppercase tracking-wider mt-0.5">{person.org}</p>
+      {/* Bio */}
+      <p className="text-[12px] text-[#6e6e73] leading-relaxed mt-3">{person.bio}</p>
+      {/* Credentials */}
+      <ul className="mt-3 space-y-1 flex-1">
         {person.credentials.map((c, i) => (
-          <li key={i} className="text-[12px] text-[#6e6e73] flex items-start gap-2">
+          <li key={i} className="text-[11px] text-[#6e6e73] flex items-start gap-2">
             <span style={{ color: person.color }} className="mt-0.5 flex-shrink-0">✓</span> {c}
           </li>
         ))}
       </ul>
-      <div className="mt-4 pt-3 border-t flex items-center gap-4" style={{ borderColor: person.color + "15" }}>
+      {/* Contact */}
+      <div className="mt-3 pt-3 border-t flex items-center gap-3" style={{ borderColor: person.color + "15" }}>
         <a href={person.linkedin} target="_blank" rel="noopener"
-          className="flex items-center gap-1.5 text-[11px] font-semibold hover:underline" style={{ color: person.color }}>
-          <Linkedin size={12} /> LinkedIn
+          className="flex items-center gap-1 text-[11px] font-semibold hover:underline" style={{ color: person.color }}>
+          <Linkedin size={11} /> LinkedIn
         </a>
         {person.email && (
           <a href={`mailto:${person.email}`}
-            className="flex items-center gap-1.5 text-[11px] font-semibold hover:underline" style={{ color: person.color }}>
-            <Mail size={12} /> Email
+            className="flex items-center gap-1 text-[11px] font-semibold hover:underline" style={{ color: person.color }}>
+            <Mail size={11} /> Email
           </a>
         )}
       </div>
@@ -742,9 +759,9 @@ export default function Page() {
               </p>
             </div>
           </AnimateIn>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {TEAM.map((person, i) => (
-              <AnimateIn key={i} delay={i * 0.12}>
+              <AnimateIn key={i} delay={i * 0.1}>
                 <TeamCard person={person} />
               </AnimateIn>
             ))}
