@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import AnimateIn from "@/components/AnimateIn";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import StatsTicker from "@/components/StatsTicker";
-import { ChevronDown, Zap, Users, Brain, Shield, TrendingUp, Target, Phone, Mail, Linkedin } from "lucide-react";
+import { ChevronDown, Users, Brain, Target, Phone, Mail, Linkedin } from "lucide-react";
 
 /* ══════════════════════════════════════════════════════════════
    DATA
@@ -105,12 +105,12 @@ const PHASES = [
 const PROOF_POINTS = [
   {
     name: "ProfiCircle",
-    metric: "100+",
-    metricLabel: "Enterprise Clients",
-    desc: "Agentic GTM system deployed for EU procurement platform. €33B TAM. Clients include Bolt, Wolt, JLL, Danone, Volvo, PERI. Full 8-agent orchestration: email, LinkedIn, voice, AI classification.",
-    role: "CTO — AI Orchestration Layer",
+    metric: "8",
+    metricLabel: "Agent Orchestration",
+    desc: "Building the AI agentic layer for an EU procurement platform (€33B TAM). Architecture: 8-agent pipeline covering outreach, LinkedIn automation, voice enrichment, and AI candidate classification. In active development.",
+    role: "AI Agentic Layer — Architect & Builder",
     color: "#0071e3",
-    url: "https://proficircle-deck-six5.vercel.app",
+    url: "",
   },
   {
     name: "ProfileSense",
@@ -146,11 +146,12 @@ const TEAM = [
     name: "Nico Fratila",
     title: "AI Infrastructure Architect",
     org: "APEX OS / InfoAcademy",
-    bio: "73+ production repos. ProfiCircle CTO. 5 years network engineering at Lloyds Banking Group. APEX OS founder — 6 persistent agents, 70+ skills. Building AI systems that run themselves.",
-    credentials: ["Lloyds Banking Group — Network Engineering", "APEX OS — 6 agents, 49 repos, 70+ skills", "ProfiCircle — CTO, 100+ enterprise clients", "InfoAcademy — 20K+ learners"],
+    bio: "73+ production repos. 5 years network engineering at Lloyds Banking Group. APEX OS founder — 6 persistent agents, 70+ skills. Currently architecting the AI agentic layer for a €33B TAM EU procurement platform. Building AI systems that run themselves.",
+    credentials: ["Lloyds Banking Group — Network Engineering (5 years)", "APEX OS — 6 agents, 49 repos, 70+ skills", "ProfiCircle — AI Agentic Layer Architect (in development)", "InfoAcademy — 20K+ learners, Orange Romania vendor"],
     linkedin: "https://linkedin.com/in/nicofratila",
     email: "nico.f@infoacademy.net",
-    phone: "+447778424242",
+    whatsapp: "+447722195774",
+    phoneRO: "+40743164820",
     color: "#ff7900",
   },
   {
@@ -161,7 +162,8 @@ const TEAM = [
     credentials: ["Vodafone — NOC Engineer, 200+ critical alerts", "100K+ Udemy students, 185 countries", "CCNP, CCNA, CCDA, JNCIA, ISTQB certified", "Politehnica Bucharest — BS Telecommunications"],
     linkedin: "https://linkedin.com/in/tmihaicatalin",
     email: "",
-    phone: "",
+    whatsapp: "",
+    phoneRO: "",
     color: "#0071e3",
   },
 ];
@@ -233,8 +235,8 @@ function PainCard({ point, index }: { point: typeof PAIN_POINTS[0]; index: numbe
   );
 }
 
-function PhaseCard({ phase }: { phase: typeof PHASES[0] }) {
-  const [open, setOpen] = useState(false);
+function PhaseCard({ phase, initialOpen = false }: { phase: typeof PHASES[0]; initialOpen?: boolean }) {
+  const [open, setOpen] = useState(initialOpen);
   return (
     <motion.div
       whileHover={{ scale: 1.01 }}
@@ -288,20 +290,41 @@ function PhaseCard({ phase }: { phase: typeof PHASES[0] }) {
 }
 
 function ProofCard({ point, index }: { point: typeof PROOF_POINTS[0]; index: number }) {
+  const inner = (
+    <div
+      className={`block rounded-2xl p-6 transition-all ${point.url ? "hover:scale-[1.02] hover:-translate-y-1 cursor-pointer" : ""}`}
+      style={{ background: point.color + "06", border: `1px solid ${point.color}18` }}
+    >
+      <div className="flex items-baseline gap-2 mb-3">
+        <span className="text-3xl font-black" style={{ color: point.color }}>{point.metric}</span>
+        <span className="text-[11px] font-bold uppercase tracking-widest text-[#86868b]">{point.metricLabel}</span>
+      </div>
+      <h3 className="text-[17px] font-bold text-[#1d1d1f] mb-1">{point.name}</h3>
+      <p className="text-[11px] font-medium uppercase tracking-wider mb-2" style={{ color: point.color }}>{point.role}</p>
+      <p className="text-[13px] text-[#6e6e73] leading-relaxed">{point.desc}</p>
+      {!point.url && (
+        <span className="inline-flex items-center gap-1 mt-3 text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full"
+          style={{ color: point.color, background: point.color + "15" }}>
+          In Development
+        </span>
+      )}
+    </div>
+  );
   return (
     <AnimateIn delay={index * 0.1}>
-      <a href={point.url} target="_blank" rel="noopener"
-        className="block rounded-2xl p-6 transition-all hover:scale-[1.02] hover:-translate-y-1"
-        style={{ background: point.color + "06", border: `1px solid ${point.color}18` }}>
-        <div className="flex items-baseline gap-2 mb-3">
-          <span className="text-3xl font-black" style={{ color: point.color }}>{point.metric}</span>
-          <span className="text-[11px] font-bold uppercase tracking-widest text-[#86868b]">{point.metricLabel}</span>
-        </div>
-        <h3 className="text-[17px] font-bold text-[#1d1d1f] mb-1">{point.name}</h3>
-        <p className="text-[11px] font-medium uppercase tracking-wider mb-2" style={{ color: point.color }}>{point.role}</p>
-        <p className="text-[13px] text-[#6e6e73] leading-relaxed">{point.desc}</p>
-      </a>
+      {point.url
+        ? <a href={point.url} target="_blank" rel="noopener">{inner}</a>
+        : inner
+      }
     </AnimateIn>
+  );
+}
+
+function WhatsAppIcon({ size = 14 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
   );
 }
 
@@ -323,17 +346,29 @@ function TeamCard({ person }: { person: typeof TEAM[0] }) {
           </li>
         ))}
       </ul>
-      <div className="flex gap-3 mt-5">
+      <div className="mt-5 space-y-2">
         {person.linkedin && (
           <a href={person.linkedin} target="_blank" rel="noopener"
-            className="text-[11px] font-bold uppercase tracking-wider hover:underline" style={{ color: person.color }}>
-            LinkedIn →
+            className="flex items-center gap-2 text-[12px] font-semibold hover:underline" style={{ color: person.color }}>
+            <Linkedin size={13} /> LinkedIn
           </a>
         )}
         {person.email && (
           <a href={`mailto:${person.email}`}
-            className="text-[11px] font-bold uppercase tracking-wider hover:underline" style={{ color: person.color }}>
-            Email →
+            className="flex items-center gap-2 text-[12px] font-semibold hover:underline" style={{ color: person.color }}>
+            <Mail size={13} /> {person.email}
+          </a>
+        )}
+        {person.whatsapp && (
+          <a href={`https://wa.me/${person.whatsapp.replace(/\+/g, "")}`} target="_blank" rel="noopener"
+            className="flex items-center gap-2 text-[12px] font-semibold text-[#25d366] hover:underline">
+            <WhatsAppIcon size={13} /> {person.whatsapp}
+          </a>
+        )}
+        {person.phoneRO && (
+          <a href={`tel:${person.phoneRO}`}
+            className="flex items-center gap-2 text-[12px] text-[#86868b] hover:text-[#1d1d1f] transition-colors">
+            <Phone size={13} /> {person.phoneRO} <span className="text-[10px] uppercase tracking-widest opacity-60">RO</span>
           </a>
         )}
       </div>
@@ -389,13 +424,23 @@ export default function Page() {
         style={{ background: "linear-gradient(135deg, #1d1d1f 0%, #0a0a0a 50%, #1a0800 100%)" }}>
         <div className="absolute inset-0 opacity-20"
           style={{ backgroundImage: "radial-gradient(circle at 70% 30%, #ff790030 0%, transparent 60%)" }} />
+        <div className="absolute inset-0 opacity-[0.04]"
+          style={{ backgroundImage: "radial-gradient(circle, #ffffff 1px, transparent 1px)", backgroundSize: "36px 36px" }} />
         <div className="relative z-10 max-w-[900px] mx-auto px-6 text-center">
           <AnimateIn>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 mb-8">
-              <span className="w-2 h-2 rounded-full bg-[#30d158] animate-pulse" />
-              <span className="text-[12px] text-white/60 uppercase tracking-widest font-medium">
-                InfoAcademy — Existing Orange Romania Vendor
-              </span>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5">
+                <span className="w-2 h-2 rounded-full bg-[#30d158] animate-pulse" />
+                <span className="text-[12px] text-white/60 uppercase tracking-widest font-medium">
+                  InfoAcademy — Existing Orange Romania Vendor
+                </span>
+              </div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#ff7900]/30 bg-[#ff7900]/10">
+                <span className="text-[12px]">⚡</span>
+                <span className="text-[12px] text-[#ff9a40] font-semibold">
+                  Paris AI Studio is live. Bucharest has until 2028.
+                </span>
+              </div>
             </div>
           </AnimateIn>
           <AnimateIn delay={0.1}>
@@ -413,10 +458,10 @@ export default function Page() {
           </AnimateIn>
           <AnimateIn delay={0.3}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-              <a href="#pricing"
+              <a href="#problem"
                 className="px-8 py-4 rounded-xl text-white font-semibold text-[15px] transition-all hover:scale-105"
                 style={{ background: "#ff7900" }}>
-                View Proposal →
+                See the Problem →
               </a>
               <a href="#proof"
                 className="px-8 py-4 rounded-xl text-white/80 font-semibold text-[15px] border border-white/15 hover:bg-white/5 transition-all">
@@ -427,14 +472,14 @@ export default function Page() {
           <AnimateIn delay={0.4}>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-16">
               {[
-                { value: 25, suffix: "K", label: "POC Investment (€)" },
-                { value: 10, suffix: " weeks", label: "To First Results" },
-                { value: 4, suffix: " agents", label: "Built By Your Team" },
-                { value: 12, suffix: " people", label: "Trained & Certified" },
+                { value: 25, prefix: "€", suffix: "K", label: "Starting Investment" },
+                { value: 10, prefix: "", suffix: " weeks", label: "To First Results" },
+                { value: 4, prefix: "", suffix: " agents", label: "Built By Your Team" },
+                { value: 12, prefix: "", suffix: " people", label: "Trained & Certified" },
               ].map((s, i) => (
                 <div key={i} className="text-center">
                   <div className="text-3xl font-black text-white">
-                    <AnimatedCounter to={s.value} suffix={s.suffix} />
+                    <AnimatedCounter to={s.value} prefix={s.prefix ?? ""} suffix={s.suffix} />
                   </div>
                   <div className="text-[11px] text-white/40 uppercase tracking-widest mt-1">{s.label}</div>
                 </div>
@@ -468,6 +513,30 @@ export default function Page() {
         </div>
       </section>
 
+      {/* ── MICRO-CTA ────────────────────────────────────────── */}
+      <div className="py-10 px-6" style={{ background: "#ff7900" }}>
+        <div className="max-w-[900px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div>
+            <p className="text-white font-black text-xl sm:text-2xl leading-tight">
+              Seen enough? Start with €25K.
+            </p>
+            <p className="text-white/70 text-[14px] mt-1">
+              No procurement committee. No RFP. One conversation.
+            </p>
+          </div>
+          <a
+            href="https://wa.me/447722195774"
+            target="_blank"
+            rel="noopener"
+            className="flex-shrink-0 flex items-center gap-3 px-7 py-3.5 rounded-xl font-bold text-[15px] bg-white transition-all hover:scale-105 hover:shadow-xl"
+            style={{ color: "#ff7900" }}
+          >
+            <WhatsAppIcon size={18} />
+            WhatsApp Nico →
+          </a>
+        </div>
+      </div>
+
       {/* ── SOLUTION ─────────────────────────────────────────── */}
       <section id="solution" className="py-24 px-6 bg-[#1d1d1f]">
         <div className="max-w-[900px] mx-auto text-center">
@@ -488,9 +557,9 @@ export default function Page() {
           <AnimateIn delay={0.2}>
             <div className="grid sm:grid-cols-3 gap-6 mt-16">
               {[
-                { icon: <Users size={28} />, title: "Train", desc: "8-12 of your people learn AI architecture by building — not by watching slides" },
-                { icon: <Brain size={28} />, title: "Build", desc: "Each team creates a working internal AI agent solving a real Orange operational problem" },
-                { icon: <Target size={28} />, title: "Architect", desc: "The integration walls they hit become your AI infrastructure roadmap" },
+                { icon: <Users size={28} />, title: "Train", desc: "8–12 of your people learn AI architecture by building — not by watching slides" },
+                { icon: <Brain size={28} />, title: "Build", desc: "Each team creates a working AI agent that solves a real Orange operational problem — owned by Orange" },
+                { icon: <Target size={28} />, title: "Architect", desc: "Real agents running inside Orange's systems reveal the actual integration landscape. That intelligence becomes an architecture blueprint built from evidence, not guesswork." },
               ].map((s, i) => (
                 <div key={i} className="rounded-2xl p-6 bg-white/5 border border-white/8 text-left">
                   <div className="text-[#ff7900] mb-4">{s.icon}</div>
@@ -513,7 +582,7 @@ export default function Page() {
                 Training that ships agents.
               </h2>
               <p className="text-lg text-[#6e6e73] mt-4 max-w-[600px] mx-auto">
-                Not a classroom course. A build program. Your team creates working AI tools — the architecture is the byproduct.
+                Not a classroom course. A build program. Your team creates working AI agents — and the architecture blueprint emerges from what they build.
               </p>
             </div>
           </AnimateIn>
@@ -521,8 +590,8 @@ export default function Page() {
             {[
               { week: "1–2", title: "Foundations", desc: "Agent patterns, orchestration, deterministic vs probabilistic pipelines, governance basics", color: "#ff7900" },
               { week: "3–6", title: "Build Sprint", desc: "Each team selects a real Orange problem and builds a working AI agent. Network triage, knowledge base, procurement analysis, compliance monitoring — Orange picks.", color: "#0071e3" },
-              { week: "7–8", title: "Architecture Review", desc: "APEX audits what your teams built. Documents patterns. Identifies infrastructure gaps. Maps integration needs.", color: "#6e3aff" },
-              { week: "9–10", title: "Roadmap Delivery", desc: "Living architecture blueprint on InfoAcademy (not a PDF). 18-month roadmap. Capability assessment. Phase 2 scope defined by YOUR people's work.", color: "#30d158" },
+              { week: "7–8", title: "Architecture Review", desc: "APEX reviews what your teams built. Synthesises patterns. Maps the integration opportunities that emerged from real builds against Orange's live systems.", color: "#6e3aff" },
+              { week: "9–10", title: "Roadmap Delivery", desc: "Living architecture blueprint on InfoAcademy — not a PDF. 18-month roadmap grounded in what your people actually built, not external assumptions about Orange's needs.", color: "#30d158" },
             ].map((w, i) => (
               <AnimateIn key={i} delay={i * 0.08}>
                 <div className="flex gap-6 items-start p-6 rounded-2xl hover:bg-[#f5f5f7] transition-colors">
@@ -534,6 +603,46 @@ export default function Page() {
                     <h3 className="text-[17px] font-bold text-[#1d1d1f]">{w.title}</h3>
                     <p className="text-[13px] text-[#6e6e73] mt-1 leading-relaxed">{w.desc}</p>
                   </div>
+                </div>
+              </AnimateIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHAT YOU GET ─────────────────────────────────────── */}
+      <section id="deliverables" className="py-24 px-6 bg-[#1d1d1f]">
+        <div className="max-w-[1120px] mx-auto">
+          <AnimateIn>
+            <div className="text-center mb-16">
+              <p className="text-[12px] font-bold uppercase tracking-widest text-[#ff7900] mb-3">Phase 1 Outputs</p>
+              <h2 className="text-4xl lg:text-5xl font-black text-white leading-tight">
+                10 weeks. Tangible outputs.
+                <br />
+                <span className="text-[#ff7900]">You own everything we build.</span>
+              </h2>
+              <p className="text-lg text-white/50 mt-4 max-w-[600px] mx-auto">
+                Not a workshop deck. A build sprint with deliverables that outlast the engagement.
+              </p>
+            </div>
+          </AnimateIn>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              { icon: "🤖", title: "3–4 Working AI Agents", desc: "Built by YOUR team. Network triage, knowledge base, procurement analysis — you pick the use cases, we guide the build.", color: "#ff7900" },
+              { icon: "🗺️", title: "Living Architecture Blueprint", desc: "Not a PDF. A structured environment on InfoAcademy that evolves as your stack does. Phase 2 continuity is built in.", color: "#0071e3" },
+              { icon: "👥", title: "12 Trained Employees", desc: "Engineers and ops people who understand AI agent architecture. Your internal champions for scale in Phase 2.", color: "#6e3aff" },
+              { icon: "📋", title: "18-Month AI Roadmap", desc: "Derived from the integration walls your team actually hits — not APEX assumptions. Your findings become your strategy.", color: "#30d158" },
+              { icon: "🔒", title: "Governance Foundation", desc: "Shadow AI visibility, standards, audit trails. The foundation you need before scaling to 50+ AI-capable staff.", color: "#ff453a" },
+              { icon: "📊", title: "Capability Assessment", desc: "Where Orange sits in AI maturity — honestly scored. Evidence for your leadership's Group AI mandate reporting.", color: "#ff9f0a" },
+            ].map((item, i) => (
+              <AnimateIn key={i} delay={i * 0.07}>
+                <div
+                  className="rounded-2xl p-6 bg-white/5 border border-white/[0.08] hover:bg-white/[0.08] transition-colors"
+                  style={{ borderTop: `2px solid ${item.color}` }}
+                >
+                  <div className="text-2xl mb-4">{item.icon}</div>
+                  <h3 className="text-[15px] font-bold text-white mb-2">{item.title}</h3>
+                  <p className="text-[13px] text-white/50 leading-relaxed">{item.desc}</p>
                 </div>
               </AnimateIn>
             ))}
@@ -602,11 +711,11 @@ export default function Page() {
             </div>
           </AnimateIn>
           <div className="grid gap-6">
-            {PHASES.map((phase, i) => (
-              <AnimateIn key={i} delay={i * 0.12}>
-                <PhaseCard phase={phase} />
-              </AnimateIn>
-            ))}
+          {PHASES.map((phase, i) => (
+            <AnimateIn key={i} delay={i * 0.12}>
+              <PhaseCard phase={phase} initialOpen={i === 0} />
+            </AnimateIn>
+          ))}
           </div>
         </div>
       </section>
@@ -635,42 +744,72 @@ export default function Page() {
         style={{ background: "linear-gradient(135deg, #1d1d1f 0%, #0a0a0a 50%, #1a0800 100%)" }}>
         <div className="max-w-[700px] mx-auto text-center">
           <AnimateIn>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#ff7900]/30 bg-[#ff7900]/10 mb-6">
+              <span className="w-2 h-2 rounded-full bg-[#ff7900]" />
+              <span className="text-[12px] text-[#ff7900] font-semibold tracking-wide">Below VP discretionary spend — no committee needed</span>
+            </div>
             <h2 className="text-4xl lg:text-5xl font-black text-white leading-tight">
               Ready to build?
             </h2>
             <p className="text-lg text-white/50 mt-4">
-              10 weeks. €25-30K. Working AI agents built by your team.
+              10 weeks. €25–30K. Working AI agents built by your team.
               <br />
               If the agents don&apos;t deliver value, you still have 12 trained people.
             </p>
           </AnimateIn>
-          <AnimateIn delay={0.15}>
+
+          <AnimateIn delay={0.12}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+              <a href="https://wa.me/447722195774" target="_blank" rel="noopener"
+                className="px-8 py-4 rounded-xl text-white font-semibold text-[15px] transition-all hover:scale-105 flex items-center justify-center gap-2"
+                style={{ background: "#25d366" }}>
+                <WhatsAppIcon size={18} /> WhatsApp Nico
+              </a>
+              <a href="tel:+40743164820"
+                className="px-8 py-4 rounded-xl text-white/80 font-semibold text-[15px] border border-white/15 hover:bg-white/5 transition-all flex items-center justify-center gap-2">
+                <Phone size={16} /> +40 743 164 820 <span className="text-[11px] opacity-50">RO</span>
+              </a>
+            </div>
+          </AnimateIn>
+
+          <AnimateIn delay={0.22}>
             <div className="mt-10 grid sm:grid-cols-2 gap-6 text-left">
               {TEAM.map((person, i) => (
-                <div key={i} className="rounded-2xl p-6 bg-white/5 border border-white/8">
-                  <h3 className="text-[17px] font-bold text-white">{person.name}</h3>
-                  <p className="text-[12px] text-white/40 uppercase tracking-wider mt-0.5">{person.title}</p>
-                  <div className="mt-4 space-y-2">
+                <div key={i} className="rounded-2xl p-6 bg-white/5 border border-white/[0.08]">
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center text-white text-[11px] font-black mb-3"
+                    style={{ background: person.color }}>
+                    {person.name.split(" ").map(n => n[0]).join("")}
+                  </div>
+                  <h3 className="text-[15px] font-bold text-white">{person.name}</h3>
+                  <p className="text-[11px] text-white/40 uppercase tracking-wider mt-0.5">{person.title}</p>
+                  <div className="mt-3 space-y-1.5">
                     {person.email && (
-                      <a href={`mailto:${person.email}`} className="flex items-center gap-2 text-[13px] text-[#ff7900] hover:underline">
-                        <Mail size={14} /> {person.email}
+                      <a href={`mailto:${person.email}`} className="flex items-center gap-2 text-[12px] text-[#ff7900] hover:underline">
+                        <Mail size={12} /> {person.email}
                       </a>
                     )}
-                    {person.phone && (
-                      <a href={`tel:${person.phone}`} className="flex items-center gap-2 text-[13px] text-white/60 hover:text-white transition-colors">
-                        <Phone size={14} /> {person.phone}
+                    {person.whatsapp && (
+                      <a href={`https://wa.me/${person.whatsapp.replace(/\+/g, "")}`} target="_blank" rel="noopener"
+                        className="flex items-center gap-2 text-[12px] text-[#25d366] hover:underline">
+                        <WhatsAppIcon size={12} /> {person.whatsapp}
                       </a>
                     )}
-                    <a href={person.linkedin} target="_blank" rel="noopener" className="flex items-center gap-2 text-[13px] text-white/60 hover:text-white transition-colors">
-                      <Linkedin size={14} /> LinkedIn
+                    {person.phoneRO && (
+                      <a href={`tel:${person.phoneRO}`} className="flex items-center gap-2 text-[12px] text-white/50 hover:text-white transition-colors">
+                        <Phone size={12} /> {person.phoneRO} <span className="text-[10px] opacity-50">RO</span>
+                      </a>
+                    )}
+                    <a href={person.linkedin} target="_blank" rel="noopener" className="flex items-center gap-2 text-[12px] text-white/50 hover:text-white transition-colors">
+                      <Linkedin size={12} /> LinkedIn
                     </a>
                   </div>
                 </div>
               ))}
             </div>
           </AnimateIn>
-          <AnimateIn delay={0.3}>
-            <p className="text-[11px] text-white/20 uppercase tracking-widest mt-16">
+
+          <AnimateIn delay={0.35}>
+            <p className="text-[11px] text-white/20 uppercase tracking-widest mt-14">
               InfoAcademy × APEX OS — Bucharest, Romania · London, UK
             </p>
           </AnimateIn>
