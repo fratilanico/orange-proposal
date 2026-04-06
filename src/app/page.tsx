@@ -170,36 +170,30 @@ const TEAM = [
     name: "Nico Fratila",
     title: "AI Infrastructure Architect",
     org: "APEX OS / InfoAcademy",
-    bio: "5 years network engineering at Lloyds Banking Group. Founded APEX OS — a sovereign AI operating system with architectural cognition: 200+ self-evolving skills, persistent orchestration, and governance that runs autonomously 24/7. Co-founding a plug-and-play cognition platform that outsources the full vendor lifecycle to AI — built on €3M+ existing R&D with an established EU procurement founder.",
-    credentials: ["Lloyds Banking Group — Network Engineering (5 years)", "APEX OS — Architectural Cognition, 200+ skills, sovereign governance", "GTM Cognition Platform — Co-founder, €3M+ R&D, €33B TAM", "InfoAcademy — 20K+ learners, Orange Romania vendor"],
+    bio: "5 years network engineering at Lloyds Banking Group. Founded APEX OS — architectural cognition with 200+ skills running 24/7.",
+    credentials: ["Lloyds Banking Group — 5 years", "APEX OS — 200+ skills, sovereign governance", "InfoAcademy — Orange Romania vendor"],
     linkedin: "https://linkedin.com/in/nicofratila",
     email: "nico.f@infoacademy.net",
-    whatsapp: "+447722195774",
-    phoneRO: "+40743164820",
     color: "#ff7900",
   },
   {
     name: "Bogdan Toporan",
     title: "Engineering Leader & AI Architect",
-    org: "ARANDI / ex-Telenav / ex-Micro Focus HP",
-    bio: "2 years focused exclusively on AI Agent Orchestration, RAG, and workflow optimisation. 17+ years building scalable cloud-native systems (K8s, Microservices, Big Data) for global tech leaders. Led 40+ engineer teams. Secured $10M+ via technical POCs. US Patent holder in network monitoring.",
-    credentials: ["ARANDI — Founder & Principal Architect (AI Agentic Systems)", "Telenav — Senior Engineering Manager, 40+ engineers", "Micro Focus / HP — R&D Manager", "US Patent — Network Monitoring", "Transylvania Angels Network — Member"],
+    org: "ARANDI / ex-Telenav / ex-HP",
+    bio: "17+ years enterprise architecture. 2 years focused on AI Agent Orchestration and RAG. Led 40+ engineer teams. US Patent holder.",
+    credentials: ["ARANDI — Founder, AI Agentic Systems", "Telenav — 40+ engineers, Big Data", "Micro Focus / HP — R&D Manager"],
     linkedin: "https://linkedin.com/in/bogdan-toporan",
     email: "bogdan.toporan@hotmail.com",
-    whatsapp: "",
-    phoneRO: "",
     color: "#6e3aff",
   },
   {
     name: "Hardik Nakum",
-    title: "Principal Cloud Architect — Agentic AI",
+    title: "Principal Cloud Architect",
     org: "Lloyds Banking Group",
-    bio: "10+ years at Lloyds Banking Group leading multi-cloud re-architecture programs across Azure, AWS, and GCP. Built AI-powered frameworks for enterprise decisioning. Regulatory compliance (ISO-27001, DORA, NIST). Agentic System Design and Cybersecurity. Shares Lloyds network engineering background with Nico.",
-    credentials: ["Lloyds Banking Group — Principal Cloud Architect (3 years)", "Lloyds Banking Group — Network & Security Architect/Lead (7.5 years)", "PayPoint plc — Enterprise Architect", "Visa — Senior Network & Security SME"],
+    bio: "10+ years at Lloyds leading multi-cloud re-architecture across Azure, AWS, and GCP. Agentic System Design and Cybersecurity.",
+    credentials: ["Lloyds — Cloud Architect (3 years)", "Lloyds — Network & Security Lead (7.5 years)", "PayPoint / Visa — Enterprise Architect"],
     linkedin: "https://linkedin.com/in/hardik-nakum",
     email: "",
-    whatsapp: "",
-    phoneRO: "",
     color: "#0071e3",
   },
 ];
@@ -393,45 +387,35 @@ function WhatsAppIcon({ size = 14 }: { size?: number }) {
 
 function TeamCard({ person }: { person: typeof TEAM[0] }) {
   return (
-    <div className="rounded-2xl p-8" style={{ background: person.color + "06", border: `1px solid ${person.color}18` }}>
-      <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4 text-white text-lg font-black"
-        style={{ background: person.color }}>
-        {person.name.split(" ").map(n => n[0]).join("")}
+    <div className="rounded-2xl p-7 h-full flex flex-col" style={{ background: person.color + "06", border: `1px solid ${person.color}18` }}>
+      <div className="flex items-center gap-4 mb-4">
+        <div className="w-12 h-12 rounded-xl flex items-center justify-center text-white text-sm font-black flex-shrink-0"
+          style={{ background: person.color }}>
+          {person.name.split(" ").map(n => n[0]).join("")}
+        </div>
+        <div>
+          <h3 className="text-[17px] font-bold text-[#1d1d1f] leading-tight">{person.name}</h3>
+          <p className="text-[12px] font-semibold" style={{ color: person.color }}>{person.title}</p>
+          <p className="text-[10px] text-[#86868b] uppercase tracking-wider">{person.org}</p>
+        </div>
       </div>
-      <h3 className="text-xl font-bold text-[#1d1d1f]">{person.name}</h3>
-      <p className="text-[13px] font-semibold mt-1" style={{ color: person.color }}>{person.title}</p>
-      <p className="text-[12px] text-[#86868b] uppercase tracking-wider mt-0.5">{person.org}</p>
-      <p className="text-[13px] text-[#6e6e73] mt-4 leading-relaxed">{person.bio}</p>
-      <ul className="mt-4 space-y-1.5">
+      <p className="text-[13px] text-[#6e6e73] leading-relaxed">{person.bio}</p>
+      <ul className="mt-3 space-y-1.5 flex-1">
         {person.credentials.map((c, i) => (
           <li key={i} className="text-[12px] text-[#6e6e73] flex items-start gap-2">
-            <span style={{ color: person.color }} className="mt-0.5">✓</span> {c}
+            <span style={{ color: person.color }} className="mt-0.5 flex-shrink-0">✓</span> {c}
           </li>
         ))}
       </ul>
-      <div className="mt-5 space-y-2">
-        {person.linkedin && (
-          <a href={person.linkedin} target="_blank" rel="noopener"
-            className="flex items-center gap-2 text-[12px] font-semibold hover:underline" style={{ color: person.color }}>
-            <Linkedin size={13} /> LinkedIn
-          </a>
-        )}
+      <div className="mt-4 pt-3 border-t flex items-center gap-4" style={{ borderColor: person.color + "15" }}>
+        <a href={person.linkedin} target="_blank" rel="noopener"
+          className="flex items-center gap-1.5 text-[11px] font-semibold hover:underline" style={{ color: person.color }}>
+          <Linkedin size={12} /> LinkedIn
+        </a>
         {person.email && (
           <a href={`mailto:${person.email}`}
-            className="flex items-center gap-2 text-[12px] font-semibold hover:underline" style={{ color: person.color }}>
-            <Mail size={13} /> {person.email}
-          </a>
-        )}
-        {person.whatsapp && (
-          <a href={`https://wa.me/${person.whatsapp.replace(/\+/g, "")}`} target="_blank" rel="noopener"
-            className="flex items-center gap-2 text-[12px] font-semibold text-[#25d366] hover:underline">
-            <WhatsAppIcon size={13} /> {person.whatsapp}
-          </a>
-        )}
-        {person.phoneRO && (
-          <a href={`tel:${person.phoneRO}`}
-            className="flex items-center gap-2 text-[12px] text-[#86868b] hover:text-[#1d1d1f] transition-colors">
-            <Phone size={13} /> {person.phoneRO} <span className="text-[10px] uppercase tracking-widest opacity-60">RO</span>
+            className="flex items-center gap-1.5 text-[11px] font-semibold hover:underline" style={{ color: person.color }}>
+            <Mail size={12} /> Email
           </a>
         )}
       </div>
@@ -920,47 +904,40 @@ export default function Page() {
           <AnimateIn delay={0.22}>
             <div className="mt-10 grid lg:grid-cols-3 gap-5 text-left">
               {TEAM.map((person, i) => (
-                <div key={i} className="rounded-2xl overflow-hidden bg-white/[0.04] border border-white/[0.08]">
-                  {/* Header bar */}
-                  <div className="px-6 pt-6 pb-4 flex items-center gap-4" style={{ borderBottom: `1px solid ${person.color}25` }}>
-                    <div className="w-12 h-12 rounded-xl flex items-center justify-center text-white text-sm font-black flex-shrink-0"
+                <div key={i} className="rounded-2xl bg-white/[0.04] border border-white/[0.08] p-6 h-full flex flex-col">
+                  {/* Name + avatar */}
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-lg flex items-center justify-center text-white text-[11px] font-black flex-shrink-0"
                       style={{ background: person.color }}>
                       {person.name.split(" ").map(n => n[0]).join("")}
                     </div>
                     <div>
-                      <h3 className="text-[15px] font-black text-white leading-tight">{person.name}</h3>
-                      <p className="text-[11px] font-semibold mt-0.5" style={{ color: person.color }}>{person.title}</p>
+                      <h3 className="text-[14px] font-black text-white leading-tight">{person.name}</h3>
                       <p className="text-[10px] text-white/30 uppercase tracking-wider">{person.org}</p>
                     </div>
                   </div>
-                  {/* Bio */}
-                  <div className="px-6 py-4">
-                    <p className="text-[12px] text-white/50 leading-relaxed">{person.bio}</p>
-                    {/* Top credentials */}
-                    <div className="mt-3 space-y-1">
-                      {person.credentials.slice(0, 3).map((c, ci) => (
-                        <div key={ci} className="flex items-start gap-2 text-[11px] text-white/40">
-                          <span className="mt-0.5 flex-shrink-0" style={{ color: person.color }}>&#10003;</span> {c}
-                        </div>
-                      ))}
-                    </div>
-                    {/* Contact */}
-                    <div className="mt-4 pt-3 border-t border-white/[0.06] space-y-1.5">
-                      {person.email && (
-                        <a href={`mailto:${person.email}`} className="flex items-center gap-2 text-[11px] hover:underline" style={{ color: person.color }}>
-                          <Mail size={11} /> {person.email}
-                        </a>
-                      )}
-                      {person.whatsapp && (
-                        <a href={`https://wa.me/${person.whatsapp.replace(/\+/g, "")}`} target="_blank" rel="noopener"
-                          className="flex items-center gap-2 text-[11px] text-[#25d366] hover:underline">
-                          <WhatsAppIcon size={11} /> {person.whatsapp}
-                        </a>
-                      )}
-                      <a href={person.linkedin} target="_blank" rel="noopener" className="flex items-center gap-2 text-[11px] text-white/40 hover:text-white transition-colors">
-                        <Linkedin size={11} /> LinkedIn
+                  {/* Title */}
+                  <p className="text-[12px] font-semibold mb-3" style={{ color: person.color }}>{person.title}</p>
+                  {/* Bio as short line */}
+                  <p className="text-[12px] text-white/45 leading-relaxed mb-3">{person.bio}</p>
+                  {/* Credentials */}
+                  <div className="space-y-1.5 flex-1">
+                    {person.credentials.map((c, ci) => (
+                      <div key={ci} className="flex items-start gap-2 text-[11px] text-white/40">
+                        <span className="mt-0.5 flex-shrink-0" style={{ color: person.color }}>✓</span> {c}
+                      </div>
+                    ))}
+                  </div>
+                  {/* Contact */}
+                  <div className="mt-4 pt-3 border-t border-white/[0.06] flex items-center gap-4">
+                    <a href={person.linkedin} target="_blank" rel="noopener" className="flex items-center gap-1.5 text-[11px] text-white/40 hover:text-white transition-colors">
+                      <Linkedin size={11} /> LinkedIn
+                    </a>
+                    {person.email && (
+                      <a href={`mailto:${person.email}`} className="flex items-center gap-1.5 text-[11px] hover:underline" style={{ color: person.color }}>
+                        <Mail size={11} /> Email
                       </a>
-                    </div>
+                    )}
                   </div>
                 </div>
               ))}
