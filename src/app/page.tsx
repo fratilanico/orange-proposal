@@ -19,6 +19,12 @@ const PAIN_POINTS = [
     color: "#ff9f0a",
   },
   {
+    icon: "🇷🇴",
+    title: "Romanian NLP — Underdeveloped",
+    desc: "Language-specific AI models are weak. Romanian is underserved by major LLM providers. Orange can't buy this off the shelf — it needs to be built.",
+    color: "#ff9f0a",
+  },
+  {
     icon: "👻",
     title: "Shadow AI — No Governance",
     desc: "Internal teams are already experimenting with ChatGPT, Claude, LangChain. No coordination, no standards, no governance. Every team is reinventing the wheel.",
@@ -42,6 +48,12 @@ const PAIN_POINTS = [
     desc: "Thousands of emails arrive daily at serviciul.clienti@orange.ro, reclamatii@orange.ro, and other generic addresses. Every one is manually read, sorted, and forwarded. Urgent issues sit in the same queue as billing questions. At this volume, it never gets better — it only grows.",
     color: "#0071e3",
   },
+  {
+    icon: "🔗",
+    title: "Complex Stack — No AI Layer",
+    desc: "Genesys, MATRIXX, IBM and more — deep multi-year investments that aren't going anywhere. But none of them have an AI layer that Orange owns. Every new capability means another vendor dependency.",
+    color: "#86868b",
+  },
 ];
 
 const PHASES = [
@@ -50,7 +62,7 @@ const PHASES = [
     title: "Assess & Build",
     subtitle: "AI Operations Lab",
     duration: "10 weeks",
-    price: "€25–30K",
+    price: "€30K",
     color: "#ff7900",
     items: [
       "8-12 Orange employees selected (IT, CX, Operations mix)",
@@ -192,7 +204,7 @@ const OBJECTIONS = [
     a: "Paris builds tools. Tools without people who know how to use them are shelfware. We build the people AND the architecture. Bucharest delivering measurable AI value positions you as the Group's AI innovation lab — political capital for your leadership.",
   },
   {
-    q: "€25-30K seems cheap for 'architecture' but expensive for 'training'.",
+    q: "€30K seems cheap for 'architecture' but expensive for 'training'.",
     a: "It's neither. It's a 10-week build program where your people create working AI agents under expert guidance. The architecture emerges from what they build. You get trained people + working agents + a roadmap. Below VP discretionary spend threshold.",
   },
 ];
@@ -202,41 +214,18 @@ const OBJECTIONS = [
    ══════════════════════════════════════════════════════════════ */
 
 function PainCard({ point, index }: { point: typeof PAIN_POINTS[0]; index: number }) {
-  const [open, setOpen] = useState(false);
   return (
     <AnimateIn delay={index * 0.08}>
-      <motion.div
-        onClick={() => setOpen(!open)}
-        whileHover={{ scale: 1.02, y: -2 }}
-        whileTap={{ scale: 0.98 }}
-        className="cursor-pointer rounded-2xl p-6 transition-all"
+      <div
+        className="rounded-2xl p-6 h-full flex flex-col"
         style={{ background: point.color + "08", border: `1px solid ${point.color}20` }}
       >
-        <div className="flex items-start justify-between">
-          <div className="flex items-center gap-3">
-            <span className="text-2xl">{point.icon}</span>
-            <h3 className="text-[15px] font-semibold text-[#1d1d1f]">{point.title}</h3>
-          </div>
-          <ChevronDown
-            size={16}
-            className="text-[#86868b] transition-transform duration-300"
-            style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
-          />
+        <div className="flex items-center gap-3 mb-3">
+          <span className="text-2xl flex-shrink-0">{point.icon}</span>
+          <h3 className="text-[15px] font-semibold text-[#1d1d1f]">{point.title}</h3>
         </div>
-        <AnimatePresence>
-          {open && (
-            <motion.p
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="text-[13px] text-[#6e6e73] mt-3 leading-relaxed"
-            >
-              {point.desc}
-            </motion.p>
-          )}
-        </AnimatePresence>
-      </motion.div>
+        <p className="text-[13px] text-[#6e6e73] leading-relaxed flex-1">{point.desc}</p>
+      </div>
     </AnimateIn>
   );
 }
@@ -524,7 +513,7 @@ export default function Page() {
         <div className="max-w-[900px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <p className="text-white font-black text-xl sm:text-2xl leading-tight">
-              Seen enough? Start with €25–30K.
+              Seen enough? Start with €30K.
             </p>
             <p className="text-white/70 text-[14px] mt-1">
               No procurement committee. No RFP. One conversation.
@@ -593,7 +582,7 @@ export default function Page() {
                 { label: "Model", apex: "Capability transfer", them: "Product delivery" },
                 { label: "Ownership", apex: "You own every agent", them: "Vendor owns IP" },
                 { label: "After 18 months", apex: "You run independently", them: "Renewal required" },
-                { label: "Entry cost", apex: "€25–30K", them: "€300K+ minimum" },
+                { label: "Entry cost", apex: "€30K", them: "€300K+ minimum" },
               ].map((row, i) => (
                 <div key={i} className="contents">
                   <div className={`px-4 py-3 ${i === 0 ? "font-black text-[11px] uppercase tracking-widest text-white/30 bg-white/[0.04]" : "text-white/40"} border-b border-white/[0.05]`}>{row.label}</div>
@@ -746,7 +735,7 @@ export default function Page() {
                   </p>
                 </div>
                 <div className="flex-shrink-0 text-right">
-                  <div className="text-3xl font-black text-[#ff7900]">€25–30K</div>
+                  <div className="text-3xl font-black text-[#ff7900]">€30K</div>
                   <div className="text-[12px] text-white/30 mt-0.5">10 weeks · Fixed fee</div>
                 </div>
               </div>
@@ -844,7 +833,7 @@ export default function Page() {
               Ready to build?
             </h2>
             <p className="text-lg text-white/50 mt-4">
-              10 weeks. €25–30K. Working AI agents built by your team.
+              10 weeks. €30K. Working AI agents built by your team.
               <br />
               If the agents don&apos;t deliver value, you still have 12 trained people.
             </p>
