@@ -14,14 +14,8 @@ import { ChevronDown, Users, Brain, Target, Phone, Mail, Linkedin } from "lucide
 const PAIN_POINTS = [
   {
     icon: "📋",
-    title: "Contract Renewals — Massive Volume, Manual Process",
-    desc: "With 9.3M subscribers on rolling contracts, Orange handles hundreds of thousands of renewal events every month — and today every single one is reactive. A customer recently had to call in themselves, then waited 5 days for an offer. At that scale, even a small improvement in retention is significant revenue.",
-    color: "#ff9f0a",
-  },
-  {
-    icon: "🇷🇴",
-    title: "Romanian NLP — Underdeveloped",
-    desc: "Language-specific AI models are weak. Romanian is underserved by major LLM providers. Orange can't buy this off the shelf — it needs to be built.",
+    title: "Contract Renewals — Reactive, Slow",
+    desc: "With 9.3M subscribers on rolling contracts, Orange handles hundreds of thousands of renewal events monthly — and today every single one is reactive. A customer recently had to call in themselves, then waited 5 days for an offer. At that scale, even a small improvement in retention is significant revenue.",
     color: "#ff9f0a",
   },
   {
@@ -44,7 +38,7 @@ const PAIN_POINTS = [
   },
   {
     icon: "📧",
-    title: "Support Emails — Overwhelming Volume, Zero Routing",
+    title: "Support Emails — Manual Triage Daily",
     desc: "Thousands of emails arrive daily at serviciul.clienti@orange.ro, reclamatii@orange.ro, and other generic addresses. Every one is manually read, sorted, and forwarded. Urgent issues sit in the same queue as billing questions. At this volume, it never gets better — it only grows.",
     color: "#0071e3",
   },
@@ -530,7 +524,7 @@ export default function Page() {
         <div className="max-w-[900px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <p className="text-white font-black text-xl sm:text-2xl leading-tight">
-              Seen enough? Start with €25K.
+              Seen enough? Start with €25–30K.
             </p>
             <p className="text-white/70 text-[14px] mt-1">
               No procurement committee. No RFP. One conversation.
@@ -630,7 +624,7 @@ export default function Page() {
               {
                 tag: "Djia — 52% success rate",
                 title: "Your voice AI is failing half the time.",
-                value: "In Phase 1, your team builds a Romanian NLP agent calibrated to your call patterns. Measurable improvement by week 6 — not 18 months from now.",
+                value: "Phase 1 maps the integration landscape your team discovers while building agents against Orange's live systems. That evidence becomes the foundation for fixing Djia in Phase 2 — grounded in your stack, not external assumptions.",
                 color: "#ff453a",
                 icon: "🤖",
               },
