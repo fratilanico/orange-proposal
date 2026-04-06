@@ -19,9 +19,9 @@ const PAIN_POINTS = [
     color: "#ff453a",
   },
   {
-    icon: "🇷🇴",
-    title: "Romanian NLP — Underdeveloped",
-    desc: "Language-specific AI models are weak. Romanian is underserved by major LLM providers. Orange can't buy this off the shelf — it needs to be built.",
+    icon: "📋",
+    title: "Contract Renewals — 5-Day Wait",
+    desc: "Millions of contracts expire monthly. Today a customer has to call in themselves, wait for a callback, then wait 5 more days for an offer. That friction is churn Orange doesn't see coming.",
     color: "#ff9f0a",
   },
   {
@@ -43,9 +43,9 @@ const PAIN_POINTS = [
     color: "#30d158",
   },
   {
-    icon: "🏢",
-    title: "Vendor Lock-In Everywhere",
-    desc: "Genesys, MATRIXX, IBM — deep multi-year contracts. Internal AI capability is the only path that doesn't create another dependency.",
+    icon: "📧",
+    title: "Support Emails — Manual Triage, Daily",
+    desc: "Hundreds of emails hit generic contact addresses every day. Someone manually reads, sorts, and forwards each one. Urgent issues sit in the same queue as billing questions. Escalations happen late.",
     color: "#0071e3",
   },
 ];
@@ -60,13 +60,13 @@ const PHASES = [
     color: "#ff7900",
     items: [
       "8-12 Orange employees selected (IT, CX, Operations mix)",
-      "Customized AI architecture training on InfoAcademy platform",
-      "Weeks 1-2: Agent patterns, orchestration, deterministic pipelines",
-      "Weeks 3-6: Each team builds a working internal AI agent",
-      "Weeks 7-8: Architecture review, gap analysis",
-      "Weeks 9-10: Living architecture blueprint delivered",
-      "3-4 working internal AI agents as tangible output",
-      "Orange owns the agents. APEX retains methodology.",
+      "Weeks 1-2: Agent patterns, orchestration, deterministic pipelines, governance basics",
+      "Team A — Contract Renewal Agent: monitors expiring contracts, analyses customer profile, generates personalised renewal offer, delivers via WhatsApp or email automatically",
+      "Team B — Email Triage Agent: scans inbound support emails, sets priority, routes to the correct department — no manual sorting",
+      "Team C — Orange picks the 3rd use case from their own operations",
+      "Weeks 7-8: Architecture review against Orange's live systems",
+      "Weeks 9-10: Living architecture blueprint + 18-month roadmap delivered",
+      "Orange owns every agent built. APEX retains methodology.",
     ],
   },
   {
@@ -602,32 +602,32 @@ export default function Page() {
           <div className="grid sm:grid-cols-2 gap-5">
             {[
               {
+                tag: "Contract Renewals — 5-day wait today",
+                title: "Customers are churning before you reach them.",
+                value: "Phase 1 Team A builds the Contract Renewal Agent: monitors expiring contracts, reads the customer profile, generates a personalised offer and sends it via WhatsApp or email — automatically. No human in the loop until the customer says yes.",
+                color: "#ff9f0a",
+                icon: "📋",
+              },
+              {
+                tag: "Support Emails — manual triage, every day",
+                title: "Your people are sorting emails. AI should do this.",
+                value: "Phase 1 Team B builds the Email Triage Agent: scans every inbound email, scores urgency, routes to the right department automatically. Your agents handle the decisions — not the sorting.",
+                color: "#0071e3",
+                icon: "📧",
+              },
+              {
                 tag: "Djia — 52% success rate",
                 title: "Your voice AI is failing half the time.",
-                value: "In Phase 1, your team builds a Romanian NLP agent calibrated to your call patterns. Measurable improvement by week 6 — not 18 months from now.",
+                value: "Phase 1 maps the integration landscape against Orange's live systems. The 18-month roadmap that comes out of week 9-10 is the evidence base for fixing Djia — grounded in your stack, not external assumptions.",
                 color: "#ff453a",
                 icon: "🤖",
               },
               {
                 tag: "€600M Group Mandate — 2028",
                 title: "Paris set the target. Bucharest needs to deliver.",
-                value: "Phase 1 produces 3–4 working agents and an architecture blueprint. Bucharest becomes the Group's AI reference implementation — political capital for your leadership.",
+                value: "3–4 working agents, 12 trained staff, architecture blueprint. Concrete deliverables your leadership can show Group — not a pilot deck. Bucharest as the AI reference implementation.",
                 color: "#ff7900",
                 icon: "📊",
-              },
-              {
-                tag: "Shadow AI — No Governance",
-                title: "15 internal experiments. No coordination.",
-                value: "12 trained staff who speak the same AI architecture language. A governance framework that coordinates what's already happening internally — and scales it.",
-                color: "#6e3aff",
-                icon: "🔒",
-              },
-              {
-                tag: "Vendor Lock-In — Genesys, MATRIXX, IBM",
-                title: "Your stack already belongs to someone else.",
-                value: "Every agent your team builds belongs to Orange. The architecture blueprint lives on InfoAcademy. Zero APEX dependency after Phase 1 if you choose not to continue.",
-                color: "#0071e3",
-                icon: "🗝️",
               },
             ].map((item, i) => (
               <AnimateIn key={i} delay={i * 0.1}>
@@ -738,7 +738,7 @@ export default function Page() {
                   <div className="space-y-5">
                     {[
                       { week: "W1–2", title: "Foundations", desc: "Agent patterns, orchestration, deterministic vs probabilistic pipelines, governance basics", color: "#ff7900" },
-                      { week: "W3–6", title: "Build Sprint", desc: "Each team selects a real Orange use case — network triage, knowledge base, procurement analysis. Orange picks. We guide the build.", color: "#0071e3" },
+                      { week: "W3–6", title: "Build Sprint", desc: "Team A: Contract Renewal Agent — monitors expiring contracts, profiles the customer, sends personalised WhatsApp/email offer automatically. Team B: Email Triage Agent — scans inbound support emails, scores urgency, routes to the right department. Team C: Orange picks.", color: "#0071e3" },
                       { week: "W7–8", title: "Architecture Review", desc: "APEX reviews what your teams built. Synthesises patterns. Maps integration opportunities against Orange's live systems.", color: "#6e3aff" },
                       { week: "W9–10", title: "Roadmap Delivery", desc: "Living blueprint on InfoAcademy — not a PDF. 18-month roadmap grounded in what your people built, not external assumptions.", color: "#30d158" },
                     ].map((w, i) => (
