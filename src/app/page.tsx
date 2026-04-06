@@ -924,6 +924,10 @@ export default function Page() {
             <p className="text-[11px] text-white/20 uppercase tracking-widest mt-14">
               InfoAcademy × APEX OS — Bucharest, Romania · London, UK
             </p>
+            <a href="https://nico.apex.infoacademy.uk" target="_blank" rel="noopener"
+              className="inline-block mt-3 text-[11px] text-white/15 hover:text-[#ff7900] transition-colors tracking-wider">
+              nico.apex.infoacademy.uk
+            </a>
           </AnimateIn>
         </div>
       </section>
