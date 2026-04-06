@@ -902,49 +902,6 @@ export default function Page() {
           </AnimateIn>
 
           <AnimateIn delay={0.22}>
-            <div className="mt-10 grid lg:grid-cols-3 gap-5 text-left">
-              {TEAM.map((person, i) => (
-                <div key={i} className="rounded-2xl bg-white/[0.04] border border-white/[0.08] p-6 h-full flex flex-col">
-                  {/* Name + avatar */}
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-lg flex items-center justify-center text-white text-[11px] font-black flex-shrink-0"
-                      style={{ background: person.color }}>
-                      {person.name.split(" ").map(n => n[0]).join("")}
-                    </div>
-                    <div>
-                      <h3 className="text-[14px] font-black text-white leading-tight">{person.name}</h3>
-                      <p className="text-[10px] text-white/30 uppercase tracking-wider">{person.org}</p>
-                    </div>
-                  </div>
-                  {/* Title */}
-                  <p className="text-[12px] font-semibold mb-3" style={{ color: person.color }}>{person.title}</p>
-                  {/* Bio as short line */}
-                  <p className="text-[12px] text-white/45 leading-relaxed mb-3">{person.bio}</p>
-                  {/* Credentials */}
-                  <div className="space-y-1.5 flex-1">
-                    {person.credentials.map((c, ci) => (
-                      <div key={ci} className="flex items-start gap-2 text-[11px] text-white/40">
-                        <span className="mt-0.5 flex-shrink-0" style={{ color: person.color }}>✓</span> {c}
-                      </div>
-                    ))}
-                  </div>
-                  {/* Contact */}
-                  <div className="mt-4 pt-3 border-t border-white/[0.06] flex items-center gap-4">
-                    <a href={person.linkedin} target="_blank" rel="noopener" className="flex items-center gap-1.5 text-[11px] text-white/40 hover:text-white transition-colors">
-                      <Linkedin size={11} /> LinkedIn
-                    </a>
-                    {person.email && (
-                      <a href={`mailto:${person.email}`} className="flex items-center gap-1.5 text-[11px] hover:underline" style={{ color: person.color }}>
-                        <Mail size={11} /> Email
-                      </a>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </AnimateIn>
-
-          <AnimateIn delay={0.35}>
             <p className="text-[11px] text-white/20 uppercase tracking-widest mt-14">
               InfoAcademy × APEX OS — Bucharest, Romania · London, UK
             </p>
