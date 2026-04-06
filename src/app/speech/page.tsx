@@ -168,6 +168,49 @@ const SECTIONS = [
     ],
   },
   {
+    id: "champion",
+    label: "Building your internal champion",
+    color: "#30d158",
+    items: [
+      {
+        type: "note",
+        text: "The person who approves Phase 1 is not necessarily your champion. Your champion is the person who WANTS this to work — because they personally benefit from it succeeding.",
+      },
+      {
+        type: "task",
+        text: "In the first meeting: watch who asks the most questions. Who leans forward. Who takes notes. That's your champion candidate.",
+      },
+      {
+        type: "task",
+        text: "In week 1-2 of Phase 1: identify the 1-2 people in the training cohort who are genuinely excited. Not the assigned participants — the ones who stay late. Those become your champions.",
+      },
+      {
+        type: "plant",
+        text: "PLANT early (week 2-3 of Phase 1, one-on-one): \"You're one of maybe 12 people in Orange who understands how to build this. When this scales — and it will — that's a different position to be in.\"",
+      },
+      {
+        type: "plant",
+        text: "PLANT mid-program (week 5-6, when their agent is working): \"This agent your team built — this is the thing you show at the next Group review. Not a slide. A working system.\"",
+      },
+      {
+        type: "plant",
+        text: "PLANT at the close of Phase 1: \"Phase 2 needs someone inside Orange who owns it. That's not a consultant role — that's yours if you want it. The person who built this gets to run it.\"",
+      },
+      {
+        type: "rule",
+        text: "Champions need to feel ownership, not assignment. Never say 'you should champion this'. Make them feel like they chose it themselves.",
+      },
+      {
+        type: "rule",
+        text: "The champion is not the buyer. They're the person who emails you at 9pm to tell you their agent just handled its first real ticket. That's who you protect, promote, and keep close.",
+      },
+      {
+        type: "say",
+        text: "When the champion hits a wall internally — bureaucracy, budget, sceptical director: \"Tell me exactly what you need to move this forward. I'll build the case with you.\" Then actually do it.",
+      },
+    ],
+  },
+  {
     id: "ego",
     label: "The ego play — for senior, high-ego profiles",
     color: "#ff453a",
