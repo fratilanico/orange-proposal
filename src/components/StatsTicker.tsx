@@ -1,14 +1,14 @@
 "use client";
 
 const stats = [
-  { label: "Orange Revenue", value: "€1.416B" },
+  { label: "Orange Romania Revenue", value: "€1.416B" },
   { label: "Mobile Subscribers", value: "9.3M" },
-  { label: "AI Value Target", value: "€600M" },
+  { label: "Group AI Target by 2028", value: "€600M" },
   { label: "Djia Success Rate", value: "52%" },
-  { label: "APEX Repos", value: "73+" },
-  { label: "Students Trained", value: "100K+" },
-  { label: "Agents Active", value: "6" },
-  { label: "Skills Deployed", value: "70+" },
+  { label: "Contracts Expiring Monthly", value: "Millions" },
+  { label: "WhatsApp Users in Romania", value: "10M+" },
+  { label: "Combined Team Experience", value: "40+ yrs" },
+  { label: "Enterprise Repos in Production", value: "73+" },
 ];
 
 const items = [...stats, ...stats];
