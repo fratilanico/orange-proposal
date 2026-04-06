@@ -23,6 +23,16 @@ const PAIN_POINTS = [
     color: "#ff9f0a",
   },
   {
+    icon: "📧",
+    title: "Support Emails — Manual Triage",
+    bullets: [
+      "Thousands of emails arrive daily at serviciul.clienti@orange.ro, reclamatii@orange.ro and others",
+      "Every one is manually read, sorted, and forwarded — urgent issues sit beside billing questions",
+      "At this volume it never gets better, only grows — and every delay risks customer escalation",
+    ],
+    color: "#0071e3",
+  },
+  {
     icon: "🇷🇴",
     title: "Romanian NLP — Underdeveloped",
     bullets: [
@@ -61,16 +71,6 @@ const PAIN_POINTS = [
       "An AI-powered WhatsApp channel creates a new touchpoint for sales, support, and retention",
     ],
     color: "#30d158",
-  },
-  {
-    icon: "📧",
-    title: "Support Emails — Manual Triage Daily",
-    bullets: [
-      "Thousands of emails arrive daily at serviciul.clienti@orange.ro, reclamatii@orange.ro and others",
-      "Every one is manually read, sorted, and forwarded — urgent issues sit beside billing questions",
-      "At this volume it never gets better, only grows — and every delay risks customer escalation",
-    ],
-    color: "#0071e3",
   },
 ];
 
