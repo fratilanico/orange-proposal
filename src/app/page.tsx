@@ -14,7 +14,7 @@ import { ChevronDown, Users, Brain, Target, Phone, Mail, Linkedin } from "lucide
 const PAIN_POINTS = [
   {
     icon: "📋",
-    title: "Contract Renewals — Reactive, Slow",
+    title: "Contract Renewals — 5-Day Wait",
     bullets: [
       "Hundreds of thousands of renewal events every month across 9.3M subscribers",
       "Process is fully reactive — customers call in themselves, then wait days for an offer",
@@ -537,7 +537,7 @@ export default function Page() {
               {[
                 { value: 30, prefix: "€", suffix: "K", label: "Phase 1 Investment" },
                 { value: 18, prefix: "", suffix: " months", label: "To AI Independence" },
-                { value: 50, prefix: "", suffix: "+", label: "AI-Capable Staff" },
+                { value: 50, prefix: "", suffix: "+", label: "Agentic AI-Ready Staff" },
                 { value: 3, prefix: "", suffix: " phases", label: "Structured Engagement" },
               ].map((s, i) => (
                 <div key={i} className="text-center">
