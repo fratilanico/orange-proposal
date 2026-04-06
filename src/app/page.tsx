@@ -811,6 +811,67 @@ export default function Page() {
         </div>
       </section>
 
+      {/* ── WHERE THIS GOES ──────────────────────────────────── */}
+      <section className="py-24 px-6 bg-[#f5f5f7]">
+        <div className="max-w-[1000px] mx-auto">
+          <AnimateIn>
+            <div className="text-center mb-14">
+              <p className="text-[12px] font-bold uppercase tracking-widest text-[#6e3aff] mb-3">The Bigger Picture</p>
+              <h2 className="text-4xl lg:text-5xl font-black text-[#1d1d1f] leading-tight">
+                Phase 1 is the door.
+                <br />
+                <span className="text-[#86868b]">The infrastructure is behind it.</span>
+              </h2>
+              <p className="text-lg text-[#6e6e73] mt-4 max-w-[600px] mx-auto">
+                Orange&apos;s full AI infrastructure — deterministic pipelines, self-verifying decisions, EU AI Act compliant — built in four phases over 24 months.
+              </p>
+            </div>
+          </AnimateIn>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { phase: "01", title: "AI Operations Lab", price: "€25–30K", duration: "10 weeks", desc: "Train 12 staff. Ship 3–4 agents. Deliver architecture blueprint. Entry point via L&D budget.", color: "#ff7900", current: true, href: null },
+              { phase: "02", title: "Sovereign Infrastructure", price: "€150–200K", duration: "6 months", desc: "APEX OS deployed. WhatsApp gateway. AGENTS.md governance. Security hardening. Genesys/MATRIXX integration.", color: "#0071e3", current: false, href: "/phase-2" },
+              { phase: "03", title: "Architectural Cognition", price: "€350–450K", duration: "9 months", desc: "FDRP quality layer. N≥3 cross-model verification. Romanian NLP fine-tuning. EU AI Act compliance.", color: "#6e3aff", current: false, href: "/phase-3" },
+              { phase: "04", title: "Orange as AI Platform", price: "€500K–1M/yr", duration: "Ongoing", desc: "License Romanian NLP to Orange Group. AI-as-a-Service for B2B clients. Bucharest = Group AI hub.", color: "#30d158", current: false, href: null },
+            ].map((p, i) => (
+              <AnimateIn key={i} delay={i * 0.08}>
+                <div className={`rounded-2xl p-6 h-full flex flex-col ${p.current ? "border-2" : "border"}`}
+                  style={{ borderColor: p.color + (p.current ? "60" : "20"), background: p.color + (p.current ? "10" : "05") }}>
+                  {p.current && (
+                    <div className="text-[10px] font-black uppercase tracking-widest mb-3 flex items-center gap-1.5"
+                      style={{ color: p.color }}>
+                      <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: p.color }} />
+                      You are here
+                    </div>
+                  )}
+                  <div className="text-[11px] font-black uppercase tracking-widest mb-1" style={{ color: p.color }}>
+                    Phase {p.phase}
+                  </div>
+                  <h3 className="text-[16px] font-black text-[#1d1d1f] mb-1">{p.title}</h3>
+                  <div className="text-[13px] font-bold mb-3" style={{ color: p.color }}>{p.price} · {p.duration}</div>
+                  <p className="text-[12px] text-[#6e6e73] leading-relaxed flex-1">{p.desc}</p>
+                  {p.href && (
+                    <a href={p.href}
+                      className="mt-4 text-[11px] font-black uppercase tracking-widest hover:underline flex items-center gap-1"
+                      style={{ color: p.color }}>
+                      View Phase {p.phase} proposal →
+                    </a>
+                  )}
+                </div>
+              </AnimateIn>
+            ))}
+          </div>
+          <AnimateIn delay={0.4}>
+            <div className="mt-8 rounded-2xl p-6 bg-white border border-[#e8e8ed] text-center">
+              <p className="text-[13px] text-[#6e6e73]">
+                Total engagement over 24 months: <span className="font-black text-[#1d1d1f]">€1.0M – €1.7M</span> ·
+                Orange owns all IP at every phase · Stop any time · Keep everything you built
+              </p>
+            </div>
+          </AnimateIn>
+        </div>
+      </section>
+
       {/* ── CTA ──────────────────────────────────────────────── */}
       <section id="cta" className="py-24 px-6"
         style={{ background: "linear-gradient(135deg, #1d1d1f 0%, #0a0a0a 50%, #1a0800 100%)" }}>
