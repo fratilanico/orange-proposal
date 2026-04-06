@@ -1,6 +1,61 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+const PASSWORD = "Nico!234";
+const STORAGE_KEY = "speech_auth";
+
+function PasswordGate({ onUnlock }: { onUnlock: () => void }) {
+  const [input, setInput] = useState("");
+  const [error, setError] = useState(false);
+  const [shake, setShake] = useState(false);
+
+  const attempt = () => {
+    if (input === PASSWORD) {
+      sessionStorage.setItem(STORAGE_KEY, "1");
+      onUnlock();
+    } else {
+      setError(true);
+      setShake(true);
+      setInput("");
+      setTimeout(() => setShake(false), 500);
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center px-4">
+      <div className={`w-full max-w-sm transition-all ${shake ? "animate-bounce" : ""}`}>
+        <div className="text-center mb-8">
+          <div className="w-12 h-12 rounded-2xl bg-[#ff7900]/10 border border-[#ff7900]/30 flex items-center justify-center mx-auto mb-4">
+            <span className="text-[#ff7900] text-xl">🔒</span>
+          </div>
+          <p className="text-[11px] font-black uppercase tracking-widest text-[#ff7900] mb-1">Private</p>
+          <h1 className="text-xl font-black text-white">Orange Speech Guide</h1>
+          <p className="text-[13px] text-white/30 mt-1">Nico only</p>
+        </div>
+        <div className="space-y-3">
+          <input
+            type="password"
+            value={input}
+            onChange={e => { setInput(e.target.value); setError(false); }}
+            onKeyDown={e => e.key === "Enter" && attempt()}
+            placeholder="Password"
+            autoFocus
+            className={`w-full bg-white/[0.06] border rounded-xl px-4 py-3 text-white text-[15px] outline-none placeholder-white/20 transition-colors ${error ? "border-[#ff453a]" : "border-white/10 focus:border-[#ff7900]/50"}`}
+          />
+          {error && <p className="text-[#ff453a] text-[12px] text-center">Wrong password</p>}
+          <button
+            onClick={attempt}
+            className="w-full py-3 rounded-xl font-black text-[15px] text-white transition-all hover:opacity-90"
+            style={{ background: "#ff7900" }}
+          >
+            Unlock →
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 const SECTIONS = [
   {
@@ -282,7 +337,14 @@ const TYPE_CONFIG: Record<string, { label: string; bg: string; text: string }> =
 };
 
 export default function SpeechPage() {
+  const [unlocked, setUnlocked] = useState(false);
   const [active, setActive] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (sessionStorage.getItem(STORAGE_KEY) === "1") setUnlocked(true);
+  }, []);
+
+  if (!unlocked) return <PasswordGate onUnlock={() => setUnlocked(true)} />;
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white font-sans">
