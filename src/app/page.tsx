@@ -15,7 +15,7 @@ const PAIN_POINTS = [
   {
     icon: "📋",
     title: "Contract Renewals — Massive Volume, Manual Process",
-    desc: "Orange manages millions of contract renewals monthly — and today every single one is reactive. Customers have to call in themselves, then wait 5 days for an offer. At this volume, even 1% improvement in retention is millions of euros.",
+    desc: "With 9.3M subscribers on rolling contracts, Orange handles hundreds of thousands of renewal events every month — and today every single one is reactive. A customer recently had to call in themselves, then waited 5 days for an offer. At that scale, even a small improvement in retention is significant revenue.",
     color: "#ff9f0a",
   },
   {
@@ -125,7 +125,7 @@ const PROOF_POINTS = [
     name: "APEX OS",
     metric: "73+",
     metricLabel: "Production Repos",
-    desc: "Sovereign AI operating system. 6 persistent agents, 49 repos, 70+ skills, 2920 tests green. Self-healing, recursive learning, sovereign governance. Running 24/7 on Azure.",
+    desc: "Sovereign AI operating system. 73+ production repos, 200+ skills deployed, persistent agent orchestration with session memory. Self-healing, recursive learning, sovereign governance. Running 24/7 on Azure.",
     role: "Founder & Architect",
     color: "#ff7900",
     url: "https://apex.infoacademy.uk",
@@ -146,8 +146,8 @@ const TEAM = [
     name: "Nico Fratila",
     title: "AI Infrastructure Architect",
     org: "APEX OS / InfoAcademy",
-    bio: "73+ production repos. 5 years network engineering at Lloyds Banking Group. APEX OS founder — 6 persistent agents, 70+ skills. Currently architecting the AI agentic layer for a €33B TAM EU procurement platform. Building AI systems that run themselves.",
-    credentials: ["Lloyds Banking Group — Network Engineering (5 years)", "APEX OS — 6 agents, 49 repos, 70+ skills", "ProfiCircle — AI Agentic Layer Architect (in development)", "InfoAcademy — 20K+ learners, Orange Romania vendor"],
+    bio: "73+ production repos. 5 years network engineering at Lloyds Banking Group. APEX OS founder — 200+ skills deployed, persistent agent orchestration running 24/7. Currently architecting the AI agentic layer for a €33B TAM EU procurement platform.",
+    credentials: ["Lloyds Banking Group — Network Engineering (5 years)", "APEX OS — 73+ repos, 200+ skills deployed", "ProfiCircle — AI Agentic Layer Architect (in development)", "InfoAcademy — 20K+ learners, Orange Romania vendor"],
     linkedin: "https://linkedin.com/in/nicofratila",
     email: "nico.f@infoacademy.net",
     whatsapp: "+447722195774",
@@ -183,7 +183,7 @@ const TEAM = [
 const OBJECTIONS = [
   {
     q: "Why not hire an AI engineer internally for €5K/month?",
-    a: "One engineer builds tools. We transfer architectural capability across your organization. One person doesn't transform 50 people. And they don't bring 100K+ students of teaching experience or 73 production repos of battle-tested patterns.",
+    a: "One engineer builds tools. We transfer architectural capability across your organisation. One person doesn't transform 12 people into AI-capable builders. Our team brings 40+ years combined enterprise experience — Lloyds, HP, Telenav, Visa, PayPoint — and 73 production repos of battle-tested patterns.",
   },
   {
     q: "You're a small company. Can you handle Orange scale?",
