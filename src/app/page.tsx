@@ -54,10 +54,10 @@ const PAIN_POINTS = [
   },
   {
     icon: "📊",
-    title: "€600M AI Target — Clock Ticking",
+    title: "€600M AI Value Target — Clock Ticking",
     bullets: [
-      "Orange Group has set ambitious AI value-generation targets aligned with Lead the Future 2025-2028",
-      "Paris is already deploying Group-level AI infrastructure — Bucharest needs to show results",
+      "Orange Group's 'Trust the Future' 2026–2030 strategy targets €600M in AI-generated value by 2028 — not a budget, a revenue commitment (Reuters, Feb 2026)",
+      "Paris is already deploying Group-level AI infrastructure — Bucharest needs to show measurable results",
       "Without concrete deliverables, the risk is centralisation from Paris, not autonomy for Romania",
     ],
     color: "#ff7900",
@@ -795,14 +795,14 @@ export default function Page() {
           <div className="grid sm:grid-cols-2 gap-5">
             {[
               {
-                tag: "Djia — 52% success rate",
-                title: "Your voice AI is failing half the time.",
+                tag: "Djia — 52% at pilot launch, no update since",
+                title: "Your voice AI performance hasn't been published in 4 years.",
                 value: "Phase 1 maps the integration landscape your team discovers while building agents against Orange's live systems. That evidence becomes the foundation for fixing Djia in Phase 2 — grounded in your stack, not external assumptions.",
                 color: "#ff453a",
                 icon: "🤖",
               },
               {
-                tag: "€600M Group Mandate — 2028",
+                tag: "€600M AI Value Target — 2028",
                 title: "Paris set the target. Bucharest needs to deliver.",
                 value: "Phase 1 produces 3–4 working agents and an architecture blueprint. Bucharest becomes the Group's AI reference implementation — political capital for your leadership.",
                 color: "#ff7900",

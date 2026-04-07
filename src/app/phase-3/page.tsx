@@ -75,7 +75,7 @@ const DELIVERABLES = [
     icon: Cpu,
     color: "#30d158",
     title: "Romanian NLP Fine-Tuning Pipeline",
-    subtitle: "Djia: 52% → 80%+ success rate",
+    subtitle: "Djia: pilot-era baseline → 80%+ target",
     description:
       "Custom model trained on Orange's own call data. Fine-tuned on Romanian telecom vocabulary, Orange-specific intents, regional dialect variation. The infrastructure to retrain continuously as new call patterns emerge.",
     applies: ["Djia voice AI improvement", "Romanian dialect handling", "Telecom intent recognition", "Continuous retraining"],
@@ -128,7 +128,7 @@ const TIMELINE = [
   {
     months: "2–4",
     title: "Romanian NLP Pipeline",
-    description: "Fine-tuning pipeline built on Orange call data. First Djia improvement cycle begins. Baseline 52% measured, target trajectory set.",
+    description: "Fine-tuning pipeline built on Orange call data. First Djia improvement cycle begins. Actual current baseline measured for the first time — target trajectory set from evidence, not assumption.",
     color: "#6e3aff",
   },
   {
@@ -161,9 +161,9 @@ const ROI_ITEMS = [
   {
     icon: TrendingUp,
     label: "Djia Success Rate",
-    from: "52%",
+    from: "52% (2021 pilot)",
     to: "80%+",
-    context: "9.3M subscriber interactions",
+    context: "9.3M subscribers — current figure unpublished",
     color: "#30d158",
   },
   {
@@ -267,7 +267,7 @@ export default function Phase3Page() {
               {[
                 { label: "Duration", value: "9 months", icon: Clock },
                 { label: "Investment", value: "€350–450K", icon: DollarSign },
-                { label: "Djia Target", value: "52% → 80%+", icon: TrendingUp },
+                { label: "Djia Target", value: "pilot 52% → 80%+", icon: TrendingUp },
                 { label: "EU AI Act", value: "Aug 2026", icon: Shield },
               ].map(({ label, value, icon: Icon }) => (
                 <div
@@ -308,8 +308,8 @@ export default function Phase3Page() {
               {
                 icon: AlertTriangle,
                 color: "#ff3b30",
-                title: "Djia at 52%",
-                body: "More than half of all voice AI interactions fail. 9.3M subscribers. Every failed interaction is a trust withdrawal from Orange's brand.",
+                title: "Djia — Unknown Real Performance",
+                body: "Djia launched at 52% success in 2021. Orange has never published an updated figure. With 9.3M subscribers, every failed interaction is a trust withdrawal — and nobody knows how many there are.",
               },
               {
                 icon: Lock,
@@ -320,8 +320,8 @@ export default function Phase3Page() {
               {
                 icon: Zap,
                 color: "#6e3aff",
-                title: "€600M Group Mandate",
-                body: "Orange Group committed €600M to AI by 2028. Bucharest's execution quality determines whether Romania leads or follows within Group.",
+                title: "€600M AI Value Target",
+                body: "Orange Group's 'Trust the Future' 2026–2030 strategy targets €600M in AI-generated value by 2028. Bucharest's execution quality determines whether Romania leads or follows within Group.",
               },
             ].map(({ icon: Icon, color, title, body }) => (
               <AnimateIn key={title}>

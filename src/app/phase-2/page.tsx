@@ -58,7 +58,7 @@ const COMPONENTS = [
     subtitle: "Persistent Agent Orchestration",
     description:
       "A production-grade orchestration layer managing agent sessions, context handoff between conversations, JSONL audit trails, heartbeat monitoring, and a REST API for human-in-the-loop control.",
-    why: "Orange's Djingo runs at 52% success. Without session persistence and context handoff, every call starts from zero — losing intent, history, and resolution context. Head of Ops fixes the memory layer.",
+    why: "Djia launched at 52% success in its 2021 pilot — Orange has never published an updated figure. Without session persistence and context handoff, every call starts from zero. Head of Ops fixes the memory layer.",
     color: "#6e3aff",
   },
   {
@@ -97,8 +97,8 @@ const COMPONENTS = [
     title: "Knowledge Management",
     subtitle: "RAG Pipeline on Orange Documentation",
     description:
-      "Retrieval-augmented generation pipeline ingesting Orange's internal docs, KB articles, and product specs. Djingo's accuracy improves measurably without retraining the base model.",
-    why: "Djingo fails 48% of calls because it doesn't know what it doesn't know. RAG gives it instant access to Orange's entire knowledge base — searchable, versioned, and continuously updated.",
+      "Retrieval-augmented generation pipeline ingesting Orange's internal docs, KB articles, and product specs. Djia's accuracy improves measurably without retraining the base model.",
+    why: "At its 2021 pilot launch, Djia couldn't resolve nearly half of all calls — and Orange has never published an updated figure since. RAG gives it instant access to Orange's entire knowledge base — searchable, versioned, and continuously updated.",
     color: "#0071e3",
   },
   {
@@ -108,7 +108,7 @@ const COMPONENTS = [
     subtitle: "Enterprise Acquisition Automation",
     description:
       "AI-driven lead identification, qualification scoring, outreach sequencing, and CRM enrichment for Orange Business. Targets enterprise and mid-market segments with precision personalisation.",
-    why: "Orange Business's €600M Group AI mandate requires internal capability — not just tools for customers but the ability to demonstrate AI-led growth. This pipeline is the proof of concept.",
+    why: "Orange Group targets €600M in AI-generated value by 2028 ('Trust the Future' strategy). Internal AI capability is how Bucharest contributes to that number — not just tools for customers, but demonstrable AI-led growth.",
     color: "#ff7900",
   },
   {
@@ -143,7 +143,7 @@ const TIMELINE = [
       "WhatsApp MultiWA gateway deployed",
       "First AI-assisted session on WhatsApp",
       "RAG pipeline on Orange internal docs",
-      "Djingo accuracy baseline measured",
+      "Djia accuracy baseline established for first time since 2021",
       "Knowledge base ingestion complete",
     ],
     color: "#0071e3",
@@ -189,9 +189,9 @@ const TIMELINE = [
 const KPIS = [
   {
     metric: "Djia Response Accuracy",
-    baseline: "52%",
-    target: "65–70% (RAG only — NLP fine-tuning in Phase 3)",
-    method: "A/B test on identical query set before/after RAG pipeline deployment",
+    baseline: "52% at 2021 pilot launch — current figure unpublished",
+    target: "Measurable uplift, 65–70% projected post-RAG",
+    method: "A/B test on identical query set before/after RAG pipeline — establishes the first public baseline since launch",
     icon: "🎯",
   },
   {
@@ -228,7 +228,7 @@ const BREAKDOWN = [
   { label: "Infrastructure Setup", amount: "€40,000", note: "One-time. Azure hardening, Head of Ops, security stack" },
   { label: "Genesys/MATRIXX Integration", amount: "€60,000", note: "API bridges preserving existing contracts" },
   { label: "WhatsApp Gateway Deployment", amount: "€25,000", note: "MultiWA self-hosted, zero ongoing vendor fees" },
-  { label: "Knowledge Management (RAG)", amount: "€25,000", note: "Pipeline + Djingo enhancement" },
+  { label: "Knowledge Management (RAG)", amount: "€25,000", note: "Pipeline + Djia knowledge base" },
   { label: "Governance Framework", amount: "€20,000", note: "AGENTS.md rollout across all departments" },
   { label: "Training (12 → 50 staff)", amount: "€15,000–€30,000", note: "Hands-on. Included in fixed fee range" },
 ]
@@ -325,7 +325,7 @@ export default function Phase2Page() {
             <p className="text-xl text-white/60 max-w-2xl leading-relaxed mb-16">
               Phase 1 proved the concept. Phase 2 deploys the production infrastructure —
               7 systems, governed AI operations, and measurable KPIs Orange's board can report
-              against the €600M Group AI mandate.
+              against the €600M AI value target ('Trust the Future' 2026–2030).
             </p>
           </AnimateIn>
 
