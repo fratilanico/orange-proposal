@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import AnimateIn from "@/components/AnimateIn";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import StatsTicker from "@/components/StatsTicker";
-import { ChevronDown, Users, Brain, Target, Phone, Mail, Linkedin } from "lucide-react";
+import { ChevronDown, Users, Brain, Target, Phone, Mail, Linkedin, Globe } from "lucide-react";
 
 /* ══════════════════════════════════════════════════════════════
    DATA
@@ -13,40 +13,64 @@ import { ChevronDown, Users, Brain, Target, Phone, Mail, Linkedin } from "lucide
 
 const PAIN_POINTS = [
   {
-    icon: "🤖",
-    title: "Djia Voice AI — 52% Success Rate",
-    desc: "Nearly half of all voice interactions fail. Customers hang up, call again, clog human queues. Every failed interaction costs Orange money and trust.",
-    color: "#ff453a",
-  },
-  {
     icon: "📋",
     title: "Contract Renewals — 5-Day Wait",
-    desc: "Millions of contracts expire monthly. Today a customer has to call in themselves, wait for a callback, then wait 5 more days for an offer. That friction is churn Orange doesn't see coming.",
+    bullets: [
+      "Hundreds of thousands of renewal events every month across 9.3M subscribers",
+      "Process is fully reactive — customers call in themselves, then wait days for an offer",
+      "At this scale, even 0.5% improvement in retention is millions in recovered revenue",
+    ],
+    color: "#ff9f0a",
+  },
+  {
+    icon: "📧",
+    title: "Support Emails — Manual Triage",
+    bullets: [
+      "Thousands of emails arrive daily at serviciul.clienti@orange.ro, reclamatii@orange.ro and others",
+      "Every one is manually read, sorted, and forwarded — urgent issues sit beside billing questions",
+      "At this volume it never gets better, only grows — and every delay risks customer escalation",
+    ],
+    color: "#0071e3",
+  },
+  {
+    icon: "🇷🇴",
+    title: "Romanian NLP — Underdeveloped",
+    bullets: [
+      "Major LLM providers underserve Romanian — models are weak on local vocabulary and intent",
+      "Orange can't buy a Romanian-calibrated AI model off the shelf from any vendor",
+      "This needs to be built internally, fine-tuned on Orange's own call data and customer language",
+    ],
     color: "#ff9f0a",
   },
   {
     icon: "👻",
     title: "Shadow AI — No Governance",
-    desc: "Internal teams are already experimenting with ChatGPT, Claude, LangChain. No coordination, no standards, no governance. Every team is reinventing the wheel.",
+    bullets: [
+      "Internal teams are already using ChatGPT, Claude, LangChain — independently, with no coordination",
+      "No shared standards, no audit trails, no visibility into what's being built or deployed",
+      "Every department is reinventing the wheel — duplicating effort and creating compliance risk",
+    ],
     color: "#6e3aff",
   },
   {
     icon: "📊",
     title: "€600M AI Target — Clock Ticking",
-    desc: "Orange Group mandates €600M in AI-generated value by 2028. Paris has Live Intelligence Studio. Bucharest needs to show results — fast.",
+    bullets: [
+      "Orange Group has set ambitious AI value-generation targets aligned with Lead the Future 2025-2028",
+      "Paris is already deploying Group-level AI infrastructure — Bucharest needs to show results",
+      "Without concrete deliverables, the risk is centralisation from Paris, not autonomy for Romania",
+    ],
     color: "#ff7900",
   },
   {
     icon: "📱",
     title: "No WhatsApp Presence",
-    desc: "10M+ Romanians use WhatsApp daily. Orange has zero presence there. Vodafone and Digi haven't moved either. First-mover advantage is sitting on the table.",
+    bullets: [
+      "WhatsApp is the dominant messaging platform in Romania — and Orange has zero presence on it",
+      "Vodafone and Digi haven't moved either — the first-mover advantage is unclaimed",
+      "An AI-powered WhatsApp channel creates a new touchpoint for sales, support, and retention",
+    ],
     color: "#30d158",
-  },
-  {
-    icon: "📧",
-    title: "Support Emails — Manual Triage, Daily",
-    desc: "Hundreds of emails hit generic contact addresses every day. Someone manually reads, sorts, and forwards each one. Urgent issues sit in the same queue as billing questions. Escalations happen late.",
-    color: "#0071e3",
   },
 ];
 
@@ -56,17 +80,17 @@ const PHASES = [
     title: "Assess & Build",
     subtitle: "AI Operations Lab",
     duration: "10 weeks",
-    price: "€25–30K",
+    price: "€30K",
     color: "#ff7900",
     items: [
       "8-12 Orange employees selected (IT, CX, Operations mix)",
-      "Weeks 1-2: Agent patterns, orchestration, deterministic pipelines, governance basics",
-      "Team A — Contract Renewal Agent: monitors expiring contracts, analyses customer profile, generates personalised renewal offer, delivers via WhatsApp or email automatically",
-      "Team B — Email Triage Agent: scans inbound support emails, sets priority, routes to the correct department — no manual sorting",
-      "Team C — Orange picks the 3rd use case from their own operations",
-      "Weeks 7-8: Architecture review against Orange's live systems",
-      "Weeks 9-10: Living architecture blueprint + 18-month roadmap delivered",
-      "Orange owns every agent built. APEX retains methodology.",
+      "Customized AI architecture training on InfoAcademy platform",
+      "Weeks 1-2: Agent patterns, orchestration, deterministic pipelines",
+      "Weeks 3-6: Each team builds a working internal AI agent",
+      "Weeks 7-8: Architecture review, gap analysis",
+      "Weeks 9-10: Living architecture blueprint delivered",
+      "3-4 working internal AI agents as tangible output",
+      "Orange owns the agents. APEX retains methodology.",
     ],
   },
   {
@@ -104,11 +128,11 @@ const PHASES = [
 
 const PROOF_POINTS = [
   {
-    name: "ProfiCircle",
-    metric: "8",
-    metricLabel: "Agent Orchestration",
-    desc: "Building the AI agentic layer for an EU procurement platform (€33B TAM). Architecture: 8-agent pipeline covering outreach, LinkedIn automation, voice enrichment, and AI candidate classification. In active development.",
-    role: "AI Agentic Layer — Architect & Builder",
+    name: "GTM Agentic Platform",
+    metric: "€3M+",
+    metricLabel: "R&D Codebase",
+    desc: "Co-founding a plug-and-play GTM platform (€33B TAM) with an established EU procurement founder. Enterprises connect their vendor and customer data — the cognition layer handles discovery, qualification, matching, and onboarding autonomously. Full vendor lifecycle outsourced to AI, not to a consulting firm. Built on €3M+ of existing R&D.",
+    role: "Co-Founder — Cognition Architecture",
     color: "#0071e3",
     url: "",
   },
@@ -116,17 +140,17 @@ const PROOF_POINTS = [
     name: "ProfileSense",
     metric: "5min",
     metricLabel: "30 Ranked Candidates",
-    desc: "White-label talent sourcing for Dutch recruitment (Lieno B.V., Benelux). Paste a job description → 30 ranked candidates with verified emails. AI-scored talent pipeline.",
-    role: "Full-Stack Delivery",
+    desc: "White-label talent sourcing platform for Dutch recruitment (Lieno B.V., Benelux). Paste a job description → 30 ranked candidates with verified emails in under 5 minutes. Multi-source AI scoring across LinkedIn, GitHub, and professional networks. Full agentic pipeline: scrape → enrich → score → rank → deliver. Production-grade, running live for paying clients.",
+    role: "Full-Stack Agentic Delivery",
     color: "#6e3aff",
     url: "https://profilesense-dashboard.vercel.app",
   },
   {
     name: "APEX OS",
-    metric: "73+",
-    metricLabel: "Production Repos",
-    desc: "Sovereign AI operating system. 6 persistent agents, 49 repos, 70+ skills, 2920 tests green. Self-healing, recursive learning, sovereign governance. Running 24/7 on Azure.",
-    role: "Founder & Architect",
+    metric: "200+",
+    metricLabel: "Skills Deployed",
+    desc: "Sovereign AI operating system with architectural cognition — 200+ self-evolving skills, persistent agent orchestration with session memory, and sovereign governance that enforces standards across the entire ecosystem. Self-healing. Running 24/7 on Azure.",
+    role: "Founder — Architectural Cognition",
     color: "#ff7900",
     url: "https://apex.infoacademy.uk",
   },
@@ -134,8 +158,8 @@ const PROOF_POINTS = [
     name: "InfoAcademy",
     metric: "20K+",
     metricLabel: "Learners",
-    desc: "AI learning platform. 163+ daily content items, webinars, agentic training. Self-serve for students, customizable for enterprise cohorts. Already delivered training to Orange Romania.",
-    role: "CEO",
+    desc: "AI-first learning platform with built-in agentic orchestration layer — currently in beta with ~100 active users. Enterprise cohorts get customised training environments, progress tracking, and AI-assisted learning paths. Free for all customers during beta. Already delivered training to Orange Romania. The same platform that powers the Phase 1 training delivery.",
+    role: "Founder & CEO",
     color: "#30d158",
     url: "https://www.infoacademy.uk",
   },
@@ -144,38 +168,84 @@ const PROOF_POINTS = [
 const TEAM = [
   {
     name: "Nico Fratila",
+    location: "London, UK",
     title: "AI Infrastructure Architect",
     org: "APEX OS / InfoAcademy",
-    bio: "73+ production repos. 5 years network engineering at Lloyds Banking Group. APEX OS founder — 6 persistent agents, 70+ skills. Currently architecting the AI agentic layer for a €33B TAM EU procurement platform. Building AI systems that run themselves.",
-    credentials: ["Lloyds Banking Group — Network Engineering (5 years)", "APEX OS — 6 agents, 49 repos, 70+ skills", "ProfiCircle — AI Agentic Layer Architect (in development)", "InfoAcademy — 20K+ learners, Orange Romania vendor"],
+    bio: "5 years network engineering at Lloyds Banking Group. Built APEX OS from scratch — sovereign AI infrastructure with 200+ skills and 73+ production repositories running 24/7. Founded InfoAcademy, Orange Romania's existing training vendor. Designed the methodology Orange will use.",
+    credentials: [
+      "Lloyds Banking Group — Network Engineering (5 years)",
+      "APEX OS — 200+ skills, sovereign governance, 24/7",
+      "InfoAcademy — Founder, existing Orange Romania vendor",
+    ],
     linkedin: "https://linkedin.com/in/nicofratila",
     email: "nico.f@infoacademy.net",
-    whatsapp: "+447722195774",
-    phoneRO: "+40743164820",
+    website: "",
     color: "#ff7900",
+    lead: false,
   },
   {
-    name: "Mihai Catalin Teodosiu",
-    title: "Network Automation AI Specialist",
-    org: "aiQA / GNS3 Technologies",
-    bio: "100,000+ students across 185 countries. Vodafone NOC engineer. Building Network Automation AI Agents. CCNP certified. 12-dimension AI system management framework. Claude Code + MCP expert.",
-    credentials: ["Vodafone — NOC Engineer, 200+ critical alerts", "100K+ Udemy students, 185 countries", "CCNP, CCNA, CCDA, JNCIA, ISTQB certified", "Politehnica Bucharest — BS Telecommunications"],
-    linkedin: "https://linkedin.com/in/tmihaicatalin",
+    name: "Liviu Olos",
+    location: "Romania",
+    title: "Lead AI Systems Architect",
+    org: "LOFTREK / FDRP / liviu.ai",
+    bio: "Creator of FDRP — the AI quality governance framework with 32 subsystems and 557 database tables, evolving daily. Runs LOFTREK (790+ clients, 76 public institutions). Selected for Anthropic's inaugural global hackathon (top 500 of 13,000). Member of Anthropic's private research network. EU AI Act, NIS2, and NATO DIANA authority.",
+    credentials: [
+      "FDRP — AI governance, 32 subsystems, 557 DB tables",
+      "LOFTREK — 790+ clients, 76 public institutions",
+      "Anthropic Hackathon — top 500 of 13,000 globally",
+      "EU AI Act · NIS2 · Cybersecurity specialist",
+      "EU Horizon + NATO DIANA project authority",
+    ],
+    linkedin: "https://www.linkedin.com/in/liviu-olos/",
     email: "",
-    whatsapp: "",
-    phoneRO: "",
+    website: "https://liviu.ai",
+    color: "#f0b429",
+    lead: true,
+  },
+  {
+    name: "Bogdan Toporan",
+    location: "Cluj, Romania",
+    title: "Engineering Leader & AI Architect",
+    org: "ARANDI / ex-Telenav / ex-HP",
+    bio: "17+ years enterprise architecture. 2 years deep in AI Agent Orchestration and RAG systems. Built telecom-grade data pipelines at Telenav serving millions of users. Led 40+ engineer teams. US Patent holder in spatial data intelligence.",
+    credentials: [
+      "ARANDI — Founder, AI Agentic Systems",
+      "Telenav — Engineering Lead, 40+ engineers, Big Data",
+      "Micro Focus / HP — R&D Manager, US Patent holder",
+    ],
+    linkedin: "https://linkedin.com/in/bogdan-toporan",
+    email: "bogdan.toporan@hotmail.com",
+    website: "",
+    color: "#6e3aff",
+    lead: false,
+  },
+  {
+    name: "Hardik Nakum",
+    location: "London, UK",
+    title: "Principal Cloud & Security Architect",
+    org: "Lloyds Banking Group",
+    bio: "10+ years at Lloyds Banking Group designing multi-cloud infrastructure across Azure, AWS, and GCP at financial-system scale. Zero-trust security architecture, agentic systems design, and enterprise network hardening for one of the UK's largest banks.",
+    credentials: [
+      "Lloyds — Principal Cloud Architect (3 years)",
+      "Lloyds — Network & Security Lead (7.5 years)",
+      "Visa / PayPoint — Enterprise Architect",
+    ],
+    linkedin: "https://linkedin.com/in/hardik-nakum",
+    email: "",
+    website: "",
     color: "#0071e3",
+    lead: false,
   },
 ];
 
 const OBJECTIONS = [
   {
     q: "Why not hire an AI engineer internally for €5K/month?",
-    a: "One engineer builds tools. We transfer architectural capability across your organization. One person doesn't transform 50 people. And they don't bring 100K+ students of teaching experience or 73 production repos of battle-tested patterns.",
+    a: "One engineer builds tools. We transfer architectural capability across your organisation. One person doesn't transform 12 people into AI-capable builders. Our team brings 40+ years combined enterprise experience — Lloyds, HP, Telenav, Visa, PayPoint — and 73 production repos of battle-tested patterns.",
   },
   {
     q: "You're a small company. Can you handle Orange scale?",
-    a: "InfoAcademy is your existing vendor — you've already vetted us. Teodosiu has trained 100K+ engineers globally. We're not replacing Genesys or MATRIXX — we're training your people to build the AI layer on top of what you already have.",
+    a: "InfoAcademy is your existing vendor — you've already vetted us. The team brings 10+ years inside Lloyds Banking Group, 17+ years of enterprise architecture, and 40+ engineer teams led. We're not replacing Genesys or MATRIXX — we're training your people to build the AI layer on top of what you already have.",
   },
   {
     q: "What if we take the blueprint and give it to Accenture?",
@@ -186,7 +256,7 @@ const OBJECTIONS = [
     a: "Paris builds tools. Tools without people who know how to use them are shelfware. We build the people AND the architecture. Bucharest delivering measurable AI value positions you as the Group's AI innovation lab — political capital for your leadership.",
   },
   {
-    q: "€25-30K seems cheap for 'architecture' but expensive for 'training'.",
+    q: "€30K seems cheap for 'architecture' but expensive for 'training'.",
     a: "It's neither. It's a 10-week build program where your people create working AI agents under expert guidance. The architecture emerges from what they build. You get trained people + working agents + a roadmap. Below VP discretionary spend threshold.",
   },
 ];
@@ -195,43 +265,70 @@ const OBJECTIONS = [
    COMPONENTS
    ══════════════════════════════════════════════════════════════ */
 
-function PainCard({ point, index }: { point: typeof PAIN_POINTS[0]; index: number }) {
-  const [open, setOpen] = useState(false);
+function PainCard({ point, index, isOpen, onToggle }: { point: typeof PAIN_POINTS[0]; index: number; isOpen: boolean; onToggle: () => void }) {
   return (
     <AnimateIn delay={index * 0.08}>
       <motion.div
-        onClick={() => setOpen(!open)}
+        onClick={onToggle}
         whileHover={{ scale: 1.02, y: -2 }}
         whileTap={{ scale: 0.98 }}
         className="cursor-pointer rounded-2xl p-6 transition-all"
-        style={{ background: point.color + "08", border: `1px solid ${point.color}20` }}
+        style={{ background: point.color + "08", border: `1px solid ${isOpen ? point.color + "40" : point.color + "20"}` }}
       >
-        <div className="flex items-start justify-between">
+        <div className="flex items-start justify-between gap-2">
           <div className="flex items-center gap-3">
-            <span className="text-2xl">{point.icon}</span>
+            <span className="text-2xl flex-shrink-0">{point.icon}</span>
             <h3 className="text-[15px] font-semibold text-[#1d1d1f]">{point.title}</h3>
           </div>
           <ChevronDown
             size={16}
-            className="text-[#86868b] transition-transform duration-300"
-            style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+            className="text-[#86868b] flex-shrink-0 mt-1 transition-transform duration-300"
+            style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
           />
         </div>
         <AnimatePresence>
-          {open && (
-            <motion.p
+          {isOpen && (
+            <motion.ul
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="text-[13px] text-[#6e6e73] mt-3 leading-relaxed"
+              className="mt-3 space-y-2"
             >
-              {point.desc}
-            </motion.p>
+              {point.bullets.map((b, i) => (
+                <motion.li
+                  key={i}
+                  initial={{ opacity: 0, x: -6 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.05 }}
+                  className="text-[13px] text-[#6e6e73] leading-relaxed flex items-start gap-2"
+                >
+                  <span className="mt-1 flex-shrink-0" style={{ color: point.color }}>•</span>
+                  {b}
+                </motion.li>
+              ))}
+            </motion.ul>
           )}
         </AnimatePresence>
       </motion.div>
     </AnimateIn>
+  );
+}
+
+function PainGrid() {
+  const [activeCard, setActiveCard] = useState<number | null>(null);
+  return (
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 items-start">
+      {PAIN_POINTS.map((p, i) => (
+        <PainCard
+          key={i}
+          point={p}
+          index={i}
+          isOpen={activeCard === i}
+          onToggle={() => setActiveCard(activeCard === i ? null : i)}
+        />
+      ))}
+    </div>
   );
 }
 
@@ -292,7 +389,7 @@ function PhaseCard({ phase, initialOpen = false }: { phase: typeof PHASES[0]; in
 function ProofCard({ point, index }: { point: typeof PROOF_POINTS[0]; index: number }) {
   const inner = (
     <div
-      className={`block rounded-2xl p-6 transition-all ${point.url ? "hover:scale-[1.02] hover:-translate-y-1 cursor-pointer" : ""}`}
+      className={`block rounded-2xl p-6 h-full flex flex-col transition-all ${point.url ? "hover:scale-[1.02] hover:-translate-y-1 cursor-pointer" : ""}`}
       style={{ background: point.color + "06", border: `1px solid ${point.color}18` }}
     >
       <div className="flex items-baseline gap-2 mb-3">
@@ -301,7 +398,7 @@ function ProofCard({ point, index }: { point: typeof PROOF_POINTS[0]; index: num
       </div>
       <h3 className="text-[17px] font-bold text-[#1d1d1f] mb-1">{point.name}</h3>
       <p className="text-[11px] font-medium uppercase tracking-wider mb-2" style={{ color: point.color }}>{point.role}</p>
-      <p className="text-[13px] text-[#6e6e73] leading-relaxed">{point.desc}</p>
+      <p className="text-[13px] text-[#6e6e73] leading-relaxed flex-1">{point.desc}</p>
       {!point.url && (
         <span className="inline-flex items-center gap-1 mt-3 text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full"
           style={{ color: point.color, background: point.color + "15" }}>
@@ -313,8 +410,8 @@ function ProofCard({ point, index }: { point: typeof PROOF_POINTS[0]; index: num
   return (
     <AnimateIn delay={index * 0.1}>
       {point.url
-        ? <a href={point.url} target="_blank" rel="noopener">{inner}</a>
-        : inner
+        ? <a href={point.url} target="_blank" rel="noopener" className="block h-full">{inner}</a>
+        : <div className="h-full">{inner}</div>
       }
     </AnimateIn>
   );
@@ -329,50 +426,136 @@ function WhatsAppIcon({ size = 14 }: { size?: number }) {
 }
 
 function TeamCard({ person }: { person: typeof TEAM[0] }) {
+  const isLead = person.lead;
+
+  const baseStyle = isLead
+    ? {
+        background: `linear-gradient(135deg, ${person.color}1a 0%, ${person.color}0a 100%)`,
+        border: `1px solid ${person.color}55`,
+      }
+    : {
+        background: person.color + "06",
+        border: `1px solid ${person.color}18`,
+      };
+
   return (
-    <div className="rounded-2xl p-8" style={{ background: person.color + "06", border: `1px solid ${person.color}18` }}>
-      <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4 text-white text-lg font-black"
-        style={{ background: person.color }}>
-        {person.name.split(" ").map(n => n[0]).join("")}
+    <motion.div
+      className="rounded-2xl p-6 h-full flex flex-col relative"
+      style={baseStyle}
+      animate={
+        isLead
+          ? {
+              boxShadow: [
+                `0 0 0 1px ${person.color}22, 0 6px 28px ${person.color}1a, 0 20px 60px ${person.color}0c`,
+                `0 0 0 1px ${person.color}50, 0 8px 40px ${person.color}30, 0 24px 80px ${person.color}18`,
+                `0 0 0 1px ${person.color}22, 0 6px 28px ${person.color}1a, 0 20px 60px ${person.color}0c`,
+              ],
+            }
+          : {}
+      }
+      transition={isLead ? { duration: 3, repeat: Infinity, ease: "easeInOut" } : {}}
+    >
+      {/* Lead badge */}
+      {isLead && (
+        <div
+          className="absolute top-4 right-4 px-2.5 py-1 rounded-full text-[9px] font-black uppercase tracking-[0.1em]"
+          style={{
+            background: `linear-gradient(135deg, ${person.color}28, ${person.color}12)`,
+            color: person.color,
+            border: `1px solid ${person.color}45`,
+          }}
+        >
+          ★ Lead AI
+        </div>
+      )}
+
+      {/* Avatar */}
+      <div
+        className="w-12 h-12 rounded-xl flex items-center justify-center text-white font-black mb-4 flex-shrink-0"
+        style={
+          isLead
+            ? {
+                background: `linear-gradient(135deg, ${person.color}, #c8860a)`,
+                fontSize: "13px",
+                boxShadow: `0 4px 16px ${person.color}40`,
+              }
+            : { background: person.color, fontSize: "12px" }
+        }
+      >
+        {person.name.split(" ").map((n) => n[0]).join("")}
       </div>
-      <h3 className="text-xl font-bold text-[#1d1d1f]">{person.name}</h3>
-      <p className="text-[13px] font-semibold mt-1" style={{ color: person.color }}>{person.title}</p>
-      <p className="text-[12px] text-[#86868b] uppercase tracking-wider mt-0.5">{person.org}</p>
-      <p className="text-[13px] text-[#6e6e73] mt-4 leading-relaxed">{person.bio}</p>
-      <ul className="mt-4 space-y-1.5">
+
+      {/* Name + location */}
+      <h3
+        className="leading-tight text-[#1d1d1f]"
+        style={{ fontSize: isLead ? "17px" : "16px", fontWeight: isLead ? 800 : 700 }}
+      >
+        {person.name}
+      </h3>
+      <p className="text-[10px] text-[#86868b] mt-0.5">{person.location}</p>
+
+      {/* Title */}
+      <p
+        className="font-semibold mt-2"
+        style={{ color: person.color, fontSize: isLead ? "13px" : "12px" }}
+      >
+        {person.title}
+      </p>
+      <p className="text-[10px] text-[#86868b] uppercase tracking-wider mt-0.5">{person.org}</p>
+
+      {/* Bio */}
+      <p className="text-[12px] text-[#6e6e73] leading-relaxed mt-3">{person.bio}</p>
+
+      {/* Credentials */}
+      <ul className="mt-3 space-y-1.5 flex-1">
         {person.credentials.map((c, i) => (
-          <li key={i} className="text-[12px] text-[#6e6e73] flex items-start gap-2">
-            <span style={{ color: person.color }} className="mt-0.5">✓</span> {c}
+          <li key={i} className="text-[11px] text-[#6e6e73] flex items-start gap-2">
+            <span style={{ color: person.color }} className="mt-0.5 flex-shrink-0">
+              ✓
+            </span>{" "}
+            {c}
           </li>
         ))}
       </ul>
-      <div className="mt-5 space-y-2">
+
+      {/* Contact */}
+      <div
+        className="mt-4 pt-3 border-t flex items-center gap-3 flex-wrap"
+        style={{ borderColor: person.color + "20" }}
+      >
         {person.linkedin && (
-          <a href={person.linkedin} target="_blank" rel="noopener"
-            className="flex items-center gap-2 text-[12px] font-semibold hover:underline" style={{ color: person.color }}>
-            <Linkedin size={13} /> LinkedIn
+          <a
+            href={person.linkedin}
+            target="_blank"
+            rel="noopener"
+            className="flex items-center gap-1 text-[11px] font-semibold hover:underline"
+            style={{ color: person.color }}
+          >
+            <Linkedin size={11} /> LinkedIn
           </a>
         )}
         {person.email && (
-          <a href={`mailto:${person.email}`}
-            className="flex items-center gap-2 text-[12px] font-semibold hover:underline" style={{ color: person.color }}>
-            <Mail size={13} /> {person.email}
+          <a
+            href={`mailto:${person.email}`}
+            className="flex items-center gap-1 text-[11px] font-semibold hover:underline"
+            style={{ color: person.color }}
+          >
+            <Mail size={11} /> Email
           </a>
         )}
-        {person.whatsapp && (
-          <a href={`https://wa.me/${person.whatsapp.replace(/\+/g, "")}`} target="_blank" rel="noopener"
-            className="flex items-center gap-2 text-[12px] font-semibold text-[#25d366] hover:underline">
-            <WhatsAppIcon size={13} /> {person.whatsapp}
-          </a>
-        )}
-        {person.phoneRO && (
-          <a href={`tel:${person.phoneRO}`}
-            className="flex items-center gap-2 text-[12px] text-[#86868b] hover:text-[#1d1d1f] transition-colors">
-            <Phone size={13} /> {person.phoneRO} <span className="text-[10px] uppercase tracking-widest opacity-60">RO</span>
+        {person.website && (
+          <a
+            href={person.website}
+            target="_blank"
+            rel="noopener"
+            className="flex items-center gap-1 text-[11px] font-semibold hover:underline"
+            style={{ color: person.color }}
+          >
+            <Globe size={11} /> liviu.ai
           </a>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -472,9 +655,9 @@ export default function Page() {
           <AnimateIn delay={0.4}>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-16">
               {[
-                { value: 25, prefix: "€", suffix: "K", label: "Entry Investment" },
+                { value: 30, prefix: "€", suffix: "K", label: "Phase 1 Investment" },
                 { value: 18, prefix: "", suffix: " months", label: "To AI Independence" },
-                { value: 50, prefix: "", suffix: "+", label: "AI-Capable Staff" },
+                { value: 50, prefix: "", suffix: "+", label: "Agentic AI-Ready Staff" },
                 { value: 3, prefix: "", suffix: " phases", label: "Structured Engagement" },
               ].map((s, i) => (
                 <div key={i} className="text-center">
@@ -505,11 +688,7 @@ export default function Page() {
               </h2>
             </div>
           </AnimateIn>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {PAIN_POINTS.map((p, i) => (
-              <PainCard key={i} point={p} index={i} />
-            ))}
-          </div>
+          <PainGrid />
         </div>
       </section>
 
@@ -518,7 +697,7 @@ export default function Page() {
         <div className="max-w-[900px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <p className="text-white font-black text-xl sm:text-2xl leading-tight">
-              Seen enough? Start with €25K.
+              Seen enough? Start with €30K.
             </p>
             <p className="text-white/70 text-[14px] mt-1">
               No procurement committee. No RFP. One conversation.
@@ -551,12 +730,26 @@ export default function Page() {
               IBM and Accenture deliver products — and a renewal invoice. We deliver an architectural capability that lives inside Orange permanently. Your people build the agents. The methodology is ours. The outcome is yours.
             </p>
           </AnimateIn>
-          <AnimateIn delay={0.15}>
-            <div className="grid sm:grid-cols-3 gap-6 mt-14">
+
+          <AnimateIn delay={0.12}>
+            <div className="mt-10 mx-auto max-w-[680px] rounded-2xl px-8 py-6 border border-white/10 bg-white/[0.04]">
+              <p className="text-[11px] font-black uppercase tracking-widest text-[#ff7900] mb-3">The core principle</p>
+              <p className="text-xl font-black text-white leading-snug">
+                The agents handle the volume.
+                <span className="text-[#ff7900]"> Your people handle what requires judgment.</span>
+              </p>
+              <p className="text-[13px] text-white/40 mt-3 leading-relaxed">
+                These AI agents are not here to replace Orange employees. They exist to remove the high-volume, repetitive grunt work — so your team spends their time on decisions, relationships, and complex cases. The work only humans should be doing.
+              </p>
+            </div>
+          </AnimateIn>
+
+          <AnimateIn delay={0.2}>
+            <div className="grid sm:grid-cols-3 gap-6 mt-10">
               {[
-                { icon: <Users size={26} />, title: "Train", desc: "8–12 of your engineers and ops staff learn AI agent architecture by doing — not by watching slides." },
-                { icon: <Brain size={26} />, title: "Build", desc: "Each person builds a working AI agent solving a real Orange problem. Network triage, knowledge base, procurement analysis — Orange picks the use cases." },
-                { icon: <Target size={26} />, title: "Architect", desc: "Real agents running inside Orange's systems reveal the actual integration landscape. That evidence becomes your 18-month AI architecture blueprint." },
+                { icon: <Users size={26} />, title: "Train", desc: "8–12 Orange employees learn to build AI agents. Not a course — a build sprint. They leave with skills, not certificates." },
+                { icon: <Brain size={26} />, title: "Build", desc: "Each team builds a working agent for a real Orange problem. Contract renewals. Email triage. The agent takes the volume. The employee takes the credit." },
+                { icon: <Target size={26} />, title: "Architect", desc: "What your team builds reveals your actual integration landscape — turning 10 weeks of hands-on work into an 18-month AI roadmap grounded in evidence." },
               ].map((s, i) => (
                 <div key={i} className="rounded-2xl p-6 bg-white/5 border border-white/[0.07] text-left">
                   <div className="text-[#ff7900] mb-4">{s.icon}</div>
@@ -573,7 +766,7 @@ export default function Page() {
                 { label: "Model", apex: "Capability transfer", them: "Product delivery" },
                 { label: "Ownership", apex: "You own every agent", them: "Vendor owns IP" },
                 { label: "After 18 months", apex: "You run independently", them: "Renewal required" },
-                { label: "Entry cost", apex: "€25–30K", them: "€300K+ minimum" },
+                { label: "Entry cost", apex: "€30K", them: "€300K+ minimum" },
               ].map((row, i) => (
                 <div key={i} className="contents">
                   <div className={`px-4 py-3 ${i === 0 ? "font-black text-[11px] uppercase tracking-widest text-white/30 bg-white/[0.04]" : "text-white/40"} border-b border-white/[0.05]`}>{row.label}</div>
@@ -602,32 +795,32 @@ export default function Page() {
           <div className="grid sm:grid-cols-2 gap-5">
             {[
               {
-                tag: "Contract Renewals — 5-day wait today",
-                title: "Customers are churning before you reach them.",
-                value: "Phase 1 Team A builds the Contract Renewal Agent: monitors expiring contracts, reads the customer profile, generates a personalised offer and sends it via WhatsApp or email — automatically. No human in the loop until the customer says yes.",
-                color: "#ff9f0a",
-                icon: "📋",
-              },
-              {
-                tag: "Support Emails — manual triage, every day",
-                title: "Your people are sorting emails. AI should do this.",
-                value: "Phase 1 Team B builds the Email Triage Agent: scans every inbound email, scores urgency, routes to the right department automatically. Your agents handle the decisions — not the sorting.",
-                color: "#0071e3",
-                icon: "📧",
-              },
-              {
                 tag: "Djia — 52% success rate",
                 title: "Your voice AI is failing half the time.",
-                value: "Phase 1 maps the integration landscape against Orange's live systems. The 18-month roadmap that comes out of week 9-10 is the evidence base for fixing Djia — grounded in your stack, not external assumptions.",
+                value: "Phase 1 maps the integration landscape your team discovers while building agents against Orange's live systems. That evidence becomes the foundation for fixing Djia in Phase 2 — grounded in your stack, not external assumptions.",
                 color: "#ff453a",
                 icon: "🤖",
               },
               {
                 tag: "€600M Group Mandate — 2028",
                 title: "Paris set the target. Bucharest needs to deliver.",
-                value: "3–4 working agents, 12 trained staff, architecture blueprint. Concrete deliverables your leadership can show Group — not a pilot deck. Bucharest as the AI reference implementation.",
+                value: "Phase 1 produces 3–4 working agents and an architecture blueprint. Bucharest becomes the Group's AI reference implementation — political capital for your leadership.",
                 color: "#ff7900",
                 icon: "📊",
+              },
+              {
+                tag: "Shadow AI — No Governance",
+                title: "15 internal experiments. No coordination.",
+                value: "12 trained staff who speak the same AI architecture language. A governance framework that coordinates what's already happening internally — and scales it.",
+                color: "#6e3aff",
+                icon: "🔒",
+              },
+              {
+                tag: "Vendor Lock-In — Genesys, MATRIXX, IBM",
+                title: "Your stack already belongs to someone else.",
+                value: "Every agent your team builds belongs to Orange. The architecture blueprint lives on InfoAcademy. Zero APEX dependency after Phase 1 if you choose not to continue.",
+                color: "#0071e3",
+                icon: "🗝️",
               },
             ].map((item, i) => (
               <AnimateIn key={i} delay={i * 0.1}>
@@ -676,18 +869,18 @@ export default function Page() {
             <div className="text-center mb-16">
               <p className="text-[12px] font-bold uppercase tracking-widest text-[#ff7900] mb-3">Your Team</p>
               <h2 className="text-4xl lg:text-5xl font-black text-[#1d1d1f]">
-                Network engineering meets
+                Enterprise engineering.
                 <br />
-                <span className="text-[#86868b]">AI infrastructure.</span>
+                <span className="text-[#86868b]">AI-native delivery.</span>
               </h2>
               <p className="text-lg text-[#6e6e73] mt-4 max-w-[600px] mx-auto">
-                Delivered through InfoAcademy — your existing vendor. No new procurement. No new vendor qualification.
+                Lloyds Banking Group pedigree. FDRP AI governance framework. 17+ years enterprise architecture. Anthropic hackathon alumni. Delivered through InfoAcademy — your existing vendor.
               </p>
             </div>
           </AnimateIn>
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {TEAM.map((person, i) => (
-              <AnimateIn key={i} delay={i * 0.15}>
+              <AnimateIn key={i} delay={i * 0.1}>
                 <TeamCard person={person} />
               </AnimateIn>
             ))}
@@ -726,7 +919,7 @@ export default function Page() {
                   </p>
                 </div>
                 <div className="flex-shrink-0 text-right">
-                  <div className="text-3xl font-black text-[#ff7900]">€25–30K</div>
+                  <div className="text-3xl font-black text-[#ff7900]">€30K</div>
                   <div className="text-[12px] text-white/30 mt-0.5">10 weeks · Fixed fee</div>
                 </div>
               </div>
@@ -738,7 +931,7 @@ export default function Page() {
                   <div className="space-y-5">
                     {[
                       { week: "W1–2", title: "Foundations", desc: "Agent patterns, orchestration, deterministic vs probabilistic pipelines, governance basics", color: "#ff7900" },
-                      { week: "W3–6", title: "Build Sprint", desc: "Team A: Contract Renewal Agent — monitors expiring contracts, profiles the customer, sends personalised WhatsApp/email offer automatically. Team B: Email Triage Agent — scans inbound support emails, scores urgency, routes to the right department. Team C: Orange picks.", color: "#0071e3" },
+                      { week: "W3–6", title: "Build Sprint", desc: "Each team selects a real Orange use case — network triage, knowledge base, procurement analysis. Orange picks. We guide the build.", color: "#0071e3" },
                       { week: "W7–8", title: "Architecture Review", desc: "APEX reviews what your teams built. Synthesises patterns. Maps integration opportunities against Orange's live systems.", color: "#6e3aff" },
                       { week: "W9–10", title: "Roadmap Delivery", desc: "Living blueprint on InfoAcademy — not a PDF. 18-month roadmap grounded in what your people built, not external assumptions.", color: "#30d158" },
                     ].map((w, i) => (
@@ -811,67 +1004,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ── WHERE THIS GOES ──────────────────────────────────── */}
-      <section className="py-24 px-6 bg-[#f5f5f7]">
-        <div className="max-w-[1000px] mx-auto">
-          <AnimateIn>
-            <div className="text-center mb-14">
-              <p className="text-[12px] font-bold uppercase tracking-widest text-[#6e3aff] mb-3">The Bigger Picture</p>
-              <h2 className="text-4xl lg:text-5xl font-black text-[#1d1d1f] leading-tight">
-                Phase 1 is the door.
-                <br />
-                <span className="text-[#86868b]">The infrastructure is behind it.</span>
-              </h2>
-              <p className="text-lg text-[#6e6e73] mt-4 max-w-[600px] mx-auto">
-                Orange&apos;s full AI infrastructure — deterministic pipelines, self-verifying decisions, EU AI Act compliant — built in four phases over 24 months.
-              </p>
-            </div>
-          </AnimateIn>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { phase: "01", title: "AI Operations Lab", price: "€25–30K", duration: "10 weeks", desc: "Train 12 staff. Ship 3–4 agents. Deliver architecture blueprint. Entry point via L&D budget.", color: "#ff7900", current: true, href: null },
-              { phase: "02", title: "Sovereign Infrastructure", price: "€150–200K", duration: "6 months", desc: "APEX OS deployed. WhatsApp gateway. AGENTS.md governance. Security hardening. Genesys/MATRIXX integration.", color: "#0071e3", current: false, href: "/phase-2" },
-              { phase: "03", title: "Architectural Cognition", price: "€350–450K", duration: "9 months", desc: "FDRP quality layer. N≥3 cross-model verification. Romanian NLP fine-tuning. EU AI Act compliance.", color: "#6e3aff", current: false, href: "/phase-3" },
-              { phase: "04", title: "Orange as AI Platform", price: "€500K–1M/yr", duration: "Ongoing", desc: "License Romanian NLP to Orange Group. AI-as-a-Service for B2B clients. Bucharest = Group AI hub.", color: "#30d158", current: false, href: null },
-            ].map((p, i) => (
-              <AnimateIn key={i} delay={i * 0.08}>
-                <div className={`rounded-2xl p-6 h-full flex flex-col ${p.current ? "border-2" : "border"}`}
-                  style={{ borderColor: p.color + (p.current ? "60" : "20"), background: p.color + (p.current ? "10" : "05") }}>
-                  {p.current && (
-                    <div className="text-[10px] font-black uppercase tracking-widest mb-3 flex items-center gap-1.5"
-                      style={{ color: p.color }}>
-                      <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: p.color }} />
-                      You are here
-                    </div>
-                  )}
-                  <div className="text-[11px] font-black uppercase tracking-widest mb-1" style={{ color: p.color }}>
-                    Phase {p.phase}
-                  </div>
-                  <h3 className="text-[16px] font-black text-[#1d1d1f] mb-1">{p.title}</h3>
-                  <div className="text-[13px] font-bold mb-3" style={{ color: p.color }}>{p.price} · {p.duration}</div>
-                  <p className="text-[12px] text-[#6e6e73] leading-relaxed flex-1">{p.desc}</p>
-                  {p.href && (
-                    <a href={p.href}
-                      className="mt-4 text-[11px] font-black uppercase tracking-widest hover:underline flex items-center gap-1"
-                      style={{ color: p.color }}>
-                      View Phase {p.phase} proposal →
-                    </a>
-                  )}
-                </div>
-              </AnimateIn>
-            ))}
-          </div>
-          <AnimateIn delay={0.4}>
-            <div className="mt-8 rounded-2xl p-6 bg-white border border-[#e8e8ed] text-center">
-              <p className="text-[13px] text-[#6e6e73]">
-                Total engagement over 24 months: <span className="font-black text-[#1d1d1f]">€1.0M – €1.7M</span> ·
-                Orange owns all IP at every phase · Stop any time · Keep everything you built
-              </p>
-            </div>
-          </AnimateIn>
-        </div>
-      </section>
-
       {/* ── CTA ──────────────────────────────────────────────── */}
       <section id="cta" className="py-24 px-6"
         style={{ background: "linear-gradient(135deg, #1d1d1f 0%, #0a0a0a 50%, #1a0800 100%)" }}>
@@ -885,7 +1017,7 @@ export default function Page() {
               Ready to build?
             </h2>
             <p className="text-lg text-white/50 mt-4">
-              10 weeks. €25–30K. Working AI agents built by your team.
+              10 weeks. €30K. Working AI agents built by your team.
               <br />
               If the agents don&apos;t deliver value, you still have 12 trained people.
             </p>
@@ -906,45 +1038,13 @@ export default function Page() {
           </AnimateIn>
 
           <AnimateIn delay={0.22}>
-            <div className="mt-10 grid sm:grid-cols-2 gap-6 text-left">
-              {TEAM.map((person, i) => (
-                <div key={i} className="rounded-2xl p-6 bg-white/5 border border-white/[0.08]">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center text-white text-[11px] font-black mb-3"
-                    style={{ background: person.color }}>
-                    {person.name.split(" ").map(n => n[0]).join("")}
-                  </div>
-                  <h3 className="text-[15px] font-bold text-white">{person.name}</h3>
-                  <p className="text-[11px] text-white/40 uppercase tracking-wider mt-0.5">{person.title}</p>
-                  <div className="mt-3 space-y-1.5">
-                    {person.email && (
-                      <a href={`mailto:${person.email}`} className="flex items-center gap-2 text-[12px] text-[#ff7900] hover:underline">
-                        <Mail size={12} /> {person.email}
-                      </a>
-                    )}
-                    {person.whatsapp && (
-                      <a href={`https://wa.me/${person.whatsapp.replace(/\+/g, "")}`} target="_blank" rel="noopener"
-                        className="flex items-center gap-2 text-[12px] text-[#25d366] hover:underline">
-                        <WhatsAppIcon size={12} /> {person.whatsapp}
-                      </a>
-                    )}
-                    {person.phoneRO && (
-                      <a href={`tel:${person.phoneRO}`} className="flex items-center gap-2 text-[12px] text-white/50 hover:text-white transition-colors">
-                        <Phone size={12} /> {person.phoneRO} <span className="text-[10px] opacity-50">RO</span>
-                      </a>
-                    )}
-                    <a href={person.linkedin} target="_blank" rel="noopener" className="flex items-center gap-2 text-[12px] text-white/50 hover:text-white transition-colors">
-                      <Linkedin size={12} /> LinkedIn
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </AnimateIn>
-
-          <AnimateIn delay={0.35}>
             <p className="text-[11px] text-white/20 uppercase tracking-widest mt-14">
               InfoAcademy × APEX OS — Bucharest, Romania · London, UK
             </p>
+            <a href="https://nico.apex.infoacademy.uk" target="_blank" rel="noopener"
+              className="inline-block mt-3 text-[11px] text-white/15 hover:text-[#ff7900] transition-colors tracking-wider">
+              nico.apex.infoacademy.uk
+            </a>
           </AnimateIn>
         </div>
       </section>

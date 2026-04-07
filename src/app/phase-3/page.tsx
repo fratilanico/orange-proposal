@@ -197,22 +197,25 @@ const TEAM = [
     name: "Nico Fratila",
     role: "AI Infrastructure Architect",
     org: "APEX OS / InfoAcademy",
-    credentials: "73+ production AI repos. Phase 1–2 delivered on time.",
+    credentials: "Built APEX OS — 200+ skills, 73+ production repositories running 24/7. 5 years network engineering at Lloyds Banking Group. Founded InfoAcademy, existing Orange Romania vendor. Delivered Phase 1 and Phase 2 on time.",
     color: "#ff7900",
+    lead: false,
   },
   {
     name: "Liviu Olos",
-    role: "FDRP Methodology & Procurement Intelligence",
-    org: "LOFTREK S.R.L.",
-    credentials: "€62M outdoor equipment integration operator. FDRP: 557 tables, 32 subsystems. 790+ Romanian B2B clients.",
-    color: "#6e3aff",
+    role: "Lead AI Systems Architect — FDRP Creator",
+    org: "LOFTREK / liviu.ai",
+    credentials: "Creator of FDRP: 32 subsystems, 557 DB tables, evolves daily. LOFTREK: 790+ clients, 76 public institutions. Anthropic global hackathon — top 500 of 13,000 candidates. Member of Anthropic's private research network. EU AI Act, NIS2 & NATO DIANA authority. EU Horizon project specialist.",
+    color: "#f0b429",
+    lead: true,
   },
   {
-    name: "Mihai Catalin Teodosiu",
-    role: "Network Automation AI Specialist",
-    org: "Independent",
-    credentials: "Vodafone NOC alumni. 100K+ students. Deep Romanian telecom infrastructure expertise.",
-    color: "#0071e3",
+    name: "Bogdan Toporan",
+    role: "Engineering Leader & AI Architect",
+    org: "ARANDI / ex-Telenav / ex-HP",
+    credentials: "17+ years enterprise architecture. AI Agent Orchestration and RAG specialist. Built telecom-grade data pipelines at Telenav serving millions of users. Led 40+ engineer teams. US Patent holder.",
+    color: "#6e3aff",
+    lead: false,
   },
 ];
 
@@ -561,26 +564,69 @@ export default function Phase3Page() {
                 The Consortium
               </h2>
               <p className="text-xl text-white/50 max-w-2xl mx-auto">
-                Three specialists. No generalist consultants. Each brings irreplaceable operational depth.
+                Enterprise engineering. FDRP governance. AI Agent Orchestration. Each brings irreplaceable operational depth — no generalist consultants.
               </p>
             </div>
           </AnimateIn>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {TEAM.map(({ name, role, org, credentials, color }, i) => (
+            {TEAM.map(({ name, role, org, credentials, color, lead }, i) => (
               <AnimateIn key={name} delay={i * 0.1}>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-7 h-full">
+                <motion.div
+                  className="rounded-2xl p-7 h-full relative"
+                  style={
+                    lead
+                      ? {
+                          background: `linear-gradient(135deg, ${color}18 0%, ${color}0a 100%)`,
+                          border: `1px solid ${color}55`,
+                        }
+                      : { background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)" }
+                  }
+                  animate={
+                    lead
+                      ? {
+                          boxShadow: [
+                            `0 0 0 1px ${color}22, 0 6px 28px ${color}1a, 0 20px 60px ${color}0c`,
+                            `0 0 0 1px ${color}50, 0 8px 40px ${color}30, 0 24px 80px ${color}18`,
+                            `0 0 0 1px ${color}22, 0 6px 28px ${color}1a, 0 20px 60px ${color}0c`,
+                          ],
+                        }
+                      : {}
+                  }
+                  transition={lead ? { duration: 3, repeat: Infinity, ease: "easeInOut" } : {}}
+                >
+                  {lead && (
+                    <div
+                      className="absolute top-4 right-4 px-2.5 py-1 rounded-full text-[9px] font-black uppercase tracking-[0.1em]"
+                      style={{
+                        background: `${color}28`,
+                        color,
+                        border: `1px solid ${color}45`,
+                      }}
+                    >
+                      ★ Lead AI
+                    </div>
+                  )}
                   <div
-                    className="w-12 h-12 rounded-full mb-4 flex items-center justify-center text-white font-bold text-lg"
-                    style={{ backgroundColor: color }}
+                    className="w-12 h-12 rounded-xl mb-4 flex items-center justify-center text-white font-bold text-lg flex-shrink-0"
+                    style={
+                      lead
+                        ? { background: `linear-gradient(135deg, ${color}, #c8860a)`, boxShadow: `0 4px 16px ${color}40` }
+                        : { backgroundColor: color }
+                    }
                   >
                     {name.charAt(0)}
                   </div>
-                  <h3 className="font-bold text-white text-lg mb-1">{name}</h3>
-                  <div className="text-sm font-medium mb-1" style={{ color }}>{role}</div>
-                  <div className="text-xs text-white/40 mb-4">{org}</div>
-                  <p className="text-white/50 text-sm leading-relaxed">{credentials}</p>
-                </div>
+                  <h3
+                    className="leading-tight mb-1"
+                    style={{ color: "white", fontWeight: lead ? 800 : 700, fontSize: lead ? "18px" : "17px" }}
+                  >
+                    {name}
+                  </h3>
+                  <div className="text-sm font-semibold mb-1" style={{ color }}>{role}</div>
+                  <div className="text-xs mb-4" style={{ color: "rgba(255,255,255,0.4)" }}>{org}</div>
+                  <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>{credentials}</p>
+                </motion.div>
               </AnimateIn>
             ))}
           </div>

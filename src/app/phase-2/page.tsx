@@ -188,10 +188,10 @@ const TIMELINE = [
 
 const KPIS = [
   {
-    metric: "Djingo Response Accuracy",
+    metric: "Djia Response Accuracy",
     baseline: "52%",
-    target: "85%+",
-    method: "A/B test on identical query set before/after RAG deployment",
+    target: "65–70% (RAG only — NLP fine-tuning in Phase 3)",
+    method: "A/B test on identical query set before/after RAG pipeline deployment",
     icon: "🎯",
   },
   {
