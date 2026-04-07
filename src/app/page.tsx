@@ -165,7 +165,7 @@ const PROOF_POINTS = [
   },
 ];
 
-const TEAM = [
+const LEADERSHIP = [
   {
     name: "Nico Fratila",
     location: "London, UK",
@@ -184,6 +184,28 @@ const TEAM = [
     color: "#ff7900",
     lead: false,
   },
+  {
+    name: "Mru Patel",
+    location: "Dubai, UAE",
+    title: "Executive Chairman & Global Partner",
+    org: "eWealthTech / ex-IBM / ex-Sun Microsystems",
+    bio: "40 years at the intersection of enterprise technology and global commercial strategy. Led multi-billion-pound programmes at IBM, Siemens, and Sun Microsystems — including pioneering open-source platforms and securing deals valued at over £3B across Europe, Africa, and Asia. Government and Fortune 500 advisor since 1987. Established the first independent Property Investment Fund in Eastern Europe. Brings the strategic and commercial architecture that turns a strong technical proposal into a Group-level decision.",
+    credentials: [
+      "IBM / Siemens / Sun Microsystems — enterprise transformation",
+      "£3B+ in programmes across Europe, Africa, Asia",
+      "Government & Fortune 500 advisor since 1987",
+      "Eastern Europe market entry — first Property Investment Fund",
+      "eWealthTech — CEO, global AI & open-source platforms",
+    ],
+    linkedin: "https://www.linkedin.com/in/maborishapatel/",
+    email: "",
+    website: "",
+    color: "#0d7377",
+    lead: false,
+  },
+];
+
+const TEAM = [
   {
     name: "Liviu Olos",
     location: "Romania",
@@ -875,13 +897,30 @@ export default function Page() {
                 <span className="text-[#86868b]">AI-native delivery.</span>
               </h2>
               <p className="text-lg text-[#6e6e73] mt-4 max-w-[600px] mx-auto">
-                Lloyds Banking Group pedigree. FDRP AI governance framework. 17+ years enterprise architecture. Anthropic hackathon alumni. Delivered through InfoAcademy — your existing vendor.
+                IBM and Lloyds pedigree. FDRP AI governance. 40+ years enterprise strategy. Anthropic hackathon alumni. Delivered through InfoAcademy — your existing vendor.
               </p>
             </div>
           </AnimateIn>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {TEAM.map((person, i) => (
+
+          {/* Strategic Leadership */}
+          <AnimateIn>
+            <p className="text-[11px] font-bold uppercase tracking-widest text-[#86868b] mb-4">Strategic Leadership</p>
+          </AnimateIn>
+          <div className="grid sm:grid-cols-2 gap-5 mb-8">
+            {LEADERSHIP.map((person, i) => (
               <AnimateIn key={i} delay={i * 0.1}>
+                <TeamCard person={person} />
+              </AnimateIn>
+            ))}
+          </div>
+
+          {/* Execution Team */}
+          <AnimateIn>
+            <p className="text-[11px] font-bold uppercase tracking-widest text-[#86868b] mb-4 mt-10">Execution Team</p>
+          </AnimateIn>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {TEAM.map((person, i) => (
+              <AnimateIn key={i} delay={i * 0.1 + 0.2}>
                 <TeamCard person={person} />
               </AnimateIn>
             ))}
