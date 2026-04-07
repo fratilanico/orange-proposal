@@ -128,7 +128,7 @@ const TIMELINE = [
   {
     months: "2–4",
     title: "Romanian NLP Pipeline",
-    description: "Fine-tuning pipeline built on Orange call data. First Djia improvement cycle begins. Actual current baseline measured for the first time — target trajectory set from evidence, not assumption.",
+    description: "Fine-tuning pipeline built on Orange's own call data — accelerating the improvements already happening internally. Performance formally benchmarked against Group reporting standards. Target trajectory set from Orange's operational evidence.",
     color: "#6e3aff",
   },
   {
@@ -163,7 +163,7 @@ const ROI_ITEMS = [
     label: "Djia Success Rate",
     from: "52% (2021 pilot)",
     to: "80%+",
-    context: "9.3M subscribers — current figure unpublished",
+    context: "9.3M subscribers — internal improvements made Group-reportable",
     color: "#30d158",
   },
   {
@@ -308,8 +308,8 @@ export default function Phase3Page() {
               {
                 icon: AlertTriangle,
                 color: "#ff3b30",
-                title: "Djia — Unknown Real Performance",
-                body: "Djia launched at 52% success in 2021. Orange has never published an updated figure. With 9.3M subscribers, every failed interaction is a trust withdrawal — and nobody knows how many there are.",
+                title: "Djia — Strong Foundation, Missing Governance Layer",
+                body: "Djia launched at 52% in 2021 and Orange's internal teams have been improving it since. What's missing is not performance — it's the governance framework to measure, verify, and report those improvements against Group AI targets.",
               },
               {
                 icon: Lock,
@@ -354,6 +354,9 @@ export default function Phase3Page() {
                 Fractal Diamond Refinement Process. Built by an operator who ran 790+ physical integration
                 projects — not an academic framework. 32 self-evolving subsystems. 557 database tables.
                 Proven on a CHF 147M antimatter facility programme (68 experts, 6,052 findings).
+              </p>
+              <p className="text-lg text-white/40 max-w-3xl mx-auto leading-relaxed mt-4">
+                The same gate methodology that governed a particle physics facility at CERN scale now governs AI decision-making in telecoms — every model selection, every Djia architecture change, every data governance call treated as a manufactured artefact with mandatory quality gates before it ships.
               </p>
             </div>
           </AnimateIn>
@@ -638,29 +641,68 @@ export default function Phase3Page() {
         <div className="max-w-4xl mx-auto">
           <AnimateIn>
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-[#1d1d1f] mb-4">
-                Investment
-              </h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#1d1d1f] mb-4">Investment</h2>
+              <p className="text-xl text-[#6e6e73] max-w-2xl mx-auto">
+                Fixed-fee engagement. Every line item is work Orange owns — not a subscription or retainer.
+              </p>
             </div>
           </AnimateIn>
 
+          {/* Line-item breakdown */}
+          <AnimateIn delay={0.05}>
+            <div className="space-y-3 mb-8">
+              {[
+                { label: "FDRP Gate Lifecycle Deployment", amount: "€80,000", note: "6-gate lifecycle across all Orange AI decisions. PDR → PQR on every Djia change and model selection." },
+                { label: "Romanian NLP Fine-Tuning Pipeline", amount: "€110,000", note: "Model training on Orange's own call data. Continuous retraining infrastructure. Djia improvement cycle." },
+                { label: "EU AI Act Compliance Framework", amount: "€80,000", note: "Article 6/9 classification for Djia. Risk management system, technical documentation, human oversight protocols." },
+                { label: "N≥3 Cross-Model Verification", amount: "€50,000", note: "Claude + GPT + Gemini verification integrated into Orange's AI pipelines. Bias detection at scale." },
+                { label: "CVT Dashboard", amount: "€40,000", note: "Convergence Velocity Tensor — real-time AI quality KPIs for CTO and Group AI Paris." },
+                { label: "Procurement Intelligence (LOFTREK OSINT)", amount: "€35,000", note: "OSINT methodology applied to Genesys, MATRIXX, IBM contracts. Renegotiation opportunities mapped." },
+                { label: "Expert Panel + Phase 4 Roadmap", amount: "€30–55K", note: "20+ specialist panel run on full Orange AI architecture. Group replication blueprint for Poland, Belgium, Spain." },
+              ].map((item, i) => (
+                <motion.div
+                  key={item.label}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.06, duration: 0.4 }}
+                  className="flex items-start justify-between gap-4 p-5 rounded-xl border border-[#e5e5ea] bg-white hover:border-[#ff7900]/30 transition-colors"
+                >
+                  <div className="flex-1">
+                    <div className="font-black text-[#1d1d1f] mb-1">{item.label}</div>
+                    <div className="text-[#6e6e73] text-sm">{item.note}</div>
+                  </div>
+                  <div className="text-[#ff7900] font-black text-lg flex-shrink-0 text-right">{item.amount}</div>
+                </motion.div>
+              ))}
+              {/* Total */}
+              <div className="flex items-center justify-between p-6 rounded-xl bg-[#ff7900] mt-2">
+                <div>
+                  <div className="text-white/80 text-sm font-bold uppercase tracking-widest mb-1">Total Investment</div>
+                  <div className="text-white text-sm">Fixed fee — no time-and-materials surprises</div>
+                </div>
+                <div className="text-white font-black text-3xl">€350–450K</div>
+              </div>
+            </div>
+          </AnimateIn>
+
+          {/* Fixed + Licence cards */}
           <div className="grid md:grid-cols-2 gap-6">
-            <AnimateIn>
+            <AnimateIn delay={0.1}>
               <div className="bg-white border-2 border-[#ff7900] rounded-2xl p-8 shadow-lg">
                 <div className="text-sm font-semibold text-[#ff7900] uppercase tracking-wider mb-2">Phase 3 Fixed</div>
                 <div className="text-5xl font-bold text-[#1d1d1f] mb-2">€350–450K</div>
                 <div className="text-[#6e6e73] mb-6">9-month engagement, fixed scope</div>
                 <ul className="space-y-3">
                   {[
-                    "All 8 deliverable systems",
-                    "FDRP gate lifecycle deployment",
-                    "Romanian NLP fine-tuning pipeline",
-                    "EU AI Act compliance framework",
-                    "N≥3 cross-model verification",
-                    "CVT dashboard",
-                    "Procurement intelligence reports",
-                    "Expert expansion panel run",
-                    "Phase 4 roadmap",
+                    "FDRP gate lifecycle across all AI decisions",
+                    "Romanian NLP fine-tuning on Orange call data",
+                    "EU AI Act Article 6/9 compliance framework",
+                    "N≥3 cross-model verification in production",
+                    "CVT dashboard for CTO + Group AI Paris",
+                    "Procurement intelligence — Genesys, MATRIXX, IBM",
+                    "20+ expert panel run on full architecture",
+                    "Phase 4 Group replication roadmap",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-sm text-[#1d1d1f]">
                       <CheckCircle size={16} className="text-[#30d158] mt-0.5 flex-shrink-0" />
@@ -671,7 +713,7 @@ export default function Phase3Page() {
               </div>
             </AnimateIn>
 
-            <AnimateIn delay={0.1}>
+            <AnimateIn delay={0.15}>
               <div className="bg-white border border-[#e5e5ea] rounded-2xl p-8">
                 <div className="text-sm font-semibold text-[#6e3aff] uppercase tracking-wider mb-2">FDRP Licence (Optional)</div>
                 <div className="text-5xl font-bold text-[#1d1d1f] mb-2">€30K</div>
@@ -679,12 +721,12 @@ export default function Phase3Page() {
                 <ul className="space-y-3">
                   {[
                     "Ongoing FDRP methodology licence",
-                    "Gate lifecycle updates",
+                    "Gate lifecycle updates as AI Act evolves",
                     "CVT algorithm improvements",
                     "Access to 32-subsystem platform",
                     "N≥3 verification framework updates",
-                    "Romanian NLP model updates",
-                    "Group replication support",
+                    "Romanian NLP model continuous retraining",
+                    "Group replication support (Poland, Belgium, Spain)",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-sm text-[#1d1d1f]">
                       <CheckCircle size={16} className="text-[#6e3aff] mt-0.5 flex-shrink-0" />

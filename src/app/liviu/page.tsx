@@ -267,7 +267,7 @@ export default function LiviuPage() {
                 Cross-model verified. EU AI Act compliant before August 2026.
               </p>
               <p className="text-white/50 leading-relaxed">
-                Phase 3 is where Djia goes from its 2021 pilot baseline toward 80%+. Where Orange&apos;s board gets a convergence
+                Phase 3 is where Djia's internal improvements get the governance layer to reach 80%+ and prove it to Group. Where Orange&apos;s board gets a convergence
                 dashboard instead of uptime metrics. Where we classify Djia under Article 6 before
                 regulators do it for them. And where FDRP gets its first €1B+ telco deployment.
               </p>

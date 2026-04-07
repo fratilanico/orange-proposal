@@ -795,8 +795,8 @@ export default function Page() {
           <div className="grid sm:grid-cols-2 gap-5">
             {[
               {
-                tag: "Djia — 52% at pilot launch, no update since",
-                title: "Your voice AI performance hasn't been published in 4 years.",
+                tag: "Djia — launched 2021, improving since",
+                title: "Your voice AI is getting better. Phase 1 gives you the architecture to prove it to Group.",
                 value: "Phase 1 maps the integration landscape your team discovers while building agents against Orange's live systems. That evidence becomes the foundation for fixing Djia in Phase 2 — grounded in your stack, not external assumptions.",
                 color: "#ff453a",
                 icon: "🤖",

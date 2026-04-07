@@ -58,7 +58,7 @@ const COMPONENTS = [
     subtitle: "Persistent Agent Orchestration",
     description:
       "A production-grade orchestration layer managing agent sessions, context handoff between conversations, JSONL audit trails, heartbeat monitoring, and a REST API for human-in-the-loop control.",
-    why: "Djia launched at 52% success in its 2021 pilot — Orange has never published an updated figure. Without session persistence and context handoff, every call starts from zero. Head of Ops fixes the memory layer.",
+    why: "Djia launched at 52% in 2021 and Orange's teams have been improving it since. Without session persistence and context handoff, every call still starts from zero — losing the context that drives real resolution rates. Head of Ops adds that memory layer on top of what you've already built.",
     color: "#6e3aff",
   },
   {
@@ -143,7 +143,7 @@ const TIMELINE = [
       "WhatsApp MultiWA gateway deployed",
       "First AI-assisted session on WhatsApp",
       "RAG pipeline on Orange internal docs",
-      "Djia accuracy baseline established for first time since 2021",
+      "Djia accuracy formally benchmarked for Group-level reporting",
       "Knowledge base ingestion complete",
     ],
     color: "#0071e3",
@@ -189,9 +189,9 @@ const TIMELINE = [
 const KPIS = [
   {
     metric: "Djia Response Accuracy",
-    baseline: "52% at 2021 pilot launch — current figure unpublished",
+    baseline: "52% at 2021 pilot launch — internal improvements ongoing",
     target: "Measurable uplift, 65–70% projected post-RAG",
-    method: "A/B test on identical query set before/after RAG pipeline — establishes the first public baseline since launch",
+    method: "A/B test on identical query set before/after RAG pipeline — adds Group-reportable benchmark to existing internal tracking",
     icon: "🎯",
   },
   {
