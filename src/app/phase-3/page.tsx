@@ -197,7 +197,7 @@ const TEAM = [
     name: "Nico Fratila",
     role: "AI Infrastructure Architect",
     org: "APEX OS / InfoAcademy",
-    credentials: "Built APEX OS — 200+ skills, 73+ production repositories running 24/7. 5 years network engineering at Lloyds Banking Group. Founded InfoAcademy, existing Orange Romania vendor. Delivered Phase 1 and Phase 2 on time.",
+    credentials: "Built APEX OS — sovereign AI OS with 400+ self-evolving skills, persistent agent memory, multi-model orchestration, self-healing watchdog, FDRP gate automation, and knowledge distillation engine, running 24/7 on Azure. Lloyds Banking Group (5 yrs). CUBE Global CCO (RegTech). InfoAcademy CEO — existing Orange vendor.",
     color: "#ff7900",
     lead: false,
   },
