@@ -86,6 +86,58 @@ const SECTIONS = [
     ],
   },
   {
+    id: "valentina",
+    label: "Valentina Giurgiuveanu — your audience",
+    color: "#e040fb",
+    items: [
+      {
+        type: "note",
+        text: "AI Strategic Program Manager at Orange Romania. 14 years at Orange. Background: Customer Service → Business Optimization → Project & Program Management → AI. Core skills she lists: Problem Solving, Project Management. 274 connections. She is operational, not visionary. She values structure over hype.",
+      },
+      {
+        type: "rule",
+        text: "Her values (in order): PRAGMATISM — she will distrust anything that sounds like a pitch. EFFICIENCY — she has optimised processes for a decade, she respects tools that make things measurable. LOYALTY — 14 years at one company. She is Orange through and through. MEASURABLE IMPACT — she lives by KPIs. If you can't quantify it, it doesn't exist to her.",
+      },
+      {
+        type: "rule",
+        text: "DO NOT open with vision or buzzwords. Open with a specific operational problem she will recognise from her own experience. The 5-day wait story is perfect — she ran CS units, she knows the pain.",
+      },
+      {
+        type: "plant",
+        text: "DEFER TO HER: Pause after presenting the Phase 1 timeline and say: \"Valentina, you've run programme delivery inside Orange for over a decade — does this timeline feel realistic given how things move internally, or would you adjust anything?\" This earns instant respect and makes her a collaborator, not a gatekeeper.",
+      },
+      {
+        type: "plant",
+        text: "KPI HOOK: \"After 10 weeks you'll have two measurable KPIs that don't exist today — average time-to-offer on expiring contracts, and email triage accuracy rate. Those are numbers you can put in a Group report. They're not aspirational — they're measured from day one.\"",
+      },
+      {
+        type: "plant",
+        text: "PROCESS IMPROVEMENT ANGLE: \"You've spent years optimising customer service processes manually. This doesn't replace that work — it automates the parts you've already proven should be automated. The agents encode your optimisation logic into code that runs 24/7.\"",
+      },
+      {
+        type: "plant",
+        text: "CHAMPION SIGNAL: She is the ideal internal champion. She understands what AI should do (she holds the AI Strategic Program Manager title), she knows what actually works inside Orange (14 years of institutional knowledge), and she values delivery over slides. If she buys in, she will fight for this internally.",
+      },
+      {
+        type: "say",
+        text: "\"I've seen your background — CS, business optimisation, programme delivery. You know better than anyone where the friction points are. I'm not here to tell you what's broken. I'm here to show you how your team can fix the ones that matter most — in 10 weeks, with working systems, not PowerPoints.\"",
+      },
+      {
+        type: "note",
+        text: "She will ask about risk, integration complexity, and internal resource impact. Be ready with: 12 people for 2-3 hours per week, no new infrastructure needed, agents run inside existing Azure, zero disruption to current operations. These are the answers she needs to say yes.",
+      },
+      {
+        type: "dont",
+        text: "DO NOT talk about Phase 3, FDRP, antimatter facilities, or Anthropic hackathons. She doesn't care about credentials — she cares about whether this will work inside Orange's real constraints. Keep it Phase 1 only unless she asks.",
+      },
+      {
+        type: "value",
+        trigger: "She asks 'what happens after Phase 1?'",
+        say: "\"That depends on what your team builds and what the data shows. Phase 1 gives you the evidence to make that call — not a vendor's opinion, but your own team's results with your own data. You decide what comes next.\"",
+      },
+    ],
+  },
+  {
     id: "open",
     label: "Opening — first 5 minutes",
     color: "#ff7900",
@@ -173,7 +225,7 @@ const SECTIONS = [
       },
       {
         type: "plant",
-        text: "COST CONTROL: \"€25K is below VP discretionary. No committee. No procurement cycle. You can move next week if you want to.\"",
+        text: "COST CONTROL: \"€30K is below VP discretionary. No committee. No procurement cycle. You can move next week if you want to.\"",
       },
       {
         type: "rule",
@@ -295,7 +347,7 @@ const SECTIONS = [
     items: [
       {
         type: "say",
-        text: "\"I'm not asking you to approve a €500K programme today. I'm asking for 10 weeks and €25K. If after week 10 the agents don't deliver value — you still have 12 trained people. You can't lose.\"",
+        text: "\"I'm not asking you to approve a €500K programme today. I'm asking for 10 weeks and €30K. If after week 10 the agents don't deliver value — you still have 12 trained people. You can't lose.\"",
       },
       {
         type: "say",
