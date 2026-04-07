@@ -17,11 +17,17 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "AI Operations Lab — InfoAcademy × Orange Romania",
-  description: "AI capability transfer for Orange Romania. Your team builds working AI agents in 10 weeks. €30K. Owned by Orange.",
+  description: "AI capability transfer for Orange Romania. Your team builds working AI agents in 10 weeks. €30K fixed fee. Owned by Orange. Delivered by InfoAcademy — existing vendor.",
   openGraph: {
-    title: "AI Operations Lab — Orange Romania",
-    description: "10 weeks. €30K. Your team builds working AI agents. Architecture blueprint included. Delivered by InfoAcademy — existing Orange vendor.",
+    title: "AI Operations Lab — Orange Romania | €30K",
+    description: "10 weeks. €30K fixed fee. Your team builds working AI agents. Architecture blueprint included. IBM + Lloyds pedigree. Delivered by InfoAcademy — existing Orange vendor.",
     type: "website",
+    url: "https://orange.apex.infoacademy.uk",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Operations Lab — Orange Romania | €30K",
+    description: "10 weeks. €30K fixed fee. Your team builds working AI agents. Architecture blueprint included.",
   },
 };
 
