@@ -174,8 +174,8 @@ const TEAM = [
     bio: "5 years network engineering at Lloyds Banking Group. Built APEX OS from scratch — sovereign AI infrastructure with 200+ skills and 73+ production repositories running 24/7. Founded InfoAcademy, Orange Romania's existing training vendor. Designed the methodology Orange will use.",
     credentials: [
       "Lloyds Banking Group — Network Engineering (5 years)",
-      "APEX OS — 200+ skills, sovereign governance, 24/7",
-      "InfoAcademy — Founder, existing Orange Romania vendor",
+      "APEX OS — Founder, 200+ skills, sovereign governance, 24/7",
+      "InfoAcademy — CEO, existing Orange Romania vendor",
     ],
     linkedin: "https://linkedin.com/in/nicofratila",
     email: "nico.f@infoacademy.net",
