@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import AnimateIn from "@/components/AnimateIn";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import StatsTicker from "@/components/StatsTicker";
-import { ChevronDown, Users, Brain, Target, Phone, Mail, Linkedin } from "lucide-react";
+import { ChevronDown, Users, Brain, Target, Phone, Mail, Linkedin, Globe } from "lucide-react";
 
 /* ══════════════════════════════════════════════════════════════
    DATA
@@ -168,47 +168,73 @@ const PROOF_POINTS = [
 const TEAM = [
   {
     name: "Nico Fratila",
-    location: "London",
+    location: "London, UK",
     title: "AI Infrastructure Architect",
     org: "APEX OS / InfoAcademy",
-    bio: "5 years network engineering at Lloyds Banking Group. Founded APEX OS — architectural cognition with 200+ skills running 24/7.",
-    credentials: ["Lloyds Banking Group — 5 years", "APEX OS — 200+ skills, sovereign governance", "InfoAcademy — Orange Romania vendor"],
+    bio: "5 years network engineering at Lloyds Banking Group. Built APEX OS from scratch — sovereign AI infrastructure with 200+ skills and 73+ production repositories running 24/7. Founded InfoAcademy, Orange Romania's existing training vendor. Designed the methodology Orange will use.",
+    credentials: [
+      "Lloyds Banking Group — Network Engineering (5 years)",
+      "APEX OS — 200+ skills, sovereign governance, 24/7",
+      "InfoAcademy — Founder, existing Orange Romania vendor",
+    ],
     linkedin: "https://linkedin.com/in/nicofratila",
     email: "nico.f@infoacademy.net",
+    website: "",
     color: "#ff7900",
+    lead: false,
+  },
+  {
+    name: "Liviu Olos",
+    location: "Romania",
+    title: "Lead AI Systems Architect",
+    org: "LOFTREK / FDRP / liviu.ai",
+    bio: "Creator of FDRP — the AI quality governance framework with 32 subsystems and 557 database tables, evolving daily. Runs LOFTREK (790+ clients, 76 public institutions). Selected for Anthropic's inaugural global hackathon (top 500 of 13,000). Member of Anthropic's private research network. EU AI Act, NIS2, and NATO DIANA authority.",
+    credentials: [
+      "FDRP — AI governance, 32 subsystems, 557 DB tables",
+      "LOFTREK — 790+ clients, 76 public institutions",
+      "Anthropic Hackathon — top 500 of 13,000 globally",
+      "EU AI Act · NIS2 · Cybersecurity specialist",
+      "EU Horizon + NATO DIANA project authority",
+    ],
+    linkedin: "https://www.linkedin.com/in/liviu-olos/",
+    email: "",
+    website: "https://liviu.ai",
+    color: "#f0b429",
+    lead: true,
   },
   {
     name: "Bogdan Toporan",
-    location: "Cluj",
+    location: "Cluj, Romania",
     title: "Engineering Leader & AI Architect",
     org: "ARANDI / ex-Telenav / ex-HP",
-    bio: "17+ years enterprise architecture. 2 years focused on AI Agent Orchestration and RAG. Led 40+ engineer teams. US Patent holder.",
-    credentials: ["ARANDI — Founder, AI Agentic Systems", "Telenav — 40+ engineers, Big Data", "Micro Focus / HP — R&D Manager"],
+    bio: "17+ years enterprise architecture. 2 years deep in AI Agent Orchestration and RAG systems. Built telecom-grade data pipelines at Telenav serving millions of users. Led 40+ engineer teams. US Patent holder in spatial data intelligence.",
+    credentials: [
+      "ARANDI — Founder, AI Agentic Systems",
+      "Telenav — Engineering Lead, 40+ engineers, Big Data",
+      "Micro Focus / HP — R&D Manager, US Patent holder",
+    ],
     linkedin: "https://linkedin.com/in/bogdan-toporan",
     email: "bogdan.toporan@hotmail.com",
+    website: "",
     color: "#6e3aff",
+    lead: false,
   },
   {
     name: "Hardik Nakum",
-    location: "London",
-    title: "Principal Cloud Architect",
+    location: "London, UK",
+    title: "Principal Cloud & Security Architect",
     org: "Lloyds Banking Group",
-    bio: "10+ years at Lloyds leading multi-cloud re-architecture across Azure, AWS, and GCP. Agentic System Design and Cybersecurity.",
-    credentials: ["Lloyds — Cloud Architect (3 years)", "Lloyds — Network & Security Lead (7.5 years)", "PayPoint / Visa — Enterprise Architect"],
+    bio: "10+ years at Lloyds Banking Group designing multi-cloud infrastructure across Azure, AWS, and GCP at financial-system scale. Zero-trust security architecture, agentic systems design, and enterprise network hardening for one of the UK's largest banks.",
+    credentials: [
+      "Lloyds — Principal Cloud Architect (3 years)",
+      "Lloyds — Network & Security Lead (7.5 years)",
+      "Visa / PayPoint — Enterprise Architect",
+    ],
     linkedin: "https://linkedin.com/in/hardik-nakum",
     email: "",
+    website: "",
     color: "#0071e3",
-  },
-  {
-    name: "Alexandru Vasile",
-    location: "San Francisco",
-    title: "DevOps & MLOps Engineer",
-    org: "Orthant Software / ex-Rezatec / ex-Broadberry",
-    bio: "7+ years across DevOps, cloud infrastructure, and automation. Applied Masters in Modern ML Techniques. NLP and LLM specialist.",
-    credentials: ["Orthant Software — DevOps & MLOps (US)", "Rezatec — Cloud Migration, GCP + Azure (5 years)", "Broadberry Data Systems — Infrastructure (6 years)"],
-    linkedin: "https://linkedin.com/in/vmalex",
-    email: "",
-    color: "#30d158",
+    lead: false,
   },
 ];
 
@@ -400,43 +426,136 @@ function WhatsAppIcon({ size = 14 }: { size?: number }) {
 }
 
 function TeamCard({ person }: { person: typeof TEAM[0] }) {
+  const isLead = person.lead;
+
+  const baseStyle = isLead
+    ? {
+        background: `linear-gradient(135deg, ${person.color}1a 0%, ${person.color}0a 100%)`,
+        border: `1px solid ${person.color}55`,
+      }
+    : {
+        background: person.color + "06",
+        border: `1px solid ${person.color}18`,
+      };
+
   return (
-    <div className="rounded-2xl p-6 h-full flex flex-col" style={{ background: person.color + "06", border: `1px solid ${person.color}18` }}>
+    <motion.div
+      className="rounded-2xl p-6 h-full flex flex-col relative"
+      style={baseStyle}
+      animate={
+        isLead
+          ? {
+              boxShadow: [
+                `0 0 0 1px ${person.color}22, 0 6px 28px ${person.color}1a, 0 20px 60px ${person.color}0c`,
+                `0 0 0 1px ${person.color}50, 0 8px 40px ${person.color}30, 0 24px 80px ${person.color}18`,
+                `0 0 0 1px ${person.color}22, 0 6px 28px ${person.color}1a, 0 20px 60px ${person.color}0c`,
+              ],
+            }
+          : {}
+      }
+      transition={isLead ? { duration: 3, repeat: Infinity, ease: "easeInOut" } : {}}
+    >
+      {/* Lead badge */}
+      {isLead && (
+        <div
+          className="absolute top-4 right-4 px-2.5 py-1 rounded-full text-[9px] font-black uppercase tracking-[0.1em]"
+          style={{
+            background: `linear-gradient(135deg, ${person.color}28, ${person.color}12)`,
+            color: person.color,
+            border: `1px solid ${person.color}45`,
+          }}
+        >
+          ★ Lead AI
+        </div>
+      )}
+
       {/* Avatar */}
-      <div className="w-11 h-11 rounded-xl flex items-center justify-center text-white text-[12px] font-black mb-4"
-        style={{ background: person.color }}>
-        {person.name.split(" ").map(n => n[0]).join("")}
+      <div
+        className="w-12 h-12 rounded-xl flex items-center justify-center text-white font-black mb-4 flex-shrink-0"
+        style={
+          isLead
+            ? {
+                background: `linear-gradient(135deg, ${person.color}, #c8860a)`,
+                fontSize: "13px",
+                boxShadow: `0 4px 16px ${person.color}40`,
+              }
+            : { background: person.color, fontSize: "12px" }
+        }
+      >
+        {person.name.split(" ").map((n) => n[0]).join("")}
       </div>
+
       {/* Name + location */}
-      <h3 className="text-[16px] font-bold text-[#1d1d1f] leading-tight">{person.name}</h3>
+      <h3
+        className="leading-tight text-[#1d1d1f]"
+        style={{ fontSize: isLead ? "17px" : "16px", fontWeight: isLead ? 800 : 700 }}
+      >
+        {person.name}
+      </h3>
       <p className="text-[10px] text-[#86868b] mt-0.5">{person.location}</p>
+
       {/* Title */}
-      <p className="text-[12px] font-semibold mt-2" style={{ color: person.color }}>{person.title}</p>
+      <p
+        className="font-semibold mt-2"
+        style={{ color: person.color, fontSize: isLead ? "13px" : "12px" }}
+      >
+        {person.title}
+      </p>
       <p className="text-[10px] text-[#86868b] uppercase tracking-wider mt-0.5">{person.org}</p>
+
       {/* Bio */}
       <p className="text-[12px] text-[#6e6e73] leading-relaxed mt-3">{person.bio}</p>
+
       {/* Credentials */}
-      <ul className="mt-3 space-y-1 flex-1">
+      <ul className="mt-3 space-y-1.5 flex-1">
         {person.credentials.map((c, i) => (
           <li key={i} className="text-[11px] text-[#6e6e73] flex items-start gap-2">
-            <span style={{ color: person.color }} className="mt-0.5 flex-shrink-0">✓</span> {c}
+            <span style={{ color: person.color }} className="mt-0.5 flex-shrink-0">
+              ✓
+            </span>{" "}
+            {c}
           </li>
         ))}
       </ul>
+
       {/* Contact */}
-      <div className="mt-3 pt-3 border-t flex items-center gap-3" style={{ borderColor: person.color + "15" }}>
-        <a href={person.linkedin} target="_blank" rel="noopener"
-          className="flex items-center gap-1 text-[11px] font-semibold hover:underline" style={{ color: person.color }}>
-          <Linkedin size={11} /> LinkedIn
-        </a>
+      <div
+        className="mt-4 pt-3 border-t flex items-center gap-3 flex-wrap"
+        style={{ borderColor: person.color + "20" }}
+      >
+        {person.linkedin && (
+          <a
+            href={person.linkedin}
+            target="_blank"
+            rel="noopener"
+            className="flex items-center gap-1 text-[11px] font-semibold hover:underline"
+            style={{ color: person.color }}
+          >
+            <Linkedin size={11} /> LinkedIn
+          </a>
+        )}
         {person.email && (
-          <a href={`mailto:${person.email}`}
-            className="flex items-center gap-1 text-[11px] font-semibold hover:underline" style={{ color: person.color }}>
+          <a
+            href={`mailto:${person.email}`}
+            className="flex items-center gap-1 text-[11px] font-semibold hover:underline"
+            style={{ color: person.color }}
+          >
             <Mail size={11} /> Email
           </a>
         )}
+        {person.website && (
+          <a
+            href={person.website}
+            target="_blank"
+            rel="noopener"
+            className="flex items-center gap-1 text-[11px] font-semibold hover:underline"
+            style={{ color: person.color }}
+          >
+            <Globe size={11} /> liviu.ai
+          </a>
+        )}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -755,7 +874,7 @@ export default function Page() {
                 <span className="text-[#86868b]">AI-native delivery.</span>
               </h2>
               <p className="text-lg text-[#6e6e73] mt-4 max-w-[600px] mx-auto">
-                Lloyds Banking Group pedigree. 17+ years enterprise architecture. AI Agent Orchestration expertise. Delivered through InfoAcademy — your existing vendor.
+                Lloyds Banking Group pedigree. FDRP AI governance framework. 17+ years enterprise architecture. Anthropic hackathon alumni. Delivered through InfoAcademy — your existing vendor.
               </p>
             </div>
           </AnimateIn>
