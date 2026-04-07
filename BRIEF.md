@@ -290,3 +290,227 @@ Full session transcript available at:
 `/root/.claude/projects/-root/df1d7c23-4049-46d9-b32c-dcd0a969bb86.jsonl`
 
 This file contains the COMPLETE conversation including all sub-agent outputs, research results, and iterative proposal development.
+
+---
+
+## 14. LIVIU OLOS — FULL PROFILE (OSINT, April 2026)
+
+### Identity
+- **Name:** Liviu Olos
+- **Phone:** +40 752 287 722
+- **LinkedIn:** linkedin.com/in/liviuolos
+- **Email:** liviu@loftrek.ro (inferred)
+
+### Main Business: LOFTREK S.R.L.
+- **Domain:** loftrek.ro (fraktiq.liviu.ai redirects here)
+- **Type:** Outdoor equipment integrator — playgrounds, fitness, skateparks, pumptracks, alpine attractions, urban furniture
+- **Founded:** 2006, Baia Sprie, Maramureș, Romania
+- **CUI:** RO18736272, J24/908/2006
+- **Revenue:** 6.7M RON record in 2023. €62M+ cumulative since 2006
+- **Clients:** 790+ unique clients, 76 public institutions, 317+ localities, 42/42 județe
+- **Manufacturers:** Buglo (PL), Cemer (TR), Playparc (DE), TechRamps (PL), Wiegand (DE), HeBlad (NL)
+- **SEAP expertise:** 76 public institution contracts — knows Romanian public procurement inside out
+- **Team:** Family business — Anamaria & Liviu Olos
+
+### AI Research: FDRP (fdrp.liviu.ai)
+- **Full name:** Fractal Diamond Refinement Process
+- **Version:** v20.0 (April 2026)
+- **Core concept:** Manufacturing quality control applied to AI planning decisions
+- **Production scale:** 62 runs, 1,477 tracked decisions, 557 DB tables, 188 views, 80 rules
+- **32 subsystems** across 7 categories: Core, Discovery, Quality, Evolution, Integration, Governance, Visualization
+- **Health (April 2026):** 14 healthy, 8 degraded, 10 unknown
+- **Six-phase gate lifecycle:** KICKOFF → PDR → CDR → FDR → TRR → PQR
+- **Convergence Velocity Tensor (CVT):** 4 axes — decision stability, coverage completeness, clash resolution, expert consensus
+- **N≥3 cross-model verification:** Claude + GPT + Gemini independently. Caught arithmetic error (85.7%→75% correction)
+- **Expert Expansion:** 68 LLM-generated specialists, 6,052 findings on antimatter programme (CHF 147M CERN facility)
+- **Self-correction proven:** retracted own convergence rate publicly — intellectual immune system
+- **Key subsystems relevant to Orange:** Cognitive Architecture (#28), Collective Coordination (#18), Six Hats (#4), Peer Review (#3), SPC Monitoring (#5), Cost Accounting (#19)
+
+### Procurement Intelligence: LOFTREK Cognition (cognition.loftrek.ro)
+- OSINT methodology applied to enterprise procurement
+- Real-time commodity/supplier/risk intelligence
+- CERN-grade verification (3 independent analytical models before delivery)
+- 807 cyber threats monitored, 451 CVEs — same architecture for commodity signals
+- Applied to Gulf/UAE market (Hormuz disruption, DEWA tariffs, cloud risk)
+- Romania-registered, GDPR-compliant, no UAE supplier conflicts
+
+### Partnership Value for Orange Proposal
+- FDRP = quality governance layer Orange needs for EU AI Act compliance (Article 6/9)
+- LOFTREK OSINT = intelligence brief on Orange's vendor estate (Genesys/MATRIXX renegotiation leverage)
+- SEAP expertise = can navigate Orange's procurement process for Phase 2+
+- Physical integration track record = credibility with Orange's infrastructure teams
+- Romanian business identity = known entity type in Romanian B2B procurement
+
+### KEY RISK
+If Orange googles Liviu → finds playground equipment. Need a clean bridge narrative:
+*"Liviu ran €62M of physical infrastructure integration. He built FDRP because AI planning fails the same way physical projects fail: no quality gates, no convergence metrics. That operational rigour is now in your AI infrastructure."*
+
+---
+
+## 15. APEX OS — FULL CAPABILITY MAP (apex.infoacademy.uk, April 2026)
+
+### Core Components
+| Component | What it does |
+|-----------|-------------|
+| Head of Ops | Persistent agent state: context.json, heartbeats (5-min), JSONL audit trail, REST API (/ops/session-start etc.) |
+| Sovereign Governance | AGENTS.md: single source of truth across repos. Tiered skills (CRITICAL/FULL/UPPER/BASE). Drift detection. |
+| Security Hardening | 5-layer: Azure NSG → UFW → fail2ban → nginx TLS → App token. Proven: 3,849 attacks blocked, 0 breaches |
+| Lead Gen Pipeline | Scrape → Enrich → Score → Brief → PDF. 50 leads in 4s. Multi-model routing (Claude/GPT/DeepSeek) |
+| WhatsApp Gateway | MultiWA: NestJS + Next.js + BullMQ. Multi-session. AI knowledge base. Broadcast. SDKs (TS/Py/PHP). $0 per-seat |
+| Cloud Infrastructure | Azure VM (B2ms, Ubuntu 24.04). nginx reverse proxy. systemd services. Let's Encrypt SSL. |
+
+### 8-Week Acceleration Programme
+- $25K per company
+- Module 1: Azure + Claude setup → Module 8: Go-live + certification
+- Every graduate leaves with production VM + governance + agents
+
+### Pricing (US market, reference)
+- Foundation: $2.5K/mo + $15K setup (1-10 people)
+- Professional: $5K/mo + $35K setup (mid-market)
+- Enterprise: $10-20K/mo + $75-150K setup
+
+### Production Metrics (verified)
+- 3,849+ attacks blocked, 0 breaches
+- 50 qualified leads in 4 seconds
+- 97s full E2E pipeline runtime
+- 28 repos under governance
+- 8 weeks pilot-to-production average
+
+---
+
+## 16. REVISED 4-PHASE PROPOSAL ARCHITECTURE
+
+### Phase 0: Intelligence First (FREE, 2 weeks)
+- Liviu leads: LOFTREK OSINT on Orange Romania
+- Output: "Orange Romania AI Readiness Assessment"
+- Covers: EU AI Act Article 6 Djia exposure, vendor lock analysis, Vodafone/Digi competitor gap, Group mandate risk
+- Delivery: lunch in Bucharest, Nico + Liviu + Frunza + one CTO-level attendee
+- Goal: escalate from L&D to CTO conversation before signing Phase 1
+
+### Phase 1: AI Operations Lab (€25–30K, 10 weeks) — CURRENT
+- Entry: Mihai Frunza, L&D budget, existing InfoAcademy vendor
+- Leads: Nico + Teodosiu
+- Output: 3–4 agents, architecture blueprint, 12 trained staff, governance foundation
+
+### Phase 2: Sovereign AI Infrastructure (€150–200K, 6 months)
+- Entry: CTO / IT Director (infrastructure budget)
+- Leads: Nico (APEX OS infrastructure)
+- Deploy: Head of Ops, AGENTS.md, WhatsApp MultiWA, security hardening, RAG knowledge management, B2B pipeline, Genesys/MATRIXX integration
+- Proposal page: /phase-2
+
+### Phase 3: Architectural Cognition (€350–450K, 9 months)
+- Entry: CTO + Board (capital budget)
+- Leads: Nico + Liviu Olos (FDRP methodology)
+- Deploy: FDRP gate lifecycle, N≥3 cross-model verification, Romanian NLP fine-tuning (Djia 52%→80%+), EU AI Act compliance, procurement intelligence
+- Proposal page: /phase-3
+
+### Phase 4: Orange as AI Platform (€500K–1M/year, ongoing)
+- Orange licenses Romanian NLP to Group (Poland, Belgium, Spain)
+- AI-as-a-Service for Orange B2B enterprise clients
+- FDRP licence fee: €30K/year
+- Bucharest = Group AI Innovation Lab
+
+**Total engagement: €1.0M–€1.7M over 24–30 months**
+
+---
+
+## 17. EU AI ACT EXPOSURE — DJIA (CRITICAL)
+
+### Classification
+Djia (voice AI handling customer calls with automated decisions) = **HIGH-RISK AI** under EU AI Act Article 6(2), Annex III, Section 4 (AI systems intended to be used for making decisions or supporting decisions on access to essential private services).
+
+### Requirements (not currently met)
+- Risk management system (Article 9)
+- Data governance practices (Article 10)
+- Technical documentation (Article 11)
+- Record-keeping / logging (Article 12)
+- Transparency to users (Article 13)
+- Human oversight measures (Article 14)
+- Accuracy, robustness, cybersecurity (Article 15)
+
+### Timeline
+- EU AI Act entered into force: August 2024
+- High-risk AI compliance deadline: **August 2026** (2-year grace period)
+- Orange is currently 0% compliant for Djia
+
+### Business impact
+- Potential fine: up to €15M or 3% of global annual turnover (Orange Group: ~€43B → €1.29B max fine)
+- Regulatory risk: ANCOM + EDPB enforcement
+- Reputational risk: first major EU telco AI compliance failure
+
+### Our solution
+Phase 3 FDRP deployment covers Articles 9, 10, 12, 14, 15 directly:
+- Gate lifecycle = risk management system (Article 9)
+- N≥3 cross-model verification = accuracy/robustness (Article 15)
+- JSONL audit trail (Head of Ops) = record-keeping (Article 12)
+- AGENTS.md governance = human oversight measures (Article 14)
+
+---
+
+## 18. CONSORTIUM STRUCTURE
+
+### Contracting Entity
+**InfoAcademy** — existing Orange Romania vendor for Phases 1–2
+
+### Phase 3+ Consortium
+- **InfoAcademy** (Nico Fratila): infrastructure, governance, training, coordination
+- **LOFTREK S.R.L.** (Liviu Olos): FDRP methodology licence, intelligence advisory, procurement navigation
+- **Revenue split Phase 3:** Nico 60% / Liviu 40%
+- **Joint IP:** Romanian NLP model — owned 50/50, licenceable to Orange Group
+- **FDRP licence:** €30K/year from Phase 4
+
+### Team Roles
+| Person | Role | Phases |
+|--------|------|--------|
+| Nico Fratila | Infrastructure architect, project lead | 1–4 |
+| Liviu Olos | FDRP methodology, intelligence advisory | 0, 3–4 |
+| Mihai Catalin Teodosiu | Telco AI, Romanian NLP training | 1–3 |
+| Mihai Frunza (Orange) | Internal champion, L&D buyer | Phase 1 entry |
+| Iulia Mandita (Orange) | Procurement specialist | All phases |
+
+---
+
+## 19. DEPLOYED PAGES (V2 — v2.orange.apex.infoacademy.uk)
+
+| Page | URL | Audience |
+|------|-----|---------|
+| Main (V2) | / | Mihai Frunza (L&D), general Orange |
+| Phase 2 | /phase-2 | Marius Maican (CTO), Alexandru Ilie (IT Director) |
+| Phase 3 | /phase-3 | CTO + Board + Paris Group AI team |
+| Liviu partnership | /liviu | Liviu Olos exclusively |
+
+---
+
+## 20. SIX HATS STRATEGIC SUMMARY (Session 2, April 2026)
+
+### White (Facts)
+- FDRP has 10/32 subsystems degraded/unknown — present only 4 core subsystems to Orange
+- Liviu's primary business is outdoor equipment (loftrek.ro) — manage the narrative proactively
+- EU AI Act Article 6 deadline: August 2026 — 0% compliance today on Djia
+- praktiq.liviu.ai = offline. fraktiq.liviu.ai = loftrek.ro. Neither is an AI product yet.
+
+### Red (Gut)
+- This combination (APEX OS + FDRP + LOFTREK OSINT) is genuinely unique. No competitor can replicate it.
+- Liviu's €62M operational track record makes FDRP credible — not theoretical
+
+### Black (Risks)
+- Multi-party consortium adds coordination complexity — need clear contracts before Orange meeting
+- FDRP's particle physics/CERN proof points need telco translation before CTO presentation
+- Phase 0 intelligence brief could be stolen by Orange and given to IBM — protect with NDA or withhold detail
+
+### Yellow (Value)
+- Phase 0 free intelligence brief wins the meeting at CTO level (not just L&D)
+- LOFTREK procurement intelligence could save Orange €5-10M in vendor renegotiations
+- Romanian NLP model is a Group asset — Bucharest becomes Group AI competency centre
+
+### Green (Creative)
+- Phase 0 → Phase 1 → Phase 4 is a 24-month journey with €1M+ total value
+- Joint IP (Romanian NLP 50/50) creates a shared commercial incentive for both Nico and Liviu
+- Liviu's physical→digital story resonates with Orange's infrastructure mindset
+
+### Blue (Action)
+1. Call Liviu (+40 752 287 722) — confirm partnership before any Orange meeting
+2. Write Phase 0 brief using LOFTREK OSINT methodology
+3. Translate FDRP gate lifecycle into Orange-specific decisions (not physics/CERN)
+4. Send Liviu the /liviu proposal page
+5. EU AI Act memo for Djia → escalates Phase 1 conversation to CTO level
