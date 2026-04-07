@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-const PASSWORD = "Nico!234";
+const PASSWORD = "Nico!234Apex2305";
 const STORAGE_KEY = "speech_auth";
 
 function PasswordGate({ onUnlock }: { onUnlock: () => void }) {
