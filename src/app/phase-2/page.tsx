@@ -240,7 +240,7 @@ const COMPARISON = [
     delivery: "6 months",
     ownership: "Full — you own the stack",
     dependency: "Zero vendor lock-in",
-    price: "€150–200K",
+    price: "€185–200K",
     color: "#ff7900",
   },
   {
@@ -339,7 +339,7 @@ export default function Phase2Page() {
               className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden border border-white/10"
             >
               {[
-                { value: "€150–200K", label: "Fixed Fee" },
+                { value: "€185–200K", label: "Fixed Fee" },
                 { value: "6 months", label: "Deployment" },
                 { value: "7 systems", label: "Deployed" },
                 { value: "50+ staff", label: "Governed" },
@@ -382,7 +382,7 @@ export default function Phase2Page() {
           <div className="flex items-center gap-3">
             <div className="w-2 h-2 rounded-full bg-white animate-pulse" />
             <span className="text-white font-bold text-sm lg:text-base">
-              Phase 1 complete. 12 staff trained. Architecture blueprint delivered.
+              Phase 1: 10 weeks · 12 staff · Working AI agents built by your team.
             </span>
           </div>
           <a
@@ -620,7 +620,7 @@ export default function Phase2Page() {
               Investment
             </p>
             <h2 className="text-4xl lg:text-5xl font-black mb-6">
-              €150–200K fixed fee
+              €185–200K fixed fee
             </h2>
             <p className="text-white/50 text-xl max-w-2xl mb-16 leading-relaxed">
               Fixed-fee engagement. No time-and-materials surprises. Every line item
@@ -659,7 +659,7 @@ export default function Phase2Page() {
                     </div>
                     <div className="text-white text-sm">Fixed fee — no surprises</div>
                   </div>
-                  <div className="text-white font-black text-3xl">€150–200K</div>
+                  <div className="text-white font-black text-3xl">€185–200K</div>
                 </div>
               </div>
             </AnimateIn>
@@ -879,7 +879,7 @@ export default function Phase2Page() {
             <div className="inline-flex items-center gap-2 bg-[#ff7900]/10 border border-[#ff7900]/30 rounded-full px-4 py-2 mb-8">
               <div className="w-2 h-2 rounded-full bg-[#ff7900] animate-pulse" />
               <span className="text-[#ff7900] text-xs font-bold uppercase tracking-widest">
-                Phase 1 delivered. Phase 2 ready to start.
+                Phase 1 in progress. Phase 2 scoping open.
               </span>
             </div>
             <h2 className="text-4xl lg:text-6xl font-black text-white mb-6 leading-tight">
