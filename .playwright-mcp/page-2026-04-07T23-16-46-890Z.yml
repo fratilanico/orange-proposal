@@ -1,0 +1,21 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]: 🔐
+    - generic [ref=e4]:
+      - text: ▓ APEX OS ▓
+      - text: COMMAND CENTER
+    - generic [ref=e5]: AUTHORIZED PERSONNEL ONLY
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e8]: PROJECT
+        - radiogroup "Select project" [ref=e9]:
+          - generic [ref=e10] [cursor=pointer]: Gateway
+          - generic [ref=e11] [cursor=pointer]: Fortress
+      - generic [ref=e12]:
+        - generic [ref=e13]: USERNAME
+        - textbox "user@domain.com" [ref=e14]: admin
+      - generic [ref=e15]:
+        - generic [ref=e16]: PASSWORD
+        - textbox "••••••••••••" [ref=e17]: Apex2026!234Elias
+      - button "▶ ACCESS SYSTEM" [ref=e18] [cursor=pointer]
+  - alert [ref=e20]

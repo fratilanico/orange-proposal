@@ -96,32 +96,39 @@ const PHASES = [
   {
     phase: "02",
     title: "Scale & Integrate",
-    subtitle: "Architecture Deployment",
+    subtitle: "Sovereign AI Infrastructure",
     duration: "6 months",
-    price: "€150–200K",
+    price: "€185–200K",
     color: "#0071e3",
+    link: "/phase-2",
     items: [
-      "Deploy agent infrastructure across 2-3 departments",
-      "AI governance framework established (FDRP methodology)",
-      "Train 2nd and 3rd cohorts (12 → 50+ AI-capable employees)",
-      "Integrate with Genesys, MATRIXX, internal APIs",
-      "Romanian NLP model fine-tuning pipeline",
-      "Measurable KPIs: Djia improvement, internal automation rate",
+      "Skills Engine — departmental AI knowledge distillation, auto-evolving",
+      "2 additional production agents (Customer Retention + Upsell Intelligence)",
+      "Python ADK Agent-to-Agent orchestration across departments",
+      "AutoResearch Evolution — agents that research, learn, and improve autonomously",
+      "Deploy inside Orange's sandboxed LLM environment (Claude + GPT + Gemini)",
+      "Per-department skill libraries built on Orange's own operational data",
+      "Scale from 12 → 50+ AI-capable employees across 3 departments",
+      "Integrate with Genesys, MATRIXX, and internal APIs",
     ],
   },
   {
     phase: "03",
-    title: "Autonomous Operations",
-    subtitle: "Self-Sustaining AI Team",
+    title: "Architectural Cognition",
+    subtitle: "FDRP Quality Governance + EU AI Act",
     duration: "9 months",
-    price: "€400K+ / retainer",
+    price: "€350–450K",
     color: "#30d158",
+    link: "/phase-3",
     items: [
-      "Orange runs own AI operations team — APEX on advisory retainer",
-      "Replication playbook for Orange Group (Poland, Belgium, Spain)",
-      "Revenue shifts from project fees to licensing + advisory",
-      "AI-as-a-Service revenue stream for enterprise clients",
-      "Full organizational AI capability achieved",
+      "FDRP gate lifecycle on every AI decision (PDR → PQR)",
+      "N≥3 cross-model verification (Claude + GPT + Gemini independently)",
+      "Romanian NLP fine-tuning pipeline on Orange call data",
+      "EU AI Act Article 6/9 compliance framework — deadline Aug 2026",
+      "CVT dashboard for CTO + Group AI Paris",
+      "Procurement intelligence — Genesys, MATRIXX, IBM contract analysis",
+      "Group replication blueprint for Poland, Belgium, Spain",
+      "Orange runs own AI operations — APEX on advisory retainer",
     ],
   },
 ];
@@ -383,26 +390,37 @@ function PhaseCard({ phase, initialOpen = false }: { phase: typeof PHASES[0]; in
       </div>
       <AnimatePresence>
         {open && (
-          <motion.ul
+          <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="space-y-2 mt-4"
           >
-            {phase.items.map((item, i) => (
-              <motion.li
-                key={i}
-                initial={{ opacity: 0, x: -8 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.04 }}
-                className="text-[13px] text-[#6e6e73] flex items-start gap-2"
+            <ul className="space-y-2 mt-4">
+              {phase.items.map((item, i) => (
+                <motion.li
+                  key={i}
+                  initial={{ opacity: 0, x: -8 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.04 }}
+                  className="text-[13px] text-[#6e6e73] flex items-start gap-2"
+                >
+                  <span style={{ color: phase.color }} className="mt-0.5">•</span>
+                  {item}
+                </motion.li>
+              ))}
+            </ul>
+            {"link" in phase && phase.link && (
+              <a
+                href={phase.link}
+                onClick={(e) => e.stopPropagation()}
+                className="inline-flex items-center gap-2 mt-5 px-5 py-2.5 rounded-xl text-[13px] font-bold text-white transition-all hover:opacity-90"
+                style={{ background: phase.color }}
               >
-                <span style={{ color: phase.color }} className="mt-0.5">•</span>
-                {item}
-              </motion.li>
-            ))}
-          </motion.ul>
+                View full Phase {phase.phase} proposal →
+              </a>
+            )}
+          </motion.div>
         )}
       </AnimatePresence>
     </motion.div>
