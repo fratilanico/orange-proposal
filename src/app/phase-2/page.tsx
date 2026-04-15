@@ -747,20 +747,22 @@ export default function Phase2Page() {
       <section className="bg-white py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <AnimateIn>
-            <p className="text-[#ff7900] text-xs font-bold uppercase tracking-widest mb-4">
-              Vendor Selection
-            </p>
-            <h2 className="text-4xl lg:text-5xl font-black text-[#1d1d1f] mb-6">
-              Why APEX OS, not IBM
-            </h2>
-            <p className="text-[#6e6e73] text-xl max-w-2xl mb-6 leading-relaxed">
-              The comparison Orange&apos;s procurement team will run. We&apos;ve done it for you.
-            </p>
+            <div className="text-center mb-6">
+              <p className="text-[#ff7900] text-xs font-bold uppercase tracking-widest mb-4">
+                Vendor Selection
+              </p>
+              <h2 className="text-4xl lg:text-5xl font-black text-[#1d1d1f] mb-6">
+                Why APEX OS, not IBM
+              </h2>
+              <p className="text-[#6e6e73] text-xl max-w-2xl mx-auto leading-relaxed">
+                The comparison Orange&apos;s procurement team will run. We&apos;ve done it for you.
+              </p>
+            </div>
           </AnimateIn>
 
           {/* Clarifying framing paragraph */}
           <AnimateIn delay={0.05}>
-            <div className="max-w-3xl mb-12 rounded-2xl border border-[#ff7900]/25 bg-[#ff7900]/5 p-6">
+            <div className="max-w-3xl mx-auto mb-12 rounded-2xl border border-[#ff7900]/25 bg-[#ff7900]/5 p-6 text-center">
               <p className="text-[13px] font-black uppercase tracking-widest text-[#ff7900] mb-2">
                 How to read this
               </p>
