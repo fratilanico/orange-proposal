@@ -77,7 +77,7 @@ const COMPONENTS = [
     title: "Phase 1 Winners → Production",
     subtitle: "Move the proof into daily workflows",
     description:
-      "Take the 3–4 winning agents from Phase 1 and move them into production workflows across the departments that owned them. Wire them into Orange's live systems, give them access boundaries, run them under supervision, and measure them daily.",
+      "Take the 3-4 winning agents from Phase 1 and move them into production workflows across the departments that owned them. Wire them into Orange's live systems, give them access boundaries, run them under supervision, and measure them daily.",
     why: "Phase 1 was proof. Phase 2 is operationalisation, the winners live inside Orange's actual workflows, not on a demo server. Expansion across multiple departments is the difference between a successful pilot and a repeatable internal capability.",
     color: "#30d158",
   },
@@ -125,7 +125,7 @@ const COMPONENTS = [
 
 const TIMELINE = [
   {
-    months: "Month 1–2",
+    months: "Month 1-2",
     label: "Set Up in Orange's Environment",
     items: [
       "Dedicated VMs provisioned inside Orange's cloud environment",
@@ -137,10 +137,10 @@ const TIMELINE = [
     color: "#ff7900",
   },
   {
-    months: "Month 2–3",
+    months: "Month 2-3",
     label: "Phase 1 Winners into Production",
     items: [
-      "3–4 winning agents from Phase 1 wired into live workflows",
+      "3-4 winning agents from Phase 1 wired into live workflows",
       "Access boundaries and role-based permissions in place",
       "RAG pipeline on Orange internal docs",
       "Djia accuracy formally benchmarked for Group-level reporting",
@@ -149,7 +149,7 @@ const TIMELINE = [
     color: "#0071e3",
   },
   {
-    months: "Month 3–4",
+    months: "Month 3-4",
     label: "Governance Rollout",
     items: [
       "AGENTS.md deployed across all repos",
@@ -161,7 +161,7 @@ const TIMELINE = [
     color: "#6e3aff",
   },
   {
-    months: "Month 4–5",
+    months: "Month 4-5",
     label: "Integrations & Multi-Department Expansion",
     items: [
       "Genesys API bridge deployed",
@@ -173,7 +173,7 @@ const TIMELINE = [
     color: "#30d158",
   },
   {
-    months: "Month 5–6",
+    months: "Month 5-6",
     label: "Optimisation & Handoff",
     items: [
       "Load testing at production scale",
@@ -190,13 +190,13 @@ const KPIS = [
   {
     metric: "Djia Response Accuracy",
     baseline: "52% at 2021 pilot launch, internal improvements ongoing",
-    target: "Measurable uplift, 65–70% projected post-RAG",
+    target: "Measurable uplift, 65-70% projected post-RAG",
     method: "A/B test on identical query set before/after RAG pipeline, adds Group-reportable benchmark to existing internal tracking",
     icon: "🎯",
   },
   {
     metric: "Phase 1 Winners in Production",
-    baseline: "3–4 agents validated in Phase 1",
+    baseline: "3-4 agents validated in Phase 1",
     target: "All winners live in daily workflows by Month 3, expanded across 2+ departments by Month 5",
     method: "Production telemetry, department-level usage metrics, supervised review cycles",
     icon: "🏆",
@@ -230,7 +230,7 @@ const BREAKDOWN = [
   { label: "Phase 1 Winners → Production", amount: "€25,000", note: "Wire the Phase 1 winning agents into live workflows" },
   { label: "Knowledge Management (RAG)", amount: "€25,000", note: "Pipeline + Djia knowledge base" },
   { label: "Observability & Governance", amount: "€20,000", note: "Monitoring, drift detection, AGENTS.md rollout" },
-  { label: "Training (12 → 50 staff)", amount: "€15,000–€30,000", note: "Hands-on. Included in fixed fee range" },
+  { label: "Training (12 → 50 staff)", amount: "€15,000-€30,000", note: "Hands-on. Included in fixed fee range" },
 ]
 
 const COMPARISON = [
@@ -240,25 +240,25 @@ const COMPARISON = [
     delivery: "6 months",
     ownership: "Full, you own the stack",
     dependency: "Zero vendor lock-in",
-    price: "€185–200K",
+    price: "€185-200K",
     color: "#ff7900",
   },
   {
     vendor: "IBM",
     highlight: false,
-    delivery: "18–24 months",
+    delivery: "18-24 months",
     ownership: "IBM Watson ecosystem",
     dependency: "Permanent IBM dependency",
-    price: "€800K–€2M",
+    price: "€800K-€2M",
     color: "#6e3aff",
   },
   {
     vendor: "Accenture",
     highlight: false,
-    delivery: "12–18 months",
+    delivery: "12-18 months",
     ownership: "Consulting deliverables",
     dependency: "Accenture team retention",
-    price: "€500K–€1.5M",
+    price: "€500K-€1.5M",
     color: "#6e3aff",
   },
   {
@@ -267,7 +267,7 @@ const COMPARISON = [
     delivery: "Roadmap TBD",
     ownership: "Ericsson platform",
     dependency: "Full platform dependency",
-    price: "€600K–€1.2M",
+    price: "€600K-€1.2M",
     color: "#6e3aff",
   },
 ]
@@ -326,7 +326,7 @@ export default function Phase2Page() {
               Phase 1 proved the concept. Phase 2 moves the Phase 1 winners into production
               workflows and expands them across multiple departments, governed AI operations,
               observability, and measurable KPIs Orange&apos;s board can report against the
-              &apos;Trust the Future&apos; 2026–2030 AI value target.
+              &apos;Trust the Future&apos; 2026-2030 AI value target.
             </p>
           </AnimateIn>
 
@@ -340,7 +340,7 @@ export default function Phase2Page() {
               className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden border border-white/10"
             >
               {[
-                { value: "€185–200K", label: "Fixed Fee" },
+                { value: "€185-200K", label: "Fixed Fee" },
                 { value: "6 months", label: "Deployment" },
                 { value: "7 systems", label: "Deployed" },
                 { value: "50+ staff", label: "Governed" },
@@ -648,7 +648,7 @@ export default function Phase2Page() {
               Investment
             </p>
             <h2 className="text-4xl lg:text-5xl font-black mb-6">
-              €185–200K fixed fee
+              €185-200K fixed fee
             </h2>
             <p className="text-white/50 text-xl max-w-2xl mb-16 leading-relaxed">
               Fixed-fee engagement. No time-and-materials surprises. Every line item
@@ -687,7 +687,7 @@ export default function Phase2Page() {
                     </div>
                     <div className="text-white text-sm">Fixed fee, no surprises</div>
                   </div>
-                  <div className="text-white font-black text-3xl">€185–200K</div>
+                  <div className="text-white font-black text-3xl">€185-200K</div>
                 </div>
               </div>
             </AnimateIn>
@@ -704,9 +704,9 @@ export default function Phase2Page() {
                 <div className="divide-y divide-white/10">
                   {[
                     { name: "Genesys AI Add-on", price: "€400K+", note: "Per-year licensing, no ownership" },
-                    { name: "IBM AI Services", price: "€800K–€2M", note: "18-24 month delivery" },
-                    { name: "Accenture Advisory", price: "€500K–€1.5M", note: "Slide decks, not infrastructure" },
-                    { name: "Ericsson Platform", price: "€600K–€1.2M", note: "Full vendor dependency" },
+                    { name: "IBM AI Services", price: "€800K-€2M", note: "18-24 month delivery" },
+                    { name: "Accenture Advisory", price: "€500K-€1.5M", note: "Slide decks, not infrastructure" },
+                    { name: "Ericsson Platform", price: "€600K-€1.2M", note: "Full vendor dependency" },
                   ].map((alt) => (
                     <div key={alt.name} className="flex items-center justify-between p-5">
                       <div>
@@ -720,7 +720,7 @@ export default function Phase2Page() {
                 <div className="p-5 bg-white/[0.03] border-t border-white/10">
                   <div className="flex items-center gap-2 mb-2">
                     <div className="w-2 h-2 rounded-full bg-[#30d158]" />
-                    <span className="text-[#30d158] font-black text-sm">APEX OS saves Orange 60–80%</span>
+                    <span className="text-[#30d158] font-black text-sm">APEX OS saves Orange 60-80%</span>
                   </div>
                   <p className="text-white/40 text-xs">
                     While delivering full infrastructure ownership, not a managed service dependency.
@@ -877,7 +877,7 @@ export default function Phase2Page() {
 
             <AnimateIn delay={0.2}>
               <div className="inline-flex items-center gap-3 bg-[#6e3aff]/10 border border-[#6e3aff]/30 rounded-full px-6 py-3 text-[#6e3aff] font-bold text-sm">
-                Phase 3 scoping included in Phase 2 Month 5–6
+                Phase 3 scoping included in Phase 2 Month 5-6
               </div>
             </AnimateIn>
           </div>

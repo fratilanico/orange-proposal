@@ -56,7 +56,7 @@ const PAIN_POINTS = [
     icon: "📊",
     title: "€600M AI Value Target: Clock Ticking",
     bullets: [
-      "Orange Group's 'Trust the Future' 2026–2030 strategy targets €600M in AI-generated value by 2028, not a budget, a revenue commitment (Reuters, Feb 2026)",
+      "Orange Group's 'Trust the Future' 2026-2030 strategy targets €600M in AI-generated value by 2028, not a budget, a revenue commitment (Reuters, Feb 2026)",
       "Paris is already deploying Group-level AI infrastructure: Bucharest needs to show measurable results",
       "Without concrete deliverables, the risk is centralisation from Paris, not autonomy for Romania",
     ],
@@ -80,7 +80,7 @@ const PHASES = [
     title: "Assess & Build",
     subtitle: "AI Operations Lab",
     duration: "10 weeks",
-    price: "€30K–€50K",
+    price: "€30K-€50K",
     scopeNote: "based on scope",
     color: "#ff7900",
     items: [
@@ -99,7 +99,7 @@ const PHASES = [
     title: "Operationalise & Integrate",
     subtitle: "From Phase 1 winners to production",
     duration: "6 months",
-    price: "€185–200K",
+    price: "€185-200K",
     color: "#0071e3",
     link: "/phase-2",
     items: [
@@ -117,7 +117,7 @@ const PHASES = [
     title: "Enterprise AI Operating Model",
     subtitle: "Governed, scalable, durable, owned by Orange",
     duration: "9 months",
-    price: "€350–450K",
+    price: "€350-450K",
     color: "#30d158",
     link: "/phase-3",
     items: [
@@ -305,7 +305,7 @@ const OBJECTIONS = [
     a: "Paris builds tools. Tools without people who know how to use them are shelfware. We build the people AND the architecture. Bucharest delivering measurable AI value positions you as the Group's AI innovation lab, political capital for your leadership.",
   },
   {
-    q: "€30K–€50K seems cheap for 'architecture' but expensive for 'training'.",
+    q: "€30K-€50K seems cheap for 'architecture' but expensive for 'training'.",
     a: "It's neither. It's a 10-week build program where your people create working AI agents under expert guidance. The architecture emerges from what they build. You get trained people + working agents + a roadmap. Price scales with scope, workflows, agents, integrations. Still below VP discretionary spend threshold.",
   },
 ];
@@ -760,7 +760,7 @@ export default function Page() {
         <div className="max-w-[900px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <p className="text-white font-black text-xl sm:text-2xl leading-tight">
-              Seen enough? Start with €30K–€50K.
+              Seen enough? Start with €30K-€50K.
             </p>
             <p className="text-white/70 text-[14px] mt-1">
               No procurement committee. No RFP. One conversation.
@@ -810,7 +810,7 @@ export default function Page() {
           <AnimateIn delay={0.2}>
             <div className="grid sm:grid-cols-3 gap-6 mt-10">
               {[
-                { icon: <Users size={26} />, title: "Train", desc: "8–12 Orange employees learn to build AI agents. Not a course, a build sprint. They leave with skills, not certificates." },
+                { icon: <Users size={26} />, title: "Train", desc: "8-12 Orange employees learn to build AI agents. Not a course, a build sprint. They leave with skills, not certificates." },
                 { icon: <Brain size={26} />, title: "Build", desc: "Each team builds a working agent for a real Orange problem. Contract renewals. Email triage. The agent takes the volume. The employee takes the credit." },
                 { icon: <Target size={26} />, title: "Architect", desc: "What your team builds reveals your actual integration landscape, turning 10 weeks of hands-on work into an 18-month AI roadmap grounded in evidence." },
               ].map((s, i) => (
@@ -829,7 +829,7 @@ export default function Page() {
                 { label: "Model", apex: "Capability transfer", them: "Product delivery" },
                 { label: "Ownership", apex: "You own every agent", them: "Vendor owns IP" },
                 { label: "After 18 months", apex: "You run independently", them: "Renewal required" },
-                { label: "Entry cost", apex: "€30K–€50K", them: "€300K+ minimum" },
+                { label: "Entry cost", apex: "€30K-€50K", them: "€300K+ minimum" },
               ].map((row, i) => (
                 <div key={i} className="contents">
                   <div className={`px-4 py-3 ${i === 0 ? "font-black text-[11px] uppercase tracking-widest text-white/30 bg-white/[0.04]" : "text-white/40"} border-b border-white/[0.05]`}>{row.label}</div>
@@ -867,7 +867,7 @@ export default function Page() {
               {
                 tag: "€600M AI Value Target, 2028",
                 title: "Paris set the target. Bucharest needs to deliver.",
-                value: "Phase 1 produces 3–4 working agents and an architecture blueprint. Bucharest becomes the Group's AI reference implementation, political capital for your leadership.",
+                value: "Phase 1 produces 3-4 working agents and an architecture blueprint. Bucharest becomes the Group's AI reference implementation, political capital for your leadership.",
                 color: "#ff7900",
                 icon: "📊",
               },
@@ -1013,7 +1013,7 @@ export default function Page() {
                   </p>
                 </div>
                 <div className="flex-shrink-0 text-right">
-                  <div className="text-3xl font-black text-[#ff7900]">€30K–€50K</div>
+                  <div className="text-3xl font-black text-[#ff7900]">€30K-€50K</div>
                   <div className="text-[12px] text-white/30 mt-0.5">10 weeks · based on scope</div>
                 </div>
               </div>
@@ -1024,10 +1024,10 @@ export default function Page() {
                   <p className="text-[11px] font-black uppercase tracking-widest text-white/25 mb-5">10-Week Program</p>
                   <div className="space-y-5">
                     {[
-                      { week: "W1–2", title: "Foundations", desc: "Agent patterns, orchestration, deterministic vs probabilistic pipelines, governance basics", color: "#ff7900" },
-                      { week: "W3–6", title: "Build Sprint", desc: "Each team selects a real Orange use case, network triage, knowledge base, procurement analysis. Orange picks. We guide the build.", color: "#0071e3" },
-                      { week: "W7–8", title: "Architecture Review", desc: "APEX reviews what your teams built. Synthesises patterns. Maps integration opportunities against Orange's live systems.", color: "#6e3aff" },
-                      { week: "W9–10", title: "Roadmap Delivery", desc: "Living blueprint on InfoAcademy, not a PDF. 18-month roadmap grounded in what your people built, not external assumptions.", color: "#30d158" },
+                      { week: "W1-2", title: "Foundations", desc: "Agent patterns, orchestration, deterministic vs probabilistic pipelines, governance basics", color: "#ff7900" },
+                      { week: "W3-6", title: "Build Sprint", desc: "Each team selects a real Orange use case, network triage, knowledge base, procurement analysis. Orange picks. We guide the build.", color: "#0071e3" },
+                      { week: "W7-8", title: "Architecture Review", desc: "APEX reviews what your teams built. Synthesises patterns. Maps integration opportunities against Orange's live systems.", color: "#6e3aff" },
+                      { week: "W9-10", title: "Roadmap Delivery", desc: "Living blueprint on InfoAcademy, not a PDF. 18-month roadmap grounded in what your people built, not external assumptions.", color: "#30d158" },
                     ].map((w, i) => (
                       <div key={i} className="flex gap-4 items-start">
                         <div className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-[10px] font-black"
@@ -1047,7 +1047,7 @@ export default function Page() {
                   <p className="text-[11px] font-black uppercase tracking-widest text-white/25 mb-5">What You Get</p>
                   <div className="space-y-4">
                     {[
-                      { icon: "🤖", title: "3–4 Working AI Agents", desc: "Built by YOUR team. Owned by Orange." },
+                      { icon: "🤖", title: "3-4 Working AI Agents", desc: "Built by YOUR team. Owned by Orange." },
                       { icon: "🗺️", title: "Living Architecture Blueprint", desc: "On InfoAcademy, not a PDF. Evolves with your stack." },
                       { icon: "👥", title: "12 Trained Employees", desc: "Your internal AI champions. Ready to scale Phase 2." },
                       { icon: "📋", title: "18-Month AI Roadmap", desc: "Grounded in your builds, not consultant assumptions." },
@@ -1111,7 +1111,7 @@ export default function Page() {
               Ready to build?
             </h2>
             <p className="text-lg text-white/50 mt-4">
-              10 weeks. €30K–€50K based on scope. Working AI agents built by your team.
+              10 weeks. €30K-€50K based on scope. Working AI agents built by your team.
               <br />
               If the agents don&apos;t deliver value, you still have 12 trained people.
             </p>

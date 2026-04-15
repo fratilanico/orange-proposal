@@ -111,7 +111,7 @@ const DELIVERABLES = [
     icon: DollarSign,
     color: "#0071e3",
     title: "Vendor Estate Intelligence",
-    subtitle: "€5–10M renegotiation opportunities",
+    subtitle: "€5-10M renegotiation opportunities",
     description:
       "OSINT methodology applied to Orange's vendor estate: Genesys, MATRIXX, IBM. Identifies contract redundancies, pricing anomalies, consolidation opportunities. Operator-grade procurement intelligence, not consultant guesswork.",
     applies: ["Genesys contract analysis", "MATRIXX pricing audit", "IBM contract review", "Vendor consolidation map"],
@@ -120,37 +120,37 @@ const DELIVERABLES = [
 
 const TIMELINE = [
   {
-    months: "1–2",
+    months: "1-2",
     title: "Governance Foundation",
     description: "AI Operations Framework deployed on Orange's existing AI decision inventory. Policies, risk classification, human oversight protocols activated on active Djia changes. On-call rota defined.",
     color: "#ff3b30",
   },
   {
-    months: "2–4",
+    months: "2-4",
     title: "Romanian NLP Pipeline",
     description: "Fine-tuning pipeline built on Orange's own call data, accelerating the improvements already happening internally. Performance formally benchmarked against Group reporting standards. Target trajectory set from Orange's operational evidence.",
     color: "#ff7900",
   },
   {
-    months: "3–5",
+    months: "3-5",
     title: "EU AI Act Framework",
     description: "Article 6/9 classification completed. Risk management system implemented. Technical documentation generated. Human oversight protocols deployed, before the August 2026 deadline.",
     color: "#6e3aff",
   },
   {
-    months: "4–6",
+    months: "4-6",
     title: "Shared Services & Operating Model",
     description: "Reusable agent components, prompts, memory, evaluation flows, and deployment patterns lifted into a shared toolchain. Ownership between business, architecture, service, data, and tech champions formalised.",
     color: "#0071e3",
   },
   {
-    months: "5–7",
+    months: "5-7",
     title: "Reporting & Vendor Intelligence",
     description: "Dashboards delivered for CTO, Board, and Group AI Paris. Vendor estate intelligence reports completed for Genesys, MATRIXX, IBM. Renegotiation recommendations prepared.",
     color: "#30d158",
   },
   {
-    months: "7–9",
+    months: "7-9",
     title: "Expert Panel + Phase 4 Roadmap",
     description: "20+ specialist panel runs on full Orange AI architecture. Phase 4 roadmap delivered. Group replication blueprint for Poland, Belgium, Spain.",
     color: "#ff9500",
@@ -178,7 +178,7 @@ const ROI_ITEMS = [
     icon: DollarSign,
     label: "Vendor Renegotiation",
     from: "Unknown",
-    to: "€5–10M",
+    to: "€5-10M",
     context: "Identified opportunities",
     color: "#0071e3",
   },
@@ -266,7 +266,7 @@ export default function Phase3Page() {
 
           <AnimateIn delay={0.3}>
             <p className="text-base text-white/40 mb-12">
-              9 months · €350–450K fixed · Five pillars · One operating model
+              9 months · €350-450K fixed · Five pillars · One operating model
             </p>
           </AnimateIn>
 
@@ -274,7 +274,7 @@ export default function Phase3Page() {
             <div className="flex flex-wrap justify-center gap-4">
               {[
                 { label: "Duration", value: "9 months", icon: Clock },
-                { label: "Investment", value: "€350–450K", icon: DollarSign },
+                { label: "Investment", value: "€350-450K", icon: DollarSign },
                 { label: "Djia Target", value: "pilot 52% → 80%+", icon: TrendingUp },
                 { label: "EU AI Act", value: "Aug 2026", icon: Shield },
               ].map(({ label, value, icon: Icon }) => (
@@ -329,7 +329,7 @@ export default function Phase3Page() {
                 icon: Zap,
                 color: "#6e3aff",
                 title: "€600M AI Value Target",
-                body: "Orange Group's 'Trust the Future' 2026–2030 strategy targets €600M in AI-generated value by 2028. Bucharest's execution quality determines whether Romania leads or follows within Group.",
+                body: "Orange Group's 'Trust the Future' 2026-2030 strategy targets €600M in AI-generated value by 2028. Bucharest's execution quality determines whether Romania leads or follows within Group.",
               },
             ].map(({ icon: Icon, color, title, body }) => (
               <AnimateIn key={title}>
@@ -692,7 +692,7 @@ export default function Phase3Page() {
                 { label: "Cross-Model Verification", amount: "€50,000", note: "Claude + GPT + Gemini deliberate on high-stakes decisions, model selection, risk classification, vendor renegotiation." },
                 { label: "Reporting & Trust Dashboards", amount: "€40,000", note: "Single pane of glass for CTO + Board + Group AI Paris. Audit trail, exports, governance posture." },
                 { label: "Vendor Estate Intelligence", amount: "€35,000", note: "OSINT methodology applied to Genesys, MATRIXX, IBM contracts. Renegotiation opportunities mapped." },
-                { label: "Expert Panel + Phase 4 Roadmap", amount: "€30–55K", note: "20+ specialist panel run on full Orange AI architecture. Group replication blueprint for Poland, Belgium, Spain." },
+                { label: "Expert Panel + Phase 4 Roadmap", amount: "€30-55K", note: "20+ specialist panel run on full Orange AI architecture. Group replication blueprint for Poland, Belgium, Spain." },
               ].map((item, i) => (
                 <motion.div
                   key={item.label}
@@ -715,7 +715,7 @@ export default function Phase3Page() {
                   <div className="text-white/80 text-sm font-bold uppercase tracking-widest mb-1">Total Investment</div>
                   <div className="text-white text-sm">Fixed fee, no time-and-materials surprises</div>
                 </div>
-                <div className="text-white font-black text-3xl">€350–450K</div>
+                <div className="text-white font-black text-3xl">€350-450K</div>
               </div>
             </div>
           </AnimateIn>
@@ -724,7 +724,7 @@ export default function Phase3Page() {
           <AnimateIn delay={0.1}>
             <div className="bg-white border-2 border-[#ff7900] rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
               <div className="text-sm font-semibold text-[#ff7900] uppercase tracking-wider mb-2">Phase 3 Fixed</div>
-              <div className="text-5xl font-bold text-[#1d1d1f] mb-2">€350–450K</div>
+              <div className="text-5xl font-bold text-[#1d1d1f] mb-2">€350-450K</div>
               <div className="text-[#6e6e73] mb-6">9-month engagement, fixed scope</div>
               <ul className="space-y-3">
                 {[
