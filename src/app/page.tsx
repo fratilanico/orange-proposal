@@ -156,7 +156,7 @@ const PROOF_POINTS = [
     name: "APEX OS",
     metric: "400+",
     metricLabel: "Skills Deployed",
-    desc: "Sovereign AI operating system — 400+ self-evolving skills, persistent cross-session agent memory, multi-model orchestration (Claude + Codex + Gemini), self-healing watchdog, knowledge distillation engine that promotes learnings to skills automatically, RAG evaluation pipeline, FDRP gate automation, and injection-guard security layer. Running 24/7 on Azure.",
+    desc: "Sovereign AI operating system — 400+ self-evolving skills, persistent cross-session agent memory, multi-model orchestration (Claude + Codex + Gemini), self-healing watchdog, knowledge distillation engine that promotes learnings to skills automatically, RAG evaluation pipeline, AI Operations Framework gate automation, and injection-guard security layer. Running 24/7 on Azure.",
     role: "Founder — Architectural Cognition",
     color: "#ff7900",
     url: "https://apex.infoacademy.uk",
@@ -176,14 +176,14 @@ const LEADERSHIP = [
   {
     name: "Nico Fratila",
     location: "London, UK",
-    title: "AI Infrastructure Architect",
+    title: "CEO, InfoAcademy · Founder, APEX OS",
     org: "APEX OS / InfoAcademy",
-    bio: "Founder of APEX OS — sovereign AI operating system with 400+ self-evolving skills, persistent agent memory, multi-model orchestration, self-healing infrastructure, and a knowledge distillation engine running 24/7 on Azure. 5 years network engineering at Lloyds Banking Group. Chief Customer Office at CUBE Global (RegTech). CEO of InfoAcademy, Orange Romania's existing training vendor.",
+    bio: "Builds the future by solving problems that matter. Co-CEO of InfoAcademy, empowering founders and businesses to move from concept to execution using battle-tested frameworks, AI automation, and hands-on technical expertise. Architect, overseer, cognitive-intelligence layer, deployer, shipper. Background spans AI/ML adoption at Lloyds Banking Group (cloud migrations and operational transformation), business analysis across fintech and education, and scalable platforms built from scratch. Has designed competitor intelligence systems, revamped enterprise websites, and trained dozens of entrepreneurs on orchestration — turning curiosity into capability. Curiosity drives me. Technology empowers me. Results define me.",
     credentials: [
       "APEX OS — Founder, 400+ skills, self-healing, 24/7 sovereign governance",
-      "Lloyds Banking Group — Network Engineering (5 years)",
+      "InfoAcademy — Co-CEO, existing Orange Romania vendor",
+      "Lloyds Banking Group — AI/ML adoption, cloud migrations (5 years)",
       "CUBE Global — Chief Customer Office (RegTech)",
-      "InfoAcademy — CEO, existing Orange Romania vendor",
     ],
     linkedin: "https://linkedin.com/in/nicofratila",
     email: "nico.f@infoacademy.net",
@@ -214,53 +214,38 @@ const LEADERSHIP = [
 
 const TEAM = [
   {
-    name: "Liviu Olos",
-    location: "Romania",
-    title: "Lead AI Systems Architect",
-    org: "LOFTREK / FDRP / liviu.ai",
-    bio: "Creator of FDRP — the AI quality governance framework with 32 subsystems and 557 database tables, evolving daily. Runs LOFTREK (790+ clients, 76 public institutions). Selected for Anthropic's inaugural global hackathon (top 500 of 13,000). Member of Anthropic's private research network. EU AI Act, NIS2, and NATO DIANA authority.",
-    credentials: [
-      "FDRP — AI governance, 32 subsystems, 557 DB tables",
-      "LOFTREK — 790+ clients, 76 public institutions",
-      "Anthropic Hackathon — top 500 of 13,000 globally",
-      "EU AI Act · NIS2 · Cybersecurity specialist",
-      "EU Horizon + NATO DIANA project authority",
-    ],
-    linkedin: "https://www.linkedin.com/in/liviu-olos/",
-    email: "",
-    website: "https://liviu.ai",
-    color: "#f0b429",
-    lead: true,
-  },
-  {
     name: "Bogdan Toporan",
     location: "Cluj, Romania",
-    title: "Engineering Leader & AI Architect",
-    org: "ARANDI / ex-Telenav / ex-HP",
-    bio: "17+ years enterprise architecture. 2 years deep in AI Agent Orchestration and RAG systems. Built telecom-grade data pipelines at Telenav serving millions of users. Led 40+ engineer teams. US Patent holder in spatial data intelligence.",
+    title: "Founder · Cloud Architect · SCADA Patent Holder",
+    org: "Arandi Software / Digitalize Today",
+    bio: "20+ years leading engineering teams at Telenav, Micro Focus (HP), and Emerson — where he patented a SCADA communication system for the Oil & Gas sector. Bridges traditional IT and the AI revolution through two consulting brands: Arandi Software takes brittle monoliths to resilient, scalable cloud systems (Microservices, Kubernetes, AWS); Digitalize Today designs and deploys agentic AI, workflow automation, and intelligent document processing that actually works in production — saving hundreds of hours of manual labor. Recently modernised a major tech client's infrastructure from scratch: custom REST APIs, AWS services, automated CI/CD pipelines. Engineers it, doesn't just talk about it.",
     credentials: [
-      "ARANDI — Founder, AI Agentic Systems",
-      "Telenav — Engineering Lead, 40+ engineers, Big Data",
-      "Micro Focus / HP — R&D Manager, US Patent holder",
+      "Telenav · Micro Focus (HP) · Emerson — 20+ years engineering",
+      "SCADA patent holder — Oil & Gas sector",
+      "Arandi Software — Founder, cloud modernisation",
+      "Digitalize Today — Founder, agentic AI & automation",
+      "4,700+ LinkedIn followers",
     ],
     linkedin: "https://linkedin.com/in/bogdan-toporan",
-    email: "bogdan.toporan@hotmail.com",
+    email: "bogdan@arandi.software",
     website: "",
     color: "#6e3aff",
     lead: false,
   },
   {
     name: "Hardik Nakum",
-    location: "London, UK",
-    title: "Principal Cloud & Security Architect",
-    org: "Lloyds Banking Group",
-    bio: "10+ years at Lloyds Banking Group designing multi-cloud infrastructure across Azure, AWS, and GCP at financial-system scale. Zero-trust security architecture, agentic systems design, and enterprise network hardening for one of the UK's largest banks.",
+    location: "UK",
+    title: "Director · Cloud, Security & Enterprise Transformation",
+    org: "MindNova",
+    bio: "Over a decade across global financial institutions, working at the intersection of AI, cloud, and cybersecurity to drive enterprise transformation with a strong focus on resilience, governance, and long-term impact. Has led large-scale cloud and transformation initiatives across Azure, AWS, and GCP; supported multi-cloud re-architecture programmes; and helped leadership teams adopt innovation in a way that is practical, responsible, and aligned to business outcomes. Builds the next generation of enterprise systems where humans and AI work together to improve decision-making and strengthen business performance.",
     credentials: [
-      "Lloyds — Principal Cloud Architect (3 years)",
-      "Lloyds — Network & Security Lead (7.5 years)",
-      "Visa / PayPoint — Enterprise Architect",
+      "10+ years across global financial institutions",
+      "AI & enterprise transformation",
+      "Cloud architecture — Azure · AWS · GCP",
+      "Cybersecurity & regulatory resilience",
+      "Director — MindNova",
     ],
-    linkedin: "https://linkedin.com/in/hardik-nakum",
+    linkedin: "https://www.linkedin.com/in/hardiknakum",
     email: "",
     website: "",
     color: "#0071e3",
@@ -595,7 +580,7 @@ function TeamCard({ person }: { person: typeof TEAM[0] }) {
             className="flex items-center gap-1 text-[11px] font-semibold hover:underline"
             style={{ color: person.color }}
           >
-            <Globe size={11} /> liviu.ai
+            <Globe size={11} /> Website
           </a>
         )}
       </div>
@@ -918,7 +903,7 @@ export default function Page() {
                 <span className="text-[#86868b]">AI-native delivery.</span>
               </h2>
               <p className="text-lg text-[#6e6e73] mt-4 max-w-[600px] mx-auto">
-                IBM and Lloyds pedigree. FDRP AI governance. 40+ years enterprise strategy. Anthropic hackathon alumni. Delivered through InfoAcademy — your existing vendor.
+                IBM, Sun Microsystems, and Lloyds pedigree. 60+ years enterprise delivery. Cloud, security, and SCADA engineering. Delivered through InfoAcademy — your existing vendor.
               </p>
             </div>
           </AnimateIn>
