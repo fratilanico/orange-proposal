@@ -93,10 +93,10 @@ const DELIVERABLES = [
     icon: Cpu,
     color: "#ff7900",
     title: "Romanian NLP Fine-Tuning Pipeline",
-    subtitle: "Djia: pilot-era baseline → 80%+ target",
+    subtitle: "From a Phase 1 benchmark to a measurable uplift",
     description:
-      "Custom model trained on Orange's own call data. Fine-tuned on Romanian telecom vocabulary, Orange-specific intents, regional dialect variation. The infrastructure to retrain continuously as new call patterns emerge.",
-    applies: ["Djia voice AI improvement", "Romanian dialect handling", "Telecom intent recognition", "Continuous retraining"],
+      "A Romanian-first fine-tuning pipeline trained on Orange's own call data, intent set, and dialect variation. Phase 1 establishes a benchmarked baseline (the public 2021 Djia number is 52%; the current Orange-internal number isn't published, so we baseline it ourselves). Phase 3 lifts whatever that baseline turns out to be using a continuous retraining loop. Applies to Djia and any other Romanian voice or text surface in scope.",
+    applies: ["Romanian dialect handling", "Telecom intent recognition", "Continuous retraining loop", "Voice and text surfaces"],
   },
   {
     icon: Brain,
@@ -157,13 +157,12 @@ const TIMELINE = [
   },
 ];
 
-const ROI_ITEMS = [
   {
     icon: TrendingUp,
-    label: "Djia Success Rate",
-    from: "52% (2021 pilot)",
-    to: "80%+",
-    context: "9.3M subscribers. Internal improvements made Group-reportable.",
+    label: "Voice AI Performance",
+    from: "Phase 1 baseline",
+    to: "Measurable uplift",
+    context: "The 2021 Djia pilot was 52%. Orange's internal number isn't public. We baseline it in Phase 1, lift it in Phase 3.",
     color: "#30d158",
   },
   {
@@ -171,7 +170,7 @@ const ROI_ITEMS = [
     label: "EU AI Act Exposure",
     from: "Unclassified",
     to: "Compliant",
-    context: "August 2026 deadline cleared",
+    context: "Djia is the most likely Article 6 high-risk classification target. August 2026 deadline cleared.",
     color: "#ff7900",
   },
   {
@@ -279,7 +278,7 @@ export default function Phase3Page() {
               {[
                 { label: "Duration", value: "9 months", icon: Clock },
                 { label: "Investment", value: "€350-450K", icon: DollarSign },
-                { label: "Djia Target", value: "pilot 52% → 80%+", icon: TrendingUp },
+                { label: "Operating model", value: "Five pillars", icon: TrendingUp },
                 { label: "EU AI Act", value: "Aug 2026", icon: Shield },
               ].map(({ label, value, icon: Icon }) => (
                 <div
@@ -320,14 +319,14 @@ export default function Phase3Page() {
               {
                 icon: AlertTriangle,
                 color: "#ff3b30",
-                title: "Djia: Strong Foundation, Missing Governance Layer",
-                body: "Djia launched at 52% in 2021 and Orange's internal teams have been improving it since. What's missing is not performance, it's the governance framework to measure, verify, and report those improvements against Group AI targets.",
+                title: "Strong AI Foundation, Missing Governance Layer",
+                body: "Orange already has AI in production (Djia in voice, internal experiments across departments). Internal teams have been improving these for years. What's missing is not performance, it's the governance framework to measure, verify, and report those improvements against Group AI targets.",
               },
               {
                 icon: Lock,
                 color: "#ff9500",
                 title: "EU AI Act Exposure",
-                body: "Djia likely classifies as high-risk AI under Article 6. Without a risk management system, Orange faces GDPR-scale fines. Deadline: August 2026.",
+                body: "Djia likely classifies as high-risk AI under Article 6 (essential private services). Without a risk management system, Orange faces GDPR-scale fines. Deadline: August 2026. This is the single concrete reason Phase 3 has a hard date attached to it.",
               },
               {
                 icon: Zap,
@@ -668,9 +667,9 @@ export default function Phase3Page() {
           <AnimateIn delay={0.05}>
             <div className="space-y-3 mb-8">
               {[
-                { label: "AI Operations Framework Deployment", amount: "€80,000", note: "Six-gate lifecycle across all Orange AI decisions. PDR → PQR on every Djia change and model selection. On-call rota and runbooks." },
-                { label: "Romanian NLP Fine-Tuning Pipeline", amount: "€110,000", note: "Model training on Orange's own call data. Continuous retraining infrastructure. Djia improvement cycle." },
-                { label: "EU AI Act Compliance Framework", amount: "€80,000", note: "Article 6/9 classification for Djia. Risk management system, technical documentation, human oversight protocols." },
+                { label: "AI Operations Framework Deployment", amount: "€80,000", note: "Six-gate lifecycle across all Orange AI decisions. PDR → PQR on every model change and high-stakes decision. On-call rota and runbooks." },
+                { label: "Romanian NLP Fine-Tuning Pipeline", amount: "€110,000", note: "Model training on Orange's own call data. Continuous retraining infrastructure. Lifts whichever voice or text surfaces are in scope (Djia included if applicable)." },
+                { label: "EU AI Act Compliance Framework", amount: "€80,000", note: "Article 6/9 classification, focused on Djia as the most likely high-risk target. Risk management system, technical documentation, human oversight protocols. August 2026 deadline." },
                 { label: "Cross-Model Verification", amount: "€50,000", note: "Claude + GPT + Gemini deliberate on high-stakes decisions (model selection, risk classification, vendor renegotiation)." },
                 { label: "Reporting & Trust Dashboards", amount: "€40,000", note: "Single pane of glass for CTO + Board + Group AI Paris. Audit trail, exports, governance posture." },
                 { label: "Vendor Estate Intelligence", amount: "€35,000", note: "OSINT methodology applied to Genesys, MATRIXX, IBM contracts. Renegotiation opportunities mapped." },

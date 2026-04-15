@@ -857,11 +857,11 @@ export default function Page() {
           <div className="grid sm:grid-cols-2 gap-5">
             {[
               {
-                tag: "Djia, launched 2021, improving since",
-                title: "Your voice AI is getting better. Phase 1 gives you the architecture to prove it to Group.",
-                value: "Phase 1 maps the integration landscape your team discovers while building agents against Orange's live systems. That evidence becomes the foundation for fixing Djia in Phase 2, grounded in your stack, not external assumptions.",
+                tag: "Use cases that already exist inside Orange",
+                title: "You already know which workflows are painful. Phase 1 picks two or three and proves them.",
+                value: "Sponsor-led selection from a menu of five (support and service triage, retention and renewal copilot, internal knowledge assistant, network triage, procurement). Voice surfaces like Djia are one option, not the assumption. Whatever Orange picks becomes the evidence base for Phase 2.",
                 color: "#ff453a",
-                icon: "🤖",
+                icon: "🎯",
               },
               {
                 tag: "€600M AI Value Target, 2028",
