@@ -576,35 +576,50 @@ export default function Phase2Page() {
             </p>
           </AnimateIn>
 
-          <div className="grid lg:grid-cols-5 gap-4">
+          <div className="flex flex-col gap-5 max-w-5xl">
             {KPIS.map((kpi, i) => (
               <AnimateIn key={kpi.metric} delay={i * 0.06}>
-                <div className="bg-white rounded-2xl p-6 border border-[#e5e5ea] h-full flex flex-col">
-                  <div className="text-3xl mb-4">{kpi.icon}</div>
-                  <div className="font-black text-[#1d1d1f] text-base mb-4 leading-tight flex-1">
-                    {kpi.metric}
+                <div className="bg-white rounded-3xl p-7 flex flex-col lg:flex-row lg:items-stretch gap-6" style={{ boxShadow: "0 1px 0 rgba(0,0,0,0.04), 0 12px 40px rgba(0,0,0,0.04)" }}>
+                  {/* Identity */}
+                  <div className="lg:w-[280px] lg:flex-shrink-0 flex items-start gap-4">
+                    <div className="text-3xl flex-shrink-0">{kpi.icon}</div>
+                    <div>
+                      <div className="text-[10px] font-black uppercase tracking-[0.15em] text-[#ff7900] mb-1">
+                        Metric #{String(i + 1).padStart(2, "0")}
+                      </div>
+                      <h3 className="text-[18px] font-black text-[#1d1d1f] leading-tight">
+                        {kpi.metric}
+                      </h3>
+                    </div>
                   </div>
 
-                  <div className="space-y-3 mb-4">
-                    <div>
-                      <div className="text-xs font-bold uppercase tracking-widest text-[#6e6e73] mb-1">
+                  {/* Baseline → Target flow */}
+                  <div className="flex-1 flex items-center gap-4 lg:border-l lg:border-[#e5e5ea] lg:pl-6">
+                    <div className="flex-1">
+                      <div className="text-[10px] font-black uppercase tracking-[0.15em] text-[#86868b] mb-1.5">
                         Baseline
                       </div>
-                      <div className="text-[#1d1d1f] font-bold text-sm">{kpi.baseline}</div>
+                      <div className="text-[14px] font-bold text-[#1d1d1f] leading-snug">
+                        {kpi.baseline}
+                      </div>
                     </div>
-                    <div>
-                      <div className="text-xs font-bold uppercase tracking-widest text-[#30d158] mb-1">
+                    <div className="text-[#ff7900] text-2xl font-black flex-shrink-0">→</div>
+                    <div className="flex-1">
+                      <div className="text-[10px] font-black uppercase tracking-[0.15em] text-[#30d158] mb-1.5">
                         Target
                       </div>
-                      <div className="text-[#30d158] font-black text-sm">{kpi.target}</div>
+                      <div className="text-[14px] font-black text-[#1d1d1f] leading-snug">
+                        {kpi.target}
+                      </div>
                     </div>
                   </div>
 
-                  <div className="border-t border-[#f0f0f5] pt-4">
-                    <div className="text-xs font-bold uppercase tracking-widest text-[#6e6e73] mb-1">
+                  {/* How we measure */}
+                  <div className="lg:w-[260px] lg:flex-shrink-0 lg:border-l lg:border-[#e5e5ea] lg:pl-6">
+                    <div className="text-[10px] font-black uppercase tracking-[0.15em] text-[#86868b] mb-1.5">
                       How we measure
                     </div>
-                    <p className="text-[#6e6e73] text-xs leading-relaxed">{kpi.method}</p>
+                    <p className="text-[13px] text-[#1d1d1f]/75 leading-relaxed">{kpi.method}</p>
                   </div>
                 </div>
               </AnimateIn>
