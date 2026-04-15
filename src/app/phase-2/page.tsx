@@ -820,7 +820,7 @@ export default function Phase2Page() {
                     {COMPARISON.map((v) => (
                       <div
                         key={v.vendor}
-                        className={`rounded-xl p-4 text-sm font-bold ${
+                        className={`rounded-xl p-4 text-sm font-bold flex items-center ${
                           v.highlight
                             ? "bg-[#ff7900]/10 border border-[#ff7900]/30 text-[#1d1d1f]"
                             : "bg-[#f5f5f7] text-[#6e6e73]"
@@ -833,46 +833,80 @@ export default function Phase2Page() {
                 </AnimateIn>
               ))}
 
-              {/* Price row (custom: shows P2 + total for APEX, total only for others) */}
+              {/* Price divider label */}
               <AnimateIn delay={0.36}>
+                <div className="grid grid-cols-5 gap-3 mb-3 mt-8">
+                  <div className="flex items-center px-4">
+                    <span className="text-xs font-bold uppercase tracking-widest text-[#ff7900]">
+                      Price
+                    </span>
+                  </div>
+                  <div className="col-span-4 flex items-center">
+                    <div className="h-px flex-1 bg-[#e5e5ea]" />
+                  </div>
+                </div>
+              </AnimateIn>
+
+              {/* Phase 2 scope price row */}
+              <AnimateIn delay={0.4}>
                 <div className="grid grid-cols-5 gap-3 mb-3">
                   <div className="flex items-center px-4">
-                    <span className="text-xs font-bold uppercase tracking-widest text-[#6e6e73]">
-                      Price
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#6e6e73] leading-tight">
+                      Phase 2 scope
+                      <span className="block text-[#86868b] font-normal normal-case tracking-normal mt-0.5">
+                        6-month production deployment
+                      </span>
                     </span>
                   </div>
                   {COMPARISON.map((v) => (
                     <div
                       key={v.vendor}
-                      className={`rounded-xl p-4 ${
+                      className={`rounded-xl p-4 flex flex-col justify-center min-h-[68px] ${
                         v.highlight
                           ? "bg-[#ff7900]/10 border border-[#ff7900]/30"
                           : "bg-[#f5f5f7]"
                       }`}
                     >
-                      {v.highlight && v.pricePhase2 ? (
-                        <>
-                          <div className="text-[11px] font-bold uppercase tracking-wider text-[#ff7900]/80 mb-0.5">
-                            This Phase 2
-                          </div>
-                          <div className="text-[15px] font-black text-[#1d1d1f] leading-none">{v.pricePhase2}</div>
-                          <div className="mt-2 pt-2 border-t border-[#ff7900]/20">
-                            <div className="text-[11px] font-bold uppercase tracking-wider text-[#ff7900]/80 mb-0.5">
-                              Total engagement
-                            </div>
-                            <div className="text-[15px] font-black text-[#1d1d1f] leading-none">{v.priceTotal}</div>
-                          </div>
-                          <div className="text-[10px] text-[#6e6e73] mt-2 leading-snug">{v.priceNote}</div>
-                        </>
+                      {v.highlight ? (
+                        <div className="text-[17px] font-black text-[#1d1d1f] leading-none">
+                          {v.pricePhase2}
+                        </div>
                       ) : (
-                        <>
-                          <div className="text-[11px] font-bold uppercase tracking-wider text-[#86868b] mb-0.5">
-                            Total programme
-                          </div>
-                          <div className="text-[15px] font-black text-[#6e6e73] leading-none">{v.priceTotal}</div>
-                          <div className="text-[10px] text-[#86868b] mt-2 leading-snug">{v.priceNote}</div>
-                        </>
+                        <div className="text-[12px] italic text-[#86868b] leading-snug">
+                          Not offered as a phase
+                        </div>
                       )}
+                    </div>
+                  ))}
+                </div>
+              </AnimateIn>
+
+              {/* Full engagement price row */}
+              <AnimateIn delay={0.46}>
+                <div className="grid grid-cols-5 gap-3 mb-3">
+                  <div className="flex items-center px-4">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#6e6e73] leading-tight">
+                      Full engagement
+                      <span className="block text-[#86868b] font-normal normal-case tracking-normal mt-0.5">
+                        equivalent total programme
+                      </span>
+                    </span>
+                  </div>
+                  {COMPARISON.map((v) => (
+                    <div
+                      key={v.vendor}
+                      className={`rounded-xl p-4 flex flex-col justify-center min-h-[68px] ${
+                        v.highlight
+                          ? "bg-[#ff7900]/10 border border-[#ff7900]/30"
+                          : "bg-[#f5f5f7]"
+                      }`}
+                    >
+                      <div className={`text-[17px] font-black leading-none ${v.highlight ? "text-[#1d1d1f]" : "text-[#6e6e73]"}`}>
+                        {v.priceTotal}
+                      </div>
+                      <div className={`text-[10px] mt-1.5 leading-snug ${v.highlight ? "text-[#ff7900]/80 font-semibold" : "text-[#86868b]"}`}>
+                        {v.priceNote}
+                      </div>
                     </div>
                   ))}
                 </div>
