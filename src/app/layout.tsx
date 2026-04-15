@@ -16,17 +16,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI Operations Lab — InfoAcademy × Orange Romania",
-  description: "AI capability transfer for Orange Romania. Your team builds working AI agents in 10 weeks. €30K–€50K based on scope. Owned by Orange. Delivered by InfoAcademy — existing vendor.",
+  title: "AI Operations Lab: InfoAcademy × Orange Romania",
+  description: "AI capability transfer for Orange Romania. Your team builds working AI agents in 10 weeks. €30K–€50K based on scope. Owned by Orange. Delivered by InfoAcademy, existing vendor.",
   openGraph: {
-    title: "AI Operations Lab — Orange Romania | €30K–€50K",
-    description: "10 weeks. €30K–€50K based on scope. Your team builds working AI agents. Architecture blueprint included. IBM + Lloyds pedigree. Delivered by InfoAcademy — existing Orange vendor.",
+    title: "AI Operations Lab: Orange Romania | €30K–€50K",
+    description: "10 weeks. €30K–€50K based on scope. Your team builds working AI agents. Architecture blueprint included. IBM + Lloyds pedigree. Delivered by InfoAcademy, existing Orange vendor.",
     type: "website",
     url: "https://orange.apex.infoacademy.uk",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Operations Lab — Orange Romania | €30K–€50K",
+    title: "AI Operations Lab: Orange Romania | €30K–€50K",
     description: "10 weeks. €30K–€50K based on scope. Your team builds working AI agents. Architecture blueprint included.",
   },
 };

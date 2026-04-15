@@ -58,14 +58,14 @@ const COMPONENTS = [
     subtitle: "Persistent Agent Orchestration",
     description:
       "A production-grade orchestration layer managing agent sessions, context handoff between conversations, JSONL audit trails, heartbeat monitoring, and a REST API for human-in-the-loop control.",
-    why: "Djia launched at 52% in 2021 and Orange's teams have been improving it since. Without session persistence and context handoff, every call still starts from zero — losing the context that drives real resolution rates. Head of Ops adds that memory layer on top of what you've already built.",
+    why: "Djia launched at 52% in 2021 and Orange's teams have been improving it since. Without session persistence and context handoff, every call still starts from zero, losing the context that drives real resolution rates. Head of Ops adds that memory layer on top of what you've already built.",
     color: "#6e3aff",
   },
   {
     id: "agents-md",
     icon: "📋",
     title: "AGENTS.md Governance",
-    subtitle: "AI Operations Framework — policy & drift control",
+    subtitle: "AI Operations Framework, policy & drift control",
     description:
       "Enforced governance spec deployed across all repos. Skills system with tiered agent hierarchy, drift detection, and audit-ready compliance. Shadow AI tracked and governed from day one.",
     why: "Internal teams are already using rogue AI tools. Without governance, Orange carries legal and data risk it cannot quantify. AGENTS.md creates the control plane before regulators force it.",
@@ -78,7 +78,7 @@ const COMPONENTS = [
     subtitle: "Move the proof into daily workflows",
     description:
       "Take the 3–4 winning agents from Phase 1 and move them into production workflows across the departments that owned them. Wire them into Orange's live systems, give them access boundaries, run them under supervision, and measure them daily.",
-    why: "Phase 1 was proof. Phase 2 is operationalisation — the winners live inside Orange's actual workflows, not on a demo server. Expansion across multiple departments is the difference between a successful pilot and a repeatable internal capability.",
+    why: "Phase 1 was proof. Phase 2 is operationalisation, the winners live inside Orange's actual workflows, not on a demo server. Expansion across multiple departments is the difference between a successful pilot and a repeatable internal capability.",
     color: "#30d158",
   },
   {
@@ -87,7 +87,7 @@ const COMPONENTS = [
     title: "Identity, Audit & Human Review",
     subtitle: "Permissions, audit trails, override controls",
     description:
-      "Identity, permissions, audit, and human review controls built in from day one. Every AI decision logged, every override tracked, every agent bounded by role-based access. Production-grade controls — not a demo harness.",
+      "Identity, permissions, audit, and human review controls built in from day one. Every AI decision logged, every override tracked, every agent bounded by role-based access. Production-grade controls, not a demo harness.",
     why: "Orange's regulatory exposure under NIS2, GDPR, and the EU AI Act makes this non-negotiable. Human review and audit trails are the difference between an agent that's allowed in production and one that stays in a sandbox.",
     color: "#ff453a",
   },
@@ -98,7 +98,7 @@ const COMPONENTS = [
     subtitle: "RAG pipeline on Orange documentation",
     description:
       "Retrieval-augmented generation pipeline ingesting Orange's internal docs, KB articles, and product specs. Djia's accuracy improves measurably without retraining the base model. Knowledge base refreshes continuously.",
-    why: "At its 2021 pilot launch, Djia couldn't resolve nearly half of all calls — and Orange has never published an updated figure since. RAG gives it instant access to Orange's entire knowledge base — searchable, versioned, and continuously updated.",
+    why: "At its 2021 pilot launch, Djia couldn't resolve nearly half of all calls, and Orange has never published an updated figure since. RAG gives it instant access to Orange's entire knowledge base, searchable, versioned, and continuously updated.",
     color: "#0071e3",
   },
   {
@@ -107,18 +107,18 @@ const COMPONENTS = [
     title: "Observability & Model Routing",
     subtitle: "Monitoring, drift detection, support processes",
     description:
-      "Observability for every production agent: model routing, drift detection, quality monitoring, support processes. When a model misbehaves, the system catches it, routes around it, and flags it for review. The same discipline Orange already applies to network operations — applied to AI.",
-    why: "Productionising AI without observability is guessing. Orange needs to know — not hope — that agents are behaving. This is the layer that makes it safe to scale beyond the first few use cases.",
+      "Observability for every production agent: model routing, drift detection, quality monitoring, support processes. When a model misbehaves, the system catches it, routes around it, and flags it for review. The same discipline Orange already applies to network operations, applied to AI.",
+    why: "Productionising AI without observability is guessing. Orange needs to know, not hope, that agents are behaving. This is the layer that makes it safe to scale beyond the first few use cases.",
     color: "#6e3aff",
   },
   {
     id: "integration",
     icon: "🔗",
     title: "AI Layer on Top of Your Existing Stack",
-    subtitle: "Genesys, MATRIXX, and internal APIs — not a replacement",
+    subtitle: "Genesys, MATRIXX, and internal APIs, not a replacement",
     description:
-      "We're not replacing Genesys or MATRIXX. We're training your people to build the AI layer on top of what you already have, to deliver real value most companies don't. API bridges that extend existing infrastructure with AI capabilities — routing, intent detection, real-time enrichment — without touching existing contracts.",
-    why: "Orange cannot rip-and-replace €40M+ in vendor contracts, and it shouldn't. The AI layer sits above Genesys and MATRIXX, coordinating them — not competing with them. Sunk costs protected, AI capability unlocked.",
+      "We're not replacing Genesys or MATRIXX. We're training your people to build the AI layer on top of what you already have, to deliver real value most companies don't. API bridges that extend existing infrastructure with AI capabilities, routing, intent detection, real-time enrichment, without touching existing contracts.",
+    why: "Orange cannot rip-and-replace €40M+ in vendor contracts, and it shouldn't. The AI layer sits above Genesys and MATRIXX, coordinating them, not competing with them. Sunk costs protected, AI capability unlocked.",
     color: "#6e3aff",
   },
 ]
@@ -189,9 +189,9 @@ const TIMELINE = [
 const KPIS = [
   {
     metric: "Djia Response Accuracy",
-    baseline: "52% at 2021 pilot launch — internal improvements ongoing",
+    baseline: "52% at 2021 pilot launch, internal improvements ongoing",
     target: "Measurable uplift, 65–70% projected post-RAG",
-    method: "A/B test on identical query set before/after RAG pipeline — adds Group-reportable benchmark to existing internal tracking",
+    method: "A/B test on identical query set before/after RAG pipeline, adds Group-reportable benchmark to existing internal tracking",
     icon: "🎯",
   },
   {
@@ -226,7 +226,7 @@ const KPIS = [
 
 const BREAKDOWN = [
   { label: "Infrastructure Setup", amount: "€40,000", note: "One-time. Azure hardening, Head of Ops, identity & audit layer" },
-  { label: "Genesys/MATRIXX Integration", amount: "€60,000", note: "AI layer on top of existing stack — API bridges, no contract changes" },
+  { label: "Genesys/MATRIXX Integration", amount: "€60,000", note: "AI layer on top of existing stack: API bridges, no contract changes" },
   { label: "Phase 1 Winners → Production", amount: "€25,000", note: "Wire the Phase 1 winning agents into live workflows" },
   { label: "Knowledge Management (RAG)", amount: "€25,000", note: "Pipeline + Djia knowledge base" },
   { label: "Observability & Governance", amount: "€20,000", note: "Monitoring, drift detection, AGENTS.md rollout" },
@@ -238,7 +238,7 @@ const COMPARISON = [
     vendor: "APEX OS",
     highlight: true,
     delivery: "6 months",
-    ownership: "Full — you own the stack",
+    ownership: "Full, you own the stack",
     dependency: "Zero vendor lock-in",
     price: "€185–200K",
     color: "#ff7900",
@@ -324,7 +324,7 @@ export default function Phase2Page() {
           <AnimateIn delay={0.2}>
             <p className="text-xl text-white/60 max-w-2xl leading-relaxed mb-16">
               Phase 1 proved the concept. Phase 2 moves the Phase 1 winners into production
-              workflows and expands them across multiple departments — governed AI operations,
+              workflows and expands them across multiple departments, governed AI operations,
               observability, and measurable KPIs Orange&apos;s board can report against the
               &apos;Trust the Future&apos; 2026–2030 AI value target.
             </p>
@@ -408,7 +408,7 @@ export default function Phase2Page() {
             <p className="text-[#6e6e73] text-xl max-w-2xl mb-16 leading-relaxed">
               Six months. Six interlocking systems built inside Orange&apos;s environment, each
               one extending the Phase 1 winners into production. Every component runs in
-              APEX OS today — proof available on request.
+              APEX OS today, proof available on request.
             </p>
           </AnimateIn>
 
@@ -573,7 +573,7 @@ export default function Phase2Page() {
             </h2>
             <p className="text-[#6e6e73] text-xl max-w-2xl mb-16 leading-relaxed">
               Five hard metrics, each with a defined measurement method. No vanity
-              numbers — only figures that appear in a board report.
+              numbers, only figures that appear in a board report.
             </p>
           </AnimateIn>
 
@@ -652,7 +652,7 @@ export default function Phase2Page() {
             </h2>
             <p className="text-white/50 text-xl max-w-2xl mb-16 leading-relaxed">
               Fixed-fee engagement. No time-and-materials surprises. Every line item
-              is infrastructure Orange owns — not a subscription or retainer.
+              is infrastructure Orange owns, not a subscription or retainer.
             </p>
           </AnimateIn>
 
@@ -685,7 +685,7 @@ export default function Phase2Page() {
                     <div className="text-white/80 text-sm font-bold uppercase tracking-widest mb-1">
                       Total Investment
                     </div>
-                    <div className="text-white text-sm">Fixed fee — no surprises</div>
+                    <div className="text-white text-sm">Fixed fee, no surprises</div>
                   </div>
                   <div className="text-white font-black text-3xl">€185–200K</div>
                 </div>
@@ -723,7 +723,7 @@ export default function Phase2Page() {
                     <span className="text-[#30d158] font-black text-sm">APEX OS saves Orange 60–80%</span>
                   </div>
                   <p className="text-white/40 text-xs">
-                    While delivering full infrastructure ownership — not a managed service dependency.
+                    While delivering full infrastructure ownership, not a managed service dependency.
                   </p>
                 </div>
               </div>
@@ -810,12 +810,12 @@ export default function Phase2Page() {
               {[
                 {
                   title: "Production-proven today",
-                  body: "Every system in Phase 2 is running in production. We're not proposing architecture — we're deploying infrastructure we already operate.",
+                  body: "Every system in Phase 2 is running in production. We're not proposing architecture, we're deploying infrastructure we already operate.",
                   icon: "✅",
                 },
                 {
                   title: "Existing Orange vendor",
-                  body: "Phase 1 delivered through InfoAcademy — already in Orange's procurement system. No new vendor approval required. Phase 2 is a PO extension.",
+                  body: "Phase 1 delivered through InfoAcademy, already in Orange's procurement system. No new vendor approval required. Phase 2 is a PO extension.",
                   icon: "🤝",
                 },
                 {
@@ -850,7 +850,7 @@ export default function Phase2Page() {
                 Phase 3: Cognitive Architecture
               </h2>
               <p className="text-white/50 text-xl max-w-2xl mx-auto leading-relaxed mb-12">
-                Phase 2 sets the infrastructure foundation. Phase 3 adds the intelligence layer —
+                Phase 2 sets the infrastructure foundation. Phase 3 adds the intelligence layer -
                 autonomous agents that learn from Orange's operations, predict failures, and
                 act without human prompting.
               </p>
@@ -861,7 +861,7 @@ export default function Phase2Page() {
                 {[
                   { icon: "🤖", label: "Autonomous Agents", desc: "Self-healing infrastructure that responds to incidents before staff are paged" },
                   { icon: "🧬", label: "Cognitive RAG", desc: "Knowledge base that updates itself from call transcripts and ticket resolutions" },
-                  { icon: "📡", label: "Predictive Operations", desc: "ML models trained on Orange's own operational data — not generic benchmarks" },
+                  { icon: "📡", label: "Predictive Operations", desc: "ML models trained on Orange's own operational data, not generic benchmarks" },
                 ].map((item) => (
                   <div
                     key={item.label}
@@ -932,7 +932,7 @@ export default function Phase2Page() {
                 WhatsApp us directly
               </a>
               <a
-                href="mailto:nico.f@infoacademy.net?subject=Phase%202%20Scoping%20Call%20—%20Orange%20Romania"
+                href="mailto:nico.f@infoacademy.net?subject=Phase%202%20Scoping%20Call%20-%20Orange%20Romania"
                 className="inline-flex items-center justify-center gap-2 bg-[#ff7900] text-white px-8 py-4 rounded-full font-black text-lg hover:bg-[#e56e00] transition-colors shadow-lg shadow-[#ff7900]/20"
               >
                 Email for Phase 2 scoping
@@ -959,7 +959,7 @@ export default function Phase2Page() {
 
               <div className="border-t border-white/10 mt-6 pt-6 text-center">
                 <p className="text-white/30 text-sm">
-                  APEX OS is delivered through <strong className="text-white/50">InfoAcademy</strong> — 
+                  APEX OS is delivered through <strong className="text-white/50">InfoAcademy</strong> - 
                   existing Orange Romania vendor. Phase 1 invoiced and delivered. Phase 2 is a PO extension.
                 </p>
               </div>
@@ -983,7 +983,7 @@ export default function Phase2Page() {
             <span className="text-white/40 text-sm">Orange Romania Phase 2 Proposal</span>
           </div>
           <div className="text-white/20 text-xs">
-            Confidential — For Marius Maican (CTO) & Alexandru Ilie (IT Director)
+            Confidential: For Marius Maican (CTO) & Alexandru Ilie (IT Director)
           </div>
         </div>
       </footer>

@@ -14,29 +14,29 @@ import { ChevronDown, Users, Brain, Target, Phone, Mail, Linkedin, Globe } from 
 const PAIN_POINTS = [
   {
     icon: "📋",
-    title: "Contract Renewals — 5-Day Wait",
+    title: "Contract Renewals, 5-Day Wait",
     bullets: [
       "Hundreds of thousands of renewal events every month across 9.3M subscribers",
-      "Process is fully reactive — customers call in themselves, then wait days for an offer",
+      "Process is fully reactive, customers call in themselves, then wait days for an offer",
       "At this scale, even 0.5% improvement in retention is millions in recovered revenue",
     ],
     color: "#ff9f0a",
   },
   {
     icon: "📧",
-    title: "Support Emails — Manual Triage",
+    title: "Support Emails: Manual Triage",
     bullets: [
       "Thousands of emails arrive daily at serviciul.clienti@orange.ro, reclamatii@orange.ro and others",
-      "Every one is manually read, sorted, and forwarded — urgent issues sit beside billing questions",
-      "At this volume it never gets better, only grows — and every delay risks customer escalation",
+      "Every one is manually read, sorted, and forwarded, urgent issues sit beside billing questions",
+      "At this volume it never gets better, only grows, and every delay risks customer escalation",
     ],
     color: "#0071e3",
   },
   {
     icon: "🇷🇴",
-    title: "Romanian NLP — Underdeveloped",
+    title: "Romanian NLP: Underdeveloped",
     bullets: [
-      "Major LLM providers underserve Romanian — models are weak on local vocabulary and intent",
+      "Major LLM providers underserve Romanian, models are weak on local vocabulary and intent",
       "Orange can't buy a Romanian-calibrated AI model off the shelf from any vendor",
       "This needs to be built internally, fine-tuned on Orange's own call data and customer language",
     ],
@@ -44,20 +44,20 @@ const PAIN_POINTS = [
   },
   {
     icon: "👻",
-    title: "Shadow AI — No Governance",
+    title: "Shadow AI: No Governance",
     bullets: [
-      "Internal teams are already using ChatGPT, Claude, LangChain — independently, with no coordination",
+      "Internal teams are already using ChatGPT, Claude, LangChain, independently, with no coordination",
       "No shared standards, no audit trails, no visibility into what's being built or deployed",
-      "Every department is reinventing the wheel — duplicating effort and creating compliance risk",
+      "Every department is reinventing the wheel, duplicating effort and creating compliance risk",
     ],
     color: "#6e3aff",
   },
   {
     icon: "📊",
-    title: "€600M AI Value Target — Clock Ticking",
+    title: "€600M AI Value Target: Clock Ticking",
     bullets: [
-      "Orange Group's 'Trust the Future' 2026–2030 strategy targets €600M in AI-generated value by 2028 — not a budget, a revenue commitment (Reuters, Feb 2026)",
-      "Paris is already deploying Group-level AI infrastructure — Bucharest needs to show measurable results",
+      "Orange Group's 'Trust the Future' 2026–2030 strategy targets €600M in AI-generated value by 2028, not a budget, a revenue commitment (Reuters, Feb 2026)",
+      "Paris is already deploying Group-level AI infrastructure: Bucharest needs to show measurable results",
       "Without concrete deliverables, the risk is centralisation from Paris, not autonomy for Romania",
     ],
     color: "#ff7900",
@@ -66,8 +66,8 @@ const PAIN_POINTS = [
     icon: "📱",
     title: "No WhatsApp Presence",
     bullets: [
-      "WhatsApp is the dominant messaging platform in Romania — and Orange has zero presence on it",
-      "Vodafone and Digi haven't moved either — the first-mover advantage is unclaimed",
+      "WhatsApp is the dominant messaging platform in Romania, and Orange has zero presence on it",
+      "Vodafone and Digi haven't moved either, the first-mover advantage is unclaimed",
       "An AI-powered WhatsApp channel creates a new touchpoint for sales, support, and retention",
     ],
     color: "#30d158",
@@ -107,27 +107,27 @@ const PHASES = [
       "Identity, permissions, audit, and human review controls built in from day one",
       "Observability, model routing, monitoring, and support processes for every agent",
       "Reusable agent patterns so Orange can repeat what works without re-inventing",
-      "Internal ownership — no long-term dependence on outside suppliers or consultants",
+      "Internal ownership, no long-term dependence on outside suppliers or consultants",
       "Scale from 12 → 50+ AI-capable employees across 3 departments",
-      "AI layer on top of Genesys, MATRIXX, and internal APIs — not a replacement",
+      "AI layer on top of Genesys, MATRIXX, and internal APIs, not a replacement",
     ],
   },
   {
     phase: "03",
     title: "Enterprise AI Operating Model",
-    subtitle: "Governed, scalable, durable — owned by Orange",
+    subtitle: "Governed, scalable, durable, owned by Orange",
     duration: "9 months",
     price: "€350–450K",
     color: "#30d158",
     link: "/phase-3",
     items: [
-      "Governance — formal policies, risk controls, human oversight, auditability, EU AI Act Art. 6/9 compliance (Aug 2026 deadline)",
-      "Shared services — reusable agent components, prompts, memory, evaluation flows, deployment patterns",
-      "Operating model — clear ownership between business teams, architecture, service, data, and tech champions",
-      "Reporting and trust — AI reporting Orange leadership can defend internally and align with Group",
-      "Future expansion — a practical base for new customer, network, B2B, and internal automation domains",
+      "Governance, formal policies, risk controls, human oversight, auditability, EU AI Act Art. 6/9 compliance (Aug 2026 deadline)",
+      "Shared services, reusable agent components, prompts, memory, evaluation flows, deployment patterns",
+      "Operating model, clear ownership between business teams, architecture, service, data, and tech champions",
+      "Reporting and trust: AI reporting Orange leadership can defend internally and align with Group",
+      "Future expansion, a practical base for new customer, network, B2B, and internal automation domains",
       "Romanian NLP fine-tuning pipeline on Orange call data",
-      "Cross-model verification — Claude + GPT + Gemini deliberate on high-stakes decisions",
+      "Cross-model verification: Claude + GPT + Gemini deliberate on high-stakes decisions",
       "Group replication blueprint for Poland, Belgium, Spain",
     ],
   },
@@ -138,8 +138,8 @@ const PROOF_POINTS = [
     name: "GTM Agentic Platform",
     metric: "€3M+",
     metricLabel: "R&D Codebase",
-    desc: "Co-founding a plug-and-play GTM platform (€33B TAM) with an established EU procurement founder. Enterprises connect their vendor and customer data — the cognition layer handles discovery, qualification, matching, and onboarding autonomously. Full vendor lifecycle outsourced to AI, not to a consulting firm. Built on €3M+ of existing R&D.",
-    role: "Co-Founder — Cognition Architecture",
+    desc: "Co-founding a plug-and-play GTM platform (€33B TAM) with an established EU procurement founder. Enterprises connect their vendor and customer data, the cognition layer handles discovery, qualification, matching, and onboarding autonomously. Full vendor lifecycle outsourced to AI, not to a consulting firm. Built on €3M+ of existing R&D.",
+    role: "Co-Founder: Cognition Architecture",
     color: "#0071e3",
     url: "",
   },
@@ -156,8 +156,8 @@ const PROOF_POINTS = [
     name: "InfoAcademy × APEX OS",
     metric: "400+",
     metricLabel: "Skills Deployed",
-    desc: "The combined platform Nico founded and still runs day-to-day — a sovereign AI operating system with 400+ self-evolving skills, persistent cross-session agent memory, multi-model orchestration (Claude + Codex + Gemini), self-healing watchdog, knowledge distillation engine that promotes learnings to skills automatically, RAG evaluation pipeline, AI Operations Framework gate automation, and injection-guard security layer. Running 24/7 on Azure.",
-    role: "Founder — Orchestration Platform",
+    desc: "The combined platform Nico founded and still runs day-to-day, a sovereign AI operating system with 400+ self-evolving skills, persistent cross-session agent memory, multi-model orchestration (Claude + Codex + Gemini), self-healing watchdog, knowledge distillation engine that promotes learnings to skills automatically, RAG evaluation pipeline, AI Operations Framework gate automation, and injection-guard security layer. Running 24/7 on Azure.",
+    role: "Founder: Orchestration Platform",
     color: "#ff7900",
     url: "https://apex.infoacademy.uk",
   },
@@ -165,7 +165,7 @@ const PROOF_POINTS = [
     name: "InfoAcademy",
     metric: "20K+",
     metricLabel: "Learners",
-    desc: "AI-first learning platform with built-in agentic orchestration layer — currently in beta with ~100 active users. Enterprise cohorts get customised training environments, progress tracking, and AI-assisted learning paths. Free for all customers during beta. Already delivered training to Orange Romania. The same platform that powers the Phase 1 training delivery.",
+    desc: "AI-first learning platform with built-in agentic orchestration layer, currently in beta with ~100 active users. Enterprise cohorts get customised training environments, progress tracking, and AI-assisted learning paths. Free for all customers during beta. Already delivered training to Orange Romania. The same platform that powers the Phase 1 training delivery.",
     role: "Chief Executive Officer",
     color: "#30d158",
     url: "https://www.infoacademy.uk",
@@ -179,12 +179,12 @@ const LEADERSHIP = [
     location: "London, UK",
     title: "CEO, InfoAcademy · Founder, InfoAcademy × APEX OS",
     org: "InfoAcademy × APEX OS",
-    bio: "Builds the future by solving problems that matter. Co-CEO of InfoAcademy and founder of the InfoAcademy × APEX OS — empowering founders and businesses to move from concept to execution using battle-tested frameworks, AI automation, and hands-on technical expertise. Architect, overseer, cognitive-intelligence layer, deployer, shipper. Background spans AI/ML adoption at Lloyds Banking Group (cloud migrations and operational transformation), business analysis across fintech and education, and scalable platforms built from scratch. Curiosity drives me. Technology empowers me. Results define me.",
+    bio: "Builds the future by solving problems that matter. Co-CEO of InfoAcademy and founder of the InfoAcademy × APEX OS, empowering founders and businesses to move from concept to execution using battle-tested frameworks, AI automation, and hands-on technical expertise. Architect, overseer, cognitive-intelligence layer, deployer, shipper. Background spans AI/ML adoption at Lloyds Banking Group (cloud migrations and operational transformation), business analysis across fintech and education, and scalable platforms built from scratch. Curiosity drives me. Technology empowers me. Results define me.",
     credentials: [
-      { company: "InfoAcademy × APEX OS", detail: "Founder — 400+ skills, self-healing, 24/7 sovereign governance" },
-      { company: "InfoAcademy", detail: "CEO — existing Orange Romania vendor, 20K+ learners" },
+      { company: "InfoAcademy × APEX OS", detail: "Founder, 400+ skills, self-healing, 24/7 sovereign governance" },
+      { company: "InfoAcademy", detail: "CEO, existing Orange Romania vendor, 20K+ learners" },
       { company: "Lloyds Banking Group", detail: "AI/ML adoption, cloud migrations (5 years)" },
-      { company: "CUBE Global", detail: "Chief Customer Office — RegTech" },
+      { company: "CUBE Global", detail: "Chief Customer Office: RegTech" },
     ],
     linkedin: "https://linkedin.com/in/nicofratila",
     email: "nico.f@infoacademy.net",
@@ -198,13 +198,13 @@ const LEADERSHIP = [
     location: "Dubai, UAE",
     title: "Executive Chairman & Global Partner",
     org: "eWealthTech / ex-IBM / ex-Sun Microsystems",
-    bio: "40 years at the intersection of enterprise technology and global commercial strategy. Led multi-billion-pound programmes at IBM, Siemens, and Sun Microsystems — including pioneering open-source platforms and securing deals valued at over £3B across Europe, Africa, and Asia. Government and Fortune 500 advisor since 1987. Established the first independent Property Investment Fund in Eastern Europe. Brings the commercial architecture that turns a strong technical proposal into a Group-level decision.",
+    bio: "40 years at the intersection of enterprise technology and global commercial strategy. Led multi-billion-pound programmes at IBM, Siemens, and Sun Microsystems, including pioneering open-source platforms and securing deals valued at over £3B across Europe, Africa, and Asia. Government and Fortune 500 advisor since 1987. Established the first independent Property Investment Fund in Eastern Europe. Brings the commercial architecture that turns a strong technical proposal into a Group-level decision.",
     credentials: [
       { company: "IBM", detail: "Enterprise transformation programmes" },
       { company: "Siemens", detail: "Business services, vertical sectors" },
       { company: "Sun Microsystems", detail: "Open-source platforms, £3B+ in deals across Europe, Africa, Asia" },
       { company: "Government & Fortune 500", detail: "Advisor since 1987" },
-      { company: "eWealthTech", detail: "CEO — global AI & open-source platforms" },
+      { company: "eWealthTech", detail: "CEO, global AI & open-source platforms" },
     ],
     linkedin: "https://www.linkedin.com/in/maborishapatel/",
     email: "",
@@ -221,13 +221,13 @@ const TEAM = [
     location: "Cluj, Romania",
     title: "Founder · Cloud Architect · SCADA Patent Holder",
     org: "Arandi Software / Digitalize Today",
-    bio: "20+ years leading engineering teams at Telenav, Micro Focus (HP), and Emerson — where he patented a SCADA communication system for the Oil & Gas sector. Bridges traditional IT and the AI revolution through two consulting brands: Arandi Software takes brittle monoliths to resilient, scalable cloud systems (Microservices, Kubernetes, AWS); Digitalize Today designs and deploys agentic AI, workflow automation, and intelligent document processing that actually works in production — saving hundreds of hours of manual labor.",
+    bio: "20+ years leading engineering teams at Telenav, Micro Focus (HP), and Emerson, where he patented a SCADA communication system for the Oil & Gas sector. Bridges traditional IT and the AI revolution through two consulting brands: Arandi Software takes brittle monoliths to resilient, scalable cloud systems (Microservices, Kubernetes, AWS); Digitalize Today designs and deploys agentic AI, workflow automation, and intelligent document processing that actually works in production, saving hundreds of hours of manual labor.",
     credentials: [
-      { company: "Telenav", detail: "Engineering Lead — big data, 40+ engineers" },
+      { company: "Telenav", detail: "Engineering Lead, big data, 40+ engineers" },
       { company: "Micro Focus / HP", detail: "R&D Manager" },
-      { company: "Emerson", detail: "SCADA patent holder — Oil & Gas sector" },
-      { company: "Arandi Software", detail: "Founder — cloud modernisation (Microservices, Kubernetes, AWS)" },
-      { company: "Digitalize Today", detail: "Founder — agentic AI & workflow automation" },
+      { company: "Emerson", detail: "SCADA patent holder: Oil & Gas sector" },
+      { company: "Arandi Software", detail: "Founder, cloud modernisation (Microservices, Kubernetes, AWS)" },
+      { company: "Digitalize Today", detail: "Founder, agentic AI & workflow automation" },
     ],
     linkedin: "https://linkedin.com/in/bogdan-toporan",
     email: "bogdan@arandi.software",
@@ -241,13 +241,13 @@ const TEAM = [
     location: "UK",
     title: "Director · Cloud, Security & Enterprise Transformation",
     org: "MindNova",
-    bio: "Over a decade across global financial institutions at the intersection of AI, cloud, and cybersecurity — driving enterprise transformation with a strong focus on resilience, governance, and long-term impact. Has led large-scale cloud and transformation initiatives across Azure, AWS, and GCP, supported multi-cloud re-architecture programmes, and helped leadership teams adopt innovation in a way that is practical, responsible, and aligned to business outcomes. Builds the next generation of enterprise systems where humans and AI work together.",
+    bio: "Over a decade across global financial institutions at the intersection of AI, cloud, and cybersecurity, driving enterprise transformation with a strong focus on resilience, governance, and long-term impact. Has led large-scale cloud and transformation initiatives across Azure, AWS, and GCP, supported multi-cloud re-architecture programmes, and helped leadership teams adopt innovation in a way that is practical, responsible, and aligned to business outcomes. Builds the next generation of enterprise systems where humans and AI work together.",
     credentials: [
       { company: "Global Financial Institutions", detail: "10+ years across the sector" },
       { company: "Azure · AWS · GCP", detail: "Cloud architecture & multi-cloud strategy" },
       { company: "Cybersecurity", detail: "Regulatory resilience, zero-trust architecture" },
       { company: "AI Transformation", detail: "Enterprise modernisation & cost optimisation" },
-      { company: "MindNova", detail: "Director — AI, cloud, cybersecurity, enterprise innovation" },
+      { company: "MindNova", detail: "Director: AI, cloud, cybersecurity, enterprise innovation" },
     ],
     linkedin: "https://www.linkedin.com/in/hardiknakum",
     email: "",
@@ -263,7 +263,7 @@ const PARTNERS = [
     logo: "/partners/north-sea-ai.jpeg",
     tagline: "Execution partner · Community",
     description:
-      "An AI community and execution hub founded by Marc van Gent — experts, researchers, companies, creatives, and startups collaborating on AI projects. Active since August 2022, working together on challenging initiatives with SMEs, corporates, and innovative startups across the North Sea region.",
+      "An AI community and execution hub founded by Marc van Gent, experts, researchers, companies, creatives, and startups collaborating on AI projects. Active since August 2022, working together on challenging initiatives with SMEs, corporates, and innovative startups across the North Sea region.",
     url: "https://www.north-sea.ai/en",
     color: "#1c4d7a",
   },
@@ -272,7 +272,7 @@ const PARTNERS = [
     logo: "/partners/atlantis-digital.jpg",
     tagline: "Digital transformation · Automation",
     description:
-      "Digital transformation and DXaaS partner for integrating digital technology into any facet of a business. Platform and expertise for automating the tasks that bore you — so internal teams focus on what drives the competitive edge.",
+      "Digital transformation and DXaaS partner for integrating digital technology into any facet of a business. Platform and expertise for automating the tasks that bore you, so internal teams focus on what drives the competitive edge.",
     url: "https://atlantisdigital.nl/en",
     color: "#2b5fd9",
   },
@@ -281,7 +281,7 @@ const PARTNERS = [
     logo: "/partners/nautilus.jpeg",
     tagline: "OT cybersecurity · Industrial",
     description:
-      "Operational Technology cybersecurity specialists — 'Securing Your OT Future'. Tracks OT/ICS incidents across shipping, oil & gas, and telecoms; publishes the OT Cyber Insights biweekly update. The industrial-security layer Orange's infrastructure teams will want in the conversation.",
+      "Operational Technology cybersecurity specialists - 'Securing Your OT Future'. Tracks OT/ICS incidents across shipping, oil & gas, and telecoms; publishes the OT Cyber Insights biweekly update. The industrial-security layer Orange's infrastructure teams will want in the conversation.",
     url: "",
     color: "#0f766e",
   },
@@ -290,23 +290,23 @@ const PARTNERS = [
 const OBJECTIONS = [
   {
     q: "Why not hire an AI engineer internally for €5K/month?",
-    a: "One engineer builds tools. We transfer architectural capability across your organisation. One person doesn't transform 12 people into AI-capable builders. Our team brings 40+ years combined enterprise experience — Lloyds, HP, Telenav, Visa, PayPoint — and 73 production repos of battle-tested patterns.",
+    a: "One engineer builds tools. We transfer architectural capability across your organisation. One person doesn't transform 12 people into AI-capable builders. Our team brings 40+ years combined enterprise experience: Lloyds, HP, Telenav, Visa, PayPoint, and 73 production repos of battle-tested patterns.",
   },
   {
     q: "You're a small company. Can you handle Orange scale?",
-    a: "InfoAcademy is your existing vendor — you've already vetted us. The team brings 10+ years inside Lloyds Banking Group, 17+ years of enterprise architecture, and 40+ engineer teams led. We're not replacing Genesys or MATRIXX — we're training your people to build the AI layer on top of what you already have.",
+    a: "InfoAcademy is your existing vendor, you've already vetted us. The team brings 10+ years inside Lloyds Banking Group, 17+ years of enterprise architecture, and 40+ engineer teams led. We're not replacing Genesys or MATRIXX, we're training your people to build the AI layer on top of what you already have.",
   },
   {
     q: "What if we take the blueprint and give it to Accenture?",
-    a: "The blueprint is a living environment on InfoAcademy, not a PDF. The methodology is licensed, not transferred. And frankly — if your internal team can execute it after Phase 1, that means the training worked. That's the point.",
+    a: "The blueprint is a living environment on InfoAcademy, not a PDF. The methodology is licensed, not transferred. And frankly, if your internal team can execute it after Phase 1, that means the training worked. That's the point.",
   },
   {
     q: "Orange Group has AI teams in Paris. Why go external?",
-    a: "Paris builds tools. Tools without people who know how to use them are shelfware. We build the people AND the architecture. Bucharest delivering measurable AI value positions you as the Group's AI innovation lab — political capital for your leadership.",
+    a: "Paris builds tools. Tools without people who know how to use them are shelfware. We build the people AND the architecture. Bucharest delivering measurable AI value positions you as the Group's AI innovation lab, political capital for your leadership.",
   },
   {
     q: "€30K–€50K seems cheap for 'architecture' but expensive for 'training'.",
-    a: "It's neither. It's a 10-week build program where your people create working AI agents under expert guidance. The architecture emerges from what they build. You get trained people + working agents + a roadmap. Price scales with scope — workflows, agents, integrations. Still below VP discretionary spend threshold.",
+    a: "It's neither. It's a 10-week build program where your people create working AI agents under expert guidance. The architecture emerges from what they build. You get trained people + working agents + a roadmap. Price scales with scope, workflows, agents, integrations. Still below VP discretionary spend threshold.",
   },
 ];
 
@@ -393,7 +393,7 @@ function PhaseCard({ phase, initialOpen = false }: { phase: typeof PHASES[0]; in
       <div className="flex items-start justify-between mb-4">
         <div>
           <div className="text-[11px] font-bold uppercase tracking-widest mb-1" style={{ color: phase.color }}>
-            Phase {phase.phase} — {phase.duration}
+            Phase {phase.phase} - {phase.duration}
           </div>
           <h3 className="text-xl font-bold text-white">{phase.title}</h3>
           <p className="text-[14px] font-medium text-white/75 mt-1">{phase.subtitle}</p>
@@ -526,7 +526,7 @@ function TeamCard({ person }: { person: typeof TEAM[0] }) {
       {/* Bio paragraph */}
       <p className="text-[13px] text-[#6e6e73] leading-relaxed mb-5 flex-1">{person.bio}</p>
 
-      {/* Experience tags — pill chips at the bottom, same pattern as phase-3 deliverable cards */}
+      {/* Experience tags, pill chips at the bottom, same pattern as phase-3 deliverable cards */}
       <div className="flex flex-wrap gap-2 mb-5">
         {person.credentials.map((c, i) => (
           <span
@@ -543,7 +543,7 @@ function TeamCard({ person }: { person: typeof TEAM[0] }) {
         ))}
       </div>
 
-      {/* Links footer — no border, just spacing */}
+      {/* Links footer, no border, just spacing */}
       <div className="flex items-center gap-5 flex-wrap">
         {person.linkedin && (
           <a
@@ -678,7 +678,7 @@ export default function Page() {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5">
                 <span className="w-2 h-2 rounded-full bg-[#30d158] animate-pulse" />
                 <span className="text-[12px] text-white/60 uppercase tracking-widest font-medium">
-                  InfoAcademy — Existing Orange Romania Vendor
+                  InfoAcademy: Existing Orange Romania Vendor
                 </span>
               </div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#ff7900]/30 bg-[#ff7900]/10">
@@ -790,7 +790,7 @@ export default function Page() {
               <span className="text-[#ff7900]">You build it. You own it. You run it.</span>
             </h2>
             <p className="text-lg text-white/50 mt-6 max-w-[680px] mx-auto leading-relaxed">
-              IBM and Accenture deliver products — and a renewal invoice. We deliver an architectural capability that lives inside Orange permanently. Your people build the agents. The methodology is ours. The outcome is yours.
+              IBM and Accenture deliver products, and a renewal invoice. We deliver an architectural capability that lives inside Orange permanently. Your people build the agents. The methodology is ours. The outcome is yours.
             </p>
           </AnimateIn>
 
@@ -802,7 +802,7 @@ export default function Page() {
                 <span className="text-[#ff7900]"> Your people handle what requires judgment.</span>
               </p>
               <p className="text-[13px] text-white/40 mt-3 leading-relaxed">
-                These AI agents are not here to replace Orange employees. They exist to remove the high-volume, repetitive grunt work — so your team spends their time on decisions, relationships, and complex cases. The work only humans should be doing.
+                These AI agents are not here to replace Orange employees. They exist to remove the high-volume, repetitive grunt work, so your team spends their time on decisions, relationships, and complex cases. The work only humans should be doing.
               </p>
             </div>
           </AnimateIn>
@@ -810,9 +810,9 @@ export default function Page() {
           <AnimateIn delay={0.2}>
             <div className="grid sm:grid-cols-3 gap-6 mt-10">
               {[
-                { icon: <Users size={26} />, title: "Train", desc: "8–12 Orange employees learn to build AI agents. Not a course — a build sprint. They leave with skills, not certificates." },
+                { icon: <Users size={26} />, title: "Train", desc: "8–12 Orange employees learn to build AI agents. Not a course, a build sprint. They leave with skills, not certificates." },
                 { icon: <Brain size={26} />, title: "Build", desc: "Each team builds a working agent for a real Orange problem. Contract renewals. Email triage. The agent takes the volume. The employee takes the credit." },
-                { icon: <Target size={26} />, title: "Architect", desc: "What your team builds reveals your actual integration landscape — turning 10 weeks of hands-on work into an 18-month AI roadmap grounded in evidence." },
+                { icon: <Target size={26} />, title: "Architect", desc: "What your team builds reveals your actual integration landscape, turning 10 weeks of hands-on work into an 18-month AI roadmap grounded in evidence." },
               ].map((s, i) => (
                 <div key={i} className="rounded-2xl p-6 bg-white/5 border border-white/[0.07] text-left">
                   <div className="text-[#ff7900] mb-4">{s.icon}</div>
@@ -858,28 +858,28 @@ export default function Page() {
           <div className="grid sm:grid-cols-2 gap-5">
             {[
               {
-                tag: "Djia — launched 2021, improving since",
+                tag: "Djia, launched 2021, improving since",
                 title: "Your voice AI is getting better. Phase 1 gives you the architecture to prove it to Group.",
-                value: "Phase 1 maps the integration landscape your team discovers while building agents against Orange's live systems. That evidence becomes the foundation for fixing Djia in Phase 2 — grounded in your stack, not external assumptions.",
+                value: "Phase 1 maps the integration landscape your team discovers while building agents against Orange's live systems. That evidence becomes the foundation for fixing Djia in Phase 2, grounded in your stack, not external assumptions.",
                 color: "#ff453a",
                 icon: "🤖",
               },
               {
-                tag: "€600M AI Value Target — 2028",
+                tag: "€600M AI Value Target, 2028",
                 title: "Paris set the target. Bucharest needs to deliver.",
-                value: "Phase 1 produces 3–4 working agents and an architecture blueprint. Bucharest becomes the Group's AI reference implementation — political capital for your leadership.",
+                value: "Phase 1 produces 3–4 working agents and an architecture blueprint. Bucharest becomes the Group's AI reference implementation, political capital for your leadership.",
                 color: "#ff7900",
                 icon: "📊",
               },
               {
-                tag: "Shadow AI — No Governance",
+                tag: "Shadow AI: No Governance",
                 title: "15 internal experiments. No coordination.",
-                value: "12 trained staff who speak the same AI architecture language. A governance framework that coordinates what's already happening internally — and scales it.",
+                value: "12 trained staff who speak the same AI architecture language. A governance framework that coordinates what's already happening internally, and scales it.",
                 color: "#6e3aff",
                 icon: "🔒",
               },
               {
-                tag: "Vendor Lock-In — Genesys, MATRIXX, IBM",
+                tag: "Vendor Lock-In: Genesys, MATRIXX, IBM",
                 title: "Your stack already belongs to someone else.",
                 value: "Every agent your team builds belongs to Orange. The architecture blueprint lives on InfoAcademy. Zero APEX dependency after Phase 1 if you choose not to continue.",
                 color: "#0071e3",
@@ -937,7 +937,7 @@ export default function Page() {
                 <span className="text-[#86868b]">AI-native delivery.</span>
               </h2>
               <p className="text-lg text-[#6e6e73] mt-4 max-w-[600px] mx-auto">
-                IBM, Sun Microsystems, and Lloyds pedigree. 60+ years enterprise delivery. Cloud, security, and SCADA engineering. Delivered through InfoAcademy — your existing vendor.
+                IBM, Sun Microsystems, and Lloyds pedigree. 60+ years enterprise delivery. Cloud, security, and SCADA engineering. Delivered through InfoAcademy, your existing vendor.
               </p>
             </div>
           </AnimateIn>
@@ -993,11 +993,11 @@ export default function Page() {
                 <br />
                 <span className="text-[#ff7900]">18 months to AI independence.</span>
               </h2>
-              <p className="text-lg text-white/40 mt-4">Start at Phase 1. Scale when ready. Stop any time — you keep everything.</p>
+              <p className="text-lg text-white/40 mt-4">Start at Phase 1. Scale when ready. Stop any time, you keep everything.</p>
             </div>
           </AnimateIn>
 
-          {/* Phase 1 — Always-open rich split card */}
+          {/* Phase 1: Always-open rich split card */}
           <AnimateIn>
             <div className="rounded-2xl overflow-hidden mb-6" style={{ border: "1px solid #ff790025" }}>
               {/* Header */}
@@ -1005,7 +1005,7 @@ export default function Page() {
                 style={{ background: "rgba(255,121,0,0.07)" }}>
                 <div>
                   <div className="text-[11px] font-black uppercase tracking-widest text-[#ff7900] mb-2">
-                    Phase 01 — The Entry Point
+                    Phase 01: The Entry Point
                   </div>
                   <h3 className="text-2xl font-black text-white">AI Operations Lab</h3>
                   <p className="text-[13px] text-white/40 mt-1">
@@ -1025,9 +1025,9 @@ export default function Page() {
                   <div className="space-y-5">
                     {[
                       { week: "W1–2", title: "Foundations", desc: "Agent patterns, orchestration, deterministic vs probabilistic pipelines, governance basics", color: "#ff7900" },
-                      { week: "W3–6", title: "Build Sprint", desc: "Each team selects a real Orange use case — network triage, knowledge base, procurement analysis. Orange picks. We guide the build.", color: "#0071e3" },
+                      { week: "W3–6", title: "Build Sprint", desc: "Each team selects a real Orange use case, network triage, knowledge base, procurement analysis. Orange picks. We guide the build.", color: "#0071e3" },
                       { week: "W7–8", title: "Architecture Review", desc: "APEX reviews what your teams built. Synthesises patterns. Maps integration opportunities against Orange's live systems.", color: "#6e3aff" },
-                      { week: "W9–10", title: "Roadmap Delivery", desc: "Living blueprint on InfoAcademy — not a PDF. 18-month roadmap grounded in what your people built, not external assumptions.", color: "#30d158" },
+                      { week: "W9–10", title: "Roadmap Delivery", desc: "Living blueprint on InfoAcademy, not a PDF. 18-month roadmap grounded in what your people built, not external assumptions.", color: "#30d158" },
                     ].map((w, i) => (
                       <div key={i} className="flex gap-4 items-start">
                         <div className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-[10px] font-black"
@@ -1048,7 +1048,7 @@ export default function Page() {
                   <div className="space-y-4">
                     {[
                       { icon: "🤖", title: "3–4 Working AI Agents", desc: "Built by YOUR team. Owned by Orange." },
-                      { icon: "🗺️", title: "Living Architecture Blueprint", desc: "On InfoAcademy — not a PDF. Evolves with your stack." },
+                      { icon: "🗺️", title: "Living Architecture Blueprint", desc: "On InfoAcademy, not a PDF. Evolves with your stack." },
                       { icon: "👥", title: "12 Trained Employees", desc: "Your internal AI champions. Ready to scale Phase 2." },
                       { icon: "📋", title: "18-Month AI Roadmap", desc: "Grounded in your builds, not consultant assumptions." },
                       { icon: "🔒", title: "Governance Foundation", desc: "Standards, audit trails, shadow AI visibility." },
@@ -1105,7 +1105,7 @@ export default function Page() {
           <AnimateIn>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#ff7900]/30 bg-[#ff7900]/10 mb-6">
               <span className="w-2 h-2 rounded-full bg-[#ff7900]" />
-              <span className="text-[12px] text-[#ff7900] font-semibold tracking-wide">Below VP discretionary spend — no committee needed</span>
+              <span className="text-[12px] text-[#ff7900] font-semibold tracking-wide">Below VP discretionary spend, no committee needed</span>
             </div>
             <h2 className="text-4xl lg:text-5xl font-black text-white leading-tight">
               Ready to build?
@@ -1133,7 +1133,7 @@ export default function Page() {
 
           <AnimateIn delay={0.22}>
             <p className="text-[11px] text-white/20 uppercase tracking-widest mt-14">
-              InfoAcademy × APEX OS — Bucharest, Romania · London, UK
+              InfoAcademy × APEX OS: Bucharest, Romania · London, UK
             </p>
             <a href="https://nico.apex.infoacademy.uk" target="_blank" rel="noopener"
               className="inline-block mt-3 text-[11px] text-white/15 hover:text-[#ff7900] transition-colors tracking-wider">
