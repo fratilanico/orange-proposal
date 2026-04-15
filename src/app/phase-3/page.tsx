@@ -157,6 +157,7 @@ const TIMELINE = [
   },
 ];
 
+const ROI_ITEMS = [
   {
     icon: TrendingUp,
     label: "Voice AI Performance",
