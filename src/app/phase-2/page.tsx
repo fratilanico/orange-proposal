@@ -65,7 +65,7 @@ const COMPONENTS = [
     id: "agents-md",
     icon: "📋",
     title: "AGENTS.md Governance",
-    subtitle: "Sovereign AI Governance Framework",
+    subtitle: "AI Operations Framework — policy & drift control",
     description:
       "Enforced governance spec deployed across all repos. Skills system with tiered agent hierarchy, drift detection, and audit-ready compliance. Shadow AI tracked and governed from day one.",
     why: "Internal teams are already using rogue AI tools. Without governance, Orange carries legal and data risk it cannot quantify. AGENTS.md creates the control plane before regulators force it.",
@@ -126,13 +126,13 @@ const COMPONENTS = [
 const TIMELINE = [
   {
     months: "Month 1–2",
-    label: "Infrastructure Foundation",
+    label: "Set Up in Orange's Environment",
     items: [
-      "Azure VM provisioning & hardening",
-      "Head of Ops deployment + REST API",
-      "5-layer security stack live",
-      "JSONL audit trail operational",
-      "Heartbeat monitoring + alerting",
+      "Dedicated VMs provisioned inside Orange's cloud environment",
+      "Head of Ops orchestration layer deployed + REST API live",
+      "Identity, permissions, audit, and human review controls in place",
+      "JSONL audit trail operational from day one",
+      "Heartbeat monitoring + alerting connected to Orange's existing NOC",
     ],
     color: "#ff7900",
   },
@@ -315,17 +315,18 @@ export default function Phase2Page() {
             <h1 className="text-5xl lg:text-7xl font-black leading-[0.95] tracking-tight mb-6">
               Phase 2:{" "}
               <span className="block">
-                <span className="text-[#ff7900]">Sovereign AI</span>
+                <span className="text-[#ff7900]">Operationalise</span>
               </span>
-              <span className="block">Infrastructure</span>
+              <span className="block">& Integrate</span>
             </h1>
           </AnimateIn>
 
           <AnimateIn delay={0.2}>
             <p className="text-xl text-white/60 max-w-2xl leading-relaxed mb-16">
-              Phase 1 proved the concept. Phase 2 deploys the production infrastructure —
-              7 systems, governed AI operations, and measurable KPIs Orange's board can report
-              against the €600M AI value target ('Trust the Future' 2026–2030).
+              Phase 1 proved the concept. Phase 2 moves the Phase 1 winners into production
+              workflows and expands them across multiple departments — governed AI operations,
+              observability, and measurable KPIs Orange&apos;s board can report against the
+              &apos;Trust the Future&apos; 2026–2030 AI value target.
             </p>
           </AnimateIn>
 

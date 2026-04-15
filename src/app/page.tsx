@@ -153,11 +153,11 @@ const PROOF_POINTS = [
     url: "https://profilesense-dashboard.vercel.app",
   },
   {
-    name: "APEX OS",
+    name: "InfoAcademy × APEX OS Orchestration Platform",
     metric: "400+",
     metricLabel: "Skills Deployed",
-    desc: "Sovereign AI operating system — 400+ self-evolving skills, persistent cross-session agent memory, multi-model orchestration (Claude + Codex + Gemini), self-healing watchdog, knowledge distillation engine that promotes learnings to skills automatically, RAG evaluation pipeline, AI Operations Framework gate automation, and injection-guard security layer. Running 24/7 on Azure.",
-    role: "Founder — Architectural Cognition",
+    desc: "The combined platform Nico founded and still runs day-to-day — a sovereign AI operating system with 400+ self-evolving skills, persistent cross-session agent memory, multi-model orchestration (Claude + Codex + Gemini), self-healing watchdog, knowledge distillation engine that promotes learnings to skills automatically, RAG evaluation pipeline, AI Operations Framework gate automation, and injection-guard security layer. Running 24/7 on Azure.",
+    role: "Founder — Orchestration Platform",
     color: "#ff7900",
     url: "https://apex.infoacademy.uk",
   },
@@ -166,7 +166,7 @@ const PROOF_POINTS = [
     metric: "20K+",
     metricLabel: "Learners",
     desc: "AI-first learning platform with built-in agentic orchestration layer — currently in beta with ~100 active users. Enterprise cohorts get customised training environments, progress tracking, and AI-assisted learning paths. Free for all customers during beta. Already delivered training to Orange Romania. The same platform that powers the Phase 1 training delivery.",
-    role: "Founder & CEO",
+    role: "Chief Executive Officer",
     color: "#30d158",
     url: "https://www.infoacademy.uk",
   },
@@ -362,7 +362,7 @@ function PhaseCard({ phase, initialOpen = false }: { phase: typeof PHASES[0]; in
             Phase {phase.phase} — {phase.duration}
           </div>
           <h3 className="text-xl font-bold text-[#1d1d1f]">{phase.title}</h3>
-          <p className="text-[13px] text-[#6e6e73] mt-1">{phase.subtitle}</p>
+          <p className="text-[14px] font-medium text-[#1d1d1f]/75 mt-1">{phase.subtitle}</p>
         </div>
         <div className="text-right">
           <div className="text-2xl font-black" style={{ color: phase.color }}>{phase.price}</div>
