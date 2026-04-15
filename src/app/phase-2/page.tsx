@@ -755,29 +755,119 @@ export default function Phase2Page() {
                 Why APEX OS, not IBM
               </h2>
               <p className="text-[#6e6e73] text-xl max-w-2xl mx-auto leading-relaxed">
-                The comparison Orange&apos;s procurement team will run. We&apos;ve done it for you.
+                Enterprise vendors propose a single monolithic project. We propose three fixed
+                phases with decision gates between them.
               </p>
             </div>
           </AnimateIn>
 
-          {/* Clarifying framing paragraph */}
+          {/* Visual pricing model: three phase cards + total bar */}
           <AnimateIn delay={0.05}>
-            <div className="max-w-3xl mx-auto mb-12 rounded-2xl border border-[#ff7900]/25 bg-[#ff7900]/5 p-6 text-center">
-              <p className="text-[13px] font-black uppercase tracking-widest text-[#ff7900] mb-2">
-                How to read this
-              </p>
-              <p className="text-[15px] text-[#1d1d1f] leading-relaxed">
-                Enterprise vendors don&apos;t phase. IBM, Accenture, and Ericsson propose single
-                monolithic 12-24 month projects to deliver the same capability Orange would get
-                across our Phase 1 + Phase 2 + Phase 3 combined. The numbers below show their
-                equivalent programme cost versus our full three-phase engagement.
-              </p>
-              <p className="text-[13px] text-[#6e6e73] leading-relaxed mt-3">
-                Our model: three fixed phases, scoped and priced separately. Phase 1 is €30-50K,
-                Phase 2 is €185-200K, Phase 3 is €350-450K. <strong>Total engagement
-                €565-700K.</strong> You stop after any phase and keep everything built to that
-                point. No vendor in the comparison below offers that structure.
-              </p>
+            <div className="max-w-5xl mx-auto mb-16">
+              {/* Section label */}
+              <div className="flex items-center gap-3 mb-4">
+                <div className="h-px flex-1 bg-[#e5e5ea]" />
+                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#ff7900]">
+                  The APEX engagement, phase by phase
+                </span>
+                <div className="h-px flex-1 bg-[#e5e5ea]" />
+              </div>
+
+              {/* Phase cards row */}
+              <div className="grid md:grid-cols-3 gap-3 relative">
+                {/* Phase 1 */}
+                <div className="rounded-2xl bg-white border border-[#e5e5ea] p-6 relative">
+                  <div className="text-[10px] font-black uppercase tracking-wider text-[#ff7900] mb-2">
+                    Phase 01
+                  </div>
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-[#86868b] mb-3">
+                    10 weeks · Fix and Prove
+                  </div>
+                  <div className="text-[28px] font-black text-[#1d1d1f] leading-none mb-2">
+                    €30-50K
+                  </div>
+                  <div className="text-[12px] text-[#6e6e73] leading-snug">
+                    Build 3-4 working agents with Orange employees. Reveal the integration
+                    landscape.
+                  </div>
+                </div>
+
+                {/* Phase 2 (highlighted: this is the page we're on) */}
+                <div className="rounded-2xl bg-[#ff7900] p-6 relative shadow-lg shadow-[#ff7900]/20">
+                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-white text-[#ff7900] text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full border border-[#ff7900]/30">
+                    You are here
+                  </div>
+                  <div className="text-[10px] font-black uppercase tracking-wider text-white/80 mb-2">
+                    Phase 02
+                  </div>
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-white/70 mb-3">
+                    6 months · Operationalise
+                  </div>
+                  <div className="text-[28px] font-black text-white leading-none mb-2">
+                    €185-200K
+                  </div>
+                  <div className="text-[12px] text-white/85 leading-snug">
+                    Move Phase 1 winners into production across multiple departments. Governance,
+                    observability, ownership.
+                  </div>
+                </div>
+
+                {/* Phase 3 */}
+                <div className="rounded-2xl bg-white border border-[#e5e5ea] p-6 relative">
+                  <div className="text-[10px] font-black uppercase tracking-wider text-[#ff7900] mb-2">
+                    Phase 03
+                  </div>
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-[#86868b] mb-3">
+                    9 months · Operating Model
+                  </div>
+                  <div className="text-[28px] font-black text-[#1d1d1f] leading-none mb-2">
+                    €350-450K
+                  </div>
+                  <div className="text-[12px] text-[#6e6e73] leading-snug">
+                    Enterprise AI operating model. EU AI Act compliance by Aug 2026. Group
+                    replication.
+                  </div>
+                </div>
+              </div>
+
+              {/* Decision gate strip */}
+              <div className="mt-3 grid md:grid-cols-3 gap-3">
+                <div className="flex items-center gap-2 justify-center py-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#30d158]" />
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#6e6e73]">
+                    Gate 1: stop here, or continue
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 justify-center py-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#30d158]" />
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#6e6e73]">
+                    Gate 2: stop here, or continue
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 justify-center py-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#30d158]" />
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#6e6e73]">
+                    Gate 3: Orange runs independently
+                  </span>
+                </div>
+              </div>
+
+              {/* Total engagement bar */}
+              <div className="mt-5 rounded-2xl bg-[#1d1d1f] p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div className="flex-1">
+                  <div className="text-[10px] font-black uppercase tracking-[0.15em] text-[#ff7900] mb-1">
+                    Total engagement
+                  </div>
+                  <div className="text-white text-[13px] leading-snug">
+                    If Orange runs all three phases. Stop at any gate and you keep everything built
+                    to that point. The table below shows what enterprise vendors charge for an
+                    equivalent monolithic project.
+                  </div>
+                </div>
+                <div className="text-[32px] sm:text-[38px] font-black text-white leading-none flex-shrink-0">
+                  €565-700K
+                </div>
+              </div>
             </div>
           </AnimateIn>
 
