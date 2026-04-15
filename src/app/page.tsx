@@ -153,7 +153,7 @@ const PROOF_POINTS = [
     url: "https://profilesense-dashboard.vercel.app",
   },
   {
-    name: "InfoAcademy × APEX OS Orchestration Platform",
+    name: "InfoAcademy × APEX OS",
     metric: "400+",
     metricLabel: "Skills Deployed",
     desc: "The combined platform Nico founded and still runs day-to-day — a sovereign AI operating system with 400+ self-evolving skills, persistent cross-session agent memory, multi-model orchestration (Claude + Codex + Gemini), self-healing watchdog, knowledge distillation engine that promotes learnings to skills automatically, RAG evaluation pipeline, AI Operations Framework gate automation, and injection-guard security layer. Running 24/7 on Azure.",
@@ -175,11 +175,11 @@ const PROOF_POINTS = [
 const LEADERSHIP = [
   {
     name: "Nico Fratila",
-    photo: "/team/nico.jpeg",
+    photo: "/team/nico.png",
     location: "London, UK",
     title: "CEO, InfoAcademy · Founder, InfoAcademy × APEX OS",
-    org: "InfoAcademy × APEX OS Orchestration Platform",
-    bio: "Builds the future by solving problems that matter. Co-CEO of InfoAcademy and founder of the InfoAcademy × APEX OS Orchestration Platform — empowering founders and businesses to move from concept to execution using battle-tested frameworks, AI automation, and hands-on technical expertise. Architect, overseer, cognitive-intelligence layer, deployer, shipper. Background spans AI/ML adoption at Lloyds Banking Group (cloud migrations and operational transformation), business analysis across fintech and education, and scalable platforms built from scratch. Curiosity drives me. Technology empowers me. Results define me.",
+    org: "InfoAcademy × APEX OS",
+    bio: "Builds the future by solving problems that matter. Co-CEO of InfoAcademy and founder of the InfoAcademy × APEX OS — empowering founders and businesses to move from concept to execution using battle-tested frameworks, AI automation, and hands-on technical expertise. Architect, overseer, cognitive-intelligence layer, deployer, shipper. Background spans AI/ML adoption at Lloyds Banking Group (cloud migrations and operational transformation), business analysis across fintech and education, and scalable platforms built from scratch. Curiosity drives me. Technology empowers me. Results define me.",
     credentials: [
       { company: "InfoAcademy × APEX OS", detail: "Founder — 400+ skills, self-healing, 24/7 sovereign governance" },
       { company: "InfoAcademy", detail: "CEO — existing Orange Romania vendor, 20K+ learners" },
@@ -491,97 +491,78 @@ function WhatsAppIcon({ size = 14 }: { size?: number }) {
 function TeamCard({ person }: { person: typeof TEAM[0] }) {
   return (
     <div
-      className="rounded-3xl overflow-hidden bg-white flex flex-col h-full"
-      style={{ boxShadow: `0 1px 0 ${person.color}22, 0 12px 40px ${person.color}0d` }}
+      className="bg-white rounded-2xl p-7 h-full flex flex-col"
+      style={{
+        border: `1px solid ${person.color}22`,
+        boxShadow: `0 1px 0 ${person.color}11, 0 12px 40px rgba(0,0,0,0.05)`,
+      }}
     >
-      {/* ─── Header block: photo + identity ─── */}
-      <div
-        className="p-6 flex items-start gap-5"
-        style={{ background: `linear-gradient(135deg, ${person.color}12 0%, ${person.color}04 100%)` }}
-      >
+      {/* Header: photo + identity */}
+      <div className="flex items-start gap-5 mb-5">
         {person.photo ? (
           <img
             src={person.photo}
             alt={person.name}
-            className="w-24 h-24 rounded-2xl object-cover flex-shrink-0"
-            style={{ boxShadow: `0 6px 20px ${person.color}33` }}
+            className="w-[88px] h-[88px] rounded-2xl object-cover flex-shrink-0"
+            style={{ boxShadow: `0 4px 16px ${person.color}33` }}
           />
         ) : (
           <div
-            className="w-24 h-24 rounded-2xl flex items-center justify-center text-white font-black text-2xl flex-shrink-0"
-            style={{ background: person.color, boxShadow: `0 6px 20px ${person.color}33` }}
+            className="w-[88px] h-[88px] rounded-2xl flex items-center justify-center text-white font-black text-[22px] flex-shrink-0"
+            style={{ background: person.color, boxShadow: `0 4px 16px ${person.color}33` }}
           >
             {person.name.split(" ").map((n) => n[0]).join("")}
           </div>
         )}
         <div className="flex-1 min-w-0 pt-1">
-          <h3 className="text-[20px] font-black text-[#1d1d1f] leading-tight">{person.name}</h3>
-          <p className="text-[13px] font-bold mt-1.5 leading-snug" style={{ color: person.color }}>
+          <h3 className="text-[19px] font-black text-[#1d1d1f] leading-tight">{person.name}</h3>
+          <div className="text-[12px] font-bold mt-1.5 leading-snug" style={{ color: person.color }}>
             {person.title}
-          </p>
-          <p className="text-[11px] text-[#1d1d1f]/55 mt-1 font-medium">
-            {person.org} <span className="mx-1 opacity-40">·</span> {person.location}
-          </p>
+          </div>
+          <div className="text-[11px] text-[#86868b] mt-1 font-medium">{person.location}</div>
         </div>
       </div>
 
-      {/* ─── Bio block ─── */}
-      <div className="px-6 pt-5 pb-4">
-        <div
-          className="text-[10px] font-black uppercase tracking-[0.15em] mb-2"
-          style={{ color: person.color }}
-        >
-          Bio
-        </div>
-        <p className="text-[13px] text-[#1d1d1f]/85 leading-relaxed">{person.bio}</p>
+      {/* Bio paragraph */}
+      <p className="text-[13px] text-[#6e6e73] leading-relaxed mb-5 flex-1">{person.bio}</p>
+
+      {/* Experience tags — pill chips at the bottom, same pattern as phase-3 deliverable cards */}
+      <div className="flex flex-wrap gap-2 mb-5">
+        {person.credentials.map((c, i) => (
+          <span
+            key={i}
+            className="text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full"
+            style={{
+              border: `1px solid ${person.color}40`,
+              color: person.color,
+              backgroundColor: `${person.color}0d`,
+            }}
+          >
+            {c.company}
+          </span>
+        ))}
       </div>
 
-      {/* ─── Experience block ─── */}
-      <div className="px-6 pt-2 pb-5 flex-1">
-        <div
-          className="text-[10px] font-black uppercase tracking-[0.15em] mb-3"
-          style={{ color: person.color }}
-        >
-          Experience
-        </div>
-        <div className="flex flex-col gap-2.5">
-          {person.credentials.map((c, i) => (
-            <div key={i} className="flex items-start gap-3">
-              <span
-                className="text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-md flex-shrink-0 whitespace-nowrap"
-                style={{ background: person.color + "18", color: person.color }}
-              >
-                {c.company}
-              </span>
-              <span className="text-[12px] text-[#1d1d1f]/75 leading-snug pt-[3px]">{c.detail}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* ─── Links footer ─── */}
-      <div
-        className="px-6 py-4 flex items-center gap-5 flex-wrap"
-        style={{ background: person.color + "08" }}
-      >
+      {/* Links footer — no border, just spacing */}
+      <div className="flex items-center gap-5 flex-wrap">
         {person.linkedin && (
           <a
             href={person.linkedin}
             target="_blank"
             rel="noopener"
-            className="flex items-center gap-1.5 text-[12px] font-bold hover:opacity-80"
+            className="flex items-center gap-1.5 text-[11px] font-bold hover:opacity-80 uppercase tracking-wider"
             style={{ color: person.color }}
           >
-            <Linkedin size={13} /> LinkedIn
+            <Linkedin size={12} /> LinkedIn
           </a>
         )}
         {person.email && (
           <a
             href={`mailto:${person.email}`}
-            className="flex items-center gap-1.5 text-[12px] font-bold hover:opacity-80"
+            className="flex items-center gap-1.5 text-[11px] font-bold hover:opacity-80 uppercase tracking-wider"
             style={{ color: person.color }}
           >
-            <Mail size={13} /> Email
+            <Mail size={12} /> Email
           </a>
         )}
         {person.website && (
@@ -589,10 +570,10 @@ function TeamCard({ person }: { person: typeof TEAM[0] }) {
             href={person.website}
             target="_blank"
             rel="noopener"
-            className="flex items-center gap-1.5 text-[12px] font-bold hover:opacity-80"
+            className="flex items-center gap-1.5 text-[11px] font-bold hover:opacity-80 uppercase tracking-wider"
             style={{ color: person.color }}
           >
-            <Globe size={13} /> Website
+            <Globe size={12} /> Website
           </a>
         )}
       </div>

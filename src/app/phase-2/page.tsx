@@ -400,14 +400,15 @@ export default function Phase2Page() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <AnimateIn>
             <p className="text-[#ff7900] text-xs font-bold uppercase tracking-widest mb-4">
-              Infrastructure Components
+              What we build
             </p>
             <h2 className="text-4xl lg:text-5xl font-black text-[#1d1d1f] mb-6">
-              What gets built
+              What gets built in six months
             </h2>
             <p className="text-[#6e6e73] text-xl max-w-2xl mb-16 leading-relaxed">
-              7 production systems deployed sequentially over 6 months.
-              Every component is running in production today — proof available on request.
+              Six months. Six interlocking systems built inside Orange&apos;s environment, each
+              one extending the Phase 1 winners into production. Every component runs in
+              APEX OS today — proof available on request.
             </p>
           </AnimateIn>
 
@@ -576,50 +577,61 @@ export default function Phase2Page() {
             </p>
           </AnimateIn>
 
-          <div className="flex flex-col gap-5 max-w-5xl">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {KPIS.map((kpi, i) => (
               <AnimateIn key={kpi.metric} delay={i * 0.06}>
-                <div className="bg-white rounded-3xl p-7 flex flex-col lg:flex-row lg:items-stretch gap-6" style={{ boxShadow: "0 1px 0 rgba(0,0,0,0.04), 0 12px 40px rgba(0,0,0,0.04)" }}>
-                  {/* Identity */}
-                  <div className="lg:w-[280px] lg:flex-shrink-0 flex items-start gap-4">
-                    <div className="text-3xl flex-shrink-0">{kpi.icon}</div>
-                    <div>
+                <div
+                  className="bg-white rounded-2xl p-7 h-full flex flex-col"
+                  style={{
+                    border: "1px solid #e5e5ea",
+                    boxShadow: "0 1px 0 rgba(0,0,0,0.03), 0 8px 32px rgba(0,0,0,0.04)",
+                  }}
+                >
+                  {/* Header: icon tile + metric name */}
+                  <div className="flex items-start gap-4 mb-5">
+                    <div
+                      className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 text-2xl"
+                      style={{ backgroundColor: "#ff790018" }}
+                    >
+                      {kpi.icon}
+                    </div>
+                    <div className="flex-1 min-w-0 pt-1">
                       <div className="text-[10px] font-black uppercase tracking-[0.15em] text-[#ff7900] mb-1">
-                        Metric #{String(i + 1).padStart(2, "0")}
+                        Metric {String(i + 1).padStart(2, "0")}
                       </div>
-                      <h3 className="text-[18px] font-black text-[#1d1d1f] leading-tight">
+                      <h3 className="text-[16px] font-black text-[#1d1d1f] leading-tight">
                         {kpi.metric}
                       </h3>
                     </div>
                   </div>
 
-                  {/* Baseline → Target flow */}
-                  <div className="flex-1 flex items-center gap-4 lg:border-l lg:border-[#e5e5ea] lg:pl-6">
-                    <div className="flex-1">
-                      <div className="text-[10px] font-black uppercase tracking-[0.15em] text-[#86868b] mb-1.5">
-                        Baseline
-                      </div>
-                      <div className="text-[14px] font-bold text-[#1d1d1f] leading-snug">
-                        {kpi.baseline}
-                      </div>
-                    </div>
-                    <div className="text-[#ff7900] text-2xl font-black flex-shrink-0">→</div>
-                    <div className="flex-1">
-                      <div className="text-[10px] font-black uppercase tracking-[0.15em] text-[#30d158] mb-1.5">
-                        Target
-                      </div>
-                      <div className="text-[14px] font-black text-[#1d1d1f] leading-snug">
-                        {kpi.target}
-                      </div>
-                    </div>
-                  </div>
-
                   {/* How we measure */}
-                  <div className="lg:w-[260px] lg:flex-shrink-0 lg:border-l lg:border-[#e5e5ea] lg:pl-6">
-                    <div className="text-[10px] font-black uppercase tracking-[0.15em] text-[#86868b] mb-1.5">
-                      How we measure
-                    </div>
-                    <p className="text-[13px] text-[#1d1d1f]/75 leading-relaxed">{kpi.method}</p>
+                  <p className="text-[13px] text-[#6e6e73] leading-relaxed mb-5 flex-1">
+                    {kpi.method}
+                  </p>
+
+                  {/* Baseline → Target as tag pills */}
+                  <div className="flex flex-wrap gap-2">
+                    <span
+                      className="text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full"
+                      style={{
+                        border: "1px solid #86868b40",
+                        color: "#6e6e73",
+                        backgroundColor: "#86868b0d",
+                      }}
+                    >
+                      Baseline · {kpi.baseline}
+                    </span>
+                    <span
+                      className="text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full"
+                      style={{
+                        border: "1px solid #30d15840",
+                        color: "#1f9447",
+                        backgroundColor: "#30d1580d",
+                      }}
+                    >
+                      Target · {kpi.target}
+                    </span>
                   </div>
                 </div>
               </AnimateIn>
