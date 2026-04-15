@@ -50,7 +50,7 @@ const DELIVERABLES = [
     title: "Governance",
     subtitle: "Policies, risk, oversight, auditability",
     description:
-      "Formal AI governance for Orange: policies for acceptable use, risk classification, human oversight protocols, auditability, and model quality ownership. EU AI Act Article 6/9 compliance for Djia before the August 2026 deadline, risk management system, technical documentation, accuracy testing.",
+      "Formal AI governance for Orange: policies for acceptable use, risk classification, human oversight protocols, auditability, and model quality ownership. EU AI Act Article 6/9 compliance for Djia before the August 2026 deadline. Risk management system, technical documentation, accuracy testing.",
     applies: ["EU AI Act Article 6/9", "Risk management system", "Human oversight protocols", "Model quality ownership"],
   },
   {
@@ -86,7 +86,7 @@ const DELIVERABLES = [
     title: "Future Expansion",
     subtitle: "A base that extends without re-architecture",
     description:
-      "A practical base for new customer, network, B2B, and internal automation domains. When the next use case surfaces, it plugs into the existing operating layer, no rewrite, no re-procurement. Same patterns replicated across Orange Group (Poland, Belgium, Spain).",
+      "A practical base for new customer, network, B2B, and internal automation domains. When the next use case surfaces, it plugs into the existing operating layer. No rewrite, no re-procurement. Same patterns replicated across Orange Group (Poland, Belgium, Spain).",
     applies: ["New customer domains", "Network automation", "B2B AI services", "Group replication"],
   },
   {
@@ -104,7 +104,7 @@ const DELIVERABLES = [
     title: "Cross-Model Verification",
     subtitle: "Claude + GPT + Gemini deliberate",
     description:
-      "For high-stakes decisions, model selection, risk classification, vendor renegotiation, multiple frontier models deliberate independently and consensus is documented. Bias detection, auditable reasoning, defensible in front of regulators.",
+      "For high-stakes decisions (model selection, risk classification, vendor renegotiation), multiple frontier models deliberate independently and consensus is documented. Bias detection, auditable reasoning, defensible in front of regulators.",
     applies: ["High-stakes decision review", "Model bias detection", "EU AI Act evidence trail", "Regulatory reporting"],
   },
   {
@@ -128,13 +128,13 @@ const TIMELINE = [
   {
     months: "2-4",
     title: "Romanian NLP Pipeline",
-    description: "Fine-tuning pipeline built on Orange's own call data, accelerating the improvements already happening internally. Performance formally benchmarked against Group reporting standards. Target trajectory set from Orange's operational evidence.",
+    description: "Fine-tuning pipeline built on Orange's own call data. Accelerates the improvements already happening internally. Performance formally benchmarked against Group reporting standards. Target trajectory set from Orange's operational evidence.",
     color: "#ff7900",
   },
   {
     months: "3-5",
     title: "EU AI Act Framework",
-    description: "Article 6/9 classification completed. Risk management system implemented. Technical documentation generated. Human oversight protocols deployed, before the August 2026 deadline.",
+    description: "Article 6/9 classification completed. Risk management system implemented. Technical documentation generated. Human oversight protocols deployed before the August 2026 deadline.",
     color: "#6e3aff",
   },
   {
@@ -163,7 +163,7 @@ const ROI_ITEMS = [
     label: "Djia Success Rate",
     from: "52% (2021 pilot)",
     to: "80%+",
-    context: "9.3M subscribers, internal improvements made Group-reportable",
+    context: "9.3M subscribers. Internal improvements made Group-reportable.",
     color: "#30d158",
   },
   {
@@ -197,7 +197,7 @@ const TEAM = [
     name: "Nico Fratila",
     role: "CEO, InfoAcademy · Founder, APEX OS",
     org: "London, UK",
-    credentials: "Built APEX OS, sovereign AI OS with 400+ self-evolving skills, persistent agent memory, multi-model orchestration, self-healing watchdog, AI Operations Framework gate automation, and knowledge distillation engine, running 24/7 on Azure. AI/ML adoption at Lloyds Banking Group (5 yrs). CUBE Global Chief Customer Office (RegTech). Co-CEO of InfoAcademy: Orange Romania's existing training vendor.",
+    credentials: "Built APEX OS: a sovereign AI OS with 400+ self-evolving skills, persistent agent memory, multi-model orchestration, self-healing watchdog, AI Operations Framework gate automation, and a knowledge distillation engine, all running 24/7 on Azure. AI/ML adoption at Lloyds Banking Group (5 years). CUBE Global Chief Customer Office (RegTech). Co-CEO of InfoAcademy, Orange Romania's existing training vendor.",
     color: "#ff7900",
     lead: false,
   },
@@ -205,7 +205,7 @@ const TEAM = [
     name: "Mru Patel",
     role: "Executive Chairman & Global Partner",
     org: "Dubai, UAE",
-    credentials: "40 years at IBM, Siemens, and Sun Microsystems - £3B+ in enterprise programmes across Europe, Africa, and Asia. Government and Fortune 500 advisor since 1987. Telecom and operator experience with Orange, Vodafone, O2, and BT. Brings the commercial architecture that turns a strong technical proposal into a Group-level decision.",
+    credentials: "40 years at IBM, Siemens, and Sun Microsystems. £3B+ in enterprise programmes across Europe, Africa, and Asia. Government and Fortune 500 advisor since 1987. Telecom and operator experience with Orange, Vodafone, O2, and BT. Brings the commercial architecture that turns a strong technical proposal into a Group-level decision.",
     color: "#0d7377",
     lead: false,
   },
@@ -213,13 +213,13 @@ const TEAM = [
     name: "Bogdan Toporan",
     role: "Founder · Cloud Architect · SCADA Patent Holder",
     org: "Cluj, Romania",
-    credentials: "20+ years leading engineering teams at Telenav, Micro Focus (HP), and Emerson, patented a SCADA communication system for the Oil & Gas sector. Founder of Arandi Software (cloud modernisation: Microservices, Kubernetes, AWS) and Digitalize Today (agentic AI, workflow automation, intelligent document processing). Engineers it, doesn't just talk about it.",
+    credentials: "20+ years leading engineering teams at Telenav, Micro Focus (HP), and Emerson. Patented a SCADA communication system for the Oil & Gas sector. Founder of Arandi Software (cloud modernisation: Microservices, Kubernetes, AWS) and Digitalize Today (agentic AI, workflow automation, intelligent document processing). Engineers it, doesn't just talk about it.",
     color: "#6e3aff",
     lead: false,
   },
   {
     name: "Hardik Nakum",
-    role: "Director: Cloud, Security & Enterprise Transformation",
+    role: "Director · Cloud, Security & Enterprise Transformation",
     org: "MindNova · UK",
     credentials: "10+ years across global financial institutions at the intersection of AI, cloud, and cybersecurity. Has led large-scale cloud and transformation initiatives across Azure, AWS, and GCP; supports multi-cloud re-architecture programmes; helps leadership teams adopt innovation in a way that is practical, responsible, and aligned to business outcomes. Director of MindNova.",
     color: "#0071e3",
@@ -259,8 +259,8 @@ export default function Phase3Page() {
           <AnimateIn delay={0.2}>
             <p className="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto mb-4 leading-relaxed">
               Nine months to make Orange Romania AI{" "}
-              <span className="text-white font-medium">capable, governed, scalable, and durable</span> -
-              owned by Orange, defensible to Group, and EU AI Act compliant before August 2026.
+              <span className="text-white font-medium">capable, governed, scalable, and durable</span>.
+              Owned by Orange, defensible to Group, and EU AI Act compliant before August 2026.
             </p>
           </AnimateIn>
 
@@ -332,11 +332,11 @@ export default function Phase3Page() {
                 body: "Orange Group's 'Trust the Future' 2026-2030 strategy targets €600M in AI-generated value by 2028. Bucharest's execution quality determines whether Romania leads or follows within Group.",
               },
             ].map(({ icon: Icon, color, title, body }) => (
-              <AnimateIn key={title}>
-                <div className="rounded-2xl border border-[#e5e5ea] p-7 bg-[#f5f5f7] h-full">
-                  <Icon size={28} style={{ color }} className="mb-4" />
+              <AnimateIn key={title} className="h-full">
+                <div className="rounded-2xl border border-[#e5e5ea] p-7 bg-[#f5f5f7] h-full flex flex-col">
+                  <Icon size={28} style={{ color }} className="mb-4 flex-shrink-0" />
                   <h3 className="text-lg font-bold text-[#1d1d1f] mb-3">{title}</h3>
-                  <p className="text-[#6e6e73] leading-relaxed">{body}</p>
+                  <p className="text-[#6e6e73] leading-relaxed flex-1">{body}</p>
                 </div>
               </AnimateIn>
             ))}
@@ -354,57 +354,57 @@ export default function Phase3Page() {
                 <span>The Operating Layer</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                An AI Operations Layer -
+                An AI Operations Layer.
                 <br />
                 <span style={{ color: "#6e3aff" }}>The NOC for Orange&apos;s AI Decisions.</span>
               </h2>
               <p className="text-xl text-white/60 max-w-3xl mx-auto leading-relaxed">
-                You already run a network operations centre. Phase 3 builds the equivalent for your AI -
+                You already run a network operations centre. Phase 3 builds the equivalent for your AI:
                 a single operating layer that observes every AI decision across Djia, the internal
                 knowledge base, support triage, and the agents your teams built in Phase 1.
               </p>
               <p className="text-lg text-white/40 max-w-3xl mx-auto leading-relaxed mt-4">
-                Alerts, dashboards, on-call rotas, runbooks. Not for packet loss or capacity events, for
-                AI quality, drift, bias, and safety. The same operational discipline Orange already has,
-                applied to AI.
+                Alerts, dashboards, on-call rotas, runbooks. Not for packet loss or capacity events.
+                For AI quality, drift, bias, and safety. The same operational discipline Orange already
+                has, applied to AI.
               </p>
             </div>
           </AnimateIn>
 
           <AnimateIn delay={0.1}>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-7">
-                <div className="inline-flex items-center gap-2 bg-[#6e3aff]/15 border border-[#6e3aff]/30 rounded-full px-3 py-1 mb-4 text-xs text-[#b399ff] font-semibold">
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-7 h-full flex flex-col">
+                <div className="inline-flex items-center gap-2 bg-[#6e3aff]/15 border border-[#6e3aff]/30 rounded-full px-3 py-1 mb-4 text-xs text-[#b399ff] font-semibold flex-shrink-0 w-fit">
                   <span>01</span>
                   <span>Observation</span>
                 </div>
                 <div className="text-white font-semibold mb-2">Every decision logged, every drift detected.</div>
-                <div className="text-white/50 text-sm leading-relaxed">
+                <div className="text-white/50 text-sm leading-relaxed flex-1">
                   Every AI output logged. Model drift detected. Escalations routed. Dashboards for the CTO,
                   summaries for the Board, exports for Group AI Paris, all fed from the same source.
                 </div>
               </div>
 
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-7">
-                <div className="inline-flex items-center gap-2 bg-[#ff7900]/15 border border-[#ff7900]/30 rounded-full px-3 py-1 mb-4 text-xs text-[#ffa64d] font-semibold">
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-7 h-full flex flex-col">
+                <div className="inline-flex items-center gap-2 bg-[#ff7900]/15 border border-[#ff7900]/30 rounded-full px-3 py-1 mb-4 text-xs text-[#ffa64d] font-semibold flex-shrink-0 w-fit">
                   <span>02</span>
                   <span>Intervention</span>
                 </div>
                 <div className="text-white font-semibold mb-2">Clear rules for when humans override.</div>
-                <div className="text-white/50 text-sm leading-relaxed">
+                <div className="text-white/50 text-sm leading-relaxed flex-1">
                   When a human overrides, when a decision is rolled back, when a model is pulled out of
                   rotation. Same discipline as your existing NOC runbooks, applied to AI incidents.
                 </div>
               </div>
 
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-7">
-                <div className="inline-flex items-center gap-2 bg-[#30d158]/15 border border-[#30d158]/30 rounded-full px-3 py-1 mb-4 text-xs text-[#5de67b] font-semibold">
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-7 h-full flex flex-col">
+                <div className="inline-flex items-center gap-2 bg-[#30d158]/15 border border-[#30d158]/30 rounded-full px-3 py-1 mb-4 text-xs text-[#5de67b] font-semibold flex-shrink-0 w-fit">
                   <span>03</span>
                   <span>Evolution</span>
                 </div>
-                <div className="text-white font-semibold mb-2">New use cases plug in, no re-architecture.</div>
-                <div className="text-white/50 text-sm leading-relaxed">
-                  When the next use case surfaces: B2B, network ops, internal automation, it plugs into
+                <div className="text-white font-semibold mb-2">New use cases plug in. No re-architecture.</div>
+                <div className="text-white/50 text-sm leading-relaxed flex-1">
+                  When the next use case surfaces (B2B, network ops, internal automation), it plugs into
                   the existing layer without a rewrite. Built to extend from day one.
                 </div>
               </div>
@@ -433,9 +433,9 @@ export default function Phase3Page() {
                 ))}
               </div>
               <p className="text-white/40 text-sm mt-6 leading-relaxed">
-                Every high-stakes AI decision, model selection, Djia architecture changes, vendor
-                renegotiation, EU AI Act risk classification, passes through the same six-gate
-                sequence. Auditable, defensible, Group-readable.
+                Every high-stakes AI decision (model selection, Djia architecture changes, vendor
+                renegotiation, EU AI Act risk classification) passes through the same six-gate sequence.
+                Auditable, defensible, Group-readable.
               </p>
             </div>
           </AnimateIn>
@@ -460,8 +460,8 @@ export default function Phase3Page() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {DELIVERABLES.map(({ icon: Icon, color, title, subtitle, description, applies }, i) => (
-              <AnimateIn key={title} delay={i * 0.05}>
-                <div className="bg-white rounded-2xl border border-[#e5e5ea] p-7 h-full">
+              <AnimateIn key={title} delay={i * 0.05} className="h-full">
+                <div className="bg-white rounded-2xl border border-[#e5e5ea] p-7 h-full flex flex-col">
                   <div className="flex items-start gap-4 mb-4">
                     <div
                       className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
@@ -474,8 +474,8 @@ export default function Phase3Page() {
                       <div className="text-sm font-medium mt-0.5" style={{ color }}>{subtitle}</div>
                     </div>
                   </div>
-                  <p className="text-[#6e6e73] text-sm leading-relaxed mb-4">{description}</p>
-                  <div className="flex flex-wrap gap-2">
+                  <p className="text-[#6e6e73] text-sm leading-relaxed mb-4 flex-1">{description}</p>
+                  <div className="flex flex-wrap gap-2 mt-auto">
                     {applies.map((tag) => (
                       <span
                         key={tag}
@@ -559,8 +559,8 @@ export default function Phase3Page() {
 
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             {ROI_ITEMS.map(({ icon: Icon, label, from, to, context, color }, i) => (
-              <AnimateIn key={label} delay={i * 0.08}>
-                <div className="border border-[#e5e5ea] rounded-2xl p-7 bg-[#f5f5f7]">
+              <AnimateIn key={label} delay={i * 0.08} className="h-full">
+                <div className="border border-[#e5e5ea] rounded-2xl p-7 bg-[#f5f5f7] h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-4">
                     <Icon size={20} style={{ color }} />
                     <span className="font-semibold text-[#1d1d1f]">{label}</span>
@@ -570,7 +570,7 @@ export default function Phase3Page() {
                     <ArrowRight size={20} style={{ color }} />
                     <div className="text-2xl font-bold" style={{ color }}>{to}</div>
                   </div>
-                  <div className="text-sm text-[#6e6e73]">{context}</div>
+                  <div className="text-sm text-[#6e6e73] flex-1">{context}</div>
                 </div>
               </AnimateIn>
             ))}
@@ -608,9 +608,9 @@ export default function Phase3Page() {
 
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {TEAM.map(({ name, role, org, credentials, color, lead }, i) => (
-              <AnimateIn key={name} delay={i * 0.1}>
+              <AnimateIn key={name} delay={i * 0.1} className="h-full">
                 <motion.div
-                  className="rounded-2xl p-7 h-full relative"
+                  className="rounded-2xl p-7 h-full flex flex-col relative"
                   style={
                     lead
                       ? {
@@ -689,7 +689,7 @@ export default function Phase3Page() {
                 { label: "AI Operations Framework Deployment", amount: "€80,000", note: "Six-gate lifecycle across all Orange AI decisions. PDR → PQR on every Djia change and model selection. On-call rota and runbooks." },
                 { label: "Romanian NLP Fine-Tuning Pipeline", amount: "€110,000", note: "Model training on Orange's own call data. Continuous retraining infrastructure. Djia improvement cycle." },
                 { label: "EU AI Act Compliance Framework", amount: "€80,000", note: "Article 6/9 classification for Djia. Risk management system, technical documentation, human oversight protocols." },
-                { label: "Cross-Model Verification", amount: "€50,000", note: "Claude + GPT + Gemini deliberate on high-stakes decisions, model selection, risk classification, vendor renegotiation." },
+                { label: "Cross-Model Verification", amount: "€50,000", note: "Claude + GPT + Gemini deliberate on high-stakes decisions (model selection, risk classification, vendor renegotiation)." },
                 { label: "Reporting & Trust Dashboards", amount: "€40,000", note: "Single pane of glass for CTO + Board + Group AI Paris. Audit trail, exports, governance posture." },
                 { label: "Vendor Estate Intelligence", amount: "€35,000", note: "OSINT methodology applied to Genesys, MATRIXX, IBM contracts. Renegotiation opportunities mapped." },
                 { label: "Expert Panel + Phase 4 Roadmap", amount: "€30-55K", note: "20+ specialist panel run on full Orange AI architecture. Group replication blueprint for Poland, Belgium, Spain." },
@@ -728,11 +728,11 @@ export default function Phase3Page() {
               <div className="text-[#6e6e73] mb-6">9-month engagement, fixed scope</div>
               <ul className="space-y-3">
                 {[
-                  "Governance, policies, risk, human oversight, auditability",
-                  "Shared services, reusable agents, prompts, memory, evaluation",
-                  "Operating model, clear ownership across the business",
-                  "Reporting & trust, dashboards Paris can read",
-                  "Future expansion, a base that extends without re-architecture",
+                  "Governance: policies, risk, human oversight, auditability",
+                  "Shared services: reusable agents, prompts, memory, evaluation",
+                  "Operating model: clear ownership across the business",
+                  "Reporting & trust: dashboards Paris can read",
+                  "Future expansion: a base that extends without re-architecture",
                   "Romanian NLP fine-tuning on Orange call data",
                   "EU AI Act Article 6/9 compliance framework",
                   "Cross-model verification for high-stakes decisions",

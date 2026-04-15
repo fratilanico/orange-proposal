@@ -65,7 +65,7 @@ const COMPONENTS = [
     id: "agents-md",
     icon: "📋",
     title: "AGENTS.md Governance",
-    subtitle: "AI Operations Framework, policy & drift control",
+    subtitle: "AI Operations Framework · policy & drift control",
     description:
       "Enforced governance spec deployed across all repos. Skills system with tiered agent hierarchy, drift detection, and audit-ready compliance. Shadow AI tracked and governed from day one.",
     why: "Internal teams are already using rogue AI tools. Without governance, Orange carries legal and data risk it cannot quantify. AGENTS.md creates the control plane before regulators force it.",
@@ -78,7 +78,7 @@ const COMPONENTS = [
     subtitle: "Move the proof into daily workflows",
     description:
       "Take the 3-4 winning agents from Phase 1 and move them into production workflows across the departments that owned them. Wire them into Orange's live systems, give them access boundaries, run them under supervision, and measure them daily.",
-    why: "Phase 1 was proof. Phase 2 is operationalisation, the winners live inside Orange's actual workflows, not on a demo server. Expansion across multiple departments is the difference between a successful pilot and a repeatable internal capability.",
+    why: "Phase 1 was proof. Phase 2 is operationalisation. The winners live inside Orange's actual workflows, not on a demo server. Expansion across multiple departments is the difference between a successful pilot and a repeatable internal capability.",
     color: "#30d158",
   },
   {
@@ -117,8 +117,8 @@ const COMPONENTS = [
     title: "AI Layer on Top of Your Existing Stack",
     subtitle: "Genesys, MATRIXX, and internal APIs, not a replacement",
     description:
-      "We're not replacing Genesys or MATRIXX. We're training your people to build the AI layer on top of what you already have, to deliver real value most companies don't. API bridges that extend existing infrastructure with AI capabilities, routing, intent detection, real-time enrichment, without touching existing contracts.",
-    why: "Orange cannot rip-and-replace €40M+ in vendor contracts, and it shouldn't. The AI layer sits above Genesys and MATRIXX, coordinating them, not competing with them. Sunk costs protected, AI capability unlocked.",
+      "We're not replacing Genesys or MATRIXX. We're training your people to build the AI layer on top of what you already have, to deliver real value most companies don't. API bridges that extend existing infrastructure with AI capabilities (routing, intent detection, real-time enrichment) without touching existing contracts.",
+    why: "Orange cannot rip-and-replace €40M+ in vendor contracts, and it shouldn't. The AI layer sits above Genesys and MATRIXX, coordinating them instead of competing with them. Sunk costs protected, AI capability unlocked.",
     color: "#6e3aff",
   },
 ]
@@ -189,9 +189,9 @@ const TIMELINE = [
 const KPIS = [
   {
     metric: "Djia Response Accuracy",
-    baseline: "52% at 2021 pilot launch, internal improvements ongoing",
-    target: "Measurable uplift, 65-70% projected post-RAG",
-    method: "A/B test on identical query set before/after RAG pipeline, adds Group-reportable benchmark to existing internal tracking",
+    baseline: "52% at 2021 pilot launch (internal improvements ongoing)",
+    target: "Measurable uplift. 65-70% projected post-RAG",
+    method: "A/B test on identical query set before and after RAG pipeline. Adds a Group-reportable benchmark to existing internal tracking.",
     icon: "🎯",
   },
   {
@@ -238,7 +238,7 @@ const COMPARISON = [
     vendor: "APEX OS",
     highlight: true,
     delivery: "6 months",
-    ownership: "Full, you own the stack",
+    ownership: "You own the stack",
     dependency: "Zero vendor lock-in",
     price: "€185-200K",
     color: "#ff7900",
@@ -324,7 +324,7 @@ export default function Phase2Page() {
           <AnimateIn delay={0.2}>
             <p className="text-xl text-white/60 max-w-2xl leading-relaxed mb-16">
               Phase 1 proved the concept. Phase 2 moves the Phase 1 winners into production
-              workflows and expands them across multiple departments, governed AI operations,
+              workflows and expands them across multiple departments. Governed AI operations,
               observability, and measurable KPIs Orange&apos;s board can report against the
               &apos;Trust the Future&apos; 2026-2030 AI value target.
             </p>
@@ -503,7 +503,7 @@ export default function Phase2Page() {
 
           <div className="grid lg:grid-cols-5 gap-4">
             {TIMELINE.map((phase, i) => (
-              <AnimateIn key={phase.months} delay={i * 0.08}>
+              <AnimateIn key={phase.months} delay={i * 0.08} className="h-full">
                 <div className="relative h-full">
                   {/* Connector line */}
                   {i < TIMELINE.length - 1 && (
@@ -573,13 +573,13 @@ export default function Phase2Page() {
             </h2>
             <p className="text-[#6e6e73] text-xl max-w-2xl mb-16 leading-relaxed">
               Five hard metrics, each with a defined measurement method. No vanity
-              numbers, only figures that appear in a board report.
+              numbers. Only figures that appear in a board report.
             </p>
           </AnimateIn>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {KPIS.map((kpi, i) => (
-              <AnimateIn key={kpi.metric} delay={i * 0.06}>
+              <AnimateIn key={kpi.metric} delay={i * 0.06} className="h-full">
                 <div
                   className="bg-white rounded-2xl p-7 h-full flex flex-col"
                   style={{
@@ -806,11 +806,11 @@ export default function Phase2Page() {
 
           {/* Supporting points */}
           <AnimateIn delay={0.4} className="mt-16">
-            <div className="grid lg:grid-cols-3 gap-6">
+            <div className="grid lg:grid-cols-3 gap-6 items-stretch">
               {[
                 {
                   title: "Production-proven today",
-                  body: "Every system in Phase 2 is running in production. We're not proposing architecture, we're deploying infrastructure we already operate.",
+                  body: "Every system in Phase 2 is running in production. We're not proposing architecture. We're deploying infrastructure we already operate.",
                   icon: "✅",
                 },
                 {
@@ -826,11 +826,11 @@ export default function Phase2Page() {
               ].map((point) => (
                 <div
                   key={point.title}
-                  className="rounded-2xl p-6 border border-[#e5e5ea] bg-[#fafafa]"
+                  className="h-full flex flex-col rounded-2xl p-6 border border-[#e5e5ea] bg-[#fafafa]"
                 >
-                  <div className="text-3xl mb-4">{point.icon}</div>
+                  <div className="text-3xl mb-4 flex-shrink-0">{point.icon}</div>
                   <div className="font-black text-[#1d1d1f] text-lg mb-3">{point.title}</div>
-                  <p className="text-[#6e6e73] leading-relaxed text-sm">{point.body}</p>
+                  <p className="text-[#6e6e73] leading-relaxed text-sm flex-1">{point.body}</p>
                 </div>
               ))}
             </div>
@@ -850,8 +850,8 @@ export default function Phase2Page() {
                 Phase 3: Cognitive Architecture
               </h2>
               <p className="text-white/50 text-xl max-w-2xl mx-auto leading-relaxed mb-12">
-                Phase 2 sets the infrastructure foundation. Phase 3 adds the intelligence layer -
-                autonomous agents that learn from Orange's operations, predict failures, and
+                Phase 2 sets the infrastructure foundation. Phase 3 adds the intelligence layer:
+                autonomous agents that learn from Orange&apos;s operations, predict failures, and
                 act without human prompting.
               </p>
             </AnimateIn>
@@ -865,11 +865,11 @@ export default function Phase2Page() {
                 ].map((item) => (
                   <div
                     key={item.label}
-                    className="rounded-2xl p-6 border border-[#6e3aff]/30 bg-[#6e3aff]/05 text-left"
+                    className="h-full flex flex-col rounded-2xl p-6 border border-[#6e3aff]/30 bg-[#6e3aff]/5 text-left"
                   >
-                    <div className="text-3xl mb-4">{item.icon}</div>
+                    <div className="text-3xl mb-4 flex-shrink-0">{item.icon}</div>
                     <div className="font-black text-white mb-3">{item.label}</div>
-                    <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
+                    <p className="text-white/50 text-sm leading-relaxed flex-1">{item.desc}</p>
                   </div>
                 ))}
               </div>
