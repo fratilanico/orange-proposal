@@ -80,7 +80,8 @@ const PHASES = [
     title: "Assess & Build",
     subtitle: "AI Operations Lab",
     duration: "10 weeks",
-    price: "€30K",
+    price: "€30K–€50K",
+    scopeNote: "based on scope",
     color: "#ff7900",
     items: [
       "8-12 Orange employees selected (IT, CX, Operations mix)",
@@ -95,40 +96,39 @@ const PHASES = [
   },
   {
     phase: "02",
-    title: "Scale & Integrate",
-    subtitle: "Sovereign AI Infrastructure",
+    title: "Operationalise & Integrate",
+    subtitle: "From Phase 1 winners to production",
     duration: "6 months",
     price: "€185–200K",
     color: "#0071e3",
     link: "/phase-2",
     items: [
-      "Skills Engine — departmental AI knowledge distillation, auto-evolving",
-      "2 additional production agents (Customer Retention + Upsell Intelligence)",
-      "Python ADK Agent-to-Agent orchestration across departments",
-      "AutoResearch Evolution — agents that research, learn, and improve autonomously",
-      "Deploy inside Orange's sandboxed LLM environment (Claude + GPT + Gemini)",
-      "Per-department skill libraries built on Orange's own operational data",
+      "Move the Phase 1 winners into production workflows and expand across multiple departments",
+      "Identity, permissions, audit, and human review controls built in from day one",
+      "Observability, model routing, monitoring, and support processes for every agent",
+      "Reusable agent patterns so Orange can repeat what works without re-inventing",
+      "Internal ownership — no long-term dependence on outside suppliers or consultants",
       "Scale from 12 → 50+ AI-capable employees across 3 departments",
-      "Integrate with Genesys, MATRIXX, and internal APIs",
+      "AI layer on top of Genesys, MATRIXX, and internal APIs — not a replacement",
     ],
   },
   {
     phase: "03",
-    title: "Architectural Cognition",
-    subtitle: "FDRP Quality Governance + EU AI Act",
+    title: "Enterprise AI Operating Model",
+    subtitle: "Governed, scalable, durable — owned by Orange",
     duration: "9 months",
     price: "€350–450K",
     color: "#30d158",
     link: "/phase-3",
     items: [
-      "FDRP gate lifecycle on every AI decision (PDR → PQR)",
-      "N≥3 cross-model verification (Claude + GPT + Gemini independently)",
+      "Governance — formal policies, risk controls, human oversight, auditability, EU AI Act Art. 6/9 compliance (Aug 2026 deadline)",
+      "Shared services — reusable agent components, prompts, memory, evaluation flows, deployment patterns",
+      "Operating model — clear ownership between business teams, architecture, service, data, and tech champions",
+      "Reporting and trust — AI reporting Orange leadership can defend internally and align with Group",
+      "Future expansion — a practical base for new customer, network, B2B, and internal automation domains",
       "Romanian NLP fine-tuning pipeline on Orange call data",
-      "EU AI Act Article 6/9 compliance framework — deadline Aug 2026",
-      "CVT dashboard for CTO + Group AI Paris",
-      "Procurement intelligence — Genesys, MATRIXX, IBM contract analysis",
+      "Cross-model verification — Claude + GPT + Gemini deliberate on high-stakes decisions",
       "Group replication blueprint for Poland, Belgium, Spain",
-      "Orange runs own AI operations — APEX on advisory retainer",
     ],
   },
 ];
@@ -286,8 +286,8 @@ const OBJECTIONS = [
     a: "Paris builds tools. Tools without people who know how to use them are shelfware. We build the people AND the architecture. Bucharest delivering measurable AI value positions you as the Group's AI innovation lab — political capital for your leadership.",
   },
   {
-    q: "€30K seems cheap for 'architecture' but expensive for 'training'.",
-    a: "It's neither. It's a 10-week build program where your people create working AI agents under expert guidance. The architecture emerges from what they build. You get trained people + working agents + a roadmap. Below VP discretionary spend threshold.",
+    q: "€30K–€50K seems cheap for 'architecture' but expensive for 'training'.",
+    a: "It's neither. It's a 10-week build program where your people create working AI agents under expert guidance. The architecture emerges from what they build. You get trained people + working agents + a roadmap. Price scales with scope — workflows, agents, integrations. Still below VP discretionary spend threshold.",
   },
 ];
 
@@ -381,6 +381,9 @@ function PhaseCard({ phase, initialOpen = false }: { phase: typeof PHASES[0]; in
         </div>
         <div className="text-right">
           <div className="text-2xl font-black" style={{ color: phase.color }}>{phase.price}</div>
+          {"scopeNote" in phase && phase.scopeNote && (
+            <div className="text-[10px] font-medium uppercase tracking-wider text-[#86868b] mt-0.5">{phase.scopeNote}</div>
+          )}
           <ChevronDown
             size={16}
             className="text-[#86868b] ml-auto mt-1 transition-transform duration-300"
@@ -738,7 +741,7 @@ export default function Page() {
         <div className="max-w-[900px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <p className="text-white font-black text-xl sm:text-2xl leading-tight">
-              Seen enough? Start with €30K.
+              Seen enough? Start with €30K–€50K.
             </p>
             <p className="text-white/70 text-[14px] mt-1">
               No procurement committee. No RFP. One conversation.
@@ -807,7 +810,7 @@ export default function Page() {
                 { label: "Model", apex: "Capability transfer", them: "Product delivery" },
                 { label: "Ownership", apex: "You own every agent", them: "Vendor owns IP" },
                 { label: "After 18 months", apex: "You run independently", them: "Renewal required" },
-                { label: "Entry cost", apex: "€30K", them: "€300K+ minimum" },
+                { label: "Entry cost", apex: "€30K–€50K", them: "€300K+ minimum" },
               ].map((row, i) => (
                 <div key={i} className="contents">
                   <div className={`px-4 py-3 ${i === 0 ? "font-black text-[11px] uppercase tracking-widest text-white/30 bg-white/[0.04]" : "text-white/40"} border-b border-white/[0.05]`}>{row.label}</div>
@@ -977,8 +980,8 @@ export default function Page() {
                   </p>
                 </div>
                 <div className="flex-shrink-0 text-right">
-                  <div className="text-3xl font-black text-[#ff7900]">€30K</div>
-                  <div className="text-[12px] text-white/30 mt-0.5">10 weeks · Fixed fee</div>
+                  <div className="text-3xl font-black text-[#ff7900]">€30K–€50K</div>
+                  <div className="text-[12px] text-white/30 mt-0.5">10 weeks · based on scope</div>
                 </div>
               </div>
               {/* Split body */}
@@ -1075,7 +1078,7 @@ export default function Page() {
               Ready to build?
             </h2>
             <p className="text-lg text-white/50 mt-4">
-              10 weeks. €30K. Working AI agents built by your team.
+              10 weeks. €30K–€50K based on scope. Working AI agents built by your team.
               <br />
               If the agents don&apos;t deliver value, you still have 12 trained people.
             </p>
