@@ -237,10 +237,12 @@ const COMPARISON = [
   {
     vendor: "APEX OS",
     highlight: true,
-    delivery: "6 months",
+    delivery: "6 months (Phase 2)",
     ownership: "You own the stack",
     dependency: "Zero vendor lock-in",
-    price: "€185-200K",
+    pricePhase2: "€185-200K",
+    priceTotal: "€565-700K",
+    priceNote: "P1 + P2 + P3 · stop after any phase",
     color: "#ff7900",
   },
   {
@@ -249,7 +251,9 @@ const COMPARISON = [
     delivery: "18-24 months",
     ownership: "IBM Watson ecosystem",
     dependency: "Permanent IBM dependency",
-    price: "€800K-€2M",
+    pricePhase2: "",
+    priceTotal: "€800K-€2M",
+    priceNote: "Single monolithic project",
     color: "#6e3aff",
   },
   {
@@ -258,7 +262,9 @@ const COMPARISON = [
     delivery: "12-18 months",
     ownership: "Consulting deliverables",
     dependency: "Accenture team retention",
-    price: "€500K-€1.5M",
+    pricePhase2: "",
+    priceTotal: "€500K-€1.5M",
+    priceNote: "Single monolithic project",
     color: "#6e3aff",
   },
   {
@@ -267,7 +273,9 @@ const COMPARISON = [
     delivery: "Roadmap TBD",
     ownership: "Ericsson platform",
     dependency: "Full platform dependency",
-    price: "€600K-€1.2M",
+    pricePhase2: "",
+    priceTotal: "€600K-€1.2M",
+    priceNote: "Single monolithic project",
     color: "#6e3aff",
   },
 ]
@@ -698,13 +706,15 @@ export default function Phase2Page() {
                 <div className="p-6 border-b border-white/10">
                   <h3 className="font-black text-white text-xl">vs. The Alternatives</h3>
                   <p className="text-white/40 text-sm mt-1">
-                    What Orange would pay for equivalent scope elsewhere
+                    Enterprise vendors don&apos;t phase. Their numbers are for a single monolithic
+                    project that covers the same ground as our full Phase 1 + 2 + 3 engagement
+                    (€565-700K).
                   </p>
                 </div>
                 <div className="divide-y divide-white/10">
                   {[
                     { name: "Genesys AI Add-on", price: "€400K+", note: "Per-year licensing, no ownership" },
-                    { name: "IBM AI Services", price: "€800K-€2M", note: "18-24 month delivery" },
+                    { name: "IBM AI Services", price: "€800K-€2M", note: "18-24 month delivery, single project" },
                     { name: "Accenture Advisory", price: "€500K-€1.5M", note: "Slide decks, not infrastructure" },
                     { name: "Ericsson Platform", price: "€600K-€1.2M", note: "Full vendor dependency" },
                   ].map((alt) => (
@@ -720,10 +730,11 @@ export default function Phase2Page() {
                 <div className="p-5 bg-white/[0.03] border-t border-white/10">
                   <div className="flex items-center gap-2 mb-2">
                     <div className="w-2 h-2 rounded-full bg-[#30d158]" />
-                    <span className="text-[#30d158] font-black text-sm">APEX OS saves Orange 60-80%</span>
+                    <span className="text-[#30d158] font-black text-sm">Same ground, at least 30% less, and you can stop at any phase</span>
                   </div>
                   <p className="text-white/40 text-xs">
-                    While delivering full infrastructure ownership, not a managed service dependency.
+                    Full three-phase APEX engagement: €565-700K. Every phase is a decision gate.
+                    Orange owns everything built to that point whether you continue or not.
                   </p>
                 </div>
               </div>
@@ -742,9 +753,30 @@ export default function Phase2Page() {
             <h2 className="text-4xl lg:text-5xl font-black text-[#1d1d1f] mb-6">
               Why APEX OS, not IBM
             </h2>
-            <p className="text-[#6e6e73] text-xl max-w-2xl mb-16 leading-relaxed">
-              The comparison Orange's procurement team will run. We've done it for you.
+            <p className="text-[#6e6e73] text-xl max-w-2xl mb-6 leading-relaxed">
+              The comparison Orange&apos;s procurement team will run. We&apos;ve done it for you.
             </p>
+          </AnimateIn>
+
+          {/* Clarifying framing paragraph */}
+          <AnimateIn delay={0.05}>
+            <div className="max-w-3xl mb-12 rounded-2xl border border-[#ff7900]/25 bg-[#ff7900]/5 p-6">
+              <p className="text-[13px] font-black uppercase tracking-widest text-[#ff7900] mb-2">
+                How to read this
+              </p>
+              <p className="text-[15px] text-[#1d1d1f] leading-relaxed">
+                Enterprise vendors don&apos;t phase. IBM, Accenture, and Ericsson propose single
+                monolithic 12-24 month projects to deliver the same capability Orange would get
+                across our Phase 1 + Phase 2 + Phase 3 combined. The numbers below show their
+                equivalent programme cost versus our full three-phase engagement.
+              </p>
+              <p className="text-[13px] text-[#6e6e73] leading-relaxed mt-3">
+                Our model: three fixed phases, scoped and priced separately. Phase 1 is €30-50K,
+                Phase 2 is €185-200K, Phase 3 is €350-450K. <strong>Total engagement
+                €565-700K.</strong> You stop after any phase and keep everything built to that
+                point. No vendor in the comparison below offers that structure.
+              </p>
+            </div>
           </AnimateIn>
 
           {/* Table header */}
@@ -772,12 +804,11 @@ export default function Phase2Page() {
                 </div>
               </AnimateIn>
 
-              {/* Rows */}
+              {/* Non-price rows */}
               {[
                 { label: "Delivery Time", key: "delivery" as const },
                 { label: "Ownership", key: "ownership" as const },
                 { label: "Dependency", key: "dependency" as const },
-                { label: "Price", key: "price" as const },
               ].map((row, ri) => (
                 <AnimateIn key={row.label} delay={0.15 + ri * 0.07}>
                   <div className="grid grid-cols-5 gap-3 mb-3">
@@ -801,6 +832,51 @@ export default function Phase2Page() {
                   </div>
                 </AnimateIn>
               ))}
+
+              {/* Price row (custom: shows P2 + total for APEX, total only for others) */}
+              <AnimateIn delay={0.36}>
+                <div className="grid grid-cols-5 gap-3 mb-3">
+                  <div className="flex items-center px-4">
+                    <span className="text-xs font-bold uppercase tracking-widest text-[#6e6e73]">
+                      Price
+                    </span>
+                  </div>
+                  {COMPARISON.map((v) => (
+                    <div
+                      key={v.vendor}
+                      className={`rounded-xl p-4 ${
+                        v.highlight
+                          ? "bg-[#ff7900]/10 border border-[#ff7900]/30"
+                          : "bg-[#f5f5f7]"
+                      }`}
+                    >
+                      {v.highlight && v.pricePhase2 ? (
+                        <>
+                          <div className="text-[11px] font-bold uppercase tracking-wider text-[#ff7900]/80 mb-0.5">
+                            This Phase 2
+                          </div>
+                          <div className="text-[15px] font-black text-[#1d1d1f] leading-none">{v.pricePhase2}</div>
+                          <div className="mt-2 pt-2 border-t border-[#ff7900]/20">
+                            <div className="text-[11px] font-bold uppercase tracking-wider text-[#ff7900]/80 mb-0.5">
+                              Total engagement
+                            </div>
+                            <div className="text-[15px] font-black text-[#1d1d1f] leading-none">{v.priceTotal}</div>
+                          </div>
+                          <div className="text-[10px] text-[#6e6e73] mt-2 leading-snug">{v.priceNote}</div>
+                        </>
+                      ) : (
+                        <>
+                          <div className="text-[11px] font-bold uppercase tracking-wider text-[#86868b] mb-0.5">
+                            Total programme
+                          </div>
+                          <div className="text-[15px] font-black text-[#6e6e73] leading-none">{v.priceTotal}</div>
+                          <div className="text-[10px] text-[#86868b] mt-2 leading-snug">{v.priceNote}</div>
+                        </>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </AnimateIn>
             </div>
           </div>
 

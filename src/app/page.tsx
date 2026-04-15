@@ -826,9 +826,11 @@ export default function Page() {
               {[
                 { label: "", apex: "APEX OS", them: "IBM / Accenture", isHeader: true },
                 { label: "Model", apex: "Capability transfer", them: "Product delivery" },
+                { label: "Structure", apex: "Three fixed phases, stop any time", them: "Single monolithic project" },
                 { label: "Ownership", apex: "You own every agent", them: "Vendor owns IP" },
                 { label: "After 18 months", apex: "You run independently", them: "Renewal required" },
-                { label: "Entry cost", apex: "€30K-€50K", them: "€300K+ minimum" },
+                { label: "Phase 1 start", apex: "€30K-€50K", them: "Not offered as a phase" },
+                { label: "Full engagement", apex: "€565-700K (P1 + P2 + P3)", them: "€1M-€3M+ single programme" },
               ].map((row, i) => (
                 <div key={i} className="contents">
                   <div className={`px-4 py-3 ${i === 0 ? "font-black text-[11px] uppercase tracking-widest text-white/30 bg-white/[0.04]" : "text-white/40"} border-b border-white/[0.05]`}>{row.label}</div>
