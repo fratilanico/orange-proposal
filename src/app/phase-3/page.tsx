@@ -195,15 +195,17 @@ const ROI_ITEMS = [
 const TEAM = [
   {
     name: "Nico Fratila",
-    role: "CEO, InfoAcademy · Founder, APEX OS",
+    photo: "/team/nico.png",
+    role: "Founder & CEO, InfoAcademy × APEX OS",
     org: "London, UK",
-    credentials: "Built APEX OS: a sovereign AI OS with 400+ self-evolving skills, persistent agent memory, multi-model orchestration, self-healing watchdog, AI Operations Framework gate automation, and a knowledge distillation engine, all running 24/7 on Azure. AI/ML adoption at Lloyds Banking Group (5 years). CUBE Global Chief Customer Office (RegTech). Co-CEO of InfoAcademy, Orange Romania's existing training vendor.",
+    credentials: "Founder & CEO of InfoAcademy × APEX OS: the sovereign AI OS running 24/7 on Azure with 400+ self-evolving skills, persistent agent memory, multi-model orchestration, self-healing watchdog, AI Operations Framework gate automation, and a knowledge distillation engine. 5 years network engineering and AI/ML adoption at Lloyds Banking Group. Chief Customer Office at CUBE Global (RegTech). Business analysis and project & programme management across FinTech and RegTech.",
     color: "#ff7900",
     lead: false,
   },
   {
     name: "Mru Patel",
-    role: "Executive Chairman & Global Partner",
+    photo: "/team/mru.png",
+    role: "Co-Founder, Executive Chairman & Global Partner",
     org: "Dubai, UAE",
     credentials: "40 years at IBM, Siemens, and Sun Microsystems. £3B+ in enterprise programmes across Europe, Africa, and Asia. Government and Fortune 500 advisor since 1987. Telecom and operator experience with Orange, Vodafone, O2, and BT. Brings the commercial architecture that turns a strong technical proposal into a Group-level decision.",
     color: "#0d7377",
@@ -211,6 +213,7 @@ const TEAM = [
   },
   {
     name: "Bogdan Toporan",
+    photo: "/team/bogdan.png",
     role: "Founder · Cloud Architect · SCADA Patent Holder",
     org: "Cluj, Romania",
     credentials: "20+ years leading engineering teams at Telenav, Micro Focus (HP), and Emerson. Patented a SCADA communication system for the Oil & Gas sector. Founder of Arandi Software (cloud modernisation: Microservices, Kubernetes, AWS) and Digitalize Today (agentic AI, workflow automation, intelligent document processing). Engineers it, doesn't just talk about it.",
@@ -219,6 +222,7 @@ const TEAM = [
   },
   {
     name: "Hardik Nakum",
+    photo: "/team/hardik.png",
     role: "Director · Cloud, Security & Enterprise Transformation",
     org: "MindNova · UK",
     credentials: "10+ years across global financial institutions at the intersection of AI, cloud, and cybersecurity. Has led large-scale cloud and transformation initiatives across Azure, AWS, and GCP; supports multi-cloud re-architecture programmes; helps leadership teams adopt innovation in a way that is practical, responsible, and aligned to business outcomes. Director of MindNova.",
@@ -607,63 +611,41 @@ export default function Phase3Page() {
           </AnimateIn>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {TEAM.map(({ name, role, org, credentials, color, lead }, i) => (
+            {TEAM.map(({ name, photo, role, org, credentials, color }, i) => (
               <AnimateIn key={name} delay={i * 0.1} className="h-full">
-                <motion.div
-                  className="rounded-2xl p-7 h-full flex flex-col relative"
-                  style={
-                    lead
-                      ? {
-                          background: `linear-gradient(135deg, ${color}18 0%, ${color}0a 100%)`,
-                          border: `1px solid ${color}55`,
-                        }
-                      : { background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)" }
-                  }
-                  animate={
-                    lead
-                      ? {
-                          boxShadow: [
-                            `0 0 0 1px ${color}22, 0 6px 28px ${color}1a, 0 20px 60px ${color}0c`,
-                            `0 0 0 1px ${color}50, 0 8px 40px ${color}30, 0 24px 80px ${color}18`,
-                            `0 0 0 1px ${color}22, 0 6px 28px ${color}1a, 0 20px 60px ${color}0c`,
-                          ],
-                        }
-                      : {}
-                  }
-                  transition={lead ? { duration: 3, repeat: Infinity, ease: "easeInOut" } : {}}
+                <div
+                  className="rounded-2xl p-7 h-full flex flex-col"
+                  style={{
+                    background: "rgba(255,255,255,0.05)",
+                    border: `1px solid ${color}33`,
+                  }}
                 >
-                  {lead && (
-                    <div
-                      className="absolute top-4 right-4 px-2.5 py-1 rounded-full text-[9px] font-black uppercase tracking-[0.1em]"
-                      style={{
-                        background: `${color}28`,
-                        color,
-                        border: `1px solid ${color}45`,
-                      }}
-                    >
-                      ★ Lead AI
+                  <div className="flex items-start gap-5 mb-5">
+                    {photo ? (
+                      <img
+                        src={photo}
+                        alt={name}
+                        className="w-[88px] h-[88px] rounded-2xl object-cover flex-shrink-0"
+                        style={{ boxShadow: `0 4px 16px ${color}55` }}
+                      />
+                    ) : (
+                      <div
+                        className="w-[88px] h-[88px] rounded-2xl flex items-center justify-center text-white font-black text-[22px] flex-shrink-0"
+                        style={{ background: color, boxShadow: `0 4px 16px ${color}55` }}
+                      >
+                        {name.charAt(0)}
+                      </div>
+                    )}
+                    <div className="flex-1 min-w-0 pt-1">
+                      <h3 className="text-[19px] font-black text-white leading-tight">{name}</h3>
+                      <div className="text-[12px] font-bold mt-1.5 leading-snug" style={{ color }}>
+                        {role}
+                      </div>
+                      <div className="text-[11px] text-white/40 mt-1 font-medium">{org}</div>
                     </div>
-                  )}
-                  <div
-                    className="w-12 h-12 rounded-xl mb-4 flex items-center justify-center text-white font-bold text-lg flex-shrink-0"
-                    style={
-                      lead
-                        ? { background: `linear-gradient(135deg, ${color}, #c8860a)`, boxShadow: `0 4px 16px ${color}40` }
-                        : { backgroundColor: color }
-                    }
-                  >
-                    {name.charAt(0)}
                   </div>
-                  <h3
-                    className="leading-tight mb-1"
-                    style={{ color: "white", fontWeight: lead ? 800 : 700, fontSize: lead ? "18px" : "17px" }}
-                  >
-                    {name}
-                  </h3>
-                  <div className="text-sm font-semibold mb-1" style={{ color }}>{role}</div>
-                  <div className="text-xs mb-4" style={{ color: "rgba(255,255,255,0.4)" }}>{org}</div>
-                  <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>{credentials}</p>
-                </motion.div>
+                  <p className="text-[13px] text-white/60 leading-relaxed flex-1">{credentials}</p>
+                </div>
               </AnimateIn>
             ))}
           </div>

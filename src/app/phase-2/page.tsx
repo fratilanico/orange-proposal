@@ -58,7 +58,7 @@ const COMPONENTS = [
     subtitle: "Persistent Agent Orchestration",
     description:
       "A production-grade orchestration layer managing agent sessions, context handoff between conversations, JSONL audit trails, heartbeat monitoring, and a REST API for human-in-the-loop control.",
-    why: "Djia launched at 52% in 2021 and Orange's teams have been improving it since. Without session persistence and context handoff, every call still starts from zero, losing the context that drives real resolution rates. Head of Ops adds that memory layer on top of what you've already built.",
+    why: "Production agents need memory. Without session persistence and context handoff, every interaction starts from zero, losing the context that drives real resolution rates. Head of Ops gives every Phase 1 winner a persistent state layer: agents remember, escalations route correctly, and human reviewers see full conversation history. Applies to whichever Phase 1 winners Orange selects, including any voice or chat surface like Djia if it's in scope.",
     color: "#6e3aff",
   },
   {
@@ -97,8 +97,8 @@ const COMPONENTS = [
     title: "Knowledge Management",
     subtitle: "RAG pipeline on Orange documentation",
     description:
-      "Retrieval-augmented generation pipeline ingesting Orange's internal docs, KB articles, and product specs. Djia's accuracy improves measurably without retraining the base model. Knowledge base refreshes continuously.",
-    why: "At its 2021 pilot launch, Djia couldn't resolve nearly half of all calls, and Orange has never published an updated figure since. RAG gives it instant access to Orange's entire knowledge base, searchable, versioned, and continuously updated.",
+      "Retrieval-augmented generation pipeline ingesting Orange's internal docs, KB articles, and product specs. Whichever agents need authoritative answers (support triage, internal knowledge assistant, retention copilot) get measurably better without retraining the base model. Knowledge base refreshes continuously.",
+    why: "Most agent quality problems are not model problems, they're knowledge access problems. RAG gives every Phase 1 winner instant access to Orange's authoritative documentation, searchable, versioned, and current. If a voice surface like Djia is in scope, the same pipeline lifts it too.",
     color: "#0071e3",
   },
   {
@@ -126,13 +126,13 @@ const COMPONENTS = [
 const TIMELINE = [
   {
     months: "Month 1-2",
-    label: "Set Up in Orange's Environment",
+    label: "Deploy Inside Orange's Environment",
     items: [
-      "Dedicated VMs provisioned inside Orange's cloud environment",
-      "Head of Ops orchestration layer deployed + REST API live",
-      "Identity, permissions, audit, and human review controls in place",
-      "JSONL audit trail operational from day one",
-      "Heartbeat monitoring + alerting connected to Orange's existing NOC",
+      "Head of Ops orchestration layer deployed inside Orange's existing enterprise infrastructure",
+      "REST API live, integrated with Orange's identity and access controls",
+      "Permissions, audit, and human review controls wired in from day one",
+      "JSONL audit trail operational, hooked into Orange's existing logging",
+      "Agent heartbeat monitoring connected to Orange's existing NOC",
     ],
     color: "#ff7900",
   },
@@ -143,7 +143,7 @@ const TIMELINE = [
       "3-4 winning agents from Phase 1 wired into live workflows",
       "Access boundaries and role-based permissions in place",
       "RAG pipeline on Orange internal docs",
-      "Djia accuracy formally benchmarked for Group-level reporting",
+      "Each production workflow benchmarked against a Group-readable baseline (including any voice surface in scope)",
       "Knowledge base ingestion complete",
     ],
     color: "#0071e3",
@@ -188,48 +188,48 @@ const TIMELINE = [
 
 const KPIS = [
   {
-    metric: "Djia Response Accuracy",
-    baseline: "52% at 2021 pilot launch (internal improvements ongoing)",
-    target: "Measurable uplift. 65-70% projected post-RAG",
-    method: "A/B test on identical query set before and after RAG pipeline. Adds a Group-reportable benchmark to existing internal tracking.",
-    icon: "🎯",
+    metric: "Production Workflow Coverage",
+    baseline: "0 workflows in production (Phase 1 outputs are pilots)",
+    target: "3-5 production-grade AI workflows live by end of Phase 2",
+    method: "Production telemetry and supervised review cycles. The exact 3-5 are the Phase 1 winners Orange picks at the decision gate.",
+    icon: "🚀",
   },
   {
-    metric: "Phase 1 Winners in Production",
-    baseline: "3-4 agents validated in Phase 1",
-    target: "All winners live in daily workflows by Month 3, expanded across 2+ departments by Month 5",
-    method: "Production telemetry, department-level usage metrics, supervised review cycles",
-    icon: "🏆",
+    metric: "Multi-Department Reach",
+    baseline: "1 department (the Phase 1 sponsor)",
+    target: "3+ business units running production agents by Month 5",
+    method: "Department-level usage metrics. Each new department gets its own owners, reviewers, and supervised rollout window.",
+    icon: "🌐",
   },
   {
-    metric: "Security Posture",
-    baseline: "Unknown exposure",
-    target: "100% attack detection rate, zero breaches",
-    method: "fail2ban logs, Azure Security Centre dashboard, weekly report",
-    icon: "🛡️",
+    metric: "Human-in-the-Loop Coverage",
+    baseline: "Ad-hoc human review (where it exists)",
+    target: "100% of high-stakes decisions go through a defined review path with measurable latency",
+    method: "Audit trail completeness, review-action SLA, override rate per agent, all in one operational dashboard.",
+    icon: "👁️",
   },
   {
-    metric: "Agent Uptime",
-    baseline: "N/A (no current agent infra)",
-    target: "99.5%+ across all deployed agents",
-    method: "Heartbeat monitor with Telegram alerting on downtime events",
-    icon: "⚡",
+    metric: "Group-Readable Reporting",
+    baseline: "Internal-only visibility, no Group-level format",
+    target: "Single dashboard the CTO can hand to Group AI Paris without translation",
+    method: "Defined report schema agreed with Group leadership in Month 1. Live dashboard from Month 4.",
+    icon: "📊",
   },
   {
-    metric: "Shadow AI Governance",
-    baseline: "0% governed (rogue tools everywhere)",
-    target: "100% of AI usage through governed platform",
-    method: "AGENTS.md repo audit, drift detection weekly report",
-    icon: "📋",
+    metric: "Internal Capability",
+    baseline: "12 trained Orange staff (Phase 1 cohort)",
+    target: "50+ AI-capable employees by end of Phase 2, ownership transferred",
+    method: "Cohort certification, hands-on build credit, named owners per agent. Orange runs Phase 3 with its own people, not ours.",
+    icon: "🛠️",
   },
 ]
 
 const BREAKDOWN = [
-  { label: "Infrastructure Setup", amount: "€40,000", note: "One-time. Azure hardening, Head of Ops, identity & audit layer" },
-  { label: "Genesys/MATRIXX Integration", amount: "€60,000", note: "AI layer on top of existing stack: API bridges, no contract changes" },
-  { label: "Phase 1 Winners → Production", amount: "€25,000", note: "Wire the Phase 1 winning agents into live workflows" },
-  { label: "Knowledge Management (RAG)", amount: "€25,000", note: "Pipeline + Djia knowledge base" },
-  { label: "Observability & Governance", amount: "€20,000", note: "Monitoring, drift detection, AGENTS.md rollout" },
+  { label: "Deployment inside Orange's environment", amount: "€40,000", note: "Head of Ops orchestration layer, identity & audit hooks, deployed onto Orange's existing enterprise infrastructure (no new infra build)" },
+  { label: "Genesys/MATRIXX Integration", amount: "€60,000", note: "AI layer on top of existing stack. API bridges, no contract changes" },
+  { label: "Phase 1 Winners → Production", amount: "€25,000", note: "Wire the Phase 1 winning agents into live workflows across the departments that own them" },
+  { label: "Knowledge Management (RAG)", amount: "€25,000", note: "Retrieval pipeline on Orange's internal documentation, KB, and product specs" },
+  { label: "Observability & Governance", amount: "€20,000", note: "Per-agent monitoring, drift detection, human review controls, AGENTS.md rollout" },
   { label: "Training (12 → 50 staff)", amount: "€15,000-€30,000", note: "Hands-on. Included in fixed fee range" },
 ]
 
@@ -945,10 +945,10 @@ export default function Phase2Page() {
             <div className="border border-white/10 rounded-2xl p-8 max-w-3xl mx-auto">
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                  { value: "3,849", label: "Attacks blocked" },
-                  { value: "Zero", label: "Breaches" },
-                  { value: "12", label: "Staff trained (P1)" },
-                  { value: "99.5%+", label: "Uptime target" },
+                  { value: "3-5", label: "Production workflows" },
+                  { value: "50+", label: "AI-capable staff" },
+                  { value: "6 mo", label: "Fixed delivery" },
+                  { value: "100%", label: "Orange-owned" },
                 ].map((stat) => (
                   <div key={stat.label} className="text-center">
                     <div className="text-white font-black text-2xl mb-1">{stat.value}</div>
