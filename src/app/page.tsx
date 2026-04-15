@@ -175,15 +175,16 @@ const PROOF_POINTS = [
 const LEADERSHIP = [
   {
     name: "Nico Fratila",
+    photo: "/team/nico.jpeg",
     location: "London, UK",
-    title: "CEO, InfoAcademy · Founder, APEX OS",
-    org: "APEX OS / InfoAcademy",
-    bio: "Builds the future by solving problems that matter. Co-CEO of InfoAcademy, empowering founders and businesses to move from concept to execution using battle-tested frameworks, AI automation, and hands-on technical expertise. Architect, overseer, cognitive-intelligence layer, deployer, shipper. Background spans AI/ML adoption at Lloyds Banking Group (cloud migrations and operational transformation), business analysis across fintech and education, and scalable platforms built from scratch. Has designed competitor intelligence systems, revamped enterprise websites, and trained dozens of entrepreneurs on orchestration — turning curiosity into capability. Curiosity drives me. Technology empowers me. Results define me.",
+    title: "CEO, InfoAcademy · Founder, InfoAcademy × APEX OS",
+    org: "InfoAcademy × APEX OS Orchestration Platform",
+    bio: "Builds the future by solving problems that matter. Co-CEO of InfoAcademy and founder of the InfoAcademy × APEX OS Orchestration Platform — empowering founders and businesses to move from concept to execution using battle-tested frameworks, AI automation, and hands-on technical expertise. Architect, overseer, cognitive-intelligence layer, deployer, shipper. Background spans AI/ML adoption at Lloyds Banking Group (cloud migrations and operational transformation), business analysis across fintech and education, and scalable platforms built from scratch. Curiosity drives me. Technology empowers me. Results define me.",
     credentials: [
-      "APEX OS — Founder, 400+ skills, self-healing, 24/7 sovereign governance",
-      "InfoAcademy — Co-CEO, existing Orange Romania vendor",
-      "Lloyds Banking Group — AI/ML adoption, cloud migrations (5 years)",
-      "CUBE Global — Chief Customer Office (RegTech)",
+      { company: "InfoAcademy × APEX OS", detail: "Founder — 400+ skills, self-healing, 24/7 sovereign governance" },
+      { company: "InfoAcademy", detail: "CEO — existing Orange Romania vendor, 20K+ learners" },
+      { company: "Lloyds Banking Group", detail: "AI/ML adoption, cloud migrations (5 years)" },
+      { company: "CUBE Global", detail: "Chief Customer Office — RegTech" },
     ],
     linkedin: "https://linkedin.com/in/nicofratila",
     email: "nico.f@infoacademy.net",
@@ -193,16 +194,17 @@ const LEADERSHIP = [
   },
   {
     name: "Mru Patel",
+    photo: "/team/mru.png",
     location: "Dubai, UAE",
     title: "Executive Chairman & Global Partner",
     org: "eWealthTech / ex-IBM / ex-Sun Microsystems",
-    bio: "40 years at the intersection of enterprise technology and global commercial strategy. Led multi-billion-pound programmes at IBM, Siemens, and Sun Microsystems — including pioneering open-source platforms and securing deals valued at over £3B across Europe, Africa, and Asia. Government and Fortune 500 advisor since 1987. Established the first independent Property Investment Fund in Eastern Europe. Brings the strategic and commercial architecture that turns a strong technical proposal into a Group-level decision.",
+    bio: "40 years at the intersection of enterprise technology and global commercial strategy. Led multi-billion-pound programmes at IBM, Siemens, and Sun Microsystems — including pioneering open-source platforms and securing deals valued at over £3B across Europe, Africa, and Asia. Government and Fortune 500 advisor since 1987. Established the first independent Property Investment Fund in Eastern Europe. Brings the commercial architecture that turns a strong technical proposal into a Group-level decision.",
     credentials: [
-      "IBM / Siemens / Sun Microsystems — enterprise transformation",
-      "£3B+ in programmes across Europe, Africa, Asia",
-      "Government & Fortune 500 advisor since 1987",
-      "Eastern Europe market entry — first Property Investment Fund",
-      "eWealthTech — CEO, global AI & open-source platforms",
+      { company: "IBM", detail: "Enterprise transformation programmes" },
+      { company: "Siemens", detail: "Business services, vertical sectors" },
+      { company: "Sun Microsystems", detail: "Open-source platforms, £3B+ in deals across Europe, Africa, Asia" },
+      { company: "Government & Fortune 500", detail: "Advisor since 1987" },
+      { company: "eWealthTech", detail: "CEO — global AI & open-source platforms" },
     ],
     linkedin: "https://www.linkedin.com/in/maborishapatel/",
     email: "",
@@ -215,16 +217,17 @@ const LEADERSHIP = [
 const TEAM = [
   {
     name: "Bogdan Toporan",
+    photo: "/team/bogdan.png",
     location: "Cluj, Romania",
     title: "Founder · Cloud Architect · SCADA Patent Holder",
     org: "Arandi Software / Digitalize Today",
-    bio: "20+ years leading engineering teams at Telenav, Micro Focus (HP), and Emerson — where he patented a SCADA communication system for the Oil & Gas sector. Bridges traditional IT and the AI revolution through two consulting brands: Arandi Software takes brittle monoliths to resilient, scalable cloud systems (Microservices, Kubernetes, AWS); Digitalize Today designs and deploys agentic AI, workflow automation, and intelligent document processing that actually works in production — saving hundreds of hours of manual labor. Recently modernised a major tech client's infrastructure from scratch: custom REST APIs, AWS services, automated CI/CD pipelines. Engineers it, doesn't just talk about it.",
+    bio: "20+ years leading engineering teams at Telenav, Micro Focus (HP), and Emerson — where he patented a SCADA communication system for the Oil & Gas sector. Bridges traditional IT and the AI revolution through two consulting brands: Arandi Software takes brittle monoliths to resilient, scalable cloud systems (Microservices, Kubernetes, AWS); Digitalize Today designs and deploys agentic AI, workflow automation, and intelligent document processing that actually works in production — saving hundreds of hours of manual labor.",
     credentials: [
-      "Telenav · Micro Focus (HP) · Emerson — 20+ years engineering",
-      "SCADA patent holder — Oil & Gas sector",
-      "Arandi Software — Founder, cloud modernisation",
-      "Digitalize Today — Founder, agentic AI & automation",
-      "4,700+ LinkedIn followers",
+      { company: "Telenav", detail: "Engineering Lead — big data, 40+ engineers" },
+      { company: "Micro Focus / HP", detail: "R&D Manager" },
+      { company: "Emerson", detail: "SCADA patent holder — Oil & Gas sector" },
+      { company: "Arandi Software", detail: "Founder — cloud modernisation (Microservices, Kubernetes, AWS)" },
+      { company: "Digitalize Today", detail: "Founder — agentic AI & workflow automation" },
     ],
     linkedin: "https://linkedin.com/in/bogdan-toporan",
     email: "bogdan@arandi.software",
@@ -234,22 +237,53 @@ const TEAM = [
   },
   {
     name: "Hardik Nakum",
+    photo: "",
     location: "UK",
     title: "Director · Cloud, Security & Enterprise Transformation",
     org: "MindNova",
-    bio: "Over a decade across global financial institutions, working at the intersection of AI, cloud, and cybersecurity to drive enterprise transformation with a strong focus on resilience, governance, and long-term impact. Has led large-scale cloud and transformation initiatives across Azure, AWS, and GCP; supported multi-cloud re-architecture programmes; and helped leadership teams adopt innovation in a way that is practical, responsible, and aligned to business outcomes. Builds the next generation of enterprise systems where humans and AI work together to improve decision-making and strengthen business performance.",
+    bio: "Over a decade across global financial institutions at the intersection of AI, cloud, and cybersecurity — driving enterprise transformation with a strong focus on resilience, governance, and long-term impact. Has led large-scale cloud and transformation initiatives across Azure, AWS, and GCP, supported multi-cloud re-architecture programmes, and helped leadership teams adopt innovation in a way that is practical, responsible, and aligned to business outcomes. Builds the next generation of enterprise systems where humans and AI work together.",
     credentials: [
-      "10+ years across global financial institutions",
-      "AI & enterprise transformation",
-      "Cloud architecture — Azure · AWS · GCP",
-      "Cybersecurity & regulatory resilience",
-      "Director — MindNova",
+      { company: "Global Financial Institutions", detail: "10+ years across the sector" },
+      { company: "Azure · AWS · GCP", detail: "Cloud architecture & multi-cloud strategy" },
+      { company: "Cybersecurity", detail: "Regulatory resilience, zero-trust architecture" },
+      { company: "AI Transformation", detail: "Enterprise modernisation & cost optimisation" },
+      { company: "MindNova", detail: "Director — AI, cloud, cybersecurity, enterprise innovation" },
     ],
     linkedin: "https://www.linkedin.com/in/hardiknakum",
     email: "",
     website: "",
     color: "#0071e3",
     lead: false,
+  },
+];
+
+const PARTNERS = [
+  {
+    name: "North Sea AI",
+    logo: "/partners/north-sea-ai.jpeg",
+    tagline: "Execution partner · Community",
+    description:
+      "An AI community and execution hub founded by Marc van Gent — experts, researchers, companies, creatives, and startups collaborating on AI projects. Active since August 2022, working together on challenging initiatives with SMEs, corporates, and innovative startups across the North Sea region.",
+    url: "https://www.north-sea.ai/en",
+    color: "#1c4d7a",
+  },
+  {
+    name: "Atlantis Digital",
+    logo: "/partners/atlantis-digital.jpg",
+    tagline: "Digital transformation · Automation",
+    description:
+      "Digital transformation and DXaaS partner for integrating digital technology into any facet of a business. Platform and expertise for automating the tasks that bore you — so internal teams focus on what drives the competitive edge.",
+    url: "https://atlantisdigital.nl/en",
+    color: "#2b5fd9",
+  },
+  {
+    name: "Nautilus OT",
+    logo: "/partners/nautilus.jpeg",
+    tagline: "OT cybersecurity · Industrial",
+    description:
+      "Operational Technology cybersecurity specialists — 'Securing Your OT Future'. Tracks OT/ICS incidents across shipping, oil & gas, and telecoms; publishes the OT Cyber Insights biweekly update. The industrial-security layer Orange's infrastructure teams will want in the conversation.",
+    url: "",
+    color: "#0f766e",
   },
 ];
 
@@ -455,121 +489,99 @@ function WhatsAppIcon({ size = 14 }: { size?: number }) {
 }
 
 function TeamCard({ person }: { person: typeof TEAM[0] }) {
-  const isLead = person.lead;
-
-  const baseStyle = isLead
-    ? {
-        background: `linear-gradient(135deg, ${person.color}1a 0%, ${person.color}0a 100%)`,
-        border: `1px solid ${person.color}55`,
-      }
-    : {
-        background: person.color + "06",
-        border: `1px solid ${person.color}18`,
-      };
-
   return (
-    <motion.div
-      className="rounded-2xl p-6 h-full flex flex-col relative"
-      style={baseStyle}
-      animate={
-        isLead
-          ? {
-              boxShadow: [
-                `0 0 0 1px ${person.color}22, 0 6px 28px ${person.color}1a, 0 20px 60px ${person.color}0c`,
-                `0 0 0 1px ${person.color}50, 0 8px 40px ${person.color}30, 0 24px 80px ${person.color}18`,
-                `0 0 0 1px ${person.color}22, 0 6px 28px ${person.color}1a, 0 20px 60px ${person.color}0c`,
-              ],
-            }
-          : {}
-      }
-      transition={isLead ? { duration: 3, repeat: Infinity, ease: "easeInOut" } : {}}
+    <div
+      className="rounded-3xl overflow-hidden bg-white flex flex-col h-full"
+      style={{ boxShadow: `0 1px 0 ${person.color}22, 0 12px 40px ${person.color}0d` }}
     >
-      {/* Lead badge */}
-      {isLead && (
-        <div
-          className="absolute top-4 right-4 px-2.5 py-1 rounded-full text-[9px] font-black uppercase tracking-[0.1em]"
-          style={{
-            background: `linear-gradient(135deg, ${person.color}28, ${person.color}12)`,
-            color: person.color,
-            border: `1px solid ${person.color}45`,
-          }}
-        >
-          ★ Lead AI
-        </div>
-      )}
-
-      {/* Avatar */}
+      {/* ─── Header block: photo + identity ─── */}
       <div
-        className="w-12 h-12 rounded-xl flex items-center justify-center text-white font-black mb-4 flex-shrink-0"
-        style={
-          isLead
-            ? {
-                background: `linear-gradient(135deg, ${person.color}, #c8860a)`,
-                fontSize: "13px",
-                boxShadow: `0 4px 16px ${person.color}40`,
-              }
-            : { background: person.color, fontSize: "12px" }
-        }
+        className="p-6 flex items-start gap-5"
+        style={{ background: `linear-gradient(135deg, ${person.color}12 0%, ${person.color}04 100%)` }}
       >
-        {person.name.split(" ").map((n) => n[0]).join("")}
+        {person.photo ? (
+          <img
+            src={person.photo}
+            alt={person.name}
+            className="w-24 h-24 rounded-2xl object-cover flex-shrink-0"
+            style={{ boxShadow: `0 6px 20px ${person.color}33` }}
+          />
+        ) : (
+          <div
+            className="w-24 h-24 rounded-2xl flex items-center justify-center text-white font-black text-2xl flex-shrink-0"
+            style={{ background: person.color, boxShadow: `0 6px 20px ${person.color}33` }}
+          >
+            {person.name.split(" ").map((n) => n[0]).join("")}
+          </div>
+        )}
+        <div className="flex-1 min-w-0 pt-1">
+          <h3 className="text-[20px] font-black text-[#1d1d1f] leading-tight">{person.name}</h3>
+          <p className="text-[13px] font-bold mt-1.5 leading-snug" style={{ color: person.color }}>
+            {person.title}
+          </p>
+          <p className="text-[11px] text-[#1d1d1f]/55 mt-1 font-medium">
+            {person.org} <span className="mx-1 opacity-40">·</span> {person.location}
+          </p>
+        </div>
       </div>
 
-      {/* Name + location */}
-      <h3
-        className="leading-tight text-[#1d1d1f]"
-        style={{ fontSize: isLead ? "17px" : "16px", fontWeight: isLead ? 800 : 700 }}
-      >
-        {person.name}
-      </h3>
-      <p className="text-[10px] text-[#86868b] mt-0.5">{person.location}</p>
+      {/* ─── Bio block ─── */}
+      <div className="px-6 pt-5 pb-4">
+        <div
+          className="text-[10px] font-black uppercase tracking-[0.15em] mb-2"
+          style={{ color: person.color }}
+        >
+          Bio
+        </div>
+        <p className="text-[13px] text-[#1d1d1f]/85 leading-relaxed">{person.bio}</p>
+      </div>
 
-      {/* Title */}
-      <p
-        className="font-semibold mt-2"
-        style={{ color: person.color, fontSize: isLead ? "13px" : "12px" }}
-      >
-        {person.title}
-      </p>
-      <p className="text-[10px] text-[#86868b] uppercase tracking-wider mt-0.5">{person.org}</p>
+      {/* ─── Experience block ─── */}
+      <div className="px-6 pt-2 pb-5 flex-1">
+        <div
+          className="text-[10px] font-black uppercase tracking-[0.15em] mb-3"
+          style={{ color: person.color }}
+        >
+          Experience
+        </div>
+        <div className="flex flex-col gap-2.5">
+          {person.credentials.map((c, i) => (
+            <div key={i} className="flex items-start gap-3">
+              <span
+                className="text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-md flex-shrink-0 whitespace-nowrap"
+                style={{ background: person.color + "18", color: person.color }}
+              >
+                {c.company}
+              </span>
+              <span className="text-[12px] text-[#1d1d1f]/75 leading-snug pt-[3px]">{c.detail}</span>
+            </div>
+          ))}
+        </div>
+      </div>
 
-      {/* Bio */}
-      <p className="text-[12px] text-[#6e6e73] leading-relaxed mt-3">{person.bio}</p>
-
-      {/* Credentials */}
-      <ul className="mt-3 space-y-1.5 flex-1">
-        {person.credentials.map((c, i) => (
-          <li key={i} className="text-[11px] text-[#6e6e73] flex items-start gap-2">
-            <span style={{ color: person.color }} className="mt-0.5 flex-shrink-0">
-              ✓
-            </span>{" "}
-            {c}
-          </li>
-        ))}
-      </ul>
-
-      {/* Contact */}
+      {/* ─── Links footer ─── */}
       <div
-        className="mt-4 pt-3 border-t flex items-center gap-3 flex-wrap"
-        style={{ borderColor: person.color + "20" }}
+        className="px-6 py-4 flex items-center gap-5 flex-wrap"
+        style={{ background: person.color + "08" }}
       >
         {person.linkedin && (
           <a
             href={person.linkedin}
             target="_blank"
             rel="noopener"
-            className="flex items-center gap-1 text-[11px] font-semibold hover:underline"
+            className="flex items-center gap-1.5 text-[12px] font-bold hover:opacity-80"
             style={{ color: person.color }}
           >
-            <Linkedin size={11} /> LinkedIn
+            <Linkedin size={13} /> LinkedIn
           </a>
         )}
         {person.email && (
           <a
             href={`mailto:${person.email}`}
-            className="flex items-center gap-1 text-[11px] font-semibold hover:underline"
+            className="flex items-center gap-1.5 text-[12px] font-bold hover:opacity-80"
             style={{ color: person.color }}
           >
-            <Mail size={11} /> Email
+            <Mail size={13} /> Email
           </a>
         )}
         {person.website && (
@@ -577,14 +589,55 @@ function TeamCard({ person }: { person: typeof TEAM[0] }) {
             href={person.website}
             target="_blank"
             rel="noopener"
-            className="flex items-center gap-1 text-[11px] font-semibold hover:underline"
+            className="flex items-center gap-1.5 text-[12px] font-bold hover:opacity-80"
             style={{ color: person.color }}
           >
-            <Globe size={11} /> Website
+            <Globe size={13} /> Website
           </a>
         )}
       </div>
-    </motion.div>
+    </div>
+  );
+}
+
+function PartnerCard({ partner }: { partner: typeof PARTNERS[0] }) {
+  const inner = (
+    <div
+      className="rounded-2xl bg-white flex items-stretch gap-4 p-5 transition-all hover:scale-[1.01]"
+      style={{ boxShadow: `0 1px 0 ${partner.color}1a, 0 8px 24px ${partner.color}0a` }}
+    >
+      <div
+        className="w-20 h-20 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden"
+        style={{ background: partner.color + "0d", border: `1px solid ${partner.color}22` }}
+      >
+        <img
+          src={partner.logo}
+          alt={partner.name}
+          className="w-full h-full object-contain p-2"
+        />
+      </div>
+      <div className="flex-1 min-w-0 flex flex-col justify-center">
+        <div className="flex items-baseline gap-2 flex-wrap">
+          <h4 className="text-[16px] font-black text-[#1d1d1f]">{partner.name}</h4>
+          <span
+            className="text-[10px] font-bold uppercase tracking-wider"
+            style={{ color: partner.color }}
+          >
+            {partner.tagline}
+          </span>
+        </div>
+        <p className="text-[12px] text-[#1d1d1f]/70 leading-relaxed mt-1.5">
+          {partner.description}
+        </p>
+      </div>
+    </div>
+  );
+  return partner.url ? (
+    <a href={partner.url} target="_blank" rel="noopener" className="block">
+      {inner}
+    </a>
+  ) : (
+    <div>{inner}</div>
   );
 }
 
@@ -924,10 +977,24 @@ export default function Page() {
           <AnimateIn>
             <p className="text-[11px] font-bold uppercase tracking-widest text-[#86868b] mb-4 mt-10">Execution Team</p>
           </AnimateIn>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 gap-5">
             {TEAM.map((person, i) => (
               <AnimateIn key={i} delay={i * 0.1 + 0.2}>
                 <TeamCard person={person} />
+              </AnimateIn>
+            ))}
+          </div>
+
+          {/* Local & International Partners */}
+          <AnimateIn>
+            <p className="text-[11px] font-bold uppercase tracking-widest text-[#86868b] mb-4 mt-12">
+              Local & International Partners
+            </p>
+          </AnimateIn>
+          <div className="flex flex-col gap-4">
+            {PARTNERS.map((partner, i) => (
+              <AnimateIn key={partner.name} delay={i * 0.08 + 0.2}>
+                <PartnerCard partner={partner} />
               </AnimateIn>
             ))}
           </div>
