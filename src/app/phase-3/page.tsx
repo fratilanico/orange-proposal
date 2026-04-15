@@ -45,35 +45,53 @@ const AnimateIn = ({
 
 const DELIVERABLES = [
   {
-    icon: GitBranch,
-    color: "#6e3aff",
-    title: "FDRP Gate Lifecycle",
-    subtitle: "PDR → CDR → FDR → TRR → PQR",
+    icon: Shield,
+    color: "#ff3b30",
+    title: "Governance",
+    subtitle: "Policies, risk, oversight, auditability",
     description:
-      "Every Orange AI decision — from Djia architecture changes to model selection — treated as a manufactured artifact with six mandatory quality gates. No high-stakes AI output ships without gate sign-off.",
-    applies: ["Djia architecture decisions", "New agent deployments", "Model selection", "Data governance"],
+      "Formal AI governance for Orange: policies for acceptable use, risk classification, human oversight protocols, auditability, and model quality ownership. EU AI Act Article 6/9 compliance for Djia before the August 2026 deadline — risk management system, technical documentation, accuracy testing.",
+    applies: ["EU AI Act Article 6/9", "Risk management system", "Human oversight protocols", "Model quality ownership"],
   },
   {
-    icon: Brain,
-    color: "#ff7900",
-    title: "N≥3 Cross-Model Verification",
-    subtitle: "Claude + GPT + Gemini independently",
+    icon: GitBranch,
+    color: "#6e3aff",
+    title: "Shared Services",
+    subtitle: "Reusable components, memory, evaluation",
     description:
-      "Every high-stakes AI output verified by three separate frontier models. Catches systematic bias that single-model review misses. Required for EU AI Act high-risk AI classification. Same methodology that caught an arithmetic error and self-corrected convergence from 85.7% to 75%.",
-    applies: ["Djia response quality", "Model bias detection", "EU AI Act evidence trail", "Regulatory reporting"],
+      "A toolchain every Orange team builds on: reusable agent components, prompts, memory, evaluation flows, deployment patterns. New use cases slot in without re-architecture. This is the layer that turns Phase 1 wins into a repeatable internal capability.",
+    applies: ["Reusable agent components", "Prompts & memory", "Evaluation flows", "Deployment patterns"],
+  },
+  {
+    icon: Users,
+    color: "#0071e3",
+    title: "Operating Model",
+    subtitle: "Clear ownership across the business",
+    description:
+      "Explicit ownership between business teams, architecture, service, data, and tech champions. Who owns the rota, who owns the toolchain, who reports upward. Phase 3 replaces shadow AI with an operating model Orange Group can defend.",
+    applies: ["Business / architecture / service / data owners", "On-call rota for AI", "Escalation paths", "Group-aligned governance"],
   },
   {
     icon: BarChart3,
-    color: "#0071e3",
-    title: "Convergence Velocity Tensor (CVT)",
-    subtitle: "Measurable AI decision quality KPIs",
+    color: "#30d158",
+    title: "Reporting & Trust",
+    subtitle: "Dashboards Paris can read",
     description:
-      "Orange's board stops seeing 'are agents running' and starts seeing AI convergence scores. CVT tracks decision quality over time, identifies drift, flags regressions before they become outages.",
-    applies: ["Board-level AI dashboard", "Decision quality trending", "Regression detection", "Portfolio KPIs"],
+      "AI reporting Orange leadership can defend internally and align with Group expectations. Single pane of glass for the CTO, exports for the Board, feeds for Group AI Paris. Measurable, auditable, translation-free.",
+    applies: ["CTO real-time view", "Board reporting layer", "Group AI Paris feed", "Audit trail"],
+  },
+  {
+    icon: Globe,
+    color: "#ff9500",
+    title: "Future Expansion",
+    subtitle: "A base that extends without re-architecture",
+    description:
+      "A practical base for new customer, network, B2B, and internal automation domains. When the next use case surfaces, it plugs into the existing operating layer — no rewrite, no re-procurement. Same patterns replicated across Orange Group (Poland, Belgium, Spain).",
+    applies: ["New customer domains", "Network automation", "B2B AI services", "Group replication"],
   },
   {
     icon: Cpu,
-    color: "#30d158",
+    color: "#ff7900",
     title: "Romanian NLP Fine-Tuning Pipeline",
     subtitle: "Djia: pilot-era baseline → 80%+ target",
     description:
@@ -81,72 +99,54 @@ const DELIVERABLES = [
     applies: ["Djia voice AI improvement", "Romanian dialect handling", "Telecom intent recognition", "Continuous retraining"],
   },
   {
-    icon: Shield,
-    color: "#ff3b30",
-    title: "EU AI Act Compliance Framework",
-    subtitle: "Article 6/9 — Deadline August 2026",
+    icon: Brain,
+    color: "#6e3aff",
+    title: "Cross-Model Verification",
+    subtitle: "Claude + GPT + Gemini deliberate",
     description:
-      "Article 6 classification for Djia (high-risk AI). Risk management system, technical documentation, human oversight protocols, accuracy testing — all mandatory before the August 2026 deadline. GDPR-scale fines for non-compliance.",
-    applies: ["Djia Article 6 classification", "Risk management system", "Technical documentation", "Human oversight protocols"],
+      "For high-stakes decisions — model selection, risk classification, vendor renegotiation — multiple frontier models deliberate independently and consensus is documented. Bias detection, auditable reasoning, defensible in front of regulators.",
+    applies: ["High-stakes decision review", "Model bias detection", "EU AI Act evidence trail", "Regulatory reporting"],
   },
   {
     icon: DollarSign,
-    color: "#ff9500",
-    title: "Procurement Intelligence",
+    color: "#0071e3",
+    title: "Vendor Estate Intelligence",
     subtitle: "€5–10M renegotiation opportunities",
     description:
-      "LOFTREK's OSINT methodology applied to Orange's vendor estate — Genesys, MATRIXX, IBM. Identifies contract redundancies, pricing anomalies, consolidation opportunities. Operator-grade procurement intelligence, not consultant guesswork.",
+      "OSINT methodology applied to Orange's vendor estate — Genesys, MATRIXX, IBM. Identifies contract redundancies, pricing anomalies, consolidation opportunities. Operator-grade procurement intelligence, not consultant guesswork.",
     applies: ["Genesys contract analysis", "MATRIXX pricing audit", "IBM contract review", "Vendor consolidation map"],
-  },
-  {
-    icon: Users,
-    color: "#6e3aff",
-    title: "Expert Expansion Panel",
-    subtitle: "20+ LLM-generated domain specialists",
-    description:
-      "Orange's AI architecture reviewed by a synthesized panel spanning telecom engineering, cybersecurity, manufacturing quality, regulatory compliance. Cross-domain validation catches blind spots that single-domain review misses.",
-    applies: ["Architecture blind spot detection", "Cross-domain validation", "Regulatory review", "Security assessment"],
-  },
-  {
-    icon: Globe,
-    color: "#0071e3",
-    title: "Cognitive Architecture Dashboard",
-    subtitle: "Real-time AI system health",
-    description:
-      "Single pane of glass: convergence metrics, gate status, compliance posture, Djia performance, CVT trending. Orange's leadership team and Group AI Paris both see the same real-time view.",
-    applies: ["CTO real-time view", "Board reporting layer", "Group AI Paris feed", "Audit trail"],
   },
 ];
 
 const TIMELINE = [
   {
     months: "1–2",
-    title: "FDRP Deployment",
-    description: "Gate lifecycle deployed on Orange's existing AI decision inventory. PDR through PQR gates activated on active Djia changes.",
-    color: "#ff7900",
+    title: "Governance Foundation",
+    description: "AI Operations Framework deployed on Orange's existing AI decision inventory. Policies, risk classification, human oversight protocols activated on active Djia changes. On-call rota defined.",
+    color: "#ff3b30",
   },
   {
     months: "2–4",
     title: "Romanian NLP Pipeline",
     description: "Fine-tuning pipeline built on Orange's own call data — accelerating the improvements already happening internally. Performance formally benchmarked against Group reporting standards. Target trajectory set from Orange's operational evidence.",
-    color: "#6e3aff",
+    color: "#ff7900",
   },
   {
     months: "3–5",
     title: "EU AI Act Framework",
-    description: "Article 6/9 classification completed. Risk management system implemented. Technical documentation generated. Human oversight protocols deployed.",
-    color: "#ff3b30",
+    description: "Article 6/9 classification completed. Risk management system implemented. Technical documentation generated. Human oversight protocols deployed — before the August 2026 deadline.",
+    color: "#6e3aff",
   },
   {
     months: "4–6",
-    title: "N≥3 Verification in Production",
-    description: "Cross-model verification integrated into Orange's AI pipelines. CVT tracking active. First board dashboard delivered.",
+    title: "Shared Services & Operating Model",
+    description: "Reusable agent components, prompts, memory, evaluation flows, and deployment patterns lifted into a shared toolchain. Ownership between business, architecture, service, data, and tech champions formalised.",
     color: "#0071e3",
   },
   {
     months: "5–7",
-    title: "CVT Dashboard + Procurement Intelligence",
-    description: "Convergence Velocity Tensor live for leadership. Vendor OSINT reports delivered for Genesys, MATRIXX, IBM. Renegotiation recommendations prepared.",
+    title: "Reporting & Vendor Intelligence",
+    description: "Dashboards delivered for CTO, Board, and Group AI Paris. Vendor estate intelligence reports completed for Genesys, MATRIXX, IBM. Renegotiation recommendations prepared.",
     color: "#30d158",
   },
   {
@@ -195,26 +195,34 @@ const ROI_ITEMS = [
 const TEAM = [
   {
     name: "Nico Fratila",
-    role: "AI Infrastructure Architect",
-    org: "APEX OS / InfoAcademy",
-    credentials: "Built APEX OS — sovereign AI OS with 400+ self-evolving skills, persistent agent memory, multi-model orchestration, self-healing watchdog, FDRP gate automation, and knowledge distillation engine, running 24/7 on Azure. Lloyds Banking Group (5 yrs). CUBE Global CCO (RegTech). InfoAcademy CEO — existing Orange vendor.",
+    role: "CEO, InfoAcademy · Founder, APEX OS",
+    org: "London, UK",
+    credentials: "Built APEX OS — sovereign AI OS with 400+ self-evolving skills, persistent agent memory, multi-model orchestration, self-healing watchdog, AI Operations Framework gate automation, and knowledge distillation engine, running 24/7 on Azure. AI/ML adoption at Lloyds Banking Group (5 yrs). CUBE Global Chief Customer Office (RegTech). Co-CEO of InfoAcademy — Orange Romania's existing training vendor.",
     color: "#ff7900",
     lead: false,
   },
   {
-    name: "Liviu Olos",
-    role: "Lead AI Systems Architect — FDRP Creator",
-    org: "LOFTREK / liviu.ai",
-    credentials: "Creator of FDRP: 32 subsystems, 557 DB tables, evolves daily. LOFTREK: 790+ clients, 76 public institutions. Anthropic global hackathon — top 500 of 13,000 candidates. Member of Anthropic's private research network. EU AI Act, NIS2 & NATO DIANA authority. EU Horizon project specialist.",
-    color: "#f0b429",
-    lead: true,
+    name: "Mru Patel",
+    role: "Executive Chairman & Global Partner",
+    org: "Dubai, UAE",
+    credentials: "40 years at IBM, Siemens, and Sun Microsystems — £3B+ in enterprise programmes across Europe, Africa, and Asia. Government and Fortune 500 advisor since 1987. Telecom and operator experience with Orange, Vodafone, O2, and BT. Brings the commercial architecture that turns a strong technical proposal into a Group-level decision.",
+    color: "#0d7377",
+    lead: false,
   },
   {
     name: "Bogdan Toporan",
-    role: "Engineering Leader & AI Architect",
-    org: "ARANDI / ex-Telenav / ex-HP",
-    credentials: "17+ years enterprise architecture. AI Agent Orchestration and RAG specialist. Built telecom-grade data pipelines at Telenav serving millions of users. Led 40+ engineer teams. US Patent holder.",
+    role: "Founder · Cloud Architect · SCADA Patent Holder",
+    org: "Cluj, Romania",
+    credentials: "20+ years leading engineering teams at Telenav, Micro Focus (HP), and Emerson — patented a SCADA communication system for the Oil & Gas sector. Founder of Arandi Software (cloud modernisation — Microservices, Kubernetes, AWS) and Digitalize Today (agentic AI, workflow automation, intelligent document processing). Engineers it, doesn't just talk about it.",
     color: "#6e3aff",
+    lead: false,
+  },
+  {
+    name: "Hardik Nakum",
+    role: "Director — Cloud, Security & Enterprise Transformation",
+    org: "MindNova · UK",
+    credentials: "10+ years across global financial institutions at the intersection of AI, cloud, and cybersecurity. Has led large-scale cloud and transformation initiatives across Azure, AWS, and GCP; supports multi-cloud re-architecture programmes; helps leadership teams adopt innovation in a way that is practical, responsible, and aligned to business outcomes. Director of MindNova.",
+    color: "#0071e3",
     lead: false,
   },
 ];
@@ -242,23 +250,23 @@ export default function Phase3Page() {
 
           <AnimateIn delay={0.1}>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.05]">
-              Architectural
+              Enterprise AI
               <br />
-              <span style={{ color: "#ff7900" }}>Cognition</span>
+              <span style={{ color: "#ff7900" }}>Operating Model</span>
             </h1>
           </AnimateIn>
 
           <AnimateIn delay={0.2}>
             <p className="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto mb-4 leading-relaxed">
-              Phase 2 built Orange Romania&apos;s AI infrastructure. Phase 3 makes it{" "}
-              <span className="text-white font-medium">intelligent</span> —
-              self-verifying, gate-reviewed, and EU AI Act compliant before August 2026.
+              Nine months to make Orange Romania AI{" "}
+              <span className="text-white font-medium">capable, governed, scalable, and durable</span> —
+              owned by Orange, defensible to Group, and EU AI Act compliant before August 2026.
             </p>
           </AnimateIn>
 
           <AnimateIn delay={0.3}>
             <p className="text-base text-white/40 mb-12">
-              9 months · €350–450K fixed · Optional FDRP licence €30K/year
+              9 months · €350–450K fixed · Five pillars · One operating model
             </p>
           </AnimateIn>
 
@@ -292,13 +300,13 @@ export default function Phase3Page() {
           <AnimateIn>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-[#1d1d1f] mb-4">
-                The Infrastructure Is Running.
+                From Successful AI Projects
                 <br />
-                <span style={{ color: "#ff7900" }}>Now It Needs to Think.</span>
+                <span style={{ color: "#ff7900" }}>To an AI Operating Capability.</span>
               </h2>
               <p className="text-xl text-[#6e6e73] max-w-2xl mx-auto">
-                Phase 2 deployed APEX OS. Orange now has the pipes. Phase 3 installs the quality layer
-                that makes every AI decision measurable, verifiable, and defensible to regulators.
+                Phase 2 operationalised the Phase 1 winners. Phase 3 is where Orange moves from
+                successful AI projects to an Orange-owned AI operating model — governed, scalable, durable.
               </p>
             </div>
           </AnimateIn>
@@ -336,34 +344,76 @@ export default function Phase3Page() {
         </div>
       </section>
 
-      {/* FDRP Explainer */}
+      {/* AI Operations Framework Explainer */}
       <section className="bg-[#1d1d1f] py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <AnimateIn>
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 bg-[#6e3aff]/20 border border-[#6e3aff]/30 rounded-full px-4 py-2 mb-6 text-sm text-[#b399ff]">
                 <Star size={14} />
-                <span>The Quality Layer</span>
+                <span>The Operating Layer</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                FDRP: Manufacturing Quality
+                An AI Operations Layer —
                 <br />
-                <span style={{ color: "#6e3aff" }}>Applied to AI Decisions</span>
+                <span style={{ color: "#6e3aff" }}>The NOC for Orange&apos;s AI Decisions.</span>
               </h2>
               <p className="text-xl text-white/60 max-w-3xl mx-auto leading-relaxed">
-                Fractal Diamond Refinement Process. Built by an operator who ran 790+ physical integration
-                projects — not an academic framework. 32 self-evolving subsystems. 557 database tables.
-                Proven on a CHF 147M antimatter facility programme (68 experts, 6,052 findings).
+                You already run a network operations centre. Phase 3 builds the equivalent for your AI —
+                a single operating layer that observes every AI decision across Djia, the internal
+                knowledge base, support triage, and the agents your teams built in Phase 1.
               </p>
               <p className="text-lg text-white/40 max-w-3xl mx-auto leading-relaxed mt-4">
-                The same gate methodology that governed a particle physics facility at CERN scale now governs AI decision-making in telecoms — every model selection, every Djia architecture change, every data governance call treated as a manufactured artefact with mandatory quality gates before it ships.
+                Alerts, dashboards, on-call rotas, runbooks. Not for packet loss or capacity events — for
+                AI quality, drift, bias, and safety. The same operational discipline Orange already has,
+                applied to AI.
               </p>
             </div>
           </AnimateIn>
 
           <AnimateIn delay={0.1}>
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-8">
-              <h3 className="text-lg font-semibold text-white/80 mb-6">Six-Phase Gate Lifecycle</h3>
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-7">
+                <div className="inline-flex items-center gap-2 bg-[#6e3aff]/15 border border-[#6e3aff]/30 rounded-full px-3 py-1 mb-4 text-xs text-[#b399ff] font-semibold">
+                  <span>01</span>
+                  <span>Observation</span>
+                </div>
+                <div className="text-white font-semibold mb-2">Every decision logged, every drift detected.</div>
+                <div className="text-white/50 text-sm leading-relaxed">
+                  Every AI output logged. Model drift detected. Escalations routed. Dashboards for the CTO,
+                  summaries for the Board, exports for Group AI Paris — all fed from the same source.
+                </div>
+              </div>
+
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-7">
+                <div className="inline-flex items-center gap-2 bg-[#ff7900]/15 border border-[#ff7900]/30 rounded-full px-3 py-1 mb-4 text-xs text-[#ffa64d] font-semibold">
+                  <span>02</span>
+                  <span>Intervention</span>
+                </div>
+                <div className="text-white font-semibold mb-2">Clear rules for when humans override.</div>
+                <div className="text-white/50 text-sm leading-relaxed">
+                  When a human overrides, when a decision is rolled back, when a model is pulled out of
+                  rotation. Same discipline as your existing NOC runbooks — applied to AI incidents.
+                </div>
+              </div>
+
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-7">
+                <div className="inline-flex items-center gap-2 bg-[#30d158]/15 border border-[#30d158]/30 rounded-full px-3 py-1 mb-4 text-xs text-[#5de67b] font-semibold">
+                  <span>03</span>
+                  <span>Evolution</span>
+                </div>
+                <div className="text-white font-semibold mb-2">New use cases plug in — no re-architecture.</div>
+                <div className="text-white/50 text-sm leading-relaxed">
+                  When the next use case surfaces — B2B, network ops, internal automation — it plugs into
+                  the existing layer without a rewrite. Built to extend from day one.
+                </div>
+              </div>
+            </div>
+          </AnimateIn>
+
+          <AnimateIn delay={0.2}>
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+              <h3 className="text-lg font-semibold text-white/80 mb-6">Governance Gate Lifecycle</h3>
               <div className="flex flex-wrap gap-3">
                 {[
                   { phase: "KICKOFF", desc: "Scope lock" },
@@ -382,27 +432,11 @@ export default function Phase3Page() {
                   </div>
                 ))}
               </div>
-            </div>
-          </AnimateIn>
-
-          <AnimateIn delay={0.2}>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-7">
-                <div className="text-3xl font-bold text-[#6e3aff] mb-2">75%</div>
-                <div className="text-white font-semibold mb-2">Self-corrected convergence rate</div>
-                <div className="text-white/50 text-sm leading-relaxed">
-                  Initial measurement: 85.7%. Cross-model verification caught an arithmetic error.
-                  FDRP self-corrected to 75%. This is a system that finds its own mistakes.
-                </div>
-              </div>
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-7">
-                <div className="text-3xl font-bold text-[#ff7900] mb-2">CHF 147M</div>
-                <div className="text-white font-semibold mb-2">Antimatter facility programme</div>
-                <div className="text-white/50 text-sm leading-relaxed">
-                  68 domain experts. 6,052 findings processed through FDRP gates.
-                  Quality methodology validated at nation-state infrastructure scale.
-                </div>
-              </div>
+              <p className="text-white/40 text-sm mt-6 leading-relaxed">
+                Every high-stakes AI decision — model selection, Djia architecture changes, vendor
+                renegotiation, EU AI Act risk classification — passes through the same six-gate
+                sequence. Auditable, defensible, Group-readable.
+              </p>
             </div>
           </AnimateIn>
         </div>
@@ -567,7 +601,7 @@ export default function Phase3Page() {
                 The Consortium
               </h2>
               <p className="text-xl text-white/50 max-w-2xl mx-auto">
-                Enterprise engineering. FDRP governance. AI Agent Orchestration. Each brings irreplaceable operational depth — no generalist consultants.
+                Enterprise engineering. AI Operations Framework governance. Cloud, security, and telecom-grade pipelines. Each brings irreplaceable operational depth — no generalist consultants.
               </p>
             </div>
           </AnimateIn>
@@ -652,12 +686,12 @@ export default function Phase3Page() {
           <AnimateIn delay={0.05}>
             <div className="space-y-3 mb-8">
               {[
-                { label: "FDRP Gate Lifecycle Deployment", amount: "€80,000", note: "6-gate lifecycle across all Orange AI decisions. PDR → PQR on every Djia change and model selection." },
+                { label: "AI Operations Framework Deployment", amount: "€80,000", note: "Six-gate lifecycle across all Orange AI decisions. PDR → PQR on every Djia change and model selection. On-call rota and runbooks." },
                 { label: "Romanian NLP Fine-Tuning Pipeline", amount: "€110,000", note: "Model training on Orange's own call data. Continuous retraining infrastructure. Djia improvement cycle." },
                 { label: "EU AI Act Compliance Framework", amount: "€80,000", note: "Article 6/9 classification for Djia. Risk management system, technical documentation, human oversight protocols." },
-                { label: "N≥3 Cross-Model Verification", amount: "€50,000", note: "Claude + GPT + Gemini verification integrated into Orange's AI pipelines. Bias detection at scale." },
-                { label: "CVT Dashboard", amount: "€40,000", note: "Convergence Velocity Tensor — real-time AI quality KPIs for CTO and Group AI Paris." },
-                { label: "Procurement Intelligence (LOFTREK OSINT)", amount: "€35,000", note: "OSINT methodology applied to Genesys, MATRIXX, IBM contracts. Renegotiation opportunities mapped." },
+                { label: "Cross-Model Verification", amount: "€50,000", note: "Claude + GPT + Gemini deliberate on high-stakes decisions — model selection, risk classification, vendor renegotiation." },
+                { label: "Reporting & Trust Dashboards", amount: "€40,000", note: "Single pane of glass for CTO + Board + Group AI Paris. Audit trail, exports, governance posture." },
+                { label: "Vendor Estate Intelligence", amount: "€35,000", note: "OSINT methodology applied to Genesys, MATRIXX, IBM contracts. Renegotiation opportunities mapped." },
                 { label: "Expert Panel + Phase 4 Roadmap", amount: "€30–55K", note: "20+ specialist panel run on full Orange AI architecture. Group replication blueprint for Poland, Belgium, Spain." },
               ].map((item, i) => (
                 <motion.div
@@ -686,57 +720,34 @@ export default function Phase3Page() {
             </div>
           </AnimateIn>
 
-          {/* Fixed + Licence cards */}
-          <div className="grid md:grid-cols-2 gap-6">
-            <AnimateIn delay={0.1}>
-              <div className="bg-white border-2 border-[#ff7900] rounded-2xl p-8 shadow-lg">
-                <div className="text-sm font-semibold text-[#ff7900] uppercase tracking-wider mb-2">Phase 3 Fixed</div>
-                <div className="text-5xl font-bold text-[#1d1d1f] mb-2">€350–450K</div>
-                <div className="text-[#6e6e73] mb-6">9-month engagement, fixed scope</div>
-                <ul className="space-y-3">
-                  {[
-                    "FDRP gate lifecycle across all AI decisions",
-                    "Romanian NLP fine-tuning on Orange call data",
-                    "EU AI Act Article 6/9 compliance framework",
-                    "N≥3 cross-model verification in production",
-                    "CVT dashboard for CTO + Group AI Paris",
-                    "Procurement intelligence — Genesys, MATRIXX, IBM",
-                    "20+ expert panel run on full architecture",
-                    "Phase 4 Group replication roadmap",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm text-[#1d1d1f]">
-                      <CheckCircle size={16} className="text-[#30d158] mt-0.5 flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </AnimateIn>
-
-            <AnimateIn delay={0.15}>
-              <div className="bg-white border border-[#e5e5ea] rounded-2xl p-8">
-                <div className="text-sm font-semibold text-[#6e3aff] uppercase tracking-wider mb-2">FDRP Licence (Optional)</div>
-                <div className="text-5xl font-bold text-[#1d1d1f] mb-2">€30K</div>
-                <div className="text-[#6e6e73] mb-6">Per year, from Phase 4 onwards</div>
-                <ul className="space-y-3">
-                  {[
-                    "Ongoing FDRP methodology licence",
-                    "Gate lifecycle updates as AI Act evolves",
-                    "CVT algorithm improvements",
-                    "Access to 32-subsystem platform",
-                    "N≥3 verification framework updates",
-                    "Romanian NLP model continuous retraining",
-                    "Group replication support (Poland, Belgium, Spain)",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm text-[#1d1d1f]">
-                      <CheckCircle size={16} className="text-[#6e3aff] mt-0.5 flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </AnimateIn>
-          </div>
+          {/* Phase 3 Fixed card */}
+          <AnimateIn delay={0.1}>
+            <div className="bg-white border-2 border-[#ff7900] rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
+              <div className="text-sm font-semibold text-[#ff7900] uppercase tracking-wider mb-2">Phase 3 Fixed</div>
+              <div className="text-5xl font-bold text-[#1d1d1f] mb-2">€350–450K</div>
+              <div className="text-[#6e6e73] mb-6">9-month engagement, fixed scope</div>
+              <ul className="space-y-3">
+                {[
+                  "Governance — policies, risk, human oversight, auditability",
+                  "Shared services — reusable agents, prompts, memory, evaluation",
+                  "Operating model — clear ownership across the business",
+                  "Reporting & trust — dashboards Paris can read",
+                  "Future expansion — a base that extends without re-architecture",
+                  "Romanian NLP fine-tuning on Orange call data",
+                  "EU AI Act Article 6/9 compliance framework",
+                  "Cross-model verification for high-stakes decisions",
+                  "Vendor estate intelligence — Genesys, MATRIXX, IBM",
+                  "20+ expert panel run on full architecture",
+                  "Phase 4 Group replication roadmap",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-[#1d1d1f]">
+                    <CheckCircle size={16} className="text-[#30d158] mt-0.5 flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </AnimateIn>
         </div>
       </section>
 
@@ -765,7 +776,7 @@ export default function Phase3Page() {
                 </a>
               </div>
               <div className="mt-8 text-white/30 text-sm">
-                InfoAcademy × LOFTREK S.R.L. · Phase 3 Proposal · April 2026
+                InfoAcademy × APEX OS · Phase 3 Proposal · April 2026
               </div>
             </div>
           </AnimateIn>
