@@ -237,7 +237,7 @@ const TEAM = [
   },
   {
     name: "Hardik Nakum",
-    photo: "",
+    photo: "/team/hardik.png",
     location: "UK",
     title: "Director · Cloud, Security & Enterprise Transformation",
     org: "MindNova",
@@ -386,8 +386,8 @@ function PhaseCard({ phase, initialOpen = false }: { phase: typeof PHASES[0]; in
   return (
     <motion.div
       whileHover={{ scale: 1.01 }}
-      className="rounded-2xl p-8 cursor-pointer"
-      style={{ background: phase.color + "06", border: `1px solid ${phase.color}18` }}
+      className="rounded-2xl p-8 cursor-pointer bg-white/[0.04]"
+      style={{ border: `1px solid ${phase.color}55`, boxShadow: `0 0 0 1px ${phase.color}18, 0 20px 60px ${phase.color}14` }}
       onClick={() => setOpen(!open)}
     >
       <div className="flex items-start justify-between mb-4">
@@ -395,17 +395,17 @@ function PhaseCard({ phase, initialOpen = false }: { phase: typeof PHASES[0]; in
           <div className="text-[11px] font-bold uppercase tracking-widest mb-1" style={{ color: phase.color }}>
             Phase {phase.phase} — {phase.duration}
           </div>
-          <h3 className="text-xl font-bold text-[#1d1d1f]">{phase.title}</h3>
-          <p className="text-[14px] font-medium text-[#1d1d1f]/75 mt-1">{phase.subtitle}</p>
+          <h3 className="text-xl font-bold text-white">{phase.title}</h3>
+          <p className="text-[14px] font-medium text-white/75 mt-1">{phase.subtitle}</p>
         </div>
         <div className="text-right">
           <div className="text-2xl font-black" style={{ color: phase.color }}>{phase.price}</div>
           {"scopeNote" in phase && phase.scopeNote && (
-            <div className="text-[10px] font-medium uppercase tracking-wider text-[#86868b] mt-0.5">{phase.scopeNote}</div>
+            <div className="text-[10px] font-medium uppercase tracking-wider text-white/60 mt-0.5">{phase.scopeNote}</div>
           )}
           <ChevronDown
             size={16}
-            className="text-[#86868b] ml-auto mt-1 transition-transform duration-300"
+            className="text-white/50 ml-auto mt-1 transition-transform duration-300"
             style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
           />
         </div>
@@ -425,7 +425,7 @@ function PhaseCard({ phase, initialOpen = false }: { phase: typeof PHASES[0]; in
                   initial={{ opacity: 0, x: -8 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.04 }}
-                  className="text-[13px] text-[#6e6e73] flex items-start gap-2"
+                  className="text-[13px] text-white/75 flex items-start gap-2"
                 >
                   <span style={{ color: phase.color }} className="mt-0.5">•</span>
                   {item}
