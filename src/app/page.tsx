@@ -294,7 +294,7 @@ const OBJECTIONS = [
   },
   {
     q: "You're a small company. Can you handle Orange scale?",
-    a: "InfoAcademy is your existing vendor. You've already vetted us. The team brings 10+ years inside Lloyds Banking Group, 17+ years of enterprise architecture, and 40+ engineer teams led. We're not replacing Genesys or MATRIXX. We're training your people to build the AI layer on top of what you already have.",
+    a: "InfoAcademy is your existing vendor. You've already vetted us. The team brings 60+ years inside several Global Fortune 500 companies and Governments, including Lloyds Banking Group, 27+ years of enterprise architecture, and 200+ engineer teams led. We're not replacing Genesys or MATRIXX. We're training your people to build the AI layer on top of what you already have, to deliver real value most companies don't. We have access to agents and specialists globally that would be hard for Orange to acquire and expensive to employ, without long consultancy agreements or loss of IP ownership. No SaaS, no PaaS, no long-term proprietary tie.",
   },
   {
     q: "What if we take the blueprint and give it to Accenture?",
