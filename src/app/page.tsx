@@ -281,7 +281,7 @@ const PARTNERS = [
     logo: "/partners/nautilus.jpeg",
     tagline: "OT cybersecurity · Industrial",
     description:
-      "Operational Technology cybersecurity specialists. 'Securing Your OT Future.' Tracks OT/ICS incidents across shipping, oil & gas, and telecoms; publishes the OT Cyber Insights biweekly update. The industrial-security layer Orange's infrastructure teams will want in the conversation.",
+      "Operational Technology cybersecurity specialists. 'Securing Your OT Future.' Tracks OT/ICS incidents across shipping, oil & gas, and telecoms; publishes the OT Cyber Insights biweekly update.",
     url: "",
     color: "#0f766e",
   },
