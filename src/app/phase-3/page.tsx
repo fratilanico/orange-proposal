@@ -246,7 +246,7 @@ export default function Phase3Page() {
 
         <div className="relative max-w-5xl mx-auto text-center">
           <AnimateIn>
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 mb-8 text-sm text-white/70">
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 mb-8 text-sm text-white/85">
               <Layers size={14} className="text-[#ff7900]" />
               <span>Phase 3 · Following Phase 1 and Phase 2</span>
             </div>
@@ -261,7 +261,7 @@ export default function Phase3Page() {
           </AnimateIn>
 
           <AnimateIn delay={0.2}>
-            <p className="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto mb-4 leading-relaxed">
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-4 leading-relaxed">
               Nine months to make Orange Romania AI{" "}
               <span className="text-white font-medium">capable, governed, scalable, and durable</span>.
               Owned by Orange, defensible to Group, and EU AI Act compliant before August 2026.
@@ -269,7 +269,7 @@ export default function Phase3Page() {
           </AnimateIn>
 
           <AnimateIn delay={0.3}>
-            <p className="text-base text-white/60 mb-12">
+            <p className="text-base text-white/80 mb-12">
               9 months · €350-450K fixed · Five pillars · One operating model
             </p>
           </AnimateIn>
@@ -288,7 +288,7 @@ export default function Phase3Page() {
                 >
                   <Icon size={16} className="text-[#ff7900]" />
                   <div className="text-left">
-                    <div className="text-xs text-white/60 uppercase tracking-wider">{label}</div>
+                    <div className="text-xs text-white/80 uppercase tracking-wider">{label}</div>
                     <div className="text-sm font-semibold text-white">{value}</div>
                   </div>
                 </div>
@@ -362,12 +362,12 @@ export default function Phase3Page() {
                 <br />
                 <span style={{ color: "#6e3aff" }}>The NOC for Orange&apos;s AI Decisions.</span>
               </h2>
-              <p className="text-xl text-white/60 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
                 You already run a network operations centre. Phase 3 builds the equivalent for your AI:
                 a single operating layer that observes every AI decision across Djia, the internal
                 knowledge base, support triage, and the agents your teams built in Phase 1.
               </p>
-              <p className="text-lg text-white/60 max-w-3xl mx-auto leading-relaxed mt-4">
+              <p className="text-lg text-white/80 max-w-3xl mx-auto leading-relaxed mt-4">
                 Alerts, dashboards, on-call rotas, runbooks. Not for packet loss or capacity events.
                 For AI quality, drift, bias, and safety. The same operational discipline Orange already
                 has, applied to AI.
@@ -383,7 +383,7 @@ export default function Phase3Page() {
                   <span>Observation</span>
                 </div>
                 <div className="text-white font-semibold mb-2">Every decision logged, every drift detected.</div>
-                <div className="text-white/70 text-sm leading-relaxed flex-1">
+                <div className="text-white/85 text-sm leading-relaxed flex-1">
                   Every AI output logged. Model drift detected. Escalations routed. Dashboards for the CTO,
                   summaries for the Board, exports for Group AI Paris, all fed from the same source.
                 </div>
@@ -395,7 +395,7 @@ export default function Phase3Page() {
                   <span>Intervention</span>
                 </div>
                 <div className="text-white font-semibold mb-2">Clear rules for when humans override.</div>
-                <div className="text-white/70 text-sm leading-relaxed flex-1">
+                <div className="text-white/85 text-sm leading-relaxed flex-1">
                   When a human overrides, when a decision is rolled back, when a model is pulled out of
                   rotation. Same discipline as your existing NOC runbooks, applied to AI incidents.
                 </div>
@@ -407,7 +407,7 @@ export default function Phase3Page() {
                   <span>Evolution</span>
                 </div>
                 <div className="text-white font-semibold mb-2">New use cases plug in. No re-architecture.</div>
-                <div className="text-white/70 text-sm leading-relaxed flex-1">
+                <div className="text-white/85 text-sm leading-relaxed flex-1">
                   When the next use case surfaces (B2B, network ops, internal automation), it plugs into
                   the existing layer without a rewrite. Built to extend from day one.
                 </div>
@@ -430,13 +430,13 @@ export default function Phase3Page() {
                   <div key={phase} className="flex items-center gap-2">
                     <div className="bg-[#6e3aff]/20 border border-[#6e3aff]/40 rounded-xl px-4 py-2 text-center">
                       <div className="text-[#b399ff] font-bold text-sm">{phase}</div>
-                      <div className="text-white/60 text-xs mt-0.5">{desc}</div>
+                      <div className="text-white/80 text-xs mt-0.5">{desc}</div>
                     </div>
-                    {i < 5 && <ArrowRight size={16} className="text-white/45" />}
+                    {i < 5 && <ArrowRight size={16} className="text-white/70" />}
                   </div>
                 ))}
               </div>
-              <p className="text-white/60 text-sm mt-6 leading-relaxed">
+              <p className="text-white/80 text-sm mt-6 leading-relaxed">
                 Every high-stakes AI decision (model selection, Djia architecture changes, vendor
                 renegotiation, EU AI Act risk classification) passes through the same six-gate sequence.
                 Auditable, defensible, Group-readable.
@@ -505,7 +505,7 @@ export default function Phase3Page() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 9-Month Execution Plan
               </h2>
-              <p className="text-xl text-white/70 max-w-2xl mx-auto">
+              <p className="text-xl text-white/85 max-w-2xl mx-auto">
                 Phased delivery. Each milestone gates the next. No deliverable ships without prior gate sign-off.
               </p>
             </div>
@@ -537,7 +537,7 @@ export default function Phase3Page() {
                         </span>
                         <h3 className="font-bold text-white text-lg">{title}</h3>
                       </div>
-                      <p className="text-white/70 leading-relaxed">{description}</p>
+                      <p className="text-white/85 leading-relaxed">{description}</p>
                     </div>
                   </div>
                 </AnimateIn>
@@ -604,7 +604,7 @@ export default function Phase3Page() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 The Consortium
               </h2>
-              <p className="text-xl text-white/70 max-w-2xl mx-auto">
+              <p className="text-xl text-white/85 max-w-2xl mx-auto">
                 Enterprise engineering. AI Operations Framework governance. Cloud, security, and telecom-grade pipelines. Each brings irreplaceable operational depth, no generalist consultants.
               </p>
             </div>
@@ -641,10 +641,10 @@ export default function Phase3Page() {
                       <div className="text-[12px] font-bold mt-1.5 leading-snug" style={{ color }}>
                         {role}
                       </div>
-                      <div className="text-[11px] text-white/60 mt-1 font-medium">{org}</div>
+                      <div className="text-[11px] text-white/80 mt-1 font-medium">{org}</div>
                     </div>
                   </div>
-                  <p className="text-[13px] text-white/60 leading-relaxed flex-1">{credentials}</p>
+                  <p className="text-[13px] text-white/80 leading-relaxed flex-1">{credentials}</p>
                 </div>
               </AnimateIn>
             ))}
@@ -742,7 +742,7 @@ export default function Phase3Page() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Next Step
               </h2>
-              <p className="text-xl text-white/60 max-w-2xl mx-auto mb-8 leading-relaxed">
+              <p className="text-xl text-white/80 max-w-2xl mx-auto mb-8 leading-relaxed">
                 Phase 3 scoping session with Orange CTO and Board. We present the gate lifecycle deployment plan,
                 EU AI Act risk classification for Djia, and the Bucharest-to-Group replication roadmap.
                 One meeting. Concrete outputs.
@@ -757,7 +757,7 @@ export default function Phase3Page() {
                   Email for Phase 3 scoping
                 </a>
               </div>
-              <div className="mt-8 text-white/55 text-sm">
+              <div className="mt-8 text-white/75 text-sm">
                 InfoAcademy × APEX OS · Phase 3 Proposal · April 2026
               </div>
             </div>
