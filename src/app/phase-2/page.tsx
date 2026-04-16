@@ -359,7 +359,7 @@ export default function Phase2Page() {
                   className="bg-[#1d1d1f] px-8 py-8 text-center"
                 >
                   <div className="text-3xl lg:text-4xl font-black text-white mb-2">{stat.value}</div>
-                  <div className="text-white/40 text-sm uppercase tracking-widest font-medium">{stat.label}</div>
+                  <div className="text-white/60 text-sm uppercase tracking-widest font-medium">{stat.label}</div>
                 </motion.div>
               ))}
             </motion.div>
@@ -503,7 +503,7 @@ export default function Phase2Page() {
             <h2 className="text-4xl lg:text-5xl font-black mb-6">
               Timeline
             </h2>
-            <p className="text-white/50 text-xl max-w-2xl mb-16 leading-relaxed">
+            <p className="text-white/70 text-xl max-w-2xl mb-16 leading-relaxed">
               Sequential delivery with clear milestones. Each month ships something Orange can
               measure immediately.
             </p>
@@ -555,7 +555,7 @@ export default function Phase2Page() {
             <div className="border border-white/10 rounded-2xl p-6 flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">
               <div>
                 <p className="font-black text-white mb-1">This is not a consulting engagement.</p>
-                <p className="text-white/50 text-sm">
+                <p className="text-white/70 text-sm">
                   Every component ships as deployed infrastructure, not recommendations.
                   KPIs are contractually defined before day one.
                 </p>
@@ -658,7 +658,7 @@ export default function Phase2Page() {
             <h2 className="text-4xl lg:text-5xl font-black mb-6">
               €185-200K fixed fee
             </h2>
-            <p className="text-white/50 text-xl max-w-2xl mb-16 leading-relaxed">
+            <p className="text-white/70 text-xl max-w-2xl mb-16 leading-relaxed">
               Fixed-fee engagement. No time-and-materials surprises. Every line item
               is infrastructure Orange owns, not a subscription or retainer.
             </p>
@@ -679,7 +679,7 @@ export default function Phase2Page() {
                   >
                     <div className="flex-1">
                       <div className="font-black text-white mb-1">{item.label}</div>
-                      <div className="text-white/40 text-sm">{item.note}</div>
+                      <div className="text-white/60 text-sm">{item.note}</div>
                     </div>
                     <div className="text-[#ff7900] font-black text-lg flex-shrink-0 text-right">
                       {item.amount}
@@ -705,7 +705,7 @@ export default function Phase2Page() {
               <div className="rounded-2xl border border-white/10 overflow-hidden">
                 <div className="p-6 border-b border-white/10">
                   <h3 className="font-black text-white text-xl">vs. The Alternatives</h3>
-                  <p className="text-white/40 text-sm mt-1">
+                  <p className="text-white/60 text-sm mt-1">
                     Enterprise vendors don&apos;t phase. Their numbers are for a single monolithic
                     project that covers the same ground as our full Phase 1 + 2 + 3 engagement
                     (€565-700K).
@@ -721,7 +721,7 @@ export default function Phase2Page() {
                     <div key={alt.name} className="flex items-center justify-between p-5">
                       <div>
                         <div className="text-white font-bold">{alt.name}</div>
-                        <div className="text-white/40 text-sm">{alt.note}</div>
+                        <div className="text-white/60 text-sm">{alt.note}</div>
                       </div>
                       <div className="text-[#ff453a] font-black text-lg">{alt.price}</div>
                     </div>
@@ -732,7 +732,7 @@ export default function Phase2Page() {
                     <div className="w-2 h-2 rounded-full bg-[#30d158]" />
                     <span className="text-[#30d158] font-black text-sm">Same ground, at least 30% less, and you can stop at any phase</span>
                   </div>
-                  <p className="text-white/40 text-xs">
+                  <p className="text-white/60 text-xs">
                     Full three-phase APEX engagement: €565-700K. Every phase is a decision gate.
                     Orange owns everything built to that point whether you continue or not.
                   </p>
@@ -1051,7 +1051,7 @@ export default function Phase2Page() {
               <h2 className="text-4xl lg:text-5xl font-black mb-6">
                 Phase 3: Cognitive Architecture
               </h2>
-              <p className="text-white/50 text-xl max-w-2xl mx-auto leading-relaxed mb-12">
+              <p className="text-white/70 text-xl max-w-2xl mx-auto leading-relaxed mb-12">
                 Phase 2 sets the infrastructure foundation. Phase 3 adds the intelligence layer:
                 autonomous agents that learn from Orange&apos;s operations, predict failures, and
                 act without human prompting.
@@ -1071,7 +1071,7 @@ export default function Phase2Page() {
                   >
                     <div className="text-3xl mb-4 flex-shrink-0">{item.icon}</div>
                     <div className="font-black text-white mb-3">{item.label}</div>
-                    <p className="text-white/50 text-sm leading-relaxed flex-1">{item.desc}</p>
+                    <p className="text-white/70 text-sm leading-relaxed flex-1">{item.desc}</p>
                   </div>
                 ))}
               </div>
@@ -1118,7 +1118,7 @@ export default function Phase2Page() {
               <br />
               <span className="text-[#ff7900]">scoping call</span>
             </h2>
-            <p className="text-white/50 text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+            <p className="text-white/70 text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
               This is a conversation between Orange's IT leadership and APEX OS.
               No sales team. No NDAs required upfront. Just a 60-minute technical
               scoping call to align on scope and KPIs.
@@ -1155,14 +1155,14 @@ export default function Phase2Page() {
                 ].map((stat) => (
                   <div key={stat.label} className="text-center">
                     <div className="text-white font-black text-2xl mb-1">{stat.value}</div>
-                    <div className="text-white/40 text-xs uppercase tracking-widest">{stat.label}</div>
+                    <div className="text-white/60 text-xs uppercase tracking-widest">{stat.label}</div>
                   </div>
                 ))}
               </div>
 
               <div className="border-t border-white/10 mt-6 pt-6 text-center">
-                <p className="text-white/30 text-sm">
-                  APEX OS is delivered through <strong className="text-white/50">InfoAcademy</strong> - 
+                <p className="text-white/55 text-sm">
+                  APEX OS is delivered through <strong className="text-white/70">InfoAcademy</strong> - 
                   existing Orange Romania vendor. Phase 1 invoiced and delivered. Phase 2 is a PO extension.
                 </p>
               </div>
@@ -1181,11 +1181,11 @@ export default function Phase2Page() {
             >
               A
             </div>
-            <span className="text-white/40 text-sm">APEX OS × InfoAcademy</span>
-            <span className="text-white/20 text-sm">·</span>
-            <span className="text-white/40 text-sm">Orange Romania Phase 2 Proposal</span>
+            <span className="text-white/60 text-sm">APEX OS × InfoAcademy</span>
+            <span className="text-white/45 text-sm">·</span>
+            <span className="text-white/60 text-sm">Orange Romania Phase 2 Proposal</span>
           </div>
-          <div className="text-white/20 text-xs">
+          <div className="text-white/45 text-xs">
             Confidential proposal · Orange Romania
           </div>
         </div>

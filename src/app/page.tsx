@@ -405,7 +405,7 @@ function PhaseCard({ phase, initialOpen = false }: { phase: typeof PHASES[0]; in
           )}
           <ChevronDown
             size={16}
-            className="text-white/50 ml-auto mt-1 transition-transform duration-300"
+            className="text-white/70 ml-auto mt-1 transition-transform duration-300"
             style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
           />
         </div>
@@ -700,7 +700,7 @@ export default function Page() {
             </h1>
           </AnimateIn>
           <AnimateIn delay={0.2}>
-            <p className="text-lg sm:text-xl text-white/50 mt-6 max-w-[640px] mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-white/70 mt-6 max-w-[640px] mx-auto leading-relaxed">
               We train your people to build AI systems and architect the patterns they build on.
               In 18 months, you don&apos;t need us. That&apos;s the point.
             </p>
@@ -730,7 +730,7 @@ export default function Page() {
                   <div className="text-3xl font-black text-white">
                     <AnimatedCounter to={s.value} prefix={s.prefix ?? ""} suffix={s.suffix} />
                   </div>
-                  <div className="text-[11px] text-white/40 uppercase tracking-widest mt-1">{s.label}</div>
+                  <div className="text-[11px] text-white/60 uppercase tracking-widest mt-1">{s.label}</div>
                 </div>
               ))}
             </div>
@@ -792,7 +792,7 @@ export default function Page() {
               <br />
               <span className="text-[#ff7900]">You build it. You own it. You run it.</span>
             </h2>
-            <p className="text-lg text-white/50 mt-6 max-w-[680px] mx-auto leading-relaxed">
+            <p className="text-lg text-white/70 mt-6 max-w-[680px] mx-auto leading-relaxed">
               IBM and Accenture deliver products, and a renewal invoice. We deliver an architectural capability that lives inside Orange permanently. Your people build the agents. The methodology is ours. The outcome is yours.
             </p>
           </AnimateIn>
@@ -804,7 +804,7 @@ export default function Page() {
                 The agents handle the volume.
                 <span className="text-[#ff7900]"> Your people handle what requires judgment.</span>
               </p>
-              <p className="text-[13px] text-white/40 mt-3 leading-relaxed">
+              <p className="text-[13px] text-white/60 mt-3 leading-relaxed">
                 These AI agents are not here to replace Orange employees. They exist to remove the high-volume, repetitive grunt work, so your team spends their time on decisions, relationships, and complex cases. The work only humans should be doing.
               </p>
             </div>
@@ -820,7 +820,7 @@ export default function Page() {
                 <div key={i} className="h-full flex flex-col rounded-2xl p-6 bg-white/5 border border-white/[0.07] text-left">
                   <div className="text-[#ff7900] mb-4 flex-shrink-0">{s.icon}</div>
                   <h3 className="text-[16px] font-bold text-white mb-2">{s.title}</h3>
-                  <p className="text-[13px] text-white/50 leading-relaxed flex-1">{s.desc}</p>
+                  <p className="text-[13px] text-white/70 leading-relaxed flex-1">{s.desc}</p>
                 </div>
               ))}
             </div>
@@ -837,9 +837,9 @@ export default function Page() {
                 { label: "Full engagement", apex: "€565-700K (P1 + P2 + P3)", them: "€1M-€3M+ single programme" },
               ].map((row, i) => (
                 <div key={i} className="contents">
-                  <div className={`px-4 py-3 ${i === 0 ? "font-black text-[11px] uppercase tracking-widest text-white/30 bg-white/[0.04]" : "text-white/40"} border-b border-white/[0.05]`}>{row.label}</div>
+                  <div className={`px-4 py-3 ${i === 0 ? "font-black text-[11px] uppercase tracking-widest text-white/55 bg-white/[0.04]" : "text-white/60"} border-b border-white/[0.05]`}>{row.label}</div>
                   <div className={`px-4 py-3 ${i === 0 ? "font-black text-[11px] uppercase tracking-widest text-[#ff7900] bg-[#ff7900]/10" : "text-white font-semibold"} border-b border-l border-white/[0.05]`}>{row.apex}</div>
-                  <div className={`px-4 py-3 ${i === 0 ? "font-black text-[11px] uppercase tracking-widest text-white/30 bg-white/[0.04]" : "text-white/30"} border-b border-l border-white/[0.05]`}>{row.them}</div>
+                  <div className={`px-4 py-3 ${i === 0 ? "font-black text-[11px] uppercase tracking-widest text-white/55 bg-white/[0.04]" : "text-white/55"} border-b border-l border-white/[0.05]`}>{row.them}</div>
                 </div>
               ))}
             </div>
@@ -998,7 +998,7 @@ export default function Page() {
                 <br />
                 <span className="text-[#ff7900]">18 months to AI independence.</span>
               </h2>
-              <p className="text-lg text-white/40 mt-4">Start at Phase 1. Scale when ready. Stop any time, you keep everything.</p>
+              <p className="text-lg text-white/60 mt-4">Start at Phase 1. Scale when ready. Stop any time, you keep everything.</p>
             </div>
           </AnimateIn>
 
@@ -1013,20 +1013,20 @@ export default function Page() {
                     Phase 01: The Entry Point
                   </div>
                   <h3 className="text-2xl font-black text-white">AI Operations Lab</h3>
-                  <p className="text-[13px] text-white/40 mt-1">
+                  <p className="text-[13px] text-white/60 mt-1">
                     Funded from L&D budget · Below VP discretionary spend · No procurement committee
                   </p>
                 </div>
                 <div className="flex-shrink-0 text-right">
                   <div className="text-3xl font-black text-[#ff7900]">€30K-€50K</div>
-                  <div className="text-[12px] text-white/30 mt-0.5">10 weeks · based on scope</div>
+                  <div className="text-[12px] text-white/55 mt-0.5">10 weeks · based on scope</div>
                 </div>
               </div>
               {/* Split body */}
               <div className="grid md:grid-cols-2">
                 {/* Left: 10-week timeline */}
                 <div className="p-7 border-b md:border-b-0 md:border-r border-white/[0.06]">
-                  <p className="text-[11px] font-black uppercase tracking-widest text-white/25 mb-5">10-Week Program</p>
+                  <p className="text-[11px] font-black uppercase tracking-widest text-white/50 mb-5">10-Week Program</p>
                   <div className="space-y-5">
                     {[
                       { week: "W1-2", title: "Foundations", desc: "Agent patterns, orchestration, deterministic vs probabilistic pipelines, governance basics", color: "#ff7900" },
@@ -1041,7 +1041,7 @@ export default function Page() {
                         </div>
                         <div>
                           <h4 className="text-[14px] font-bold text-white">{w.title}</h4>
-                          <p className="text-[12px] text-white/35 mt-0.5 leading-relaxed">{w.desc}</p>
+                          <p className="text-[12px] text-white/60 mt-0.5 leading-relaxed">{w.desc}</p>
                         </div>
                       </div>
                     ))}
@@ -1049,7 +1049,7 @@ export default function Page() {
                 </div>
                 {/* Right: Deliverables */}
                 <div className="p-7">
-                  <p className="text-[11px] font-black uppercase tracking-widest text-white/25 mb-5">What You Get</p>
+                  <p className="text-[11px] font-black uppercase tracking-widest text-white/50 mb-5">What You Get</p>
                   <div className="space-y-4">
                     {[
                       { icon: "🤖", title: "3-4 Working AI Agents", desc: "Built by YOUR team. Owned by Orange." },
@@ -1063,7 +1063,7 @@ export default function Page() {
                         <span className="text-base flex-shrink-0 mt-0.5">{item.icon}</span>
                         <div>
                           <h4 className="text-[13px] font-bold text-white">{item.title}</h4>
-                          <p className="text-[11px] text-white/35 leading-relaxed">{item.desc}</p>
+                          <p className="text-[11px] text-white/60 leading-relaxed">{item.desc}</p>
                         </div>
                       </div>
                     ))}
@@ -1115,7 +1115,7 @@ export default function Page() {
             <h2 className="text-4xl lg:text-5xl font-black text-white leading-tight">
               Ready to build?
             </h2>
-            <p className="text-lg text-white/50 mt-4">
+            <p className="text-lg text-white/70 mt-4">
               10 weeks. €30K-€50K based on scope. Working AI agents built by your team.
               <br />
               If the agents don&apos;t deliver value, you still have 12 trained people.
@@ -1137,11 +1137,11 @@ export default function Page() {
           </AnimateIn>
 
           <AnimateIn delay={0.22}>
-            <p className="text-[11px] text-white/20 uppercase tracking-widest mt-14">
+            <p className="text-[11px] text-white/60 uppercase tracking-widest mt-14">
               InfoAcademy × APEX OS: Bucharest, Romania · London, UK
             </p>
             <a href="https://nico.apex.infoacademy.uk" target="_blank" rel="noopener"
-              className="inline-block mt-3 text-[11px] text-white/15 hover:text-[#ff7900] transition-colors tracking-wider">
+              className="inline-block mt-3 text-[11px] text-[#ff7900] hover:text-[#ffa64d] transition-colors tracking-wider">
               nico.apex.infoacademy.uk
             </a>
           </AnimateIn>
