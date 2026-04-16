@@ -198,13 +198,13 @@ const LEADERSHIP = [
     location: "Dubai, UAE",
     title: "Co-Founder, Executive Chairman & Global Partner",
     org: "eWealthTech / ex-IBM / ex-Sun Microsystems",
-    bio: "40 years at the intersection of enterprise technology and global commercial strategy. Led multi-billion-pound programmes at IBM, Siemens, and Sun Microsystems, including pioneering open-source platforms and securing deals valued at over £3B across Europe, Africa, and Asia. Government and Fortune 500 advisor since 1987. Established the first independent Property Investment Fund in Eastern Europe. Brings the commercial architecture that turns a strong technical proposal into a Group-level decision.",
+    bio: "40 years at the intersection of innovative, disruptive enterprise technology and global commercial strategy. Led multi-billion-pound programmes at IBM, Siemens, and Sun Microsystems, including pioneering several vertical-sector solutions including telcos, open-source platforms, and securing deals valued at over £3B across Europe, Africa, and Asia. Government and Fortune 500 advisor since 1987. Established the first independent Property Investment Fund in Eastern Europe in 2004. Founder and CEO of several startups in FinTech, HealthTech, Marketing & Comms. Brings the strategic and commercial architecture that turns a strong technical proposal into a Group-level decision.",
     credentials: [
       { company: "IBM", detail: "Enterprise transformation programmes" },
-      { company: "Siemens", detail: "Business services, vertical sectors" },
+      { company: "Siemens Nixdorf", detail: "Business services, vertical sectors including telcos" },
       { company: "Sun Microsystems", detail: "Open-source platforms, £3B+ in deals across Europe, Africa, Asia" },
       { company: "Government & Fortune 500", detail: "Advisor since 1987" },
-      { company: "eWealthTech", detail: "CEO. Global AI and open-source platforms" },
+      { company: "eWealthTech", detail: "Founder & CEO. Global Ecosystem in Wealth & Health, AI & open-source platforms" },
     ],
     linkedin: "https://www.linkedin.com/in/maborishapatel/",
     email: "",
@@ -627,8 +627,11 @@ function ObjectionItem({ obj, index }: { obj: typeof OBJECTIONS[0]; index: numbe
   return (
     <AnimateIn delay={index * 0.06}>
       <div
+        role="button"
+        tabIndex={0}
         onClick={() => setOpen(!open)}
-        className="cursor-pointer border-b border-[#e8e8ed] py-5 group"
+        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") setOpen(!open); }}
+        className="cursor-pointer border-b border-[#e8e8ed] py-5 group select-none"
       >
         <div className="flex items-start justify-between gap-4">
           <h4 className="text-[15px] font-semibold text-[#1d1d1f] group-hover:text-[#ff7900] transition-colors">

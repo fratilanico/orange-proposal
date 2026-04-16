@@ -207,7 +207,7 @@ const TEAM = [
     photo: "/team/mru.png",
     role: "Co-Founder, Executive Chairman & Global Partner",
     org: "Dubai, UAE",
-    credentials: "40 years at IBM, Siemens, and Sun Microsystems. £3B+ in enterprise programmes across Europe, Africa, and Asia. Government and Fortune 500 advisor since 1987. Telecom and operator experience with Orange, Vodafone, O2, and BT. Brings the commercial architecture that turns a strong technical proposal into a Group-level decision.",
+    credentials: "40 years at the intersection of innovative, disruptive enterprise technology and global commercial strategy. Led multi-billion-pound programmes at IBM, Siemens, and Sun Microsystems, including pioneering vertical-sector solutions including telcos, open-source platforms, and securing deals valued at over £3B across Europe, Africa, and Asia. Government and Fortune 500 advisor since 1987. Established the first independent Property Investment Fund in Eastern Europe in 2004. Founder and CEO of several startups in FinTech, HealthTech, Marketing & Comms. Telecom and operator experience with Orange, Vodafone, O2, and BT.",
     color: "#0d7377",
     lead: false,
   },
