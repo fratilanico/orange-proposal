@@ -1,27 +1,71 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 
-const sections = [
-  { href: "#problem", label: "The Challenge" },
-  { href: "#offer", label: "What We Offer" },
-  { href: "#value", label: "The Value" },
-  { href: "#proof", label: "Track Record" },
-  { href: "#team", label: "Team" },
-  { href: "#engagement", label: "The Engagement" },
-  { href: "#cta", label: "Contact" },
+const homepageSections = [
+  { anchor: "problem", label: "The Challenge" },
+  { anchor: "offer", label: "What We Offer" },
+  { anchor: "value", label: "The Value" },
+  { anchor: "proof", label: "Track Record" },
+  { anchor: "team", label: "Team" },
+  { anchor: "engagement", label: "The Engagement" },
+  { anchor: "cta", label: "Contact" },
+];
+
+// Phase-2 and Phase-3 get their own short nav pointing at sections on that page,
+// plus a link back to the homepage.
+const phase2Sections = [
+  { anchor: "problem", label: "The Challenge", target: "home" },
+  { anchor: "offer", label: "What Gets Built", target: "self" },
+  { anchor: "investment", label: "Investment", target: "self" },
+  { anchor: "team", label: "Team", target: "home" },
+  { anchor: "cta", label: "Contact", target: "self" },
+];
+
+const phase3Sections = [
+  { anchor: "problem", label: "The Challenge", target: "home" },
+  { anchor: "offer", label: "Operating Model", target: "self" },
+  { anchor: "investment", label: "Investment", target: "self" },
+  { anchor: "team", label: "Team", target: "home" },
+  { anchor: "cta", label: "Contact", target: "self" },
 ];
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
   }, []);
+
+  // Build the nav section list based on current route
+  const isHome = pathname === "/";
+  const isPhase2 = pathname === "/phase-2";
+  const isPhase3 = pathname === "/phase-3";
+
+  let sections: { href: string; label: string }[];
+  if (isHome) {
+    sections = homepageSections.map((s) => ({ href: `#${s.anchor}`, label: s.label }));
+  } else if (isPhase2) {
+    sections = phase2Sections.map((s) => ({
+      href: s.target === "self" ? `#${s.anchor}` : `/#${s.anchor}`,
+      label: s.label,
+    }));
+  } else if (isPhase3) {
+    sections = phase3Sections.map((s) => ({
+      href: s.target === "self" ? `#${s.anchor}` : `/#${s.anchor}`,
+      label: s.label,
+    }));
+  } else {
+    sections = homepageSections.map((s) => ({ href: `/#${s.anchor}`, label: s.label }));
+  }
+
+  const logoHref = isHome ? "#hero" : "/";
 
   return (
     <nav
@@ -30,7 +74,7 @@ export default function Navigation() {
       }`}
     >
       <div className="max-w-[1120px] mx-auto flex items-center justify-between h-[52px] px-6">
-        <a href="#hero"
+        <a href={logoHref}
           className={`flex items-center gap-2 transition-colors duration-500 ${
             scrolled ? "text-[#1d1d1f]" : "text-white"
           }`}>

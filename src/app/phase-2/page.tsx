@@ -404,7 +404,7 @@ export default function Phase2Page() {
       </section>
 
       {/* ── 3. WHAT GETS BUILT ──────────────────────────────────────────────── */}
-      <section className="bg-white py-32">
+      <section id="offer" className="bg-white py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <AnimateIn>
             <p className="text-[#ff7900] text-xs font-bold uppercase tracking-widest mb-4">
@@ -1088,6 +1088,7 @@ export default function Phase2Page() {
 
       {/* ── 9. CTA ──────────────────────────────────────────────────────────── */}
       <section
+        id="cta"
         className="relative py-32 overflow-hidden"
         style={{
           background: "linear-gradient(135deg, #1d1d1f 0%, #2a1810 40%, #1d1d1f 100%)",
@@ -1185,7 +1186,7 @@ export default function Phase2Page() {
             <span className="text-white/40 text-sm">Orange Romania Phase 2 Proposal</span>
           </div>
           <div className="text-white/20 text-xs">
-            Confidential: For Marius Maican (CTO) & Alexandru Ilie (IT Director)
+            Confidential proposal · Orange Romania
           </div>
         </div>
       </footer>

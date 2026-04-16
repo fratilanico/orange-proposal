@@ -196,9 +196,9 @@ const TEAM = [
   {
     name: "Nico Fratila",
     photo: "/team/nico.png",
-    role: "Founder & CEO, InfoAcademy × APEX OS",
+    role: "Founder & CEO, APEX OS",
     org: "London, UK",
-    credentials: "Founder & CEO of InfoAcademy × APEX OS: the sovereign AI OS running 24/7 on Azure with 400+ self-evolving skills, persistent agent memory, multi-model orchestration, self-healing watchdog, AI Operations Framework gate automation, and a knowledge distillation engine. 5 years network engineering and AI/ML adoption at Lloyds Banking Group. Chief Customer Office at CUBE Global (RegTech). Business analysis and project & programme management across FinTech and RegTech.",
+    credentials: "Founder & CEO of APEX OS: the sovereign AI OS running 24/7 on Azure with 400+ self-evolving skills, persistent agent memory, multi-model orchestration, self-healing watchdog, AI Operations Framework gate automation, and a knowledge distillation engine. Also runs InfoAcademy, Orange Romania's existing training vendor. 5 years network engineering and AI/ML adoption at Lloyds Banking Group. Chief Customer Office at CUBE Global (RegTech). Business analysis and project & programme management across FinTech and RegTech.",
     color: "#ff7900",
     lead: false,
   },
@@ -447,7 +447,7 @@ export default function Phase3Page() {
       </section>
 
       {/* 8 Deliverables */}
-      <section className="bg-[#f5f5f7] py-24 px-6">
+      <section id="offer" className="bg-[#f5f5f7] py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <AnimateIn>
             <div className="text-center mb-16">
@@ -653,7 +653,7 @@ export default function Phase3Page() {
       </section>
 
       {/* Pricing */}
-      <section className="bg-[#f5f5f7] py-24 px-6">
+      <section id="investment" className="bg-[#f5f5f7] py-24 px-6">
         <div className="max-w-4xl mx-auto">
           <AnimateIn>
             <div className="text-center mb-16">
@@ -734,7 +734,7 @@ export default function Phase3Page() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#1d1d1f] py-24 px-6">
+      <section id="cta" className="bg-[#1d1d1f] py-24 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <AnimateIn>
             <div className="bg-white/5 border border-white/10 rounded-3xl p-12">
